@@ -1,184 +1,190 @@
 `timescale 1ns / 1ps
 
-module spi_slave (
-
-// port list
-
-SCLK			,
-rst_n			,
-i_cs_n			,
-i_mosi			,
-o_miso			,
-o_rx_wr_en		,
-o_rx_wr_data		,
-i_rx_fifo_full		,
-o_rx_overflow_pulse	,
-o_tx_fifo_rd_en		,
-i_tx_fifo_rd_data	,
-i_tx_fifo_empty		,
-o_spi_busy		
-
+module register_block (
+    // port list
+    ACLK                        ,
+    rst_n                       ,
+    i_bus_addr                  ,
+    i_bus_wr_en                 ,
+    i_bus_wdata                 ,
+    i_bus_rd_en                 ,
+    o_bus_rdata                 ,
+    o_rx_fifo_rd_en             ,
+    i_rx_fifo_rd_data           ,
+    i_rx_fifo_empty             ,
+    i_rx_fifo_full              ,
+    i_rx_fifo_level             ,
+    o_tx_fifo_wr_en             ,
+    o_tx_fifo_wr_data           ,
+    i_tx_fifo_full              ,
+    i_spi_busy_sync             ,
+    i_rx_overflow_pulse_sync    ,
+    o_overflow                  ,
+    o_rx_valid
 );
 
 // port declaration
+input           ACLK                        ;
+input           rst_n                       ; // ACLK-domain synchronized reset
 
-input 		SCLK			; // SPI serial clock
-input		rst_n			; // SCLk-domain synchronized reset
+input   [7:0]   i_bus_addr                  ; // register bus
+input           i_bus_wr_en                 ;
+input   [7:0]   i_bus_wdata                 ;
+input           i_bus_rd_en                 ;
+output  [7:0]   o_bus_rdata                 ;
 
-input		i_cs_n			; // chip select, active low
-input		i_mosi			; // master -> slave data
-output		o_miso			; // slave -> master data
+output          o_rx_fifo_rd_en             ; // RX FIFO, read side (ACLK domain)
+input   [7:0]   i_rx_fifo_rd_data           ;
+input           i_rx_fifo_empty             ;
+input           i_rx_fifo_full              ;
+input   [4:0]   i_rx_fifo_level             ; // ADDR_WIDTH=4 -> 5-bit level
 
-output		o_rx_wr_en		; // RX FIFO write side (SCLK domain)
-output [7:0]	o_rx_wr_data		;
-input		i_rx_fifo_full		;
-output		o_rx_overflow_pulse	; // 1-cycle pulse: byte was dropped
+output          o_tx_fifo_wr_en             ; // TX FIFO, write side (ACLK domain)
+output  [7:0]   o_tx_fifo_wr_data           ;
+input           i_tx_fifo_full              ;
 
-output 		o_tx_fifo_rd_en		; // TX FIFO read side (SCLK domain)
-input [7:0]	i_tx_fifo_rd_data	;
-input		i_tx_fifo_empty		;
+input           i_spi_busy_sync             ; // already synchronized into ACLK domain
+input           i_rx_overflow_pulse_sync    ; // pulse_sync'd, 1 ACLK cycle
 
-output		o_spi_busy		;
+output          o_overflow                  ; // top-level status outputs
+output          o_rx_valid                  ;
 
 // internal register
+reg     [7:0]   o_bus_rdata                 ;
+reg             o_tx_fifo_wr_en             ;
+reg     [7:0]   o_tx_fifo_wr_data           ;
 
-reg		o_miso			;
+// ---------------------------------------------------------------
+// Register map addresses
+// ---------------------------------------------------------------
+localparam [7:0] ADDR_RX_DATA    = 8'h00,
+                  ADDR_STATUS     = 8'h04,
+                  ADDR_CONTROL    = 8'h08,
+                  ADDR_FIFO_LEVEL = 8'h0C,
+                  ADDR_TX_DATA    = 8'h10;
 
-// FSM state encoding
+reg  [7:0] r_rx_data_buf;
+reg        rx_data_buf_valid;
+reg        r_rx_fifo_rd_en_d;      // aligns with FIFO's 1-cycle read latency
 
-localparam [1:0] S_IDLE 	= 2'd0,
-		 S_LODE		= 2'd1,
-		 S_RECEIVE	= 2'd2,
-		 S_BYTE_DONE	= 2'd3;
+reg        irq_enable;
+reg        r_drain_active;
+reg        r_overflow_sticky;
 
-reg [1:0] state, next_state ;
-
-// Datapath registers
-
-reg [2:0] bit_cnt		; // counts sample bits 0..7
-reg [7:0] r_shift_rx		; // accumulates i_mosi, MSB-first
-reg [7:0] r_shift_tc		; // shift out on o_miso, MSB-first
-reg [7:0] r_tx_byte_larched 	; // most recently available TX byte
-
-wire w_entering_receive = (next_state == S_RECEIVE) && (state != S_RECEIVE);
-wire w_byte_complete	= (state == S_RECEIVE) && (bit_cnt == 3'd7)	   ;
+wire       w_rx_addr_hit       = (i_bus_addr == ADDR_RX_DATA);
+wire       w_tx_addr_hit       = (i_bus_addr == ADDR_TX_DATA);
+wire       w_control_wr_hit    = i_bus_wr_en && (i_bus_addr == ADDR_CONTROL);
+wire       w_fifo_clear_strobe = w_control_wr_hit && i_bus_wdata[0];
+wire       w_ovfl_clear_strobe = w_control_wr_hit && i_bus_wdata[1];
+wire       w_rx_prefetch       = !rx_data_buf_valid && !i_rx_fifo_empty && !r_drain_active;
 
 // modeling
 
-// Process 1/3 -- state register
+// ---------------------------------------------------------------
+// RX prefetch buffer (pop-on-read RX_DATA_REG)
+// ---------------------------------------------------------------
+assign o_rx_fifo_rd_en = w_rx_prefetch || r_drain_active;
 
-always @(posedge SCLK) begin
-
-	if (!rst_n)
-	    state <= S_IDLE	;
-
-	else
-	    state <= next_state	;
+always @(posedge ACLK) begin
+    if (!rst_n)
+        r_rx_fifo_rd_en_d <= 1'b0;
+    else
+        r_rx_fifo_rd_en_d <= w_rx_prefetch;
 end
 
-// process 2/3 -- combinational next-state logic
+always @(posedge ACLK) begin
+    if (!rst_n) begin
+        r_rx_data_buf     <= 8'd0;
+        rx_data_buf_valid <= 1'b0;
+    end else if (r_drain_active) begin
+        rx_data_buf_valid <= 1'b0;                  // drain: discard, don't latch
+    end else if (r_rx_fifo_rd_en_d) begin
+        r_rx_data_buf     <= i_rx_fifo_rd_data;
+        rx_data_buf_valid <= 1'b1;
+    end else if (i_bus_rd_en && w_rx_addr_hit && rx_data_buf_valid) begin
+        rx_data_buf_valid <= 1'b0;                  // consumed by software read
+    end
+end
+
+// ---------------------------------------------------------------
+// CONTROL_REG: FIFO_CLEAR / OVERFLOW_CLEAR (write strobes),
+//              IRQ_ENABLE (persistent, stored)
+// ---------------------------------------------------------------
+always @(posedge ACLK) begin
+    if (!rst_n)
+        irq_enable <= 1'b0;
+    else if (w_control_wr_hit)
+        irq_enable <= i_bus_wdata[2];
+end
+
+// Drain FSM: once triggered, keep popping the RX FIFO (discarding data)
+// until it reports empty, then stop. A single flag is enough since the
+// pop-and-check-empty loop is exactly what o_rx_fifo_rd_en/i_rx_fifo_empty
+// already give us.
+always @(posedge ACLK) begin
+    if (!rst_n)
+        r_drain_active <= 1'b0;
+    else if (w_fifo_clear_strobe)
+        r_drain_active <= 1'b1;
+    else if (r_drain_active && i_rx_fifo_empty)
+        r_drain_active <= 1'b0;
+end
+
+// OVERFLOW sticky flag: set by a synchronized overflow event from the
+// SPI Slave (SCLK domain, already pulse_sync'd into ACLK), cleared by
+// software strobe. If both happen the same cycle, the new overflow
+// wins (set has priority), matching "sticky until explicitly cleared".
+always @(posedge ACLK) begin
+    if (!rst_n)
+        r_overflow_sticky <= 1'b0;
+    else if (i_rx_overflow_pulse_sync)
+        r_overflow_sticky <= 1'b1;
+    else if (w_ovfl_clear_strobe)
+        r_overflow_sticky <= 1'b0;
+end
+
+// ---------------------------------------------------------------
+// TX_DATA_REG: write pushes into the TX async_fifo write side.
+// o_tx_fifo_wr_data is only updated on a TX_DATA_REG write (gated by
+// w_tx_addr_hit) so that reading TX_DATA_REG back always returns the
+// last value actually written there, not whatever else was on the
+// bus during some other register's write.
+// ---------------------------------------------------------------
+always @(posedge ACLK) begin
+    if (!rst_n) begin
+        o_tx_fifo_wr_en   <= 1'b0;
+        o_tx_fifo_wr_data <= 8'd0;
+    end else begin
+        o_tx_fifo_wr_en <= i_bus_wr_en && w_tx_addr_hit && !i_tx_fifo_full;
+        if (i_bus_wr_en && w_tx_addr_hit)
+            o_tx_fifo_wr_data <= i_bus_wdata;
+    end
+end
+
+// ---------------------------------------------------------------
+// Read mux (combinational)
+// ---------------------------------------------------------------
+wire [7:0] w_status_reg_val = {3'b000,                 // [7:5] reserved
+                              r_overflow_sticky,        // [4] OVERFLOW
+                              rx_data_buf_valid,        // [3] RX_VALID
+                              i_spi_busy_sync,           // [2] SPI_BUSY
+                              i_rx_fifo_full,             // [1] FULL
+                              i_rx_fifo_empty};            // [0] EMPTY
+
+wire [7:0] w_control_reg_val = {5'b00000, irq_enable, 1'b0, 1'b0};
 
 always @(*) begin
-
-	next_state = state	; // safe default: hold state
-
-	case (state)
-
-	    S_IDEL: begin
-		if (!i_cs_n)
-		    next_state = S_LOAD		; // frame start
-	    end
-		
-            S_LOAD: begin
-		    next_state = S_RECEIVE	; // always advances after 1 cycle
-	    end
-
-	    S_RECEIVE: begin 
-		if (i_cs_n)
-		    next_state = S_IDLE		; // abort: i_cs_n deasserted mid-byte
-	        else if (w_byte_complete)
-		    next_state = S_BYTE_DONE	;
-		else
-  		    next_state = S_RECEIVE	;
-	    end
-
-
-	    S_BYTE_DONE: begin
-		 if (i_cs_n)
-		     next_state = S_IDLE	; // frame start
-		 else 
-		     next_state = S_RECEIVE	; // next byte, same frame
-	    end
-
-	     default: next_state = S_IDLE	; // recovert from an illegal state
-
-	  endcase
+    case (i_bus_addr)
+        ADDR_RX_DATA:    o_bus_rdata = r_rx_data_buf;
+        ADDR_STATUS:     o_bus_rdata = w_status_reg_val;
+        ADDR_CONTROL:    o_bus_rdata = w_control_reg_val;
+        ADDR_FIFO_LEVEL: o_bus_rdata = {3'b000, i_rx_fifo_level};
+        ADDR_TX_DATA:    o_bus_rdata = o_tx_fifo_wr_data;   // last written value, RW readback
+        default:         o_bus_rdata = 8'h00;
+    endcase
 end
 
-// Process 3/3 -- datapath / output logic (registers clocked by SCLK)
-
-// bit counter + RX shift register
-
-always @(posedge SCLK) begin
-
-	if (!rst_n) begin
-	    bit_cnt    <= 3'd0				;
-	    r_shift_rx <= 8'd0				;
-
-	end else if (w_entering_receive) begin
-	    bit_cnt    <= 3'd0				; // new byte starting
-
-	end else if (state == S_RECEIVE) begin
-	    bit_cnt    <= bit_cnt + 3'd1		;
-	    r_shift_rx <= {r_shift_rx[6:0], i_mosi}	; // MSB-first sample on SCLK rise
-	end
-end
-
-wire w_tx_pop = !i_tx_fifo_empty && (state != S_RECEIVE)	;
-assign o_tx_fifo_rd_en = w_tx_pop				;
-
-reg r_tx_pop_d;
-
-always @(posedge SCLK) begin
-
- 	if (!rst_n) begin
-	    r_tx_pop_d		<= 1'b0	;
-	    r_tx_byte_latched   <= 8'd0	; 
-	
-	end else begin
-	    r_tx_pop_d <= w_tx_pop	;
-	   
-	    if (r_tx_pop_d)
-		r_tx_byte_latched <= i_tx_fifo_rd_data ; // FIFO read data valid 1 cycle after rd_en
-		
-	end
-end
-
-always @(posedge SCLK) begin
-
-	if (!rst_n)
-	    r_shift_tx <= 8'd0				;
-
-	else if (w_entering_receive)
-	    r_shift_tx <= r_tx_byte_latched		;
-
-	else if (state == S_RECEIVE)
-	    r_shift_tx <= {r_shift_tx[6:0], 1'b0}	;
-end
-
-always @(negedge SCLK) begin
-	
-	if (!rst_n)
-	    o_miso <= 1'b0		;
-	
-	else if (state == S_RECEIVE)
-	    o_miso <= r_shift_tx[7]	;
-end
-
-assign o_rx_wr_en		= (state == S_BYTE_DONE) && !i_rx_fifo_full	;
-assign o_rx_wr_data		= r_shift_rx					;
-assign o_rx_overflow_pulse      = (state == S_BYTE_DONE) && i_rx_fifo_full	;
-
-assign o_spi_busy = (state != S_IDLE)						;
+assign o_overflow = r_overflow_sticky;
+assign o_rx_valid = rx_data_buf_valid;
 
 endmodule

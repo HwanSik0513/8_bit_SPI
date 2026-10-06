@@ -46,11 +46,17 @@ localparam DEPTH = (1 << ADDR_WIDTH)		;
 
 reg	[DATA_WIDTH-1:0] mem [0:DEPTH-1]	;
 
-// write domain
+// Write domain
 
 reg	[ADDR_WIDTH:0] r_wr_ptr_bin, w_wr_ptr_bin_next		;
 reg	[ADDR_WIDTH:0] r_wr_ptr_gray, w_wr_ptr_gray_next	;
-reg	[ADDR_WIDTH:0] r_wr_ptr_gray_meta_r, r_wr_ptr_gray_rclk	; // wr ptr synced INTO rd_clk 
+reg	[ADDR_WIDTH:0] r_rd_ptr_gray_meta_w, r_rd_ptr_gray_wclk	; // rd ptr synced INTO wr_clk 
+
+// Read domain
+
+reg	[ADDR_WIDTH:0] r_rd_ptr_bin, w_rd_ptr_bin_next		;
+reg	[ADDR_WIDTH:0] r_rd_ptr_gray, w_rd_ptr_gray_next	;
+reg	[ADDR_WIDTH:0] r_wr_ptr_gray_meta_r, r_wr_ptr_gray_rclk	; // wr ptr sunced INTO rd_clk
 
 // modeling 
 
@@ -58,7 +64,7 @@ reg	[ADDR_WIDTH:0] r_wr_ptr_gray_meta_r, r_wr_ptr_gray_rclk	; // wr ptr synced I
 
 always @(*) begin
 	w_wr_ptr_bin_next = r_wr_ptr_bin + (i_wr_en && !o_full)			;
-	w_wr_prt_gray_nexy = (w_wr_ptr_bin_next >> 1) ^ w_wr_ptr_bin_next	;
+	w_wr_ptr_gray_next = (w_wr_ptr_bin_next >> 1) ^ w_wr_ptr_bin_next	;
 end
 
 always @(posedge wr_clk) begin
@@ -73,15 +79,15 @@ end
 
 always @(posedge wr_clk) begin
 	if(i_wr_en && !o_full)
-	   mem[r_wr_ptr_bin[ADDR_WIDTH-1:0] <= i_wr_data;
+	   mem[r_wr_ptr_bin[ADDR_WIDTH-1:0]] <= i_wr_data;
 end
 
 // 2FF-synchronized the read pointer (Gray) into the write domain
 
 always @(posedge wr_clk) begin
 	if (!wr_rst_n) begin
-	    r_rd_ptr_gray_meta_w <= {(ADDR_WIDTH+1)}{1'b0}};
-	    r_rd_ptr_gray_wclk   <= {(ADDR_WIDTH+1)}{1'b0}};
+	    r_rd_ptr_gray_meta_w <= {(ADDR_WIDTH+1){1'b0}};
+	    r_rd_ptr_gray_wclk   <= {(ADDR_WIDTH+1){1'b0}};
 	end else begin
 	    r_rd_ptr_gray_meta_w <= r_rd_ptr_gray	;
 	    r_rd_ptr_gray_wclk	 <= r_rd_ptr_gray_meta_w;
@@ -117,10 +123,10 @@ end
 
 always @(posedge rd_clk) begin 
 	if (!rd_rst_n) begin
-	     r_wr_ptr_gray_meta_f  <= {(ADDR_WIDTH+1){1'b0}};
+	     r_wr_ptr_gray_meta_r  <= {(ADDR_WIDTH+1){1'b0}};
 	     r_wr_ptr_gray_rclk    <= {(ADDR_WIDTH+1){1'b0}};
 	end else begin
-	     r_wr_ptr_gray_meta_f  <= {(ADDR_WIDTH+1){1'b0}};
+	     r_wr_ptr_gray_meta_r  <= {(ADDR_WIDTH+1){1'b0}};
 	     r_wr_ptr_gray_rclk	   <= {(ADDR_WIDTH+1){1'b0}};
 	end
 end
@@ -129,12 +135,12 @@ end
 
 assign o_empty = (w_rd_ptr_gray_next == r_wr_ptr_gray_rclk);
 
-fuction [ADDR_WIDTH:0] gray2bin	;
-	input [ADDR_WIDTH:0] g	;
-	integer	i		;
+function [ADDR_WIDTH:0] gray2bin	;
+	input [ADDR_WIDTH:0] g		;
+	integer	i			;
 	begin 
 		gray2bin[ADDR_WIDTH] = g[ADDR_WIDTH]		;
-		for (i = ADDR_WIDTH - 1; i >= 0; i = i - 1 	;
+		for (i = ADDR_WIDTH - 1; i >= 0; i = i - 1) 	
 			gray2bin[i] = gray2bin[i+1] ^ g[i]	;
 	end
 endfunction

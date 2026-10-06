@@ -2,7 +2,19 @@
 // File created by:  xrun
 // Do not modify this file
 //
-/home/hah003/PROJ1/Proj1_make/TOP/SIM/TESTBENCH/tb_reset_sync.v
+/home/hah003/PROJ1/Proj1_make/TOP/SIM/TESTBENCH/tb_async_fifo.v
+/home/hah003/PROJ1/Proj1_make/TOP/SIM/TESTBENCH/tb_bufg_sim_stub.v
+/home/hah003/PROJ1/Proj1_make/TOP/SIM/TESTBENCH/tb_register_block.v
+/home/hah003/PROJ1/Proj1_make/TOP/SIM/TESTBENCH/tb_spi_bridge_top.v
+/home/hah003/PROJ1/Proj1_make/TOP/SIM/TESTBENCH/tb_spi_master_slave.v
+/home/hah003/PROJ1/Proj1_make/TOP/SIM/TESTBENCH/tb_spi_slave.v
+/home/hah003/PROJ1/Proj1_make/TOP/RTL/Async_fifo.v
+/home/hah003/PROJ1/Proj1_make/TOP/RTL/Pulse_sync.v
+/home/hah003/PROJ1/Proj1_make/TOP/RTL/Register_block.v
 /home/hah003/PROJ1/Proj1_make/TOP/RTL/Reset_sync.v
+/home/hah003/PROJ1/Proj1_make/TOP/RTL/Sclk_gen.v
+/home/hah003/PROJ1/Proj1_make/TOP/RTL/Spi_bridge_top.v
+/home/hah003/PROJ1/Proj1_make/TOP/RTL/Spi_master.v
+/home/hah003/PROJ1/Proj1_make/TOP/RTL/Spi_slave.v
 /GPDK045/digital/giolib045_v3.5/vlog/pads_FF_s1vg.v
 /GPDK045/digital/gsclib045_all_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v

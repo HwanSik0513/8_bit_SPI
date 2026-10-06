@@ -90,3 +90,5 @@ define VIEW_MAP ( $VIEW_MAP \
 , .v.gz => v \
 , .v.Z => v \
 )
+define ELAB_SNAPSHOT
+define SNAPSHOT worklib.tb_async_fifo:v

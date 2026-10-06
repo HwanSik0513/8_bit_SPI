@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module Reset_sync (
+module reset_sync (
 
 // port list
 

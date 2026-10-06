@@ -4,8 +4,8 @@ xrun -64bit \
 	-access +rwc \
 	-gui \
 	+libext+.v \
-	../TESTBENCH/tb_reset_sync.v \
-	../../RTL/Reset_sync.v \
+	../TESTBENCH/*.v \
+	../../RTL/*.v \
 	/GPDK045/digital/giolib045_v3.5/vlog/pads_FF_s1vg.v \
 	/GPDK045/digital/gsclib045_all_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v \
 	-l func_sim.log
