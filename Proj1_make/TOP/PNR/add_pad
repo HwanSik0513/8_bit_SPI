@@ -1,0 +1,63 @@
+
+PADVSS    pad7();
+PADVSSIOR pad8();
+
+PADVSSIOR pad10();
+
+PADVDD    pad11();
+PADVSS    pad12();
+PADVDDIOR pad13();
+PADVSSIOR pad14();
+
+PADVSSIOR pad17();
+PADVSSIOR pad18();
+
+PADVSSIOR pad20();
+PADVDD    pad21();
+PADVDD    pad22();
+PADVSS    pad23();
+PADVDDIOR pad24();
+PADVSSIOR pad25();
+
+PADVDD    pad35();
+PADVSS    pad36();
+PADVDDIOR pad37();
+PADVSSIOR pad38();
+
+PADVDD    pad46();
+PADVSS    pad47();
+PADVDDIOR pad48();
+PADVSSIOR pad49();
+PADVSSIOR pad50();
+
+PADVDD    pad67();
+PADVSS    pad68();
+PADVDDIOR pad69();
+PADVSSIOR pad70();
+
+PADVSSIOR pad78();
+
+PADVDD    pad87();
+PADVSS    pad88();
+PADVDDIOR pad89();
+PADVSSIOR pad90();
+
+PADVDD    pad118();
+PADVSS    pad119();
+PADVDDIOR pad120();
+PADVSSIOR pad121();
+
+PADVDD    pad138();
+PADVSS    pad139();
+PADVDDIOR pad140();
+PADVSSIOR pad141();
+
+PADVDD    pad160();
+PADVSS    pad161();
+PADVDDIOR pad162();
+PADVSSIOR pad163();
+
+PADVDD    pad181();
+PADVSS    pad182();
+PADVDDIOR pad183();
+PADVSSIOR pad184();

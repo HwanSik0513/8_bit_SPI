@@ -1,0 +1,40 @@
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:43:37 2012 )
+// Library name: giolib045
+// Cell name: PADVDD25
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADVDD25 VDD VDD25! VDDIOR! VSS VSSIOR!
+I2 (\529\:VDD25!) BONDPAD52
+C1 (VSSIOR! VDD) capacitor c=6.81357e-14
+C2 (VDD25! VDD) capacitor c=3.86672e-14
+C3 (VSS VDD) capacitor c=5.63127e-14
+C4 (VDDIOR! VDD) capacitor c=1.86096e-14
+C5 (\529\:VDD25! VDD) capacitor c=3.57105e-15
+C6 (\49\:VDD25! VDD) capacitor c=5.88295e-14
+C7 (\205\:VDD25! VDD) capacitor c=1.10227e-14
+Rl46 (\49\:VDD25! VDD25!) resistor r=0.1647 c=0
+Rk1101 (\49\:VDD25! \205\:VDD25!) resistor r=0.1084 c=0
+Rj965 (\205\:VDD25! \529\:VDD25!) resistor r=1.4507 c=0
+Ri839 (\230\:VDD \543\:VDD) resistor r=0.1304 c=0
+Rh317 (\543\:VDD VDD) resistor r=0.1008 c=0
+Rw330 (\230\:VDD \559\:VDD) resistor r=0.05748 c=0
+Rv392 (VDD \559\:VDD) resistor r=0.09134 c=0
+Ru343 (VDD \561\:VDD) resistor r=0.0912 c=0
+Rz43 (VDD \577\:VDD) resistor r=0.1035 c=0
+Ry254 (\561\:VDD \577\:VDD) resistor r=0.1403 c=0
+I1\|M4_52__rcx (\49\:VDD25! VSSIOR! VSSIOR! VSSIOR!) g45n2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=5.25e-12 ps=3.082e-05 pd=2.105e-05 \
+        nrd=468.75m nrs=468.75m sa=5.25e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+ends PADVDD25
+// End of subcircuit definition.
+

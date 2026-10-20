@@ -1,0 +1,5 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(01Sep2026:23:39:41):( xrun -64bit +max_err_count+50 +define+function_sim -access +rwc -profile -profthread -gui TB_io_cell.v ../../../giolib045_v3.5/vlog/pads_FF_s1vg.v -l ./func_sim.log )

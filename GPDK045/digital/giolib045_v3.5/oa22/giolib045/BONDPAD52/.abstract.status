@@ -1,0 +1,8 @@
+cUiMoveCellToBin {BONDPAD52} {Ignore}
+cUiSelectCellP {BONDPAD52}
+cUiSetViewStatus {BONDPAD52} {layout} {1}
+cUiSetViewStatus {BONDPAD52} {logical} {0}
+cUiSetViewStatus {BONDPAD52} {abstract.pin} {0}
+cUiSetViewStatus {BONDPAD52} {abstract.ext} {0}
+cUiSetViewStatus {BONDPAD52} {abstract} {0}
+cUiSetViewStatus {BONDPAD52} {abstract.ver} {0}

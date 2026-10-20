@@ -1,0 +1,65 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  giolib045
+* Top Cell Name: PADVSS25
+* View Name:     schematic
+* Netlisted on:  Mar 15 07:46:17 2012
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL VSSIOR!
++        VSS!
++        VDDIOR!
++        VSS25!
++        VDD!
+
+*.PIN VSSIOR!
+*+    VSS!
+*+    VDDIOR!
+*+    VSS25!
+*+    VDD!
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    BONDPAD52
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT BONDPAD52 PAD
+*.PININFO PAD:B
+.ENDS
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    IORINGVSS25
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT IORINGVSS25 inh_VDD inh_VDDIOR inh_VSS inh_VSS25 inh_VSSIOR
+*.PININFO inh_VDD:I inh_VDDIOR:I inh_VSS:I inh_VSS25:I inh_VSSIOR:I
+MM6 inh_VSS25 inh_VDDIOR inh_VDDIOR inh_VDDIOR g45p2svt m=1 l=200n w=560u
+.ENDS
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    PADVSS25
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT PADVSS25
+*.PININFO
+XI1 VSS25! / BONDPAD52
+XI0 VDD! VDDIOR! VSS! VSS25! VSSIOR! / IORINGVSS25
+.ENDS
+

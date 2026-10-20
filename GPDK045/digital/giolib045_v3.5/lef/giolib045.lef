@@ -1,0 +1,1677 @@
+VERSION 5.7 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+ 
+UNITS
+    DATABASE MICRONS 2000  ;
+END UNITS
+ 
+ MANUFACTURINGGRID    0.005000 ;
+ 
+SITE pad
+    SYMMETRY x y r90 ;
+    CLASS pad ;
+    SIZE 1.000 BY 240.000 ;
+END pad
+ 
+SITE corner
+    SYMMETRY x y r90 ;
+    CLASS pad ;
+    SIZE 240.000 BY 240.000 ;
+END corner
+
+PROPERTYDEFINITIONS
+  MACRO oaTaper STRING ;
+END PROPERTYDEFINITIONS
+
+MACRO PADANALOG
+  CLASS PAD ;
+  ORIGIN 0 80 ;
+  FOREIGN PADANALOG 0 -80 ;
+  SIZE 60 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN VDDIOR
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDDIOR VDDIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 49 1 61 ;
+        RECT 0 34.5 1 46.5 ;
+        RECT 0 20 1 32 ;
+        RECT 0 5.5 1 17.5 ;
+        RECT 59 49 60 61 ;
+        RECT 59 34.5 60 46.5 ;
+        RECT 59 20 60 32 ;
+        RECT 59 5.5 60 17.5 ;
+    END
+  END VDDIOR
+  PIN VSSIOR
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSSIOR VSSIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 138.5 1 150.5 ;
+        RECT 0 124 1 136 ;
+        RECT 0 109.5 1 121.5 ;
+        RECT 0 95 1 107 ;
+        RECT 59 138.5 60 150.5 ;
+        RECT 59 124 60 136 ;
+        RECT 59 109.5 60 121.5 ;
+        RECT 59 95 60 107 ;
+    END
+  END VSSIOR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.27 1 90.5 ;
+        RECT 59 79.27 60 90.5 ;
+    END
+  END VSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 65.38 1 76.61 ;
+        RECT 59 65.38 60 76.61 ;
+    END
+  END VDD
+  PIN AY
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal1 ;
+        RECT 27.015 156.955 30.06 160 ;
+    END
+  END AY
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 60 160 ;
+  END
+END PADANALOG
+
+
+PROPERTYDEFINITIONS
+  MACRO oaTaper STRING ;
+END PROPERTYDEFINITIONS
+
+MACRO PADDB
+  CLASS PAD ;
+  ORIGIN 0 80 ;
+  FOREIGN PADDB 0 -80 ;
+  SIZE 60 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        POLYGON 28.72 159.39 28.68 159.39 28.68 160 27.68 160 27.68 159.39 27.62 159.39 27.62 159.275 28.72 159.275 ;
+    END
+  END Y
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        POLYGON 30.55 159.37 30.5 159.37 30.5 160 29.5 160 29.5 159.37 29.45 159.37 29.45 159.275 30.55 159.275 ;
+    END
+  END A
+  PIN OEN
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        POLYGON 32.365 159.37 32.31 159.37 32.31 160 31.31 160 31.31 159.37 31.265 159.37 31.265 159.275 32.365 159.275 ;
+    END
+  END OEN
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 65.495 1 66.485 ;
+        RECT 59 65.495 60 66.485 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.265 1 80.255 ;
+        RECT 59 79.265 60 80.255 ;
+    END
+  END VSS
+  PIN VSSIOR
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSSIOR VSSIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 138.495 1 150.495 ;
+        RECT 0 123.995 1 135.995 ;
+        RECT 0 109.495 1 121.495 ;
+        RECT 0 94.995 1 106.995 ;
+        RECT 59 138.495 60 150.495 ;
+        RECT 59 123.995 60 135.995 ;
+        RECT 59 109.495 60 121.495 ;
+        RECT 59 94.995 60 106.995 ;
+    END
+  END VSSIOR
+  PIN VDDIOR
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDDIOR VDDIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 48.995 1 60.995 ;
+        RECT 0 34.495 1 46.495 ;
+        RECT 0 19.995 1 31.995 ;
+        RECT 0 5.495 1 17.495 ;
+        RECT 59 48.995 60 60.995 ;
+        RECT 59 34.495 60 46.495 ;
+        RECT 59 19.995 60 31.995 ;
+        RECT 59 5.495 60 17.495 ;
+    END
+  END VDDIOR
+  PIN PAD
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal11 ;
+        RECT 28 0 32 1.42 ;
+    END
+  END PAD
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 60 160 ;
+  END
+  PROPERTY oaTaper "virtuosoDefaultTaper" ;
+END PADDB
+
+
+MACRO PADDI
+  CLASS PAD ;
+  ORIGIN 0 80 ;
+  FOREIGN PADDI 0 -80 ;
+  SIZE 60 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN PAD
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal11 ;
+        RECT 28 0 32 1.42 ;
+    END
+  END PAD
+  PIN VDDIOR
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDDIOR VDDIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 48.995 1 60.995 ;
+        RECT 0 34.495 1 46.495 ;
+        RECT 0 19.995 1 31.995 ;
+        RECT 0 5.495 1 17.495 ;
+        RECT 59 48.995 60 60.995 ;
+        RECT 59 34.495 60 46.495 ;
+        RECT 59 19.995 60 31.995 ;
+        RECT 59 5.495 60 17.495 ;
+    END
+  END VDDIOR
+  PIN VSSIOR
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSSIOR VSSIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 138.495 1 150.495 ;
+        RECT 0 123.995 1 135.995 ;
+        RECT 0 109.495 1 121.495 ;
+        RECT 0 94.995 1 106.995 ;
+        RECT 59 138.495 60 150.495 ;
+        RECT 59 123.995 60 135.995 ;
+        RECT 59 109.495 60 121.495 ;
+        RECT 59 94.995 60 106.995 ;
+    END
+  END VSSIOR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.265 1 80.255 ;
+        RECT 59 79.265 60 80.255 ;
+    END
+  END VSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 65.495 1 66.485 ;
+        RECT 59 65.495 60 66.485 ;
+    END
+  END VDD
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 27.55 159.275 28.275 160 ;
+    END
+  END Y
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 60 160 ;
+  END
+END PADDI
+
+
+MACRO PADDO
+  CLASS PAD ;
+  ORIGIN 0 80 ;
+  FOREIGN PADDO 0 -80 ;
+  SIZE 60 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 29.5 159.275 30.225 160 ;
+    END
+  END A
+  PIN VDDIOR
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDDIOR VDDIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 49 1 61 ;
+        RECT 0 34.5 1 46.5 ;
+        RECT 0 20 1 32 ;
+        RECT 0 5.5 1 17.5 ;
+        RECT 59 49 60 61 ;
+        RECT 59 34.5 60 46.5 ;
+        RECT 59 20 60 32 ;
+        RECT 59 5.5 60 17.5 ;
+    END
+  END VDDIOR
+  PIN VSSIOR
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSSIOR VSSIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 138.5 1 150.5 ;
+        RECT 0 124 1 136 ;
+        RECT 0 109.5 1 121.5 ;
+        RECT 0 95 1 107 ;
+        RECT 59 138.5 60 150.5 ;
+        RECT 59 124 60 136 ;
+        RECT 59 109.5 60 121.5 ;
+        RECT 59 95 60 107 ;
+    END
+  END VSSIOR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.27 1 90.5 ;
+        RECT 59 79.27 60 90.5 ;
+    END
+  END VSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 65.5 1 76.61 ;
+        RECT 59 65.5 60 76.61 ;
+    END
+  END VDD
+  PIN PAD
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal11 ;
+        RECT 28 -1.4 32 1.415 ;
+    END
+  END PAD
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 60 160 ;
+  END
+END PADDO
+
+
+MACRO PADDOZ
+  CLASS PAD ;
+  ORIGIN 0 80 ;
+  FOREIGN PADDOZ 0 -80 ;
+  SIZE 60 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN VDDIOR
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDDIOR VDDIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 48.995 1 60.995 ;
+        RECT 0 34.495 1 46.495 ;
+        RECT 0 19.995 1 31.995 ;
+        RECT 0 5.495 1 17.495 ;
+        RECT 59 48.995 60 60.995 ;
+        RECT 59 34.495 60 46.495 ;
+        RECT 59 19.995 60 31.995 ;
+        RECT 59 5.495 60 17.495 ;
+    END
+  END VDDIOR
+  PIN VSSIOR
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSSIOR VSSIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 138.495 1 150.495 ;
+        RECT 0 123.995 1 135.995 ;
+        RECT 0 109.495 1 121.495 ;
+        RECT 0 94.995 1 106.995 ;
+        RECT 59 138.495 60 150.495 ;
+        RECT 59 123.995 60 135.995 ;
+        RECT 59 109.495 60 121.495 ;
+        RECT 59 94.995 60 106.995 ;
+    END
+  END VSSIOR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.265 1 80.255 ;
+        RECT 59 79.265 60 80.255 ;
+    END
+  END VSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 65.495 1 66.485 ;
+        RECT 59 65.495 60 66.485 ;
+    END
+  END VDD
+  PIN OEN
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 31.31 159.275 32.035 160 ;
+    END
+  END OEN
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 29.5 159.275 30.225 160 ;
+    END
+  END A
+  PIN PAD
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal11 ;
+        RECT 28 0 32 1.42 ;
+    END
+  END PAD
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 60 160 ;
+  END
+END PADDOZ
+
+
+PROPERTYDEFINITIONS
+  MACRO oaTaper STRING ;
+END PROPERTYDEFINITIONS
+
+MACRO PADVDD
+  CLASS PAD ;
+  ORIGIN 0 80 ;
+  FOREIGN PADVDD 0 -80 ;
+  SIZE 60 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      LAYER Metal3 ;
+        RECT 53.815 156.64 57.165 160 ;
+      LAYER Metal2 ;
+        RECT 53.815 156.64 57.165 160 ;
+      LAYER Metal3 ;
+        RECT 2.855 156.64 6.205 160 ;
+      LAYER Metal2 ;
+        RECT 2.855 156.64 6.205 160 ;
+    END
+  END VDD
+  PIN VSSIOR
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSSIOR VSSIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 138.5 1 150.5 ;
+        RECT 0 124 1 136 ;
+        RECT 0 109.5 1 121.5 ;
+        RECT 0 95 1 107 ;
+        RECT 59 138.5 60 150.5 ;
+        RECT 59 124 60 136 ;
+        RECT 59 109.5 60 121.5 ;
+        RECT 59 95 60 107 ;
+    END
+  END VSSIOR
+  PIN VDDIOR
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDDIOR VDDIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 49 1 61 ;
+        RECT 0 34.5 1 46.5 ;
+        RECT 0 20 1 32 ;
+        RECT 0 5.5 1 17.5 ;
+        RECT 59 49 60 61 ;
+        RECT 59 34.5 60 46.5 ;
+        RECT 59 20 60 32 ;
+        RECT 59 5.5 60 17.5 ;
+    END
+  END VDDIOR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.27 1 90.5 ;
+        RECT 59 79.27 60 90.5 ;
+    END
+  END VSS
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 60 160 ;
+  END
+  PROPERTY oaTaper "virtuosoDefaultTaper" ;
+END PADVDD
+
+
+PROPERTYDEFINITIONS
+  MACRO oaTaper STRING ;
+END PROPERTYDEFINITIONS
+
+MACRO PADVDD25
+  CLASS PAD ;
+  ORIGIN 0 80 ;
+  FOREIGN PADVDD25 0 -80 ;
+  SIZE 60 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 59 65.38 60 76.61 ;
+        RECT 0 65.38 1 76.61 ;
+    END
+  END VDD
+  PIN VSSIOR
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSSIOR VSSIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 138.5 1 150.5 ;
+        RECT 0 124 1 136 ;
+        RECT 0 109.5 1 121.5 ;
+        RECT 0 95 1 107 ;
+        RECT 59 138.5 60 150.5 ;
+        RECT 59 124 60 136 ;
+        RECT 59 109.5 60 121.5 ;
+        RECT 59 95 60 107 ;
+    END
+  END VSSIOR
+  PIN VDDIOR
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDDIOR VDDIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 49 1 61 ;
+        RECT 0 34.5 1 46.5 ;
+        RECT 0 20 1 32 ;
+        RECT 0 5.5 1 17.5 ;
+        RECT 59 49 60 61 ;
+        RECT 59 34.5 60 46.5 ;
+        RECT 59 20 60 32 ;
+        RECT 59 5.5 60 17.5 ;
+    END
+  END VDDIOR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.27 1 90.5 ;
+        RECT 59 79.27 60 90.5 ;
+    END
+  END VSS
+  PIN VDD25
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    NETEXPR "VDD25 VDD25!" ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2.855 156.64 6.215 160 ;
+      LAYER Metal3 ;
+        RECT 2.855 156.64 6.215 160 ;
+    END
+  END VDD25
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 60 160 ;
+  END
+  PROPERTY oaTaper "virtuosoDefaultTaper" ;
+END PADVDD25
+
+
+PROPERTYDEFINITIONS
+  MACRO oaTaper STRING ;
+END PROPERTYDEFINITIONS
+
+MACRO PADVDDIOR
+  CLASS PAD ;
+  ORIGIN 0 80 ;
+  FOREIGN PADVDDIOR 0 -80 ;
+  SIZE 60 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 59 65.38 60 76.61 ;
+        RECT 0 65.38 1 76.61 ;
+    END
+  END VDD
+  PIN VSSIOR
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSSIOR VSSIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 138.5 1 150.5 ;
+        RECT 0 124 1 136 ;
+        RECT 0 109.5 1 121.5 ;
+        RECT 0 95 1 107 ;
+        RECT 59 138.5 60 150.5 ;
+        RECT 59 124 60 136 ;
+        RECT 59 109.5 60 121.5 ;
+        RECT 59 95 60 107 ;
+    END
+  END VSSIOR
+  PIN VDDIOR
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDDIOR VDDIOR!" ;
+    PORT
+      LAYER Metal3 ;
+        RECT 53.815 156.64 57.165 160 ;
+      LAYER Metal2 ;
+        RECT 53.815 156.64 57.165 160 ;
+      LAYER Metal3 ;
+        RECT 2.855 156.64 6.205 160 ;
+      LAYER Metal2 ;
+        RECT 2.855 156.64 6.205 160 ;
+    END
+  END VDDIOR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.27 1 90.5 ;
+        RECT 59 79.27 60 90.5 ;
+    END
+  END VSS
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 60 160 ;
+  END
+  PROPERTY oaTaper "virtuosoDefaultTaper" ;
+END PADVDDIOR
+
+
+PROPERTYDEFINITIONS
+  MACRO extractNetShortViolationLimit INTEGER ;
+  MACRO extractCellviewShortViolationLimit INTEGER ;
+  MACRO extractStopLevel INTEGER ;
+  MACRO deviceExtractType STRING ;
+  MACRO extractCellviewOpenViolationLimit INTEGER ;
+  MACRO extractNetOpenViolationLimit INTEGER ;
+  MACRO lxChainAlignPMOS STRING ;
+  MACRO lxGroundNetNames STRING ;
+  MACRO lxGetSignifDigits INTEGER ;
+  MACRO extractCellviewIllegalConnectionLimit INTEGER ;
+  MACRO lxStackPartitionParameters STRING ;
+  MACRO setupConstraintGroup STRING ;
+  MACRO lxChainAlignNMOS STRING ;
+  MACRO lxSupplyNetNames STRING ;
+  MACRO lxGenerationOrientation STRING ;
+  MACRO lxInternalLibName STRING ;
+  MACRO lxInternalConfigLibName STRING ;
+  MACRO lxInternalTop STRING ;
+  MACRO lxInternalType STRING ;
+  MACRO lxInternalCellName STRING ;
+  MACRO lxInternalViewName STRING ;
+  MACRO lxInternalConfigCellName STRING ;
+  MACRO lxInternalConfigViewName STRING ;
+  MACRO oaTaper STRING ;
+END PROPERTYDEFINITIONS
+
+MACRO PADVSS
+  CLASS PAD ;
+  ORIGIN 0 80 ;
+  FOREIGN PADVSS 0 -80 ;
+  SIZE 60 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal3 ;
+        RECT 53.805 156.64 57.155 160 ;
+        RECT 2.845 156.64 6.195 160 ;
+      LAYER Metal2 ;
+        RECT 53.805 156.64 57.155 160 ;
+        RECT 2.845 156.64 6.195 160 ;
+    END
+  END VSS
+  PIN VDDIOR
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDDIOR VDDIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 49 1 61 ;
+        RECT 0 34.5 1 46.5 ;
+        RECT 0 20 1 32 ;
+        RECT 0 5.5 1 17.5 ;
+        RECT 59 49 60 61 ;
+        RECT 59 34.5 60 46.5 ;
+        RECT 59 20 60 32 ;
+        RECT 59 5.5 60 17.5 ;
+    END
+  END VDDIOR
+  PIN VSSIOR
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSSIOR VSSIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 138.5 1 150.5 ;
+        RECT 0 124 1 136 ;
+        RECT 0 109.5 1 121.5 ;
+        RECT 0 95 1 107 ;
+        RECT 59 138.5 60 150.5 ;
+        RECT 59 124 60 136 ;
+        RECT 59 109.5 60 121.5 ;
+        RECT 59 95 60 107 ;
+    END
+  END VSSIOR
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 59 65.38 60 76.61 ;
+        RECT 0 65.38 1 76.61 ;
+    END
+  END VDD
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 60 160 ;
+  END
+  PROPERTY extractNetShortViolationLimit 100 ;
+  PROPERTY extractCellviewShortViolationLimit 1000 ;
+  PROPERTY extractStopLevel 0 ;
+  PROPERTY deviceExtractType "pcells" ;
+  PROPERTY extractCellviewOpenViolationLimit 2000 ;
+  PROPERTY extractNetOpenViolationLimit 1000 ;
+  PROPERTY lxChainAlignPMOS "Top" ;
+  PROPERTY lxGroundNetNames "gnd gnd! gnd: vss vss! vss:" ;
+  PROPERTY lxGetSignifDigits 0 ;
+  PROPERTY extractCellviewIllegalConnectionLimit 1000 ;
+  PROPERTY lxStackPartitionParameters "(0 100)" ;
+  PROPERTY setupConstraintGroup "virtuosoDefaultExtractorSetup" ;
+  PROPERTY lxChainAlignNMOS "Bottom" ;
+  PROPERTY lxSupplyNetNames "vcc vcc! vcc: vdd vdd! vdd:" ;
+  PROPERTY lxGenerationOrientation "preserve" ;
+  PROPERTY lxInternalLibName "giolib045" ;
+  PROPERTY lxInternalConfigLibName "giolib045" ;
+  PROPERTY lxInternalTop "" ;
+  PROPERTY lxInternalType "CELLVIEW" ;
+  PROPERTY lxInternalCellName "PADVSS" ;
+  PROPERTY lxInternalViewName "schematic" ;
+  PROPERTY lxInternalConfigCellName "PADVSS" ;
+  PROPERTY lxInternalConfigViewName "physConfig" ;
+  PROPERTY oaTaper "virtuosoDefaultTaper" ;
+END PADVSS
+
+
+PROPERTYDEFINITIONS
+  MACRO oaTaper STRING ;
+END PROPERTYDEFINITIONS
+
+MACRO PADVSS25
+  CLASS PAD ;
+  ORIGIN 0 80 ;
+  FOREIGN PADVSS25 0 -80 ;
+  SIZE 60 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.27 1 90.5 ;
+        RECT 59 79.27 60 90.5 ;
+    END
+  END VSS
+  PIN VDDIOR
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDDIOR VDDIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 49 1 61 ;
+        RECT 0 34.5 1 46.5 ;
+        RECT 0 20 1 32 ;
+        RECT 0 5.5 1 17.5 ;
+        RECT 59 49 60 61 ;
+        RECT 59 34.5 60 46.5 ;
+        RECT 59 20 60 32 ;
+        RECT 59 5.5 60 17.5 ;
+    END
+  END VDDIOR
+  PIN VSSIOR
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSSIOR VSSIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 138.5 1 150.5 ;
+        RECT 0 124 1 136 ;
+        RECT 0 109.5 1 121.5 ;
+        RECT 0 95 1 107 ;
+        RECT 59 138.5 60 150.5 ;
+        RECT 59 124 60 136 ;
+        RECT 59 109.5 60 121.5 ;
+        RECT 59 95 60 107 ;
+    END
+  END VSSIOR
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 59 65.38 60 76.61 ;
+        RECT 0 65.38 1 76.61 ;
+    END
+  END VDD
+  PIN VSS25
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    NETEXPR "VSS25 VSS25!" ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2.845 156.64 6.205 160 ;
+      LAYER Metal3 ;
+        RECT 2.845 156.64 6.205 160 ;
+    END
+  END VSS25
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 60 160 ;
+  END
+  PROPERTY oaTaper "virtuosoDefaultTaper" ;
+END PADVSS25
+
+
+MACRO PADVSSIOR
+  CLASS PAD ;
+  ORIGIN 0 80 ;
+  FOREIGN PADVSSIOR 0 -80 ;
+  SIZE 60 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.27 1 90.5 ;
+        RECT 59 79.27 60 90.5 ;
+    END
+  END VSS
+  PIN VDDIOR
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDDIOR VDDIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 49 1 61 ;
+        RECT 0 34.5 1 46.5 ;
+        RECT 0 20 1 32 ;
+        RECT 0 5.5 1 17.5 ;
+        RECT 59 49 60 61 ;
+        RECT 59 34.5 60 46.5 ;
+        RECT 59 20 60 32 ;
+        RECT 59 5.5 60 17.5 ;
+    END
+  END VDDIOR
+  PIN VSSIOR
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSSIOR VSSIOR!" ;
+    PORT
+      LAYER Metal3 ;
+        RECT 53.805 156.64 57.155 160 ;
+        RECT 2.845 156.64 6.195 160 ;
+      LAYER Metal2 ;
+        RECT 53.805 156.64 57.155 160 ;
+        RECT 2.845 156.64 6.195 160 ;
+    END
+  END VSSIOR
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 59 65.38 60 76.61 ;
+        RECT 0 65.38 1 76.61 ;
+    END
+  END VDD
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 60 160 ;
+  END
+END PADVSSIOR
+
+
+MACRO padIORINGCORNER
+  CLASS ENDCAP BOTTOMLEFT ;
+  ORIGIN 80 80 ;
+  FOREIGN padIORINGCORNER -80 -80 ;
+  SIZE 240 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE CornerSite ;
+  PIN VDDIOR
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDDIOR VDDIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 5.5 159 17.5 160 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 20 159 32 160 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 34.5 159 46.5 160 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 49 159 61 160 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 159 49 160 61 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 159 34.5 160 46.5 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 159 20 160 32 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 159 5.5 160 17.5 ;
+    END
+  END VDDIOR
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 65.5 159 76.61 160 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 159 65.5 160 76.61 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 79.27 159 90.5 160 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 159 79.27 160 90.5 ;
+    END
+  END VSS
+  PIN VSSIOR
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSSIOR VSSIOR!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 95 159 107 160 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 109.5 159 121.5 160 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 124 159 136 160 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 138.5 159 150.5 160 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 159 138.5 160 150.5 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 159 124 160 136 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 159 109.5 160 121.5 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 159 95 160 107 ;
+    END
+  END VSSIOR
+  OBS
+    LAYER Metal1 ;
+      RECT -80 -80 160 160 ;
+    LAYER Metal2 ;
+      RECT -80 -80 160 160 ;
+    LAYER Metal3 ;
+      RECT -80 -80 160 160 ;
+    LAYER Metal4 ;
+      RECT -80 -80 160 160 ;
+    LAYER Metal5 ;
+      RECT -80 -80 160 160 ;
+    LAYER Metal6 ;
+      RECT -80 -80 160 160 ;
+    LAYER Metal7 ;
+      RECT -80 -80 160 160 ;
+    LAYER Metal8 ;
+      RECT -80 -80 160 160 ;
+    LAYER Metal9 ;
+      RECT -80 -80 160 160 ;
+    LAYER Metal10 ;
+      RECT -80 -80 160 160 ;
+    LAYER Metal11 ;
+      RECT -80 -80 160 160 ;
+  END
+END padIORINGCORNER
+
+
+MACRO padIORINGFEED1
+  CLASS PAD SPACER ;
+  ORIGIN 0 80 ;
+  FOREIGN padIORINGFEED1 0 -80 ;
+  SIZE 1 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN VDDPAD25
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    NETEXPR "VDDPAD25 VDDPAD25!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 3 1 63 ;
+    END
+  END VDDPAD25
+  PIN VSSPAD
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    NETEXPR "VSSPAD VSSPAD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 93 1 153 ;
+    END
+  END VSSPAD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.27 1 90.5 ;
+    END
+  END VSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      CLASS CORE ;
+      LAYER Metal4 ;
+        RECT 0 65.5 1 76.61 ;
+    END
+  END VDD
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 1 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 1 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 1 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 1 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 1 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 1 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 1 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 1 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 1 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 1 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 1 160 ;
+  END
+END padIORINGFEED1
+
+
+MACRO padIORINGFEED10
+  CLASS PAD SPACER ;
+  ORIGIN 0 80 ;
+  FOREIGN padIORINGFEED10 0 -80 ;
+  SIZE 10 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN VDDPAD25
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    NETEXPR "VDDPAD25 VDDPAD25!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 3 1 63 ;
+        RECT 9 3 10 63 ;
+    END
+  END VDDPAD25
+  PIN VSSPAD
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    NETEXPR "VSSPAD VSSPAD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 93 1 153 ;
+        RECT 9 93 10 153 ;
+    END
+  END VSSPAD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.27 1 90.5 ;
+        RECT 9 79.27 10 90.5 ;
+    END
+  END VSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      CLASS CORE ;
+      LAYER Metal4 ;
+        RECT 0 65.5 1 76.61 ;
+        RECT 9 65.5 10 76.61 ;
+    END
+  END VDD
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 10 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 10 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 10 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 10 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 10 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 10 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 10 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 10 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 10 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 10 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 10 160 ;
+  END
+END padIORINGFEED10
+
+
+MACRO padIORINGFEED3
+  CLASS PAD SPACER ;
+  ORIGIN 0 80 ;
+  FOREIGN padIORINGFEED3 0 -80 ;
+  SIZE 3 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN VDDPAD25
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    NETEXPR "VDDPAD25 VDDPAD25!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 3 1 63 ;
+        RECT 2 3 3 63 ;
+    END
+  END VDDPAD25
+  PIN VSSPAD
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    NETEXPR "VSSPAD VSSPAD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 93 1 153 ;
+        RECT 2 93 3 153 ;
+    END
+  END VSSPAD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.27 1 90.5 ;
+        RECT 2 79.27 3 90.5 ;
+    END
+  END VSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      CLASS CORE ;
+      LAYER Metal4 ;
+        RECT 0 65.5 1 76.61 ;
+        RECT 2 65.5 3 76.61 ;
+    END
+  END VDD
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 3 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 3 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 3 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 3 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 3 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 3 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 3 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 3 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 3 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 3 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 3 160 ;
+  END
+END padIORINGFEED3
+
+
+MACRO padIORINGFEED5
+  CLASS PAD SPACER ;
+  ORIGIN 0 80 ;
+  FOREIGN padIORINGFEED5 0 -80 ;
+  SIZE 5 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN VDDPAD25
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    NETEXPR "VDDPAD25 VDDPAD25!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 3 1 63 ;
+        RECT 4 3 5 63 ;
+    END
+  END VDDPAD25
+  PIN VSSPAD
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    NETEXPR "VSSPAD VSSPAD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 93 1 153 ;
+        RECT 4 93 5 153 ;
+    END
+  END VSSPAD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.27 1 90.5 ;
+        RECT 4 79.27 5 90.5 ;
+    END
+  END VSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      CLASS CORE ;
+      LAYER Metal4 ;
+        RECT 0 65.5 1 76.61 ;
+        RECT 4 65.5 5 76.61 ;
+    END
+  END VDD
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 5 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 5 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 5 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 5 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 5 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 5 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 5 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 5 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 5 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 5 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 5 160 ;
+  END
+END padIORINGFEED5
+
+
+MACRO padIORINGFEED60
+  CLASS PAD SPACER ;
+  ORIGIN 0 80 ;
+  FOREIGN padIORINGFEED60 0 -80 ;
+  SIZE 60 BY 240 ;
+  SYMMETRY X Y R90 ;
+  SITE IOSite ;
+  PIN VDDPAD25
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    NETEXPR "VDDPAD25 VDDPAD25!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 3 1 63 ;
+        RECT 59 3 60 63 ;
+    END
+  END VDDPAD25
+  PIN VSSPAD
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    NETEXPR "VSSPAD VSSPAD!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 93 1 153 ;
+        RECT 59 93 60 153 ;
+    END
+  END VSSPAD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal4 ;
+        RECT 0 79.27 1 90.5 ;
+        RECT 59 79.27 60 90.5 ;
+    END
+  END VSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      CLASS CORE ;
+      LAYER Metal4 ;
+        RECT 0 65.5 1 76.61 ;
+        RECT 59 65.5 60 76.61 ;
+    END
+  END VDD
+  OBS
+    LAYER Metal1 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal2 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal3 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal4 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal5 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal6 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal7 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal8 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal9 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal10 ;
+      RECT 0 -80 60 160 ;
+    LAYER Metal11 ;
+      RECT 0 -80 60 160 ;
+  END
+END padIORINGFEED60
+
+END LIBRARY

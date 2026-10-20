@@ -1,0 +1,15 @@
+$> lec
+
+
+1. GUI Mode 
+- Library define
+- Read the Golden Design(RTL)
+- Read the Revised Design(Gate Level Netlist)
+- Set the compare points up
+- Go to lec mode 
+- Compare
+
+2. Batch Mode (script based)
+After lec is invoked, type the below command at the console
+
+SETUP> dofile ./script/script.tcl

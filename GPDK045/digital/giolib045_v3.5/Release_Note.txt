@@ -1,0 +1,120 @@
+
+                   GIOLIB045 Release Note
+	           ======================
+		   
+1. Database Revisions:
+
+Revision: GIOLIB045_v3.2 (Date: 2014-Jul-09)
+------------------------------------------------------------------------------------------------------------------------
+   Database Contents                       |  Description
+------------------------------------------------------------------------------------------------------------------------
+ (1) giolib045/PADDOZ/{symbol,symbolPT,    | Updated 'PAD' pin direction to 'Output' (from 'InputOutput') to match with
+     schematic,layout,abstract,extracted}, | the Verilog entry.
+     giolib045.lef, giolib045.cdl          |  
+
+ (2) giolib045/IORINGDOZ/{symbol,symbolPT, | Updated 'PAD' pin direction to 'Output' (from 'InputOutput') to match with
+     schematic,layout,abstract},           | the Verilog entry.
+     giolib045.cdl                         |  
+ 
+ (3) giolib045/IORINGDO/{symbol,symbolPT,  | Updated 'PAD' pin direction to 'Output' (from 'InputOutput') to match with
+     schematic,layout,abstract},           | the Verilog entry.
+     giolib045.cdl                         |  
+       
+ (4) giolib045/PADDI/{layout,abstract      | Updated 'PAD' pin direction to 'Input' (from 'InputOutput') to match with
+     extracted}, giolib045.lef             | the Verilog entry.
+
+ (5) giolib045/IORINGDI/{symbol,symbolPT,  | Updated 'PAD' pin direction to 'Input' (from 'InputOutput') to match with
+     schematic,layout,abstract},           | the Verilog entry.
+     giolib045.cdl                         |
+------------------------------------------------------------------------------------------------------------------------
+ Note: 
+ (a) The compressed 'giolib045_v3.2.tgz' file bundles these two datasets: (i)  giolib045 
+                                                                          (ii) gsclib045_tech  (the derived ITDB)
+ (b) The base 'gpdk045' technology dataset is not bundled and user should obtain it separately.
+ 
+
+Revision: GIOLIB045_v3.1_20140623
+------------------------------------------------------------------------------------------------------------------------
+   Database Contents                       |  Description
+------------------------------------------------------------------------------------------------------------------------
+  (1) giolib045/PAD<x>/{layout, abstract}  | Improved the pin-cutout for VLS-XL routing; and changed the 'PAD' pin
+                                           | from Metal1 to Metal11.
+  (2) giolib045/padIORINGCORNER/layout     | Set pin connectivity to 'Strong Connection' for support to VLS-XL; and
+                                           | deleted the stranded DRC markers.
+  (3) giolib045/IORINGVDD/{layout,abstract}| Improved VDD terminal and pin-cutout for VLS-XL.
+  (4) giolib045/IORINGVSS/{layout,abstract}| Improved VDD terminal and pin-cutout for VLS-XL.
+  (5) lef/giolib045.lef                    | The macro LEF file with all pad cells.
+  (6) cdl/giolib045.cdl                    | The CDL netlist file with all pad cells.
+  (7) AMSFF_database_diagram.pdf           | The recommended database structure.
+  ===================================================================================================================== 
+  DRC Status: test_pad/layout              | PVS DRC = E0      (Ref: 'gpdk045_v4.0' rule file)
+  LVS Status: test_pad/{layout_LPpllchip,  | PVS LVS = Matched (Ref: 'gpdk045_v4.0' rule file)
+                      schematic_LPpllchip} | 					  
+ ----------------------------------------------------------------------------------------------------------------------
+  Notes: 
+  (a) PVS-LVS
+      These extra PVS-LVS rules are needed:
+      ------------------------------------------------------------------------------------
+         lvs_black_box BONDPAD52 -source_layout;
+         lvs_filter_device padIORINGCORNER (padIORINGCORNER) -source_schematic; 
+      ------------------------------------------------------------------------------------
+      
+  (b) The associated ITDB technology libraries
+      i.  The derived 'gsclib045_tech' technology libary is available seperately in 'gsclib045_tech_v4.1_20140623.tgz'
+      ii. The base 'gpdk045' technology dataset is available separately.
+ 
+
+Revision: GIOLIB045_v3.0 (Date: 2012-Jul-27)
+------------------------------------------------------------------------------------------------------------------------
+  Database Contents                       |  Description
+------------------------------------------------------------------------------------------------------------------------
+  giolib045/Info/ReadMe                   | Added info: Multi-supply/ground methodolgy
+  giolib045/PAD<x>/layout                 | Added pSub.dra polygon for distinguishing the psuedo ground 'VSS' from 
+                                          | thee main ground 'VSSIOR'
+  giolib045/test_pad/layout               | All pads for DRC validation 
+  giolib045/test_pad/{layout_LPpllchip,   | Example: Pads used in 'zambezi45/LP_pll_chip/layout': DRC=E0, LVS=Matched
+                      schematic_LPpllchip}|
+------------------------------------------------------------------------------------------------------------------------
+
+
+Revision: GIOLIB045_v2.0 (Date: 2012-Mar-19)
+------------------------------------------------------------------------------------------------------------------------
+  Database Contents               |  Description
+------------------------------------------------------------------------------------------------------------------------
+  giolib045/Info/ReadMe           | Brief docs (cell description and recommened use-model)
+  giolib045/test_pads/layout      | Test view for DRC
+                     /schematic   | Test logic in the digital pads: PADDB, PADDI, PADDO, PADDOZ
+		     /adexl_sch   | ADE-XL state for Spectre simulation to the pad 'schematic' view
+		     /adexl_ext   | ADE-XL state for Spectre simulation to the pad 'extracted' view
+  giolib045/<cellName>/extracted  | The extracted view with RC parasitics (from QRC extraction)
+  LIBS/GPDK045/giolib45/cdl       | A directory with CDL netlist (from schematic view)
+  LIBS/GPDK045/giolib45/spectre   | A directory with Spectre netlists (from schematic and extracted view) 
+------------------------------------------------------------------------------------------------------------------------
+
+
+Revision: GIOLIB045_v1.0 (Date: 2011-Apr-15)
+          Preliminary revision that derived from 'giolib090'.
+--------------------------------------------------------------------------------
+  Database Contents               |  Description
+--------------------------------------------------------------------------------
+  LIBS/GPDK045/giolib045          | Root directory of Generic IO library, 45nm
+--------------------------------------------------------------------------------
+  oa22/giolib045                  | Virtuoso library (Linux directory)
+  timing/pad_{FF|SS|TT}_s1vg.lib  | Timing file
+  vlog/pad_{FF|SS|TT}_s1vg.v      | Verilog file
+  vhdl/pad_{FF|SS|TT}_s1vg.v      | VHDL file
+  lef/giolib045.lef               | Macro LEF file
+  html/{slow|fast|typical}/index.html | Documentation in HTML
+--------------------------------------------------------------------------------
+
+2. Database location:
+   In AMSFF database, the recommended location for GIOLIB045 is:  <AMSFF_Root_Dir>/LIBS/GPDK045/<giolib045_vx.x>
+   Then, create a symbolic link 'giolib045' to a specific GIOLIB045 version.
+   
+
+3. Pad and IO cell info:
+   Please refer to this text view: giolib045/Info/ReadMe 
+   
+4. Process technology: GPDK045 (Cadence Generic Process Kit, 45nm node).
+   Recommended version: gpdk045_v4.0 or later versions.
+   

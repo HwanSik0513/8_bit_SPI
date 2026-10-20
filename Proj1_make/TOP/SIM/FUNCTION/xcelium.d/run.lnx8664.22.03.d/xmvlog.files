@@ -2,12 +2,7 @@
 // File created by:  xrun
 // Do not modify this file
 //
-/home/hah003/PROJ1/Proj1_make/TOP/SIM/TESTBENCH/tb_async_fifo.v
-/home/hah003/PROJ1/Proj1_make/TOP/SIM/TESTBENCH/tb_bufg_sim_stub.v
-/home/hah003/PROJ1/Proj1_make/TOP/SIM/TESTBENCH/tb_register_block.v
 /home/hah003/PROJ1/Proj1_make/TOP/SIM/TESTBENCH/tb_spi_bridge_top.v
-/home/hah003/PROJ1/Proj1_make/TOP/SIM/TESTBENCH/tb_spi_master_slave.v
-/home/hah003/PROJ1/Proj1_make/TOP/SIM/TESTBENCH/tb_spi_slave.v
 /home/hah003/PROJ1/Proj1_make/TOP/RTL/Async_fifo.v
 /home/hah003/PROJ1/Proj1_make/TOP/RTL/Pulse_sync.v
 /home/hah003/PROJ1/Proj1_make/TOP/RTL/Register_block.v

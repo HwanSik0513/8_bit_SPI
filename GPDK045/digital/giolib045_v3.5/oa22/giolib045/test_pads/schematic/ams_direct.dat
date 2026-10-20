@@ -1,0 +1,49 @@
+$FILE_FORMAT_VERSION
+	Version 1.1;
+$END
+$VECTOR_PREFERENCE
+	descending;
+$END
+$GLOBAL_SIGNALS
+	VDD!:::;
+	VDDIOR!:::;
+	VSS!:::;
+	VSSIOR!:::;
+	gnd!:::;
+$END
+$VERILOG_NAME_MAP_LIST
+	net:VSS!:cds_globals.\\VSS! ;
+	net:VDD!:cds_globals.\\VDD! ;
+	net:gnd!:cds_globals.\\gnd! ;
+	net:VDDIOR!:cds_globals.\\VDDIOR! ;
+	net:VSSIOR!:cds_globals.\\VSSIOR! ;
+$END
+$TIMESTAMP
+	1326091791=9-giolib0455-PADDI;
+	1326091750=9-giolib0455-PADDI6-symbol;
+	1326091846=9-giolib0455-PADDB;
+	1326091846=9-giolib0455-PADDB6-symbol;
+	1326091825=9-giolib0455-PADDO;
+	1326091746=9-giolib0455-PADDO6-symbol;
+	1326091849=9-giolib0456-PADDOZ;
+	1326091849=9-giolib0456-PADDOZ6-symbol;
+	1322548730=9-analogLib3-res;
+	1236576110=9-analogLib3-res6-symbol;
+	1322548730=9-analogLib3-cap;
+	1236576105=9-analogLib3-cap6-symbol;
+	1322548730=9-analogLib6-vpulse;
+	1236576103=9-analogLib6-vpulse6-symbol;
+	1322548730=9-analogLib3-vdc;
+	1236576109=9-analogLib3-vdc6-symbol;
+	1331935725=verilog.vams;
+$END
+$DESIGN_VARIABLES
+	vddior:;
+	vdd:;
+$END
+$PRIMITIVE_TERM_MAP
+	analogLib:res:symbol:*:4-PLUS1-15-MINUS30-(FUNCTION minus(root("PLUS")));
+	analogLib:cap:symbol:*:4-PLUS1-15-MINUS30-(FUNCTION minus(root("PLUS")));
+	analogLib:vpulse:symbol:*:4-PLUS1-p5-MINUS30-(FUNCTION minus(root("PLUS")));
+	analogLib:vdc:symbol:*:4-PLUS1-p5-MINUS30-(FUNCTION minus(root("PLUS")));
+$END

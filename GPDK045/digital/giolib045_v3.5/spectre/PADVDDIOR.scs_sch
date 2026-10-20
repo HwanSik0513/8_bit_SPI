@@ -1,0 +1,31 @@
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: IORINGVDDIOR
+// View name: schematic
+subckt IORINGVDDIOR inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+    M4 (inh_VDDIOR inh_VSSIOR inh_VSSIOR inh_VSSIOR) g45n2svt w=(560u) \
+        l=200n nf=56 as=57p ad=56p ps=591.4u pd=571.2u nrd=178.571u \
+        nrs=181.76u sa=150n sb=150n sd=200n sca=26.54226 scb=0.03127 \
+        scc=0.00222 m=(1)
+ends IORINGVDDIOR
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:44:49 2012 )
+// Library name: giolib045
+// Cell name: PADVDDIOR
+// View name: schematic
+
+simulator lang=spectre
+
+subckt PADVDDIOR VDDIOR! VSSIOR! VDD VSS
+I2 (VDDIOR!) BONDPAD52
+I0 (VDD VDDIOR! VSS VSSIOR!) IORINGVDDIOR
+ends PADVDDIOR
+// End of subcircuit definition.
+

@@ -1,0 +1,142 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  giolib045
+* Top Cell Name: PADDO
+* View Name:     schematic
+* Netlisted on:  Mar 15 07:39:25 2012
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL VDD!
++        VDDIOR!
++        VSS!
++        VSSIOR!
+
+*.PIN VDD!
+*+    VDDIOR!
+*+    VSS!
+*+    VSSIOR!
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    BONDPAD52
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT BONDPAD52 PAD
+*.PININFO PAD:B
+.ENDS
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    levelup_latch
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT levelup_latch nmos nmos25 pmos pmos25 inh_VDD inh_VDDIOR inh_VSS 
++ inh_VSSIOR
+*.PININFO nmos:I pmos:I inh_VDD:I inh_VDDIOR:I inh_VSS:I inh_VSSIOR:I nmos25:O 
+*.PININFO pmos25:O
+MPM4 net0189 nmos inh_VDD inh_VDD g45p1svt m=1 l=45n w=4u
+MPM3 net0218 net0189 inh_VDD inh_VDD g45p1svt m=1 l=45n w=4u
+MPM2 net0227 net59 inh_VDD inh_VDD g45p1svt m=1 l=45n w=4u
+MPM1 net59 pmos inh_VDD inh_VDD g45p1svt m=1 l=45n w=4u
+MM15 net093 net0174 inh_VSSIOR inh_VSSIOR g45n2svt m=1 l=150n w=500n
+MM11 net0174 net093 inh_VSSIOR inh_VSSIOR g45n2svt m=1 l=150n w=500n
+MM21 pmos25 net0174 inh_VSSIOR inh_VSSIOR g45n2svt m=1 l=150n w=5u
+MM19 net0110 net0106 inh_VSSIOR inh_VSSIOR g45n2svt m=1 l=150n w=500n
+MM20 net0106 net0110 inh_VSSIOR inh_VSSIOR g45n2svt m=1 l=150n w=500n
+MM26 pmos25 net0174 inh_VSSIOR inh_VSSIOR g45n2svt m=1 l=150n w=5u
+MM23 nmos25 net0110 inh_VSSIOR inh_VSSIOR g45n2svt m=1 l=150n w=5u
+MM27 pmos25 net0174 inh_VSSIOR inh_VSSIOR g45n2svt m=1 l=150n w=5u
+MM30 nmos25 net0110 inh_VSSIOR inh_VSSIOR g45n2svt m=1 l=150n w=5u
+MNM4 net0218 net0189 inh_VSS inh_VSS g45n1svt m=1 l=45n w=2u
+MNM6 net093 net59 inh_VSS inh_VSS g45n1svt m=1 l=45n w=5u
+MNM1 net59 pmos inh_VSS inh_VSS g45n1svt m=1 l=45n w=2u
+MNM2 net0227 net59 inh_VSS inh_VSS g45n1svt m=1 l=45n w=2u
+MNM7 net0106 net0189 inh_VSS inh_VSS g45n1svt m=1 l=45n w=5u
+MNM5 net0174 net0227 inh_VSS inh_VSS g45n1svt m=1 l=45n w=5u
+MNM8 net0110 net0218 inh_VSS inh_VSS g45n1svt m=1 l=45n w=5u
+MNM3 net0189 nmos inh_VSS inh_VSS g45n1svt m=1 l=45n w=2u
+MM14 net0174 net093 inh_VDDIOR inh_VDDIOR g45p2svt m=1 l=150n w=4u
+MM18 net093 net0174 inh_VDDIOR inh_VDDIOR g45p2svt m=1 l=150n w=4u
+MM24 net0110 net0106 inh_VDDIOR inh_VDDIOR g45p2svt m=1 l=150n w=5u
+MM22 net0106 net0110 inh_VDDIOR inh_VDDIOR g45p2svt m=1 l=150n w=5u
+MM13 nmos25 net0110 inh_VDDIOR inh_VDDIOR g45p2svt m=1 l=150n w=5u
+MM12 pmos25 net0174 inh_VDDIOR inh_VDDIOR g45p2svt m=1 l=150n w=4u
+MM29 nmos25 net0110 inh_VDDIOR inh_VDDIOR g45p2svt m=1 l=150n w=5u
+MM28 nmos25 net0110 inh_VDDIOR inh_VDDIOR g45p2svt m=1 l=150n w=5u
+MM31 pmos25 net0174 inh_VDDIOR inh_VDDIOR g45p2svt m=1 l=150n w=4u
+.ENDS
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    ESDCore04
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ESDCore04 NMos PAD PMos inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+*.PININFO NMos:I PMos:I inh_VDD:I inh_VDDIOR:I inh_VSS:I inh_VSSIOR:I PAD:B
+MM8 PAD NMos inh_VSSIOR inh_VSSIOR g45n2svt m=1 l=200n w=80u
+MM4 PAD inh_VSSIOR inh_VSSIOR inh_VSSIOR g45n2svt m=1 l=200n w=480u
+MM9 PAD PMos inh_VDDIOR inh_VDDIOR g45p2svt m=1 l=200n w=160u
+MM6 PAD inh_VDDIOR inh_VDDIOR inh_VDDIOR g45p2svt m=1 l=200n w=400u
+.ENDS
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    nonzoutlogic
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nonzoutlogic A NMOS PMOS inh_VDD inh_VSS
+*.PININFO A:I inh_VDD:I inh_VSS:I NMOS:O PMOS:O
+MNM0 net79 net79 inh_VSS inh_VSS g45n1svt m=1 l=45n w=500n
+MNM4 NMOS OEB inh_VSS inh_VSS g45n1svt m=1 l=45n w=500n
+MNM2 OEB OE inh_VSS inh_VSS g45n1svt m=1 l=45n w=500n
+MNM3 NMOS A inh_VSS inh_VSS g45n1svt m=1 l=45n w=500n
+MNM5 PMOS OE NMOS inh_VSS g45n1svt m=1 l=45n w=500n
+MPM1 OE net79 inh_VDD inh_VDD g45p1svt m=1 l=45n w=1u
+MPM2 OEB OE inh_VDD inh_VDD g45p1svt m=1 l=45n w=1u
+MPM3 PMOS A inh_VDD inh_VDD g45p1svt m=1 l=45n w=1u
+MPM4 NMOS OEB PMOS inh_VDD g45p1svt m=1 l=45n w=1u
+MPM5 PMOS OE inh_VDD inh_VDD g45p1svt m=1 l=45n w=1u
+.ENDS
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    IORINGDO
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT IORINGDO A PAD inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+*.PININFO A:I inh_VDD:I inh_VDDIOR:I inh_VSS:I inh_VSSIOR:I PAD:B
+XI2 nmos nmos25 pmos pmos25 inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR / 
++ levelup_latch
+XI3 nmos25 PAD pmos25 inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR / ESDCore04
+XI1 A nmos pmos inh_VDD inh_VSS / nonzoutlogic
+.ENDS
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    PADDO
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT PADDO A PAD
+*.PININFO A:I PAD:O
+XI2 PAD / BONDPAD52
+XI1 A PAD VDD! VDDIOR! VSS! VSSIOR! / IORINGDO
+.ENDS
+

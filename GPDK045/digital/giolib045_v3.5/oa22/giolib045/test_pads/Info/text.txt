@@ -1,0 +1,18 @@
+
+Info: PVS Verification to pad cells
+===================================
+
+1. Status
+   A. PVS DRC = E0      (layout_LPpllchip view)
+   B. PVS LVS = Matched (layout_LPpllchip vs. schematic_LPpllchip)
+
+2. PVS LVS Setup Requirement:
+   A. The .simrc file with this entry:
+      simPrintInhConnAttributes = 't ;;Else, PVS-LVS has "ERROR (OSSHNL-249)"
+    
+   B. A local/additional PVS rule file with these entries:
+      -----------------------------------------------------------
+      lvs_black_box BONDPAD52 -source_layout;
+      lvs_filter_device padIORINGCORNER (padIORINGCORNER) -source_schematic;
+      lvs_netlist yes -allow_inconsistent_model;
+      -----------------------------------------------------------

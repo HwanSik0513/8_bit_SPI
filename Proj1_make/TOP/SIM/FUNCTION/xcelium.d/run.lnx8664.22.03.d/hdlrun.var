@@ -91,4 +91,6 @@ define VIEW_MAP ( $VIEW_MAP \
 , .v.Z => v \
 )
 define ELAB_SNAPSHOT
-define SNAPSHOT worklib.tb_async_fifo:v
+define SNAPSHOT worklib.tb_spi_bridge_top:v
+define ELAB_SNAPSHOT
+define SNAPSHOT worklib.tb_spi_bridge_top:v

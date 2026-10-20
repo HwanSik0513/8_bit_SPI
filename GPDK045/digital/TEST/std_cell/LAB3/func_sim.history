@@ -1,0 +1,1 @@
+s1(01Sep2026:18:43:11):  xrun -64bit +max_err_count+50 +define+function_sim -access +rwc -profile -profthread -gui TB_std_cell.v ../../../gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v -l ./func_sim.log 

@@ -9,12 +9,7 @@
 +rwc
 -gui
 +libext+.v
-../TESTBENCH/tb_async_fifo.v
-../TESTBENCH/tb_bufg_sim_stub.v
-../TESTBENCH/tb_register_block.v
 ../TESTBENCH/tb_spi_bridge_top.v
-../TESTBENCH/tb_spi_master_slave.v
-../TESTBENCH/tb_spi_slave.v
 ../../RTL/Async_fifo.v
 ../../RTL/Pulse_sync.v
 ../../RTL/Register_block.v

@@ -1,0 +1,14 @@
+// Generated for: spectre (Mar 15 07:36:53 2012 )
+// Library name: giolib045
+// Cell name: PADANALOG
+// View name: schematic
+
+simulator lang=spectre
+
+subckt PADANALOG AY VSS VDDIOR! VDD VSSIOR!
+M4 (AY VSSIOR! VSSIOR! VSSIOR!) g45n2svt w=(560u) l=200n nf=56 as=57p \
+        ad=56p ps=591.4u pd=571.2u nrd=178.571u nrs=181.76u sa=150n \
+        sb=150n sd=200n sca=26.54226 scb=0.03127 scc=0.00222 m=(1)
+ends PADANALOG
+// End of subcircuit definition.
+

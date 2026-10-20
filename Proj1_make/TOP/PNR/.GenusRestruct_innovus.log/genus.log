@@ -1,0 +1,49 @@
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (0 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (13 seconds elapsed).
+
+#@ Processing -execute option
+@genus 1> encrypt -tcl coeGenusHelpers.tcl > coeGenusHelpers.enc; tcl_source coeGenusInit.tcl
+  Setting attribute of root '/': 'flow_verbose' = false
+  Setting attribute of root '/': 'metric_enable' = false
+Warning : Partition Based Synthesis (PBS) is turned off. Expect very long runtime. [PBS-3]
+  Setting attribute of root '/': 'partition_based_synthesis' = false
+  Setting attribute of root '/': 'pbs_debug_level' = 0
+  Setting attribute of root '/': 'tinfo_tstamp_file' = 
+  Setting attribute of root '/': 'write_verification_files' = false
+  Setting attribute of root '/': 'write_vlog_bit_blast_bus_connections' = true
+  Setting attribute of root '/': 'write_vlog_line_wrap_limit' = 3990
+  Setting attribute of root '/': 'metric_auto_capture' = false
+  Setting attribute of root '/': 'power_unit' = nW
+  Setting attribute of root '/': 'power_format' = %.4f
+  Setting attribute of root '/': 'avoid_tied_inputs' = false
+  Setting attribute of root '/': 'joules_silent' = true
+  Setting attribute of root '/': 'read_lef_ver60' = true
+Warning : This attribute will be obsolete in a next major release. [TUI-32]
+        : attribute: 'exp_opt_generic_timing_area_aware', object type: 'root'
+  Setting attribute of root '/': 'exp_opt_generic_timing_area_aware' = false
+
+Reading library /home/ex_poly2/SoC/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib
+  Message Summary for Library both libraries:
+  *******************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 49
+  Appending library. [LBR-3]: 1
+  *******************************************
+ 
+
+  According to qrc_tech_file, there are total 11 routing layers [ V(5) / H(6) ]
+
+Done reading qrc_tech_file
+
+
+Another Ctrl-C within 1 second will terminate the tool.
+CURRENT RESOURCES: RT {elapsed: 180s, ST: 15s, FG: 15s, CPU: 0.4%}, MEM {curr: 2.6G, peak: 8.7G, phys curr: 0.4G, phys peak: 0.4G}, SYS {load: 0.5, cpu: 80, total: 377.0G, free: 315.7G}
+Abnormal exit.

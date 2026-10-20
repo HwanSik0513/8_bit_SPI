@@ -1,5 +1,5 @@
 xrun(64): 22.03-s012: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.03-s012: Started on Oct 01, 2026 at 16:14:43 KST
+TOOL:	xrun(64)	22.03-s012: Started on Oct 16, 2026 at 15:18:56 KST
 xrun
 	-64bit
 	+max_err_count+50
@@ -7,12 +7,7 @@ xrun
 	-access +rwc
 	-gui
 	+libext+.v
-	../TESTBENCH/tb_async_fifo.v
-	../TESTBENCH/tb_bufg_sim_stub.v
-	../TESTBENCH/tb_register_block.v
 	../TESTBENCH/tb_spi_bridge_top.v
-	../TESTBENCH/tb_spi_master_slave.v
-	../TESTBENCH/tb_spi_slave.v
 	../../RTL/Async_fifo.v
 	../../RTL/Pulse_sync.v
 	../../RTL/Register_block.v
@@ -36,34 +31,113 @@ xcelium>
 xcelium> source /tools/cadence/XCELIUM2203/tools/xcelium/files/xmsimrc
 xcelium> database -open waves -into waves.shm -default
 Created default SHM database waves
-xcelium> probe -create -shm tb_async_fifo.errors tb_async_fifo.i tb_async_fifo.i_rd_en tb_async_fifo.i_wr_data tb_async_fifo.i_wr_en tb_async_fifo.o_empty tb_async_fifo.o_full tb_async_fifo.o_rd_data tb_async_fifo.o_rd_level tb_async_fifo.rd_clk tb_async_fifo.rd_rst_n tb_async_fifo.sb_mem tb_async_fifo.sb_rd_ptr tb_async_fifo.sb_wr_ptr tb_async_fifo.wr_clk tb_async_fifo.wr_rst_n tb_register_block.ACLK tb_register_block.errors tb_register_block.i_bus_addr tb_register_block.i_bus_rd_en tb_register_block.i_bus_wdata tb_register_block.i_bus_wr_en tb_register_block.i_rx_fifo_empty tb_register_block.i_rx_fifo_full tb_register_block.i_rx_fifo_level tb_register_block.i_rx_fifo_rd_data tb_register_block.i_rx_overflow_pulse_sync tb_register_block.i_spi_busy_sync tb_register_block.i_tx_fifo_full tb_register_block.o_bus_rdata tb_register_block.o_overflow tb_register_block.o_rx_fifo_rd_en tb_register_block.o_rx_valid tb_register_block.o_tx_fifo_wr_data tb_register_block.o_tx_fifo_wr_en tb_register_block.rdata tb_register_block.rst_n tb_register_block.rx_head tb_register_block.rx_queue tb_register_block.rx_tail tb_spi_bridge_top.ACLK tb_spi_bridge_top.ARESETn tb_spi_bridge_top.errors tb_spi_bridge_top.expected_rx_byte tb_spi_bridge_top.i_bus_addr tb_spi_bridge_top.i_bus_rd_en tb_spi_bridge_top.i_bus_wdata tb_spi_bridge_top.i_bus_wr_en tb_spi_bridge_top.miso_bit_idx tb_spi_bridge_top.miso_byte_ready tb_spi_bridge_top.miso_capturing tb_spi_bridge_top.miso_last_byte tb_spi_bridge_top.miso_shift tb_spi_bridge_top.o_bus_rdata tb_spi_bridge_top.o_dbg_cs_n tb_spi_bridge_top.o_dbg_miso tb_spi_bridge_top.o_dbg_mosi tb_spi_bridge_top.o_dbg_sclk tb_spi_bridge_top.o_overflow tb_spi_bridge_top.o_rx_valid tb_spi_bridge_top.rx_frames_checked tb_spi_bridge_top.rx_val tb_spi_bridge_top.status_val tb_spi_master_slave.SCLK tb_spi_master_slave.errors tb_spi_master_slave.expected_byte tb_spi_master_slave.frames_checked tb_spi_master_slave.m_o_busy tb_spi_master_slave.m_o_rx_captured tb_spi_master_slave.m_o_rx_captured_valid tb_spi_master_slave.rst_n tb_spi_master_slave.s_i_rx_fifo_full tb_spi_master_slave.s_i_tx_fifo_empty tb_spi_master_slave.s_i_tx_fifo_rd_data tb_spi_master_slave.s_o_rx_wr_data tb_spi_master_slave.s_o_rx_wr_en tb_spi_master_slave.s_o_spi_busy tb_spi_master_slave.w_cs_n tb_spi_master_slave.w_miso tb_spi_master_slave.w_mosi tb_spi_slave.SCLK tb_spi_slave.errors tb_spi_slave.i_cs_n tb_spi_slave.i_mosi tb_spi_slave.i_rx_fifo_full tb_spi_slave.i_tx_fifo_empty tb_spi_slave.i_tx_fifo_rd_data tb_spi_slave.o_miso tb_spi_slave.o_rx_overflow_pulse tb_spi_slave.o_rx_wr_data tb_spi_slave.o_rx_wr_en tb_spi_slave.o_spi_busy tb_spi_slave.o_tx_fifo_rd_en tb_spi_slave.overflow_count tb_spi_slave.rst_n tb_spi_slave.rx_capture tb_spi_slave.rx_capture_valid
+xcelium> probe -create -shm tb_spi_bridge_top.ACLK tb_spi_bridge_top.ARESETn tb_spi_bridge_top.acc_base tb_spi_bridge_top.acc_log tb_spi_bridge_top.acc_n tb_spi_bridge_top.base tb_spi_bridge_top.checks tb_spi_bridge_top.cs_cnt tb_spi_bridge_top.duty_viol tb_spi_bridge_top.edge_n tb_spi_bridge_top.errors tb_spi_bridge_top.fT tb_spi_bridge_top.first_idx tb_spi_bridge_top.first_val tb_spi_bridge_top.fr_cnt tb_spi_bridge_top.i tb_spi_bridge_top.i_bus_addr tb_spi_bridge_top.i_bus_rd_en tb_spi_bridge_top.i_bus_wdata tb_spi_bridge_top.i_bus_wr_en tb_spi_bridge_top.ish tb_spi_bridge_top.k tb_spi_bridge_top.last_pos tb_spi_bridge_top.lv tb_spi_bridge_top.miso_log tb_spi_bridge_top.mode_viol tb_spi_bridge_top.mon_arm tb_spi_bridge_top.mosi_log tb_spi_bridge_top.msh tb_spi_bridge_top.nz tb_spi_bridge_top.nz_first tb_spi_bridge_top.nzn tb_spi_bridge_top.o_bus_rdata tb_spi_bridge_top.o_dbg_cs_n tb_spi_bridge_top.o_dbg_miso tb_spi_bridge_top.o_dbg_mosi tb_spi_bridge_top.o_dbg_sclk tb_spi_bridge_top.o_overflow tb_spi_bridge_top.o_rx_valid tb_spi_bridge_top.ok tb_spi_bridge_top.period_viol tb_spi_bridge_top.rd tb_spi_bridge_top.run_len tb_spi_bridge_top.seen_busy tb_spi_bridge_top.seen_idle tb_spi_bridge_top.st tb_spi_bridge_top.vals
 Created probe 1
 xcelium> run
-[55000] TEST 1: RX prefetch + pop-on-read
-[85000] PASS: RX_VALID set after prefetch = 1
-[105000] PASS: RX_DATA_REG == 0x77 = 77
-[115000] PASS: LID clears after read (consumed) = 0
-[115000] TEST 2: TX_DATA_REG write + readback
-[125000] TEST 1: fill to full
-[140000] Starting 8-frame master<->slave loopback check
-[145000] FAIL: o_tx_fifo_wr_en pulsed expected=1 got=0
-[145000] FAIL: o_tx_fifo_wr_data == 0xC3 expected=c3 got=0
-[165000] FAIL: TX_DATA_REG readback == 0xC3 expected=c3 got=0
-[195000] TEST 1: RX path end-to-end, 6 frames
-[205000] FAIL: EG unaffected by unrelated write expected=c3 got=0
-[205000] TEST 3: FIFO_CLEAR drain
-[220000] TEST 1: normal byte transfer (0xA5)
-[455000] PASS: o_full asserted after 16 writes
-[455000] PASS: RX FIFO drained (empty) = 1
-[455000] PASS: RX_VALID clear after drain = 0
-[455000] TEST 4: OVERFLOW sticky set/clear
-[475000] TEST 2: drain to empty, check order
-[485000] PASS: o_overflow set after pulse = 1
-[505000] PASS: STATUS_REG.OVERFLOW bit set = 1
-[535000] PASS: low cleared after OVERFLOW_CLEAR = 0
-[535000] TESTS FAILED: 4 error(s) (tb_register_block)
-Simulation complete via $finish(1) at time 535 NS + 0
-../TESTBENCH/tb_register_block.v:228     $finish;
+[100000] TEST 0: reset state
+[120000] PASS: CONTROL after reset (= 0x0)
+[140000] PASS: TX_DATA after reset (= 0x0)
+[160000] PASS: FIFO_LEVEL after reset (= 0x0)
+[160000] PASS: OVERFLOW low after reset
+[160000] TEST 1: RX path
+[1020000] PASS: RX byte arrived before timeout
+[1020000] PASS: RX_DATA == frame counter (= 0x0)
+[1020000] PASS: RX_DATA == MOSI pin monitor
+[1780000] PASS: RX byte arrived before timeout
+[1780000] PASS: RX_DATA == frame counter (= 0x1)
+[1780000] PASS: RX_DATA == MOSI pin monitor
+[2540000] PASS: RX byte arrived before timeout
+[2540000] PASS: RX_DATA == frame counter (= 0x2)
+[2540000] PASS: RX_DATA == MOSI pin monitor
+[3300000] PASS: RX byte arrived before timeout
+[3300000] PASS: RX_DATA == frame counter (= 0x3)
+[3300000] PASS: RX_DATA == MOSI pin monitor
+[4060000] PASS: RX byte arrived before timeout
+[4060000] PASS: RX_DATA == frame counter (= 0x4)
+[4060000] PASS: RX_DATA == MOSI pin monitor
+[4820000] PASS: RX byte arrived before timeout
+[4820000] PASS: RX_DATA == frame counter (= 0x5)
+[4820000] PASS: RX_DATA == MOSI pin monitor
+[5580000] PASS: RX byte arrived before timeout
+[5580000] PASS: RX_DATA == frame counter (= 0x6)
+[5580000] PASS: RX_DATA == MOSI pin monitor
+[6340000] PASS: RX byte arrived before timeout
+[6340000] PASS: RX_DATA == frame counter (= 0x7)
+[6340000] PASS: RX_DATA == MOSI pin monitor
+[6340000] PASS: SCLK period 40 ns (= 0x0)
+[6340000] PASS: SCLK duty 50 percent (= 0x0)
+[6340000] TEST 2: SPI_BUSY
+[8800000] PASS: SPI_BUSY observed high
+[8800000] PASS: SPI_BUSY observed low
+[8800000] TEST 3: TX path
+[13060000] PASS: 5A sent once (= 0x1)
+[13060000] PASS: MISO carries 5A within 3 frames
+[13060000] PASS: MISO bytes == FIFO-accepted bytes (1 bytes)
+[13060000] PASS: frames before first write send 00 (= 0x0)
+[13060000] PASS: frames before first write send 00 (= 0x0)
+[13060000] PASS: frames before first write send 00 (= 0x0)
+[13060000] PASS: TX_DATA readback == 5A (= 0x5a)
+[13080000] PASS: TX_DATA readback (= 0x5a)
+[17620000] PASS: C6 sent once
+[17620000] TEST 3b: back-to-back TX
+[25220000] PASS: three TX bytes sent (= 0x3)
+[25220000] PASS: TX byte 1 (= 0x11)
+[25220000] PASS: TX byte 2 (= 0x22)
+[25220000] PASS: TX byte 3 (= 0x33)
+[25220000] PASS: MISO bytes == FIFO-accepted bytes (3 bytes)
+[25220000] PASS: later frames send 00 (= 0x0)
+[25220000] TEST 3c: TX FIFO overrun
+[38900000] PASS: at least FIFO depth accepted
+[38900000] PASS: some writes rejected
+[38900000] PASS: every accepted byte sent in order (5 bytes)
+[38920000] PASS: TX readback last accepted byte (= 0xa9)
+[38920000] TEST 4: FIFO_CLEAR
+[44240000] PASS: RX FIFO holds several entries
+[44680000] PASS: FIFO_LEVEL small after clear
+[44680000] PASS: RX_VALID cleared
+[45100000] PASS: new data arrives after clear
+[45100000] PASS: no stale data after clear
+[45100000] PASS: no overflow from clear
+[45100000] TEST 4b: TX FIFO clear
+[45200000] PASS: write rejected during TX clear (= 0xd)
+[45580000] PASS: TX_CLR_BUSY returns to zero
+[51060000] PASS: cleared TX bytes never appear (= 0x0)
+[55620000] PASS: new TX byte 81 sent once
+[55620000] PASS: MISO bytes == FIFO-accepted bytes (1 bytes)
+[55620000] TEST 5: RX FIFO overflow
+[73880000] PASS: STATUS OVERFLOW RX_VALID FULL (= 0x1a)
+[73880000] PASS: OVERFLOW output high
+[73900000] PASS: FIFO_LEVEL full (= 0x10)
+[74900000] PASS: 17 stored bytes consecutive (= 0x11)
+[74900000] PASS: first byte matches MOSI log
+[74960000] PASS: dropped frames do not reappear
+[74980000] PASS: OVERFLOW sticky
+[75020000] PASS: OVERFLOW cleared
+[75020000] TEST 6: asynchronous reset
+[77204000] PASS: reset: RX_VALID low
+[77204000] PASS: reset: OVERFLOW low
+[77204000] PASS: reset: CS_N high
+[77204000] PASS: reset: SCLK stopped low
+[77700000] PASS: STATUS EMPTY after reset
+[77720000] PASS: CONTROL reset (= 0x0)
+[77740000] PASS: TX_DATA reset (= 0x0)
+[77760000] PASS: FIFO_LEVEL reset (= 0x0)
+[78200000] PASS: traffic restarts after reset
+[78200000] PASS: first RX frame after reset (= 0x0)
+[81120000] PASS: MISO reset frame 1 (= 0x0)
+[81120000] PASS: MISO reset frame 2 (= 0x0)
+[81120000] PASS: MISO reset frame 3 (= 0x0)
+[85680000] PASS: first TX after reset sent once
+[85680000] PASS: MISO bytes == FIFO-accepted bytes (1 bytes)
+[85680000] TEST 7: continuous transfer
+[108600000] PASS: 40 frames in order (= 0x28)
+[108600000] PASS: no overflow during continuous RX
+[108600000] PASS: SCLK period 40 ns (= 0x0)
+[108600000] PASS: SCLK duty 50 percent (= 0x0)
+[108600000] PASS: MOSI MISO rising-edge violations (= 0x0)
+[108600000] ALL TESTS PASSED (tb_spi_bridge_top, 90 checks)
+Simulation complete via $finish(1) at time 108600 NS + 0
+../TESTBENCH/tb_spi_bridge_top.v:1013     $finish;
 xcelium> ^C
 xcelium> exit
-TOOL:	xrun(64)	22.03-s012: Exiting on Oct 06, 2026 at 09:14:09 KST  (total: 112:59:26)
+TOOL:	xrun(64)	22.03-s012: Exiting on Oct 16, 2026 at 15:26:42 KST  (total: 00:07:46)

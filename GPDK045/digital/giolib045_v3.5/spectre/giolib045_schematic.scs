@@ -1,0 +1,870 @@
+// Generated for: spectre (Mar 15 07:36:53 2012 )
+// Library name: giolib045
+// Cell name: PADANALOG
+// View name: schematic
+
+simulator lang=spectre
+
+subckt PADANALOG AY VSS VDDIOR! VDD VSSIOR!
+M4 (AY VSSIOR! VSSIOR! VSSIOR!) g45n2svt w=(560u) l=200n nf=56 as=57p \
+        ad=56p ps=591.4u pd=571.2u nrd=178.571u nrs=181.76u sa=150n \
+        sb=150n sd=200n sca=26.54226 scb=0.03127 scc=0.00222 m=(1)
+ends PADANALOG
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: levelup_latch
+// View name: schematic
+subckt levelup_latch nmos nmos25 pmos pmos25 inh_VDD inh_VDDIOR inh_VSS \
+        inh_VSSIOR
+    PM4 (net0189 nmos inh_VDD inh_VDD) g45p1svt w=(4u) l=45n nf=2 as=560f \
+        ad=320f ps=8.56u pd=4.32u nrd=20m nrs=35m sa=140n sb=140n sd=160n \
+        sca=56.99756 scb=0.05691 scc=0.00695 m=(1)
+    PM3 (net0218 net0189 inh_VDD inh_VDD) g45p1svt w=(4u) l=45n nf=2 \
+        as=560f ad=320f ps=8.56u pd=4.32u nrd=20m nrs=35m sa=140n sb=140n \
+        sd=160n sca=56.99756 scb=0.05691 scc=0.00695 m=(1)
+    PM2 (net0227 net59 inh_VDD inh_VDD) g45p1svt w=(4u) l=45n nf=2 as=560f \
+        ad=320f ps=8.56u pd=4.32u nrd=20m nrs=35m sa=140n sb=140n sd=160n \
+        sca=56.99756 scb=0.05691 scc=0.00695 m=(1)
+    PM1 (net59 pmos inh_VDD inh_VDD) g45p1svt w=(4u) l=45n nf=2 as=560f \
+        ad=320f ps=8.56u pd=4.32u nrd=20m nrs=35m sa=140n sb=140n sd=160n \
+        sca=56.99756 scb=0.05691 scc=0.00695 m=(1)
+    M15 (net093 net0174 inh_VSSIOR inh_VSSIOR) g45n2svt w=(500n) l=150n \
+        nf=1 as=150f ad=150f ps=1.1u pd=1.1u nrd=468.75m nrs=468.75m \
+        sa=150n sb=150n sd=200n sca=114.17432 scb=0.08203 scc=0.01268 \
+        m=(1)
+    M11 (net0174 net093 inh_VSSIOR inh_VSSIOR) g45n2svt w=(500n) l=150n \
+        nf=1 as=150f ad=150f ps=1.1u pd=1.1u nrd=468.75m nrs=468.75m \
+        sa=150n sb=150n sd=200n sca=114.17432 scb=0.08203 scc=0.01268 \
+        m=(1)
+    M21 (pmos25 net0174 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    M19 (net0110 net0106 inh_VSSIOR inh_VSSIOR) g45n2svt w=(500n) l=150n \
+        nf=1 as=150f ad=150f ps=1.1u pd=1.1u nrd=468.75m nrs=468.75m \
+        sa=150n sb=150n sd=200n sca=114.17432 scb=0.08203 scc=0.01268 \
+        m=(1)
+    M20 (net0106 net0110 inh_VSSIOR inh_VSSIOR) g45n2svt w=(500n) l=150n \
+        nf=1 as=150f ad=150f ps=1.1u pd=1.1u nrd=468.75m nrs=468.75m \
+        sa=150n sb=150n sd=200n sca=114.17432 scb=0.08203 scc=0.01268 \
+        m=(1)
+    M26 (pmos25 net0174 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    M23 (nmos25 net0110 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    M27 (pmos25 net0174 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    M30 (nmos25 net0110 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    NM4 (net0218 net0189 inh_VSS inh_VSS) g45n1svt w=(2u) l=45n nf=1 \
+        as=560f ad=560f ps=2.56u pd=2.56u nrd=1.16667 nrs=1.16667 sa=140n \
+        sb=140n sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM6 (net093 net59 inh_VSS inh_VSS) g45n1svt w=(5u) l=45n nf=2 as=700f \
+        ad=400f ps=10.56u pd=5.32u nrd=16m nrs=28m sa=140n sb=140n sd=160n \
+        sca=53.83716 scb=0.05516 scc=0.00662 m=(1)
+    NM1 (net59 pmos inh_VSS inh_VSS) g45n1svt w=(2u) l=45n nf=1 as=560f \
+        ad=560f ps=2.56u pd=2.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM2 (net0227 net59 inh_VSS inh_VSS) g45n1svt w=(2u) l=45n nf=1 as=560f \
+        ad=560f ps=2.56u pd=2.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM7 (net0106 net0189 inh_VSS inh_VSS) g45n1svt w=(5u) l=45n nf=2 \
+        as=700f ad=400f ps=10.56u pd=5.32u nrd=16m nrs=28m sa=140n sb=140n \
+        sd=160n sca=53.83716 scb=0.05516 scc=0.00662 m=(1)
+    NM5 (net0174 net0227 inh_VSS inh_VSS) g45n1svt w=(5u) l=45n nf=2 \
+        as=700f ad=400f ps=10.56u pd=5.32u nrd=16m nrs=28m sa=140n sb=140n \
+        sd=160n sca=53.83716 scb=0.05516 scc=0.00662 m=(1)
+    NM8 (net0110 net0218 inh_VSS inh_VSS) g45n1svt w=(5u) l=45n nf=2 \
+        as=700f ad=400f ps=10.56u pd=5.32u nrd=16m nrs=28m sa=140n sb=140n \
+        sd=160n sca=53.83716 scb=0.05516 scc=0.00662 m=(1)
+    NM3 (net0189 nmos inh_VSS inh_VSS) g45n1svt w=(2u) l=45n nf=1 as=560f \
+        ad=560f ps=2.56u pd=2.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    M14 (net0174 net093 inh_VDDIOR inh_VDDIOR) g45p2svt w=(4u) l=150n nf=2 \
+        as=600f ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n \
+        sd=200n sca=13.21691 scb=0.01245 scc=0.00023 m=(1)
+    M18 (net093 net0174 inh_VDDIOR inh_VDDIOR) g45p2svt w=(4u) l=150n nf=2 \
+        as=600f ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n \
+        sd=200n sca=13.21691 scb=0.01245 scc=0.00023 m=(1)
+    M24 (net0110 net0106 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n \
+        nf=2 as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n \
+        sb=150n sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M22 (net0106 net0110 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n \
+        nf=2 as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n \
+        sb=150n sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M13 (nmos25 net0110 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M12 (pmos25 net0174 inh_VDDIOR inh_VDDIOR) g45p2svt w=(4u) l=150n nf=2 \
+        as=600f ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n \
+        sd=200n sca=13.21691 scb=0.01245 scc=0.00023 m=(1)
+    M29 (nmos25 net0110 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M28 (nmos25 net0110 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M31 (pmos25 net0174 inh_VDDIOR inh_VDDIOR) g45p2svt w=(4u) l=150n nf=2 \
+        as=600f ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n \
+        sd=200n sca=13.21691 scb=0.01245 scc=0.00023 m=(1)
+ends levelup_latch
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: bidirlogic
+// View name: schematic
+subckt bidirlogic A NMOS OEN PMOS inh_VDD inh_VSS
+    NM0 (OE OEN inh_VSS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM4 (NMOS OEB inh_VSS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM2 (OEB OE inh_VSS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM3 (NMOS A inh_VSS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM5 (PMOS OE NMOS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM1 (OE OEN inh_VDD inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f \
+        ad=280f ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM2 (OEB OE inh_VDD inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f \
+        ad=280f ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM3 (PMOS A inh_VDD inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f \
+        ad=280f ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM4 (NMOS OEB PMOS inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f ad=280f \
+        ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM5 (PMOS OE inh_VDD inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f \
+        ad=280f ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+ends bidirlogic
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: ESDCore04
+// View name: schematic
+subckt ESDCore04 NMos PAD PMos inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+    M8 (PAD NMos inh_VSSIOR inh_VSSIOR) g45n2svt w=(80u) l=200n nf=8 as=9p \
+        ad=8p ps=101.8u pd=81.6u nrd=1.25m nrs=1.40625m sa=150n sb=150n \
+        sd=200n sca=21.98759 scb=0.02458 scc=0.00162 m=(1)
+    M4 (PAD inh_VSSIOR inh_VSSIOR inh_VSSIOR) g45n2svt w=(480u) l=200n \
+        nf=48 as=49p ad=48p ps=509.8u pd=489.6u nrd=208.333u nrs=212.674u \
+        sa=150n sb=150n sd=200n sca=21.98759 scb=0.02458 scc=0.00162 m=(1)
+    M9 (PAD PMos inh_VDDIOR inh_VDDIOR) g45p2svt w=(160u) l=200n nf=16 \
+        as=17p ad=16p ps=183.4u pd=163.2u nrd=625u nrs=664.063u sa=150n \
+        sb=150n sd=200n sca=9.50568 scb=0.00865 scc=0.00011 m=(1)
+    M6 (PAD inh_VDDIOR inh_VDDIOR inh_VDDIOR) g45p2svt w=(400u) l=200n \
+        nf=40 as=41p ad=40p ps=428.2u pd=408u nrd=250u nrs=256.25u sa=150n \
+        sb=150n sd=200n sca=9.50568 scb=0.00865 scc=0.00011 m=(1)
+ends ESDCore04
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: inputlogic
+// View name: schematic
+subckt inputlogic Y PAD inh_VDD inh_VSS
+    M2 (net026 PAD inh_VSS inh_VSS) g45n2svt w=(4u) l=150n nf=2 as=600f \
+        ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n sd=200n \
+        sca=42.63626 scb=0.04264 scc=0.00405 m=(1)
+    M0 (net026 PAD inh_VSS inh_VSS) g45n2svt w=(4u) l=150n nf=2 as=600f \
+        ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n sd=200n \
+        sca=42.63626 scb=0.04264 scc=0.00405 m=(1)
+    NM0 (Y net026 inh_VSS inh_VSS) g45n1svt w=(5u) l=45n nf=2 as=700f \
+        ad=400f ps=10.56u pd=5.32u nrd=16m nrs=28m sa=140n sb=140n sd=160n \
+        sca=53.83716 scb=0.05516 scc=0.00662 m=(1)
+    PM1 (Y net026 inh_VDD inh_VDD) g45p1svt w=(4u) l=45n nf=2 as=560f \
+        ad=320f ps=8.56u pd=4.32u nrd=20m nrs=35m sa=140n sb=140n sd=160n \
+        sca=56.99756 scb=0.05691 scc=0.00695 m=(1)
+    M5 (net026 PAD inh_VDD inh_VDD) g45p2svt w=(5u) l=150n nf=2 as=750f \
+        ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n sd=200n \
+        sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M4 (net026 PAD inh_VDD inh_VDD) g45p2svt w=(5u) l=150n nf=2 as=750f \
+        ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n sd=200n \
+        sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M3 (net026 PAD inh_VDD inh_VDD) g45p2svt w=(5u) l=150n nf=2 as=750f \
+        ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n sd=200n \
+        sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M1 (net026 PAD inh_VDD inh_VDD) g45p2svt w=(5u) l=150n nf=2 as=750f \
+        ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n sd=200n \
+        sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+ends inputlogic
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: IORINGDB
+// View name: schematic
+subckt IORINGDB A OEN PAD Y inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+    I2 (nmos nmos25 pmos pmos25 inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR) \
+        levelup_latch
+    I1 (A nmos OEN pmos inh_VDD inh_VSS) bidirlogic
+    I3 (nmos25 PAD pmos25 inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR) ESDCore04
+    I4 (Y PAD inh_VDD inh_VSS) inputlogic
+ends IORINGDB
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:37:59 2012 )
+// Library name: giolib045
+// Cell name: PADDB
+// View name: schematic
+
+simulator lang=spectre
+
+subckt PADDB A OEN PAD Y VSSIOR! VSS VDDIOR! VDD
+I18 (PAD) BONDPAD52
+I17 (A OEN PAD Y VDD VDDIOR! VSS VSSIOR!) IORINGDB
+ends PADDB
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: inputlogic
+// View name: schematic
+subckt inputlogic Y PAD inh_VDD inh_VSS
+    M2 (net026 PAD inh_VSS inh_VSS) g45n2svt w=(4u) l=150n nf=2 as=600f \
+        ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n sd=200n \
+        sca=42.63626 scb=0.04264 scc=0.00405 m=(1)
+    M0 (net026 PAD inh_VSS inh_VSS) g45n2svt w=(4u) l=150n nf=2 as=600f \
+        ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n sd=200n \
+        sca=42.63626 scb=0.04264 scc=0.00405 m=(1)
+    NM0 (Y net026 inh_VSS inh_VSS) g45n1svt w=(5u) l=45n nf=2 as=700f \
+        ad=400f ps=10.56u pd=5.32u nrd=16m nrs=28m sa=140n sb=140n sd=160n \
+        sca=53.83716 scb=0.05516 scc=0.00662 m=(1)
+    PM1 (Y net026 inh_VDD inh_VDD) g45p1svt w=(4u) l=45n nf=2 as=560f \
+        ad=320f ps=8.56u pd=4.32u nrd=20m nrs=35m sa=140n sb=140n sd=160n \
+        sca=56.99756 scb=0.05691 scc=0.00695 m=(1)
+    M5 (net026 PAD inh_VDD inh_VDD) g45p2svt w=(5u) l=150n nf=2 as=750f \
+        ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n sd=200n \
+        sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M4 (net026 PAD inh_VDD inh_VDD) g45p2svt w=(5u) l=150n nf=2 as=750f \
+        ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n sd=200n \
+        sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M3 (net026 PAD inh_VDD inh_VDD) g45p2svt w=(5u) l=150n nf=2 as=750f \
+        ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n sd=200n \
+        sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M1 (net026 PAD inh_VDD inh_VDD) g45p2svt w=(5u) l=150n nf=2 as=750f \
+        ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n sd=200n \
+        sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+ends inputlogic
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: ESDCore04_Input
+// View name: schematic
+subckt ESDCore04_Input PAD inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+    M4 (PAD inh_VSSIOR inh_VSSIOR inh_VSSIOR) g45n2svt w=(560u) l=200n \
+        nf=56 as=57p ad=56p ps=591.4u pd=571.2u nrd=178.571u nrs=181.76u \
+        sa=150n sb=150n sd=200n sca=21.98759 scb=0.02458 scc=0.00162 m=(1)
+    M6 (PAD inh_VDDIOR inh_VDDIOR inh_VDDIOR) g45p2svt w=(560u) l=200n \
+        nf=56 as=57p ad=56p ps=591.4u pd=571.2u nrd=178.571u nrs=181.76u \
+        sa=150n sb=150n sd=200n sca=8.24598 scb=0.00670 scc=0.00008 m=(1)
+ends ESDCore04_Input
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: IORINGDI
+// View name: schematic
+subckt IORINGDI PAD Y inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+    I2 (Y PAD inh_VDD inh_VSS) inputlogic
+    I1 (PAD inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR) ESDCore04_Input
+ends IORINGDI
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:39:05 2012 )
+// Library name: giolib045
+// Cell name: PADDI
+// View name: schematic
+
+simulator lang=spectre
+
+subckt PADDI PAD Y VSSIOR! VDD VDDIOR! VSS
+I2 (PAD) BONDPAD52
+I1 (PAD Y VDD VDDIOR! VSS VSSIOR!) IORINGDI
+ends PADDI
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: levelup_latch
+// View name: schematic
+subckt levelup_latch nmos nmos25 pmos pmos25 inh_VDD inh_VDDIOR inh_VSS \
+        inh_VSSIOR
+    PM4 (net0189 nmos inh_VDD inh_VDD) g45p1svt w=(4u) l=45n nf=2 as=560f \
+        ad=320f ps=8.56u pd=4.32u nrd=20m nrs=35m sa=140n sb=140n sd=160n \
+        sca=56.99756 scb=0.05691 scc=0.00695 m=(1)
+    PM3 (net0218 net0189 inh_VDD inh_VDD) g45p1svt w=(4u) l=45n nf=2 \
+        as=560f ad=320f ps=8.56u pd=4.32u nrd=20m nrs=35m sa=140n sb=140n \
+        sd=160n sca=56.99756 scb=0.05691 scc=0.00695 m=(1)
+    PM2 (net0227 net59 inh_VDD inh_VDD) g45p1svt w=(4u) l=45n nf=2 as=560f \
+        ad=320f ps=8.56u pd=4.32u nrd=20m nrs=35m sa=140n sb=140n sd=160n \
+        sca=56.99756 scb=0.05691 scc=0.00695 m=(1)
+    PM1 (net59 pmos inh_VDD inh_VDD) g45p1svt w=(4u) l=45n nf=2 as=560f \
+        ad=320f ps=8.56u pd=4.32u nrd=20m nrs=35m sa=140n sb=140n sd=160n \
+        sca=56.99756 scb=0.05691 scc=0.00695 m=(1)
+    M15 (net093 net0174 inh_VSSIOR inh_VSSIOR) g45n2svt w=(500n) l=150n \
+        nf=1 as=150f ad=150f ps=1.1u pd=1.1u nrd=468.75m nrs=468.75m \
+        sa=150n sb=150n sd=200n sca=114.17432 scb=0.08203 scc=0.01268 \
+        m=(1)
+    M11 (net0174 net093 inh_VSSIOR inh_VSSIOR) g45n2svt w=(500n) l=150n \
+        nf=1 as=150f ad=150f ps=1.1u pd=1.1u nrd=468.75m nrs=468.75m \
+        sa=150n sb=150n sd=200n sca=114.17432 scb=0.08203 scc=0.01268 \
+        m=(1)
+    M21 (pmos25 net0174 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    M19 (net0110 net0106 inh_VSSIOR inh_VSSIOR) g45n2svt w=(500n) l=150n \
+        nf=1 as=150f ad=150f ps=1.1u pd=1.1u nrd=468.75m nrs=468.75m \
+        sa=150n sb=150n sd=200n sca=114.17432 scb=0.08203 scc=0.01268 \
+        m=(1)
+    M20 (net0106 net0110 inh_VSSIOR inh_VSSIOR) g45n2svt w=(500n) l=150n \
+        nf=1 as=150f ad=150f ps=1.1u pd=1.1u nrd=468.75m nrs=468.75m \
+        sa=150n sb=150n sd=200n sca=114.17432 scb=0.08203 scc=0.01268 \
+        m=(1)
+    M26 (pmos25 net0174 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    M23 (nmos25 net0110 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    M27 (pmos25 net0174 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    M30 (nmos25 net0110 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    NM4 (net0218 net0189 inh_VSS inh_VSS) g45n1svt w=(2u) l=45n nf=1 \
+        as=560f ad=560f ps=2.56u pd=2.56u nrd=1.16667 nrs=1.16667 sa=140n \
+        sb=140n sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM6 (net093 net59 inh_VSS inh_VSS) g45n1svt w=(5u) l=45n nf=2 as=700f \
+        ad=400f ps=10.56u pd=5.32u nrd=16m nrs=28m sa=140n sb=140n sd=160n \
+        sca=53.83716 scb=0.05516 scc=0.00662 m=(1)
+    NM1 (net59 pmos inh_VSS inh_VSS) g45n1svt w=(2u) l=45n nf=1 as=560f \
+        ad=560f ps=2.56u pd=2.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM2 (net0227 net59 inh_VSS inh_VSS) g45n1svt w=(2u) l=45n nf=1 as=560f \
+        ad=560f ps=2.56u pd=2.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM7 (net0106 net0189 inh_VSS inh_VSS) g45n1svt w=(5u) l=45n nf=2 \
+        as=700f ad=400f ps=10.56u pd=5.32u nrd=16m nrs=28m sa=140n sb=140n \
+        sd=160n sca=53.83716 scb=0.05516 scc=0.00662 m=(1)
+    NM5 (net0174 net0227 inh_VSS inh_VSS) g45n1svt w=(5u) l=45n nf=2 \
+        as=700f ad=400f ps=10.56u pd=5.32u nrd=16m nrs=28m sa=140n sb=140n \
+        sd=160n sca=53.83716 scb=0.05516 scc=0.00662 m=(1)
+    NM8 (net0110 net0218 inh_VSS inh_VSS) g45n1svt w=(5u) l=45n nf=2 \
+        as=700f ad=400f ps=10.56u pd=5.32u nrd=16m nrs=28m sa=140n sb=140n \
+        sd=160n sca=53.83716 scb=0.05516 scc=0.00662 m=(1)
+    NM3 (net0189 nmos inh_VSS inh_VSS) g45n1svt w=(2u) l=45n nf=1 as=560f \
+        ad=560f ps=2.56u pd=2.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    M14 (net0174 net093 inh_VDDIOR inh_VDDIOR) g45p2svt w=(4u) l=150n nf=2 \
+        as=600f ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n \
+        sd=200n sca=13.21691 scb=0.01245 scc=0.00023 m=(1)
+    M18 (net093 net0174 inh_VDDIOR inh_VDDIOR) g45p2svt w=(4u) l=150n nf=2 \
+        as=600f ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n \
+        sd=200n sca=13.21691 scb=0.01245 scc=0.00023 m=(1)
+    M24 (net0110 net0106 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n \
+        nf=2 as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n \
+        sb=150n sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M22 (net0106 net0110 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n \
+        nf=2 as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n \
+        sb=150n sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M13 (nmos25 net0110 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M12 (pmos25 net0174 inh_VDDIOR inh_VDDIOR) g45p2svt w=(4u) l=150n nf=2 \
+        as=600f ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n \
+        sd=200n sca=13.21691 scb=0.01245 scc=0.00023 m=(1)
+    M29 (nmos25 net0110 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M28 (nmos25 net0110 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M31 (pmos25 net0174 inh_VDDIOR inh_VDDIOR) g45p2svt w=(4u) l=150n nf=2 \
+        as=600f ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n \
+        sd=200n sca=13.21691 scb=0.01245 scc=0.00023 m=(1)
+ends levelup_latch
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: ESDCore04
+// View name: schematic
+subckt ESDCore04 NMos PAD PMos inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+    M8 (PAD NMos inh_VSSIOR inh_VSSIOR) g45n2svt w=(80u) l=200n nf=8 as=9p \
+        ad=8p ps=101.8u pd=81.6u nrd=1.25m nrs=1.40625m sa=150n sb=150n \
+        sd=200n sca=21.98759 scb=0.02458 scc=0.00162 m=(1)
+    M4 (PAD inh_VSSIOR inh_VSSIOR inh_VSSIOR) g45n2svt w=(480u) l=200n \
+        nf=48 as=49p ad=48p ps=509.8u pd=489.6u nrd=208.333u nrs=212.674u \
+        sa=150n sb=150n sd=200n sca=21.98759 scb=0.02458 scc=0.00162 m=(1)
+    M9 (PAD PMos inh_VDDIOR inh_VDDIOR) g45p2svt w=(160u) l=200n nf=16 \
+        as=17p ad=16p ps=183.4u pd=163.2u nrd=625u nrs=664.063u sa=150n \
+        sb=150n sd=200n sca=9.50568 scb=0.00865 scc=0.00011 m=(1)
+    M6 (PAD inh_VDDIOR inh_VDDIOR inh_VDDIOR) g45p2svt w=(400u) l=200n \
+        nf=40 as=41p ad=40p ps=428.2u pd=408u nrd=250u nrs=256.25u sa=150n \
+        sb=150n sd=200n sca=9.50568 scb=0.00865 scc=0.00011 m=(1)
+ends ESDCore04
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: nonzoutlogic
+// View name: schematic
+subckt nonzoutlogic A NMOS PMOS inh_VDD inh_VSS
+    NM0 (net79 net79 inh_VSS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM4 (NMOS OEB inh_VSS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM2 (OEB OE inh_VSS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM3 (NMOS A inh_VSS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM5 (PMOS OE NMOS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM1 (OE net79 inh_VDD inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f \
+        ad=280f ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM2 (OEB OE inh_VDD inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f \
+        ad=280f ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM3 (PMOS A inh_VDD inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f \
+        ad=280f ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM4 (NMOS OEB PMOS inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f ad=280f \
+        ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM5 (PMOS OE inh_VDD inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f \
+        ad=280f ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+ends nonzoutlogic
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: IORINGDO
+// View name: schematic
+subckt IORINGDO A PAD inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+    I2 (nmos nmos25 pmos pmos25 inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR) \
+        levelup_latch
+    I3 (nmos25 PAD pmos25 inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR) ESDCore04
+    I1 (A nmos pmos inh_VDD inh_VSS) nonzoutlogic
+ends IORINGDO
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:40:11 2012 )
+// Library name: giolib045
+// Cell name: PADDO
+// View name: schematic
+
+simulator lang=spectre
+
+subckt PADDO A PAD VDD VDDIOR! VSS VSSIOR!
+I2 (PAD) BONDPAD52
+I1 (A PAD VDD VDDIOR! VSS VSSIOR!) IORINGDO
+ends PADDO
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: levelup_latch
+// View name: schematic
+subckt levelup_latch nmos nmos25 pmos pmos25 inh_VDD inh_VDDIOR inh_VSS \
+        inh_VSSIOR
+    PM4 (net0189 nmos inh_VDD inh_VDD) g45p1svt w=(4u) l=45n nf=2 as=560f \
+        ad=320f ps=8.56u pd=4.32u nrd=20m nrs=35m sa=140n sb=140n sd=160n \
+        sca=56.99756 scb=0.05691 scc=0.00695 m=(1)
+    PM3 (net0218 net0189 inh_VDD inh_VDD) g45p1svt w=(4u) l=45n nf=2 \
+        as=560f ad=320f ps=8.56u pd=4.32u nrd=20m nrs=35m sa=140n sb=140n \
+        sd=160n sca=56.99756 scb=0.05691 scc=0.00695 m=(1)
+    PM2 (net0227 net59 inh_VDD inh_VDD) g45p1svt w=(4u) l=45n nf=2 as=560f \
+        ad=320f ps=8.56u pd=4.32u nrd=20m nrs=35m sa=140n sb=140n sd=160n \
+        sca=56.99756 scb=0.05691 scc=0.00695 m=(1)
+    PM1 (net59 pmos inh_VDD inh_VDD) g45p1svt w=(4u) l=45n nf=2 as=560f \
+        ad=320f ps=8.56u pd=4.32u nrd=20m nrs=35m sa=140n sb=140n sd=160n \
+        sca=56.99756 scb=0.05691 scc=0.00695 m=(1)
+    M15 (net093 net0174 inh_VSSIOR inh_VSSIOR) g45n2svt w=(500n) l=150n \
+        nf=1 as=150f ad=150f ps=1.1u pd=1.1u nrd=468.75m nrs=468.75m \
+        sa=150n sb=150n sd=200n sca=114.17432 scb=0.08203 scc=0.01268 \
+        m=(1)
+    M11 (net0174 net093 inh_VSSIOR inh_VSSIOR) g45n2svt w=(500n) l=150n \
+        nf=1 as=150f ad=150f ps=1.1u pd=1.1u nrd=468.75m nrs=468.75m \
+        sa=150n sb=150n sd=200n sca=114.17432 scb=0.08203 scc=0.01268 \
+        m=(1)
+    M21 (pmos25 net0174 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    M19 (net0110 net0106 inh_VSSIOR inh_VSSIOR) g45n2svt w=(500n) l=150n \
+        nf=1 as=150f ad=150f ps=1.1u pd=1.1u nrd=468.75m nrs=468.75m \
+        sa=150n sb=150n sd=200n sca=114.17432 scb=0.08203 scc=0.01268 \
+        m=(1)
+    M20 (net0106 net0110 inh_VSSIOR inh_VSSIOR) g45n2svt w=(500n) l=150n \
+        nf=1 as=150f ad=150f ps=1.1u pd=1.1u nrd=468.75m nrs=468.75m \
+        sa=150n sb=150n sd=200n sca=114.17432 scb=0.08203 scc=0.01268 \
+        m=(1)
+    M26 (pmos25 net0174 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    M23 (nmos25 net0110 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    M27 (pmos25 net0174 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    M30 (nmos25 net0110 inh_VSSIOR inh_VSSIOR) g45n2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=39.47586 scb=0.04088 scc=0.00372 m=(1)
+    NM4 (net0218 net0189 inh_VSS inh_VSS) g45n1svt w=(2u) l=45n nf=1 \
+        as=560f ad=560f ps=2.56u pd=2.56u nrd=1.16667 nrs=1.16667 sa=140n \
+        sb=140n sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM6 (net093 net59 inh_VSS inh_VSS) g45n1svt w=(5u) l=45n nf=2 as=700f \
+        ad=400f ps=10.56u pd=5.32u nrd=16m nrs=28m sa=140n sb=140n sd=160n \
+        sca=53.83716 scb=0.05516 scc=0.00662 m=(1)
+    NM1 (net59 pmos inh_VSS inh_VSS) g45n1svt w=(2u) l=45n nf=1 as=560f \
+        ad=560f ps=2.56u pd=2.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM2 (net0227 net59 inh_VSS inh_VSS) g45n1svt w=(2u) l=45n nf=1 as=560f \
+        ad=560f ps=2.56u pd=2.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM7 (net0106 net0189 inh_VSS inh_VSS) g45n1svt w=(5u) l=45n nf=2 \
+        as=700f ad=400f ps=10.56u pd=5.32u nrd=16m nrs=28m sa=140n sb=140n \
+        sd=160n sca=53.83716 scb=0.05516 scc=0.00662 m=(1)
+    NM5 (net0174 net0227 inh_VSS inh_VSS) g45n1svt w=(5u) l=45n nf=2 \
+        as=700f ad=400f ps=10.56u pd=5.32u nrd=16m nrs=28m sa=140n sb=140n \
+        sd=160n sca=53.83716 scb=0.05516 scc=0.00662 m=(1)
+    NM8 (net0110 net0218 inh_VSS inh_VSS) g45n1svt w=(5u) l=45n nf=2 \
+        as=700f ad=400f ps=10.56u pd=5.32u nrd=16m nrs=28m sa=140n sb=140n \
+        sd=160n sca=53.83716 scb=0.05516 scc=0.00662 m=(1)
+    NM3 (net0189 nmos inh_VSS inh_VSS) g45n1svt w=(2u) l=45n nf=1 as=560f \
+        ad=560f ps=2.56u pd=2.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    M14 (net0174 net093 inh_VDDIOR inh_VDDIOR) g45p2svt w=(4u) l=150n nf=2 \
+        as=600f ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n \
+        sd=200n sca=13.21691 scb=0.01245 scc=0.00023 m=(1)
+    M18 (net093 net0174 inh_VDDIOR inh_VDDIOR) g45p2svt w=(4u) l=150n nf=2 \
+        as=600f ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n \
+        sd=200n sca=13.21691 scb=0.01245 scc=0.00023 m=(1)
+    M24 (net0110 net0106 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n \
+        nf=2 as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n \
+        sb=150n sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M22 (net0106 net0110 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n \
+        nf=2 as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n \
+        sb=150n sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M13 (nmos25 net0110 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M12 (pmos25 net0174 inh_VDDIOR inh_VDDIOR) g45p2svt w=(4u) l=150n nf=2 \
+        as=600f ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n \
+        sd=200n sca=13.21691 scb=0.01245 scc=0.00023 m=(1)
+    M29 (nmos25 net0110 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M28 (nmos25 net0110 inh_VDDIOR inh_VDDIOR) g45p2svt w=(5u) l=150n nf=2 \
+        as=750f ad=500f ps=10.6u pd=5.4u nrd=20m nrs=30m sa=150n sb=150n \
+        sd=200n sca=12.53804 scb=0.01184 scc=0.00021 m=(1)
+    M31 (pmos25 net0174 inh_VDDIOR inh_VDDIOR) g45p2svt w=(4u) l=150n nf=2 \
+        as=600f ad=400f ps=8.6u pd=4.4u nrd=25m nrs=37.5m sa=150n sb=150n \
+        sd=200n sca=13.21691 scb=0.01245 scc=0.00023 m=(1)
+ends levelup_latch
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: ESDCore04
+// View name: schematic
+subckt ESDCore04 NMos PAD PMos inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+    M8 (PAD NMos inh_VSSIOR inh_VSSIOR) g45n2svt w=(80u) l=200n nf=8 as=9p \
+        ad=8p ps=101.8u pd=81.6u nrd=1.25m nrs=1.40625m sa=150n sb=150n \
+        sd=200n sca=21.98759 scb=0.02458 scc=0.00162 m=(1)
+    M4 (PAD inh_VSSIOR inh_VSSIOR inh_VSSIOR) g45n2svt w=(480u) l=200n \
+        nf=48 as=49p ad=48p ps=509.8u pd=489.6u nrd=208.333u nrs=212.674u \
+        sa=150n sb=150n sd=200n sca=21.98759 scb=0.02458 scc=0.00162 m=(1)
+    M9 (PAD PMos inh_VDDIOR inh_VDDIOR) g45p2svt w=(160u) l=200n nf=16 \
+        as=17p ad=16p ps=183.4u pd=163.2u nrd=625u nrs=664.063u sa=150n \
+        sb=150n sd=200n sca=9.50568 scb=0.00865 scc=0.00011 m=(1)
+    M6 (PAD inh_VDDIOR inh_VDDIOR inh_VDDIOR) g45p2svt w=(400u) l=200n \
+        nf=40 as=41p ad=40p ps=428.2u pd=408u nrd=250u nrs=256.25u sa=150n \
+        sb=150n sd=200n sca=9.50568 scb=0.00865 scc=0.00011 m=(1)
+ends ESDCore04
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: bidirlogic
+// View name: schematic
+subckt bidirlogic A NMOS OEN PMOS inh_VDD inh_VSS
+    NM0 (OE OEN inh_VSS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM4 (NMOS OEB inh_VSS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM2 (OEB OE inh_VSS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM3 (NMOS A inh_VSS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    NM5 (PMOS OE NMOS inh_VSS) g45n1svt w=(500n) l=45n nf=1 as=140f \
+        ad=140f ps=1.06u pd=1.06u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM1 (OE OEN inh_VDD inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f \
+        ad=280f ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM2 (OEB OE inh_VDD inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f \
+        ad=280f ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM3 (PMOS A inh_VDD inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f \
+        ad=280f ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM4 (NMOS OEB PMOS inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f ad=280f \
+        ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n sd=160n \
+        sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+    PM5 (PMOS OE inh_VDD inh_VDD) g45p1svt w=(1u) l=45n nf=1 as=280f \
+        ad=280f ps=1.56u pd=1.56u nrd=1.16667 nrs=1.16667 sa=140n sb=140n \
+        sd=160n sca=226.00151 scb=0.11734 scc=0.02767 m=(1)
+ends bidirlogic
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: IORINGDOZ
+// View name: schematic
+subckt IORINGDOZ A OEN PAD inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+    I2 (nmos nmos25 pmos pmos25 inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR) \
+        levelup_latch
+    I3 (nmos25 PAD pmos25 inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR) ESDCore04
+    I1 (A nmos OEN pmos inh_VDD inh_VSS) bidirlogic
+ends IORINGDOZ
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:41:18 2012 )
+// Library name: giolib045
+// Cell name: PADDOZ
+// View name: schematic
+
+simulator lang=spectre
+
+subckt PADDOZ A OEN PAD VSS VDDIOR! VDD VSSIOR!
+I2 (PAD) BONDPAD52
+I14 (A OEN PAD VDD VDDIOR! VSS VSSIOR!) IORINGDOZ
+ends PADDOZ
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: IORINGVDD
+// View name: schematic
+subckt IORINGVDD inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+    M4 (inh_VDD inh_VSSIOR inh_VSSIOR inh_VSSIOR) g45n2svt w=(560u) l=200n \
+        nf=56 as=57p ad=56p ps=591.4u pd=571.2u nrd=178.571u nrs=181.76u \
+        sa=150n sb=150n sd=200n sca=26.54226 scb=0.03127 scc=0.00222 m=(1)
+ends IORINGVDD
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:42:29 2012 )
+// Library name: giolib045
+// Cell name: PADVDD
+// View name: schematic
+
+simulator lang=spectre
+
+subckt PADVDD VDD VDDIOR! VSSIOR! VSS
+I2 (VDD) BONDPAD52
+I1 (VDD VDDIOR! VSS VSSIOR!) IORINGVDD
+ends PADVDD
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: IORINGVDD25
+// View name: schematic
+subckt IORINGVDD25 inh_VDD inh_VDD25 inh_VDDIOR inh_VSS inh_VSSIOR
+    M4 (inh_VDD25 inh_VSSIOR inh_VSSIOR inh_VSSIOR) g45n2svt w=(560u) \
+        l=200n nf=56 as=57p ad=56p ps=591.4u pd=571.2u nrd=178.571u \
+        nrs=181.76u sa=150n sb=150n sd=200n sca=26.54226 scb=0.03127 \
+        scc=0.00222 m=(1)
+ends IORINGVDD25
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:43:37 2012 )
+// Library name: giolib045
+// Cell name: PADVDD25
+// View name: schematic
+
+simulator lang=spectre
+
+subckt PADVDD25 VDDIOR! VDD25! VSSIOR! VSS VDD
+I1 (VDD VDD25! VDDIOR! VSS VSSIOR!) IORINGVDD25
+I2 (VDD25!) BONDPAD52
+ends PADVDD25
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: IORINGVDDIOR
+// View name: schematic
+subckt IORINGVDDIOR inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+    M4 (inh_VDDIOR inh_VSSIOR inh_VSSIOR inh_VSSIOR) g45n2svt w=(560u) \
+        l=200n nf=56 as=57p ad=56p ps=591.4u pd=571.2u nrd=178.571u \
+        nrs=181.76u sa=150n sb=150n sd=200n sca=26.54226 scb=0.03127 \
+        scc=0.00222 m=(1)
+ends IORINGVDDIOR
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:44:49 2012 )
+// Library name: giolib045
+// Cell name: PADVDDIOR
+// View name: schematic
+
+simulator lang=spectre
+
+subckt PADVDDIOR VDDIOR! VSSIOR! VDD VSS
+I2 (VDDIOR!) BONDPAD52
+I0 (VDD VDDIOR! VSS VSSIOR!) IORINGVDDIOR
+ends PADVDDIOR
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: IORINGVSS
+// View name: schematic
+subckt IORINGVSS inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+    M6 (inh_VSS inh_VDDIOR inh_VDDIOR inh_VDDIOR) g45p2svt w=(560u) l=200n \
+        nf=56 as=57p ad=56p ps=591.4u pd=571.2u nrd=178.571u nrs=181.76u \
+        sa=150n sb=150n sd=200n sca=9.50568 scb=0.00865 scc=0.00011 m=(1)
+ends IORINGVSS
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:45:55 2012 )
+// Library name: giolib045
+// Cell name: PADVSS
+// View name: schematic
+
+simulator lang=spectre
+
+subckt PADVSS VSSIOR! VSS VDD VDDIOR!
+I0 (VDD VDDIOR! VSS VSSIOR!) IORINGVSS
+I1 (VSS) BONDPAD52
+ends PADVSS
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: IORINGVSS25
+// View name: schematic
+subckt IORINGVSS25 inh_VDD inh_VDDIOR inh_VSS inh_VSS25 inh_VSSIOR
+    M6 (inh_VSS25 inh_VDDIOR inh_VDDIOR inh_VDDIOR) g45p2svt w=(560u) \
+        l=200n nf=56 as=57p ad=56p ps=591.4u pd=571.2u nrd=178.571u \
+        nrs=181.76u sa=150n sb=150n sd=200n sca=9.50568 scb=0.00865 \
+        scc=0.00011 m=(1)
+ends IORINGVSS25
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:47:03 2012 )
+// Library name: giolib045
+// Cell name: PADVSS25
+// View name: schematic
+
+simulator lang=spectre
+
+subckt PADVSS25 VSSIOR! VSS VDDIOR! VSS25! VDD
+I1 (VSS25!) BONDPAD52
+I0 (VDD VDDIOR! VSS VSS25! VSSIOR!) IORINGVSS25
+ends PADVSS25
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: IORINGVSSIOR
+// View name: schematic
+subckt IORINGVSSIOR inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+    M6 (inh_VSSIOR inh_VDDIOR inh_VDDIOR inh_VDDIOR) g45p2svt w=(560u) \
+        l=200n nf=56 as=57p ad=56p ps=591.4u pd=571.2u nrd=178.571u \
+        nrs=181.76u sa=150n sb=150n sd=200n sca=9.50568 scb=0.00865 \
+        scc=0.00011 m=(1)
+ends IORINGVSSIOR
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:48:12 2012 )
+// Library name: giolib045
+// Cell name: PADVSSIOR
+// View name: schematic
+
+simulator lang=spectre
+
+subckt PADVSSIOR VDD VDDIOR! VSS VSSIOR!
+I1 (VSSIOR!) BONDPAD52
+I0 (VDD VDDIOR! VSS VSSIOR!) IORINGVSSIOR
+ends PADVSSIOR
+// End of subcircuit definition.
+

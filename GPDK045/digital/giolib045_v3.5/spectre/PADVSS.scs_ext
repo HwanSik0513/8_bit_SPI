@@ -1,0 +1,68 @@
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:45:56 2012 )
+// Library name: giolib045
+// Cell name: PADVSS
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADVSS VDD VDDIOR! VSS VSSIOR!
+I1 (\1552\:VSS) BONDPAD52
+C1 (VSSIOR! VSS) capacitor c=1.78221e-14
+C2 (VDD VSS) capacitor c=5.05734e-14
+C3 (VDDIOR! VSS) capacitor c=6.42639e-14
+C4 (\19\:VDD VSS) capacitor c=6.58728e-15
+C5 (\18\:VDD VSS) capacitor c=6.56185e-15
+C6 (\17\:VDD VSS) capacitor c=6.56185e-15
+C7 (\16\:VDD VSS) capacitor c=6.56185e-15
+C8 (\15\:VDD VSS) capacitor c=6.65241e-15
+C9 (\14\:VDD VSS) capacitor c=6.58949e-15
+C10 (\7\:VDD VSS) capacitor c=2.19896e-16
+C11 (\8\:VDD VSS) capacitor c=2.23634e-16
+C12 (\9\:VDD VSS) capacitor c=2.26109e-16
+C13 (\10\:VDD VSS) capacitor c=2.17405e-16
+C14 (\11\:VDD VSS) capacitor c=2.32353e-16
+C15 (\12\:VDD VSS) capacitor c=2.10998e-16
+Rl46 (\325\:VSS \1552\:VSS) resistor r=0.1883 c=0
+Rl52 (VDD \17\:VDD) resistor r=0.5404 c=0
+Rl58 (VDD \10\:VDD) resistor r=0.06163 c=0
+Rk35 (\325\:VSS \339\:VSS) resistor r=0.08814 c=0
+Rk29 (VDD \16\:VDD) resistor r=0.5452 c=0
+Rk36 (\17\:VDD \10\:VDD) resistor r=0.5088 c=0
+Rj496 (\339\:VSS VSS) resistor r=0.569 c=0
+Rj433 (VDD \15\:VDD) resistor r=0.5439 c=0
+Rj500 (\9\:VDD \10\:VDD) resistor r=0.1392 c=0
+Ri50 (VSS \1194\:VSS) resistor r=9.804 c=0
+Ri49 (VDD \14\:VDD) resistor r=0.5419 c=0
+Ri53 (VDD \11\:VDD) resistor r=0.07756 c=0
+Rh134 (VSS \1195\:VSS) resistor r=1.4397 c=0
+Rh68 (VDD \7\:VDD) resistor r=0.06428 c=0
+Rh70 (\18\:VDD \11\:VDD) resistor r=0.5088 c=0
+Rw269 (\1194\:VSS \1195\:VSS) resistor r=17.0226 c=0
+Rw270 (\14\:VDD \7\:VDD) resistor r=0.509 c=0
+Rw237 (VDD \12\:VDD) resistor r=0.05508 c=0
+Rv48 (VSS \342\:VSS) resistor r=0.1708 c=0
+Rv64 (VDD \8\:VDD) resistor r=0.06822 c=0
+Rv46 (\19\:VDD \12\:VDD) resistor r=0.5088 c=0
+Ru65 (\1194\:VSS \342\:VSS) resistor r=0.7147 c=0
+Ru66 (\15\:VDD \8\:VDD) resistor r=0.509 c=0
+Ru67 (\11\:VDD \12\:VDD) resistor r=0.139 c=0
+Rz187 (\1195\:VSS \342\:VSS) resistor r=1.0537 c=0
+Rz178 (\7\:VDD \8\:VDD) resistor r=0.1392 c=0
+Ry391 (VDD \19\:VDD) resistor r=0.537 c=0
+Ry309 (VDD \9\:VDD) resistor r=0.07084 c=0
+Rx1 (VDD \18\:VDD) resistor r=0.5485 c=0
+Rx4 (\16\:VDD \9\:VDD) resistor r=0.5089 c=0
+I0\|M6_52__rcx (\325\:VSS VDDIOR! VDDIOR! VDDIOR!) g45p2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=3.473e-12 ps=3.082e-05 pd=2.07e-05 \
+        nrd=468.75m nrs=468.75m sa=3.474e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+ends PADVSS
+// End of subcircuit definition.
+

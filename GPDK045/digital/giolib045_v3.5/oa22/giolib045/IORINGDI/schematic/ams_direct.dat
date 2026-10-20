@@ -1,0 +1,35 @@
+$FILE_FORMAT_VERSION
+	Version 1.1;
+$END
+$VECTOR_PREFERENCE
+	descending;
+$END
+$GLOBAL_SIGNALS
+	VSS!:::;
+	VSSIOR!:::;
+	VDD!:::;
+	VDDIOR!:::;
+$END
+$INH_SIGNAL_CONN
+	VDDIOR!:VDDIOR;
+	VDD!:VDD;
+	VSS!:VSS;
+	VSSIOR!:VSSIOR;
+$END
+$INH_TERMINAL_CONN
+	VSSIOR:VSSIOR=VSSIOR!;
+	VSS:VSS=VSS!;
+	VDDIOR:VDDIOR=VDDIOR!;
+	VDD:VDD=VDD!;
+$END
+$TIMESTAMP
+	1326091862=9-giolib04510-inputlogic;
+	1326091862=9-giolib04510-inputlogic6-symbol;
+	-1=5-basic4-opin;
+	1273039898=5-basic4-opin6-symbol;
+	-1=5-basic4-ipin;
+	1273039899=5-basic4-ipin6-symbol;
+	1326091808=9-giolib04515-ESDCore04_Input;
+	1326091808=9-giolib04515-ESDCore04_Input6-symbol;
+	1404919401=verilog.vams;
+$END

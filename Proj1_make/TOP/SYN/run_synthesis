@@ -1,0 +1,10 @@
+#!/bin/csh -f
+## Start Time
+echo -n "Syn Start : " > cds_syn_runtime
+date > cds_syn_runtime
+
+genus -f ./script/spi_bridge_top_45nm.tcl -log ./log/all.log
+
+## End Time
+echo -n "Syn End   : " >> cds_syn_runtime
+date >> cds_syn_runtime

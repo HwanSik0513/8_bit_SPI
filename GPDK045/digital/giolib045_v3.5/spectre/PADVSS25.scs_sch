@@ -1,0 +1,31 @@
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+
+// Library name: giolib045
+// Cell name: IORINGVSS25
+// View name: schematic
+subckt IORINGVSS25 inh_VDD inh_VDDIOR inh_VSS inh_VSS25 inh_VSSIOR
+    M6 (inh_VSS25 inh_VDDIOR inh_VDDIOR inh_VDDIOR) g45p2svt w=(560u) \
+        l=200n nf=56 as=57p ad=56p ps=591.4u pd=571.2u nrd=178.571u \
+        nrs=181.76u sa=150n sb=150n sd=200n sca=9.50568 scb=0.00865 \
+        scc=0.00011 m=(1)
+ends IORINGVSS25
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:47:03 2012 )
+// Library name: giolib045
+// Cell name: PADVSS25
+// View name: schematic
+
+simulator lang=spectre
+
+subckt PADVSS25 VSSIOR! VSS VDDIOR! VSS25! VDD
+I1 (VSS25!) BONDPAD52
+I0 (VDD VDDIOR! VSS VSS25! VSSIOR!) IORINGVSS25
+ends PADVSS25
+// End of subcircuit definition.
+

@@ -1,0 +1,7 @@
+
+## smkcow
+## 20250324
+## gdk45nm IO library technical issue :: 
+## I have made init_io file, but <innovus -stylus> couldn't make IO cell placement
+## it couldn't place corner cells and it couldn't place pad1, 2, 3, 4.. in sequence
+## So I have decided to use innovus without-stylus option

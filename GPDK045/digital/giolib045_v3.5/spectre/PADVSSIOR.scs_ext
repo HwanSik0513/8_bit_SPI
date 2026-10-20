@@ -1,0 +1,30 @@
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:48:13 2012 )
+// Library name: giolib045
+// Cell name: PADVSSIOR
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADVSSIOR VDD VDDIOR! VSS VSSIOR!
+I1 (\1022\:VSSIOR!) BONDPAD52
+C1 (VDDIOR! VSS) capacitor c=6.42704e-14
+C2 (VSSIOR! VSS) capacitor c=3.18348e-14
+C3 (VDD VSS) capacitor c=1.10915e-14
+C4 (\1022\:VSSIOR! VSS) capacitor c=1.12843e-15
+C5 (\21\:VSSIOR! VSS) capacitor c=5.41655e-14
+Rl46 (\21\:VSSIOR! \1022\:VSSIOR!) resistor r=0.1883 c=0
+Rk1282 (\21\:VSSIOR! VSSIOR!) resistor r=0.7413 c=0
+I0\|M6_52__rcx (\21\:VSSIOR! VDDIOR! VDDIOR! VDDIOR!) g45p2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=3.473e-12 ps=3.082e-05 pd=2.07e-05 \
+        nrd=468.75m nrs=468.75m sa=3.474e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+ends PADVSSIOR
+// End of subcircuit definition.
+

@@ -1,0 +1,8 @@
+//Verilog-AMS HDL for "giolib045", "PADVDDIOR" "verilogams"
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module PADVDDIOR ( );
+
+endmodule

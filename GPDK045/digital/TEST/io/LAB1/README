@@ -1,0 +1,14 @@
+##########
+## NOTE ##
+##########
+#1. Bi-direction IO 
+#2. PAD_B_IN is an Input for PAD to Y
+#3. In Lab1, just 1 value is go into PAD_B_IN and out through Y pin
+
+###########
+## GUIDE ##
+###########
+with option -gui
+simvision auto started
+dump folder is auto opened 
+press start button and stop at $stop function

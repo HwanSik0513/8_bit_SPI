@@ -1,0 +1,8 @@
+//Verilog-AMS HDL for "giolib045", "IORINGCORNER" "verilogams"
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module IORINGCORNER ( );
+
+endmodule

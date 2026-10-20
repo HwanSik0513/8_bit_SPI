@@ -1,0 +1,2217 @@
+// Generated for: spectre (Mar 15 07:36:54 2012 )
+// Library name: giolib045
+// Cell name: PADANALOG
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADANALOG AY VDD VDDIOR! VSS VSSIOR!
+C1 (VSS VDD) capacitor c=1.31279e-13
+C2 (VSSIOR! VDD) capacitor c=5.93374e-14
+C3 (AY VDD) capacitor c=3.25193e-15
+C4 (VDDIOR! VDD) capacitor c=9.85225e-14
+C5 (\1\:AY VDD) capacitor c=2.96625e-13
+Rl46 (\1\:AY AY) resistor r=0.2332 c=0
+M4_52__rcx (\1\:AY VSSIOR! VSSIOR! VSSIOR!) g45n2svt w=(1e-05) l=2e-07 \
+        nf=1 as=5.41e-11 ad=5.25e-12 ps=3.082e-05 pd=2.105e-05 nrd=468.75m \
+        nrs=468.75m sa=5.25e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+ends PADANALOG
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:38:00 2012 )
+// Library name: giolib045
+// Cell name: PADDB
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADDB A OEN PAD VDD VDDIOR! VSS VSSIOR! Y
+I17\|I4\|M1 (I17\|I4\|net026 \1\:PAD \17\:VDD VDD) g45p2svt w=(2.5e-06) \
+        l=1.5e-07 nf=1 as=4.8438e-13 ad=4.8437e-13 ps=5.3875e-06 \
+        pd=5.3875e-06 nrd=468.75m nrs=468.75m sa=1.5e-07 sb=2e-06 sd=200n \
+        sca=5.50546 scb=0.00263755 scc=5.11898e-05 m=(8)
+I17\|I1\|PM3 (\4\:I17\|pmos \1\:A \8\:VDD VDD) g45p1svt w=(1e-06) \
+        l=4.5e-08 nf=1 as=1.6e-13 ad=1.4e-13 ps=2.32e-06 pd=2.28e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n sca=33.3252 \
+        scb=0.0289801 scc=0.00318301 m=(1)
+I17\|I4\|M0_1__rcx (I17\|I4\|net026 \14\:PAD \14\:VSS VSS) g45n2svt \
+        w=(2e-06) l=1.5e-07 nf=1 as=3.75e-13 ad=3.75e-13 ps=4.375e-06 \
+        pd=4.375e-06 nrd=468.75m nrs=468.75m sa=8.5e-07 sb=5e-07 sd=200n \
+        sca=2.4058 scb=5.46971e-05 scc=1.46892e-09 m=(4)
+I18 (\380\:PAD) BONDPAD52
+C1 (A VSSIOR!) capacitor c=3.16526e-17
+C2 (VDD VSSIOR!) capacitor c=1.21787e-14
+C3 (Y VSSIOR!) capacitor c=1.56986e-17
+C4 (VSS VSSIOR!) capacitor c=1.85718e-14
+C5 (OEN VSSIOR!) capacitor c=9.85017e-15
+C6 (PAD VSSIOR!) capacitor c=1.36798e-17
+C7 (VDDIOR! VSSIOR!) capacitor c=8.40257e-14
+C8 (I17\|pmos VSSIOR!) capacitor c=1.54887e-16
+C9 (I17\|nmos VSSIOR!) capacitor c=2.23708e-16
+C10 (I17\|pmos25 VSSIOR!) capacitor c=1.30463e-14
+C11 (I17\|nmos25 VSSIOR!) capacitor c=8.71662e-15
+C12 (I17\|I1\|OEB VSSIOR!) capacitor c=8.72828e-17
+C13 (I17\|I4\|net026 VSSIOR!) capacitor c=2.6151e-15
+C14 (I17\|I2\|net093 VSSIOR!) capacitor c=2.14743e-16
+C15 (I17\|I2\|net0106 VSSIOR!) capacitor c=1.95392e-16
+C16 (I17\|I2\|net0174 VSSIOR!) capacitor c=4.62085e-17
+C17 (I17\|I2\|net0110 VSSIOR!) capacitor c=4.68176e-17
+C18 (I17\|I2\|net59 VSSIOR!) capacitor c=2.22162e-16
+C19 (I17\|I2\|net0189 VSSIOR!) capacitor c=2.17664e-16
+C20 (I17\|I2\|net0227 VSSIOR!) capacitor c=2.32061e-16
+C21 (I17\|I2\|net0218 VSSIOR!) capacitor c=2.37062e-16
+C22 (\3\:I17\|I2\|net093 VSSIOR!) capacitor c=2.6229e-16
+C23 (\3\:I17\|I2\|net0106 VSSIOR!) capacitor c=2.19543e-16
+C24 (\3\:I17\|I2\|net0110 VSSIOR!) capacitor c=1.22424e-16
+C25 (\1\:PAD VSSIOR!) capacitor c=1.06179e-15
+C26 (\12\:I17\|nmos VSSIOR!) capacitor c=1.24087e-16
+C27 (\12\:I17\|pmos VSSIOR!) capacitor c=2.5431e-16
+C28 (\5\:I17\|I1\|OE VSSIOR!) capacitor c=1.23576e-16
+C29 (\1\:OEN VSSIOR!) capacitor c=1.39186e-16
+C30 (\3\:I17\|I1\|OE VSSIOR!) capacitor c=6.08238e-17
+C31 (\1\:A VSSIOR!) capacitor c=1.40888e-16
+C32 (\40\:I17\|I2\|net0174 VSSIOR!) capacitor c=1.00879e-15
+C33 (\7\:I17\|I2\|net0110 VSSIOR!) capacitor c=4.63649e-16
+C34 (\2\:I17\|I2\|net0106 VSSIOR!) capacitor c=9.04163e-17
+C35 (\2\:I17\|I2\|net093 VSSIOR!) capacitor c=9.74186e-17
+C36 (\2\:I17\|I2\|net0110 VSSIOR!) capacitor c=5.80964e-17
+C37 (\2\:I17\|I2\|net0174 VSSIOR!) capacitor c=5.84839e-17
+C38 (\6\:I17\|I2\|net0189 VSSIOR!) capacitor c=1.39385e-16
+C39 (\6\:I17\|I2\|net59 VSSIOR!) capacitor c=1.37857e-16
+C40 (\17\:I17\|nmos VSSIOR!) capacitor c=1.51412e-16
+C41 (\17\:I17\|pmos VSSIOR!) capacitor c=1.4991e-16
+C42 (\29\:I17\|I4\|net026 VSSIOR!) capacitor c=4.43333e-16
+C43 (\8\:I17\|I1\|OE VSSIOR!) capacitor c=3.20505e-17
+C44 (\3\:OEN VSSIOR!) capacitor c=6.57889e-17
+C45 (\3\:A VSSIOR!) capacitor c=4.85137e-17
+C46 (\3\:I17\|I1\|OEB VSSIOR!) capacitor c=1.35796e-16
+C47 (\4\:I17\|I1\|OE VSSIOR!) capacitor c=1.14863e-16
+C48 (\60\:I17\|nmos25 VSSIOR!) capacitor c=1.73368e-17
+C49 (\62\:I17\|nmos25 VSSIOR!) capacitor c=4.79198e-17
+C50 (\97\:I17\|pmos25 VSSIOR!) capacitor c=1.59051e-17
+C51 (\102\:I17\|pmos25 VSSIOR!) capacitor c=1.2374e-17
+C52 (\104\:I17\|pmos25 VSSIOR!) capacitor c=5.54025e-18
+C53 (\24\:I17\|I2\|net0174 VSSIOR!) capacitor c=3.60707e-16
+C54 (\31\:I17\|I2\|net0110 VSSIOR!) capacitor c=1.31272e-15
+C55 (\6\:I17\|I2\|net093 VSSIOR!) capacitor c=2.67859e-17
+C56 (\3\:I17\|I2\|net0174 VSSIOR!) capacitor c=2.56414e-17
+C57 (\3\:I17\|I2\|net0227 VSSIOR!) capacitor c=5.89755e-18
+C58 (\4\:I17\|I2\|net0189 VSSIOR!) capacitor c=2.33224e-16
+C59 (\4\:I17\|I2\|net59 VSSIOR!) capacitor c=2.30022e-16
+C60 (\15\:I17\|pmos VSSIOR!) capacitor c=6.57943e-17
+C61 (\7\:I17\|I1\|OE VSSIOR!) capacitor c=1.58231e-17
+C62 (\2\:OEN VSSIOR!) capacitor c=9.20973e-17
+C63 (\4\:A VSSIOR!) capacitor c=3.60422e-17
+C64 (\2\:I17\|I1\|OEB VSSIOR!) capacitor c=5.62295e-17
+C65 (\2\:A VSSIOR!) capacitor c=3.28522e-17
+C66 (\7\:I17\|pmos25 VSSIOR!) capacitor c=4.61322e-17
+C67 (\9\:I17\|pmos25 VSSIOR!) capacitor c=6.51267e-17
+C68 (\11\:I17\|pmos25 VSSIOR!) capacitor c=8.68361e-17
+C69 (\84\:VSS VSSIOR!) capacitor c=9.27685e-16
+C70 (\49\:I17\|nmos25 VSSIOR!) capacitor c=3.92027e-18
+C71 (\77\:I17\|pmos25 VSSIOR!) capacitor c=5.9335e-17
+C72 (\20\:I17\|pmos VSSIOR!) capacitor c=1.28641e-16
+C73 (\8\:OEN VSSIOR!) capacitor c=5.72143e-15
+C74 (\13\:A VSSIOR!) capacitor c=9.61629e-15
+C75 (\12\:A VSSIOR!) capacitor c=7.3243e-15
+C76 (\7\:Y VSSIOR!) capacitor c=9.54834e-15
+C77 (\6\:OEN VSSIOR!) capacitor c=4.20319e-17
+C78 (\9\:I17\|nmos VSSIOR!) capacitor c=6.55306e-16
+C79 (\9\:I17\|pmos VSSIOR!) capacitor c=5.38137e-17
+C80 (\71\:I17\|pmos25 VSSIOR!) capacitor c=7.40965e-16
+C81 (\20\:I17\|I2\|net0174 VSSIOR!) capacitor c=5.89013e-16
+C82 (\20\:I17\|I2\|net0106 VSSIOR!) capacitor c=1.66881e-16
+C83 (\27\:I17\|I2\|net0110 VSSIOR!) capacitor c=6.91864e-17
+C84 (\18\:I17\|I2\|net093 VSSIOR!) capacitor c=7.7876e-18
+C85 (\24\:I17\|I2\|net0110 VSSIOR!) capacitor c=2.45039e-17
+C86 (\13\:I17\|I2\|net093 VSSIOR!) capacitor c=4.47923e-17
+C87 (\17\:I17\|I2\|net0110 VSSIOR!) capacitor c=1.96881e-17
+C88 (\9\:I17\|I2\|net0174 VSSIOR!) capacitor c=8.89202e-17
+C89 (\9\:I17\|I2\|net093 VSSIOR!) capacitor c=6.13961e-17
+C90 (\4\:Y VSSIOR!) capacitor c=1.06335e-17
+C91 (\14\:VSS VSSIOR!) capacitor c=6.16432e-16
+C92 (\17\:VDD VSSIOR!) capacitor c=1.31581e-15
+C93 (\8\:I17\|I1\|OEB VSSIOR!) capacitor c=2.89063e-16
+C94 (\4\:I17\|nmos VSSIOR!) capacitor c=2.37448e-16
+C95 (\9\:I17\|I1\|OE VSSIOR!) capacitor c=1.46941e-16
+C96 (\3\:I17\|nmos VSSIOR!) capacitor c=1.27489e-16
+C97 (\3\:I17\|pmos VSSIOR!) capacitor c=1.30355e-16
+C98 (\29\:PAD VSSIOR!) capacitor c=6.42782e-15
+C99 (\31\:I17\|nmos25 VSSIOR!) capacitor c=1.96095e-15
+C100 (\18\:I17\|I2\|net0174 VSSIOR!) capacitor c=4.27965e-16
+C101 (\25\:I17\|I2\|net0110 VSSIOR!) capacitor c=9.79613e-17
+C102 (\16\:I17\|I2\|net093 VSSIOR!) capacitor c=2.17796e-16
+C103 (\13\:I17\|I2\|net0106 VSSIOR!) capacitor c=3.19099e-16
+C104 (\57\:VDD VSSIOR!) capacitor c=1.73454e-15
+C105 (\9\:I17\|I2\|net0218 VSSIOR!) capacitor c=3.66806e-16
+C106 (\9\:I17\|I2\|net0227 VSSIOR!) capacitor c=3.63836e-16
+C107 (\14\:I17\|I2\|net0189 VSSIOR!) capacitor c=4.2997e-16
+C108 (\14\:I17\|I2\|net59 VSSIOR!) capacitor c=3.92316e-16
+C109 (\26\:VDD VSSIOR!) capacitor c=3.97783e-16
+C110 (\5\:Y VSSIOR!) capacitor c=5.95336e-16
+C111 (\6\:I17\|I1\|OEB VSSIOR!) capacitor c=1.32166e-16
+C112 (\1\:VDD VSSIOR!) capacitor c=1.85326e-16
+C113 (\18\:I17\|I1\|OE VSSIOR!) capacitor c=2.00765e-16
+C114 (\7\:I17\|nmos VSSIOR!) capacitor c=2.00403e-16
+C115 (\6\:I17\|pmos VSSIOR!) capacitor c=1.28169e-16
+C116 (\10\:VDD VSSIOR!) capacitor c=1.76419e-16
+C117 (\4\:I17\|pmos VSSIOR!) capacitor c=2.60394e-16
+C118 (\8\:VDD VSSIOR!) capacitor c=1.07869e-16
+C119 (\61\:I17\|pmos25 VSSIOR!) capacitor c=1.17437e-15
+C120 (\22\:I17\|I2\|net0110 VSSIOR!) capacitor c=5.34982e-17
+C121 (\13\:I17\|I2\|net0174 VSSIOR!) capacitor c=5.3446e-17
+C122 (\10\:I17\|I2\|net0106 VSSIOR!) capacitor c=1.80645e-16
+C123 (\11\:I17\|I2\|net093 VSSIOR!) capacitor c=1.61123e-16
+C124 (\50\:VSS VSSIOR!) capacitor c=1.59323e-15
+C125 (\14\:I17\|I2\|net0110 VSSIOR!) capacitor c=6.7258e-16
+C126 (\7\:I17\|I2\|net0174 VSSIOR!) capacitor c=5.30986e-16
+C127 (\41\:VSS VSSIOR!) capacitor c=1.82217e-15
+C128 (\6\:I17\|I2\|net0106 VSSIOR!) capacitor c=4.71428e-16
+C129 (\7\:I17\|I2\|net093 VSSIOR!) capacitor c=5.05137e-16
+C130 (\7\:I17\|I2\|net0218 VSSIOR!) capacitor c=4.65414e-16
+C131 (\7\:I17\|I2\|net0227 VSSIOR!) capacitor c=4.50556e-16
+C132 (\75\:VSS VSSIOR!) capacitor c=3.30942e-16
+C133 (\60\:VSS VSSIOR!) capacitor c=3.30942e-16
+C134 (\12\:I17\|I2\|net0189 VSSIOR!) capacitor c=2.37422e-16
+C135 (\12\:I17\|I2\|net59 VSSIOR!) capacitor c=2.60295e-16
+C136 (\23\:VSS VSSIOR!) capacitor c=4.95854e-16
+C137 (\1\:Y VSSIOR!) capacitor c=4.17581e-16
+C138 (\9\:I17\|I1\|OEB VSSIOR!) capacitor c=8.9016e-17
+C139 (\5\:VSS VSSIOR!) capacitor c=1.05638e-16
+C140 (\16\:I17\|I1\|OE VSSIOR!) capacitor c=7.51994e-17
+C141 (\5\:I17\|nmos VSSIOR!) capacitor c=1.73895e-16
+C142 (\8\:VSS VSSIOR!) capacitor c=1.02044e-16
+C143 (\2\:I17\|nmos25 VSSIOR!) capacitor c=3.4793e-17
+C144 (\4\:I17\|nmos25 VSSIOR!) capacitor c=3.72192e-17
+C145 (\6\:I17\|nmos25 VSSIOR!) capacitor c=1.0583e-16
+C146 (\2\:I17\|pmos25 VSSIOR!) capacitor c=8.10891e-17
+C147 (\4\:I17\|pmos25 VSSIOR!) capacitor c=1.93501e-16
+C148 (\6\:I17\|pmos25 VSSIOR!) capacitor c=2.1745e-16
+C149 (\8\:I17\|pmos25 VSSIOR!) capacitor c=9.54515e-17
+C150 (\10\:I17\|pmos25 VSSIOR!) capacitor c=1.93501e-16
+C151 (\12\:I17\|pmos25 VSSIOR!) capacitor c=2.05939e-16
+C152 (\2\:I17\|I1\|OE VSSIOR!) capacitor c=8.2141e-17
+C153 (\6\:I17\|I1\|OE VSSIOR!) capacitor c=2.51588e-16
+C154 (\10\:I17\|I1\|OE VSSIOR!) capacitor c=6.5798e-17
+C155 (\4\:I17\|I1\|OEB VSSIOR!) capacitor c=7.57462e-17
+C156 (\14\:PAD VSSIOR!) capacitor c=3.93045e-16
+C157 (\4\:OEN VSSIOR!) capacitor c=8.40251e-17
+C158 (\14\:I17\|I1\|OE VSSIOR!) capacitor c=2.56689e-17
+C159 (\15\:I17\|I1\|OE VSSIOR!) capacitor c=3.96483e-16
+C160 (\12\:I17\|I1\|OEB VSSIOR!) capacitor c=1.2771e-16
+C161 (\7\:OEN VSSIOR!) capacitor c=2.31375e-16
+C162 (\10\:I17\|nmos VSSIOR!) capacitor c=9.87015e-17
+C163 (\11\:I17\|nmos VSSIOR!) capacitor c=8.77332e-17
+C164 (\10\:I17\|pmos VSSIOR!) capacitor c=1.92707e-16
+C165 (\27\:PAD VSSIOR!) capacitor c=7.90306e-16
+C166 (\8\:Y VSSIOR!) capacitor c=6.08013e-15
+C167 (\3\:I17\|I2\|net0189 VSSIOR!) capacitor c=3.03269e-17
+C168 (\7\:I17\|I2\|net0189 VSSIOR!) capacitor c=1.56662e-16
+C169 (\7\:I17\|I2\|net59 VSSIOR!) capacitor c=1.43858e-16
+C170 (\15\:A VSSIOR!) capacitor c=6.57975e-16
+C171 (\16\:A VSSIOR!) capacitor c=7.73547e-17
+C172 (\9\:OEN VSSIOR!) capacitor c=4.25979e-16
+C173 (\10\:OEN VSSIOR!) capacitor c=6.05763e-16
+C174 (\4\:I17\|I2\|net0174 VSSIOR!) capacitor c=1.55433e-16
+C175 (\11\:I17\|I2\|net0189 VSSIOR!) capacitor c=1.2153e-16
+C176 (\11\:I17\|I2\|net59 VSSIOR!) capacitor c=9.20878e-17
+C177 (\6\:I17\|I2\|net0218 VSSIOR!) capacitor c=1.89831e-16
+C178 (\6\:I17\|I2\|net0227 VSSIOR!) capacitor c=1.65442e-16
+C179 (\21\:I17\|pmos VSSIOR!) capacitor c=6.16966e-16
+C180 (\22\:I17\|pmos VSSIOR!) capacitor c=7.81232e-16
+C181 (\85\:VSS VSSIOR!) capacitor c=1.06037e-15
+C182 (\20\:I17\|I2\|net0110 VSSIOR!) capacitor c=4.64386e-17
+C183 (\14\:I17\|I2\|net093 VSSIOR!) capacitor c=5.08271e-18
+C184 (\23\:I17\|nmos VSSIOR!) capacitor c=1.83976e-15
+C185 (\19\:I17\|I2\|net093 VSSIOR!) capacitor c=5.18428e-17
+C186 (\23\:I17\|pmos VSSIOR!) capacitor c=6.28732e-16
+C187 (\34\:I17\|I2\|net0110 VSSIOR!) capacitor c=3.11559e-16
+C188 (\35\:I17\|I2\|net0110 VSSIOR!) capacitor c=5.01762e-17
+C189 (\37\:I17\|I2\|net0110 VSSIOR!) capacitor c=2.86116e-16
+C190 (\21\:I17\|I2\|net0106 VSSIOR!) capacitor c=3.67953e-16
+C191 (\24\:I17\|I2\|net0106 VSSIOR!) capacitor c=2.74533e-16
+C192 (\25\:I17\|I2\|net0106 VSSIOR!) capacitor c=1.98176e-16
+C193 (\21\:I17\|I2\|net093 VSSIOR!) capacitor c=2.95974e-16
+C194 (\22\:I17\|I2\|net093 VSSIOR!) capacitor c=6.6933e-17
+C195 (\23\:I17\|I2\|net093 VSSIOR!) capacitor c=6.93029e-17
+C196 (\24\:I17\|I2\|net093 VSSIOR!) capacitor c=1.61145e-16
+C197 (\25\:I17\|I2\|net093 VSSIOR!) capacitor c=1.02657e-16
+C198 (\53\:I17\|nmos25 VSSIOR!) capacitor c=1.09381e-15
+C199 (\80\:I17\|pmos25 VSSIOR!) capacitor c=1.33659e-15
+C200 (\42\:PAD VSSIOR!) capacitor c=6.70286e-15
+C201 (\43\:PAD VSSIOR!) capacitor c=7.07918e-15
+C202 (\57\:PAD VSSIOR!) capacitor c=4.3813e-14
+C203 (\74\:PAD VSSIOR!) capacitor c=6.72288e-14
+C204 (\67\:I17\|nmos25 VSSIOR!) capacitor c=2.37199e-17
+C205 (\68\:I17\|nmos25 VSSIOR!) capacitor c=6.28796e-17
+C206 (\69\:I17\|nmos25 VSSIOR!) capacitor c=8.22768e-17
+C207 (\108\:I17\|pmos25 VSSIOR!) capacitor c=6.03962e-16
+C208 (\109\:I17\|pmos25 VSSIOR!) capacitor c=4.75003e-17
+C209 (\110\:I17\|pmos25 VSSIOR!) capacitor c=2.39092e-17
+C210 (\111\:I17\|pmos25 VSSIOR!) capacitor c=5.8707e-16
+C211 (\112\:I17\|pmos25 VSSIOR!) capacitor c=3.59889e-17
+C212 (\1369\:VDDIOR! VSSIOR!) capacitor c=4.37957e-15
+C213 (\86\:VSS VSSIOR!) capacitor c=2.12195e-15
+C214 (\87\:VSS VSSIOR!) capacitor c=8.60064e-16
+C215 (\88\:VSS VSSIOR!) capacitor c=1.7869e-16
+C216 (\76\:VDD VSSIOR!) capacitor c=1.90272e-15
+C217 (\73\:VDD VSSIOR!) capacitor c=7.14926e-16
+C218 (\74\:VDD VSSIOR!) capacitor c=4.75641e-16
+C219 (\75\:VDD VSSIOR!) capacitor c=4.56165e-15
+Rl7 (\17\:VDD \26\:VDD) resistor r=0.2654 c=0
+Rl1 (\61\:I17\|pmos25 \71\:I17\|pmos25) resistor r=0.4264 c=0
+Rl214 (\2\:A \15\:A) resistor r=23.2431 c=0
+Rl220 (\73\:VDD \1\:VDD) resistor r=8.4221 c=0
+Rl226 (\84\:VSS \86\:VSS) resistor r=0.01 c=0
+Rl231 (\962\:VSSIOR! \961\:VSSIOR!) resistor r=0.08333 c=0
+Rl238 (\9\:OEN \10\:OEN) resistor r=3.4892 c=0
+Rl244 (\10\:I17\|pmos \9\:I17\|pmos) resistor r=0.3446 c=0
+Rl38 (\10\:I17\|nmos \11\:I17\|nmos) resistor r=0.1767 c=0
+Rl44 (I17\|pmos25 \7\:I17\|pmos25) resistor r=16.2371 c=0
+Rl50 (\10\:I17\|pmos25 \8\:I17\|pmos25) resistor r=1.243 c=0
+Rl55 (\104\:I17\|pmos25 \112\:I17\|pmos25) resistor r=2.25 c=0
+Rl62 (\4\:I17\|nmos25 \6\:I17\|nmos25) resistor r=1.5629 c=0
+Rl67 (\2\:I17\|I1\|OEB \3\:I17\|I1\|OEB) resistor r=354.215 c=0
+Rl8 (\6\:I17\|I1\|OE \7\:I17\|I1\|OE) resistor r=1.2301 c=0
+Rl9 (\22\:I17\|I2\|net093 \23\:I17\|I2\|net093) resistor r=0.2078 c=0
+Rl24 (\18\:I17\|I2\|net093 \16\:I17\|I2\|net093) resistor r=5.0399 c=0
+Rl25 (I17\|I2\|net0174 \20\:I17\|I2\|net0174) resistor r=44.6113 c=0
+Rl273 (\3\:I17\|I2\|net0110 \37\:I17\|I2\|net0110) resistor r=102.502 c=0
+Rl280 (\4\:I17\|I2\|net59 \11\:I17\|I2\|net59) resistor r=45.1179 c=0
+Rl285 (\3\:I17\|I2\|net0227 \6\:I17\|I2\|net0227) resistor r=45.0626 c=0
+Rk890 (\14\:VSS \23\:VSS) resistor r=0.3278 c=0
+Rk73 (\29\:I17\|I4\|net026 I17\|I4\|net026) resistor r=52.5266 c=0
+Rk74 (\12\:A \15\:A) resistor r=2.9838 c=0
+Rk76 (\73\:VDD \8\:VDD) resistor r=8.3784 c=0
+Rk75 (\86\:VSS VSS) resistor r=0.2952 c=0
+Rk77 (\990\:VSSIOR! \959\:VSSIOR!) resistor r=0.04167 c=0
+Rk78 (\8\:OEN OEN) resistor r=4.1608 c=0
+Rk764 (\15\:I17\|pmos \23\:I17\|pmos) resistor r=45.6457 c=0
+Rk763 (\3\:I17\|nmos \11\:I17\|nmos) resistor r=0.5 c=0
+Rk758 (\7\:I17\|pmos25 \9\:I17\|pmos25) resistor r=4.8642 c=0
+Rk757 (\11\:I17\|pmos25 \12\:I17\|pmos25) resistor r=2.25 c=0
+Rk759 (\111\:I17\|pmos25 \112\:I17\|pmos25) resistor r=1.7757 c=0
+Rk785 (\60\:I17\|nmos25 \68\:I17\|nmos25) resistor r=4.8642 c=0
+Rk69 (\8\:I17\|I1\|OEB \12\:I17\|I1\|OEB) resistor r=0.9453 c=0
+Rk68 (I17\|I1\|OE \10\:I17\|I1\|OE) resistor r=45 c=0
+Rk70 (\23\:I17\|I2\|net093 \24\:I17\|I2\|net093) resistor r=0.2489 c=0
+Rk71 (\20\:I17\|I2\|net0106 \21\:I17\|I2\|net0106) resistor r=0.5 c=0
+Rk72 (\20\:I17\|I2\|net0174 \40\:I17\|I2\|net0174) resistor r=64.8193 c=0
+Rk784 (\37\:I17\|I2\|net0110 \17\:I17\|I2\|net0110) resistor r=0.5 c=0
+Rk783 (\11\:I17\|I2\|net59 \12\:I17\|I2\|net59) resistor r=6.4624 c=0
+Rk902 (\6\:I17\|I2\|net0227 \7\:I17\|I2\|net0227) resistor r=5.9679 c=0
+Rj466 (\50\:VSS \41\:VSS) resistor r=8.222 c=0
+Rj137 (I17\|I2\|net093 \2\:I17\|I2\|net093) resistor r=151.567 c=0
+Rj138 (\13\:A \16\:A) resistor r=0.0119 c=0
+Rj145 (\73\:VDD \10\:VDD) resistor r=8.3237 c=0
+Rj146 (\86\:VSS \87\:VSS) resistor r=0.1164 c=0
+Rj323 (VSSIOR! \959\:VSSIOR!) resistor r=0.2216 c=0
+Rj322 (\2\:OEN \4\:OEN) resistor r=22.5 c=0
+Rj324 (\23\:I17\|pmos \20\:I17\|pmos) resistor r=0.9701 c=0
+Rj465 (\9\:I17\|nmos \23\:I17\|nmos) resistor r=6.4327 c=0
+Rj325 (I17\|pmos25 \11\:I17\|pmos25) resistor r=16.1311 c=0
+Rj326 (\10\:I17\|pmos25 \12\:I17\|pmos25) resistor r=1.7757 c=0
+Rj327 (\71\:I17\|pmos25 \77\:I17\|pmos25) resistor r=2.2831 c=0
+Rj475 (\62\:I17\|nmos25 \68\:I17\|nmos25) resistor r=4.8642 c=0
+Rj476 (\2\:I17\|I1\|OEB \4\:I17\|I1\|OEB) resistor r=22.5 c=0
+Rj477 (\10\:I17\|I1\|OE \9\:I17\|I1\|OE) resistor r=0.0674 c=0
+Rj478 (\13\:I17\|I2\|net093 \24\:I17\|I2\|net093) resistor r=0.5 c=0
+Rj932 (\21\:I17\|I2\|net0106 \24\:I17\|I2\|net0106) resistor r=0.2852 c=0
+Rj935 (\20\:I17\|I2\|net0174 \9\:I17\|I2\|net0174) resistor r=0.3157 c=0
+Rj938 (\35\:I17\|I2\|net0110 \20\:I17\|I2\|net0110) resistor r=0.5 c=0
+Rj941 (\11\:I17\|I2\|net59 \14\:I17\|I2\|net59) resistor r=4.977 c=0
+Rj944 (\6\:I17\|I2\|net0227 \9\:I17\|I2\|net0227) resistor r=5.4816 c=0
+Ri413 (\50\:VSS \60\:VSS) resistor r=5.8264 c=0
+Ri414 (I17\|I2\|net0106 \2\:I17\|I2\|net0106) resistor r=151.567 c=0
+Ri412 (\16\:A A) resistor r=0.03677 c=0
+Ri420 (\4\:Y \8\:Y) resistor r=0.5 c=0
+Ri421 (\14\:VSS \87\:VSS) resistor r=0.04478 c=0
+Ri835 (\961\:VSSIOR! \959\:VSSIOR!) resistor r=0.4514 c=0
+Ri838 (\7\:OEN \4\:OEN) resistor r=0.5 c=0
+Ri841 (\9\:I17\|pmos \22\:I17\|pmos) resistor r=0.5 c=0
+Ri844 (\12\:I17\|nmos \23\:I17\|nmos) resistor r=298.679 c=0
+Ri847 (\9\:I17\|pmos25 \11\:I17\|pmos25) resistor r=4.8642 c=0
+Ri850 (I17\|pmos25 \108\:I17\|pmos25) resistor r=23.0521 c=0
+Ri853 (I17\|pmos25 \80\:I17\|pmos25) resistor r=2.8776 c=0
+Ri745 (\60\:I17\|nmos25 \67\:I17\|nmos25) resistor r=5.625 c=0
+Ri699 (\12\:I17\|I1\|OEB \4\:I17\|I1\|OEB) resistor r=0.5 c=0
+Ri731 (\9\:I17\|I1\|OE \15\:I17\|I1\|OE) resistor r=1.3102 c=0
+Ri763 (\24\:I17\|I2\|net093 \25\:I17\|I2\|net093) resistor r=0.609 c=0
+Ri795 (I17\|I2\|net0106 \24\:I17\|I2\|net0106) resistor r=45.5 c=0
+Ri685 (\9\:I17\|I2\|net0174 \7\:I17\|I2\|net0174) resistor r=5.074 c=0
+Ri701 (I17\|I2\|net0110 \20\:I17\|I2\|net0110) resistor r=45 c=0
+Ri733 (I17\|I2\|net0189 \3\:I17\|I2\|net0189) resistor r=144.201 c=0
+Ri765 (I17\|I2\|net0218 \6\:I17\|I2\|net0218) resistor r=283.871 c=0
+Rh11 (\41\:VSS \75\:VSS) resistor r=5.8245 c=0
+Rh7 (I17\|I2\|net0174 \2\:I17\|I2\|net0174) resistor r=128.13 c=0
+Rh8 (\76\:VDD VDD) resistor r=0.01862 c=0
+Rh10 (\8\:Y \7\:Y) resistor r=4.5516 c=0
+Rh9 (VSS \88\:VSS) resistor r=0.2428 c=0
+Rh1 (\973\:VSSIOR! \974\:VSSIOR!) resistor r=19.9224 c=0
+Rh2 (\42\:PAD \29\:PAD) resistor r=0.4402 c=0
+Rh4 (\20\:I17\|pmos \21\:I17\|pmos) resistor r=0.5 c=0
+Rh3 (\23\:I17\|nmos \17\:I17\|nmos) resistor r=545.007 c=0
+Rh178 (I17\|pmos25 \4\:I17\|pmos25) resistor r=2.25 c=0
+Rh201 (\97\:I17\|pmos25 \108\:I17\|pmos25) resistor r=6.7316 c=0
+Rh224 (\77\:I17\|pmos25 \80\:I17\|pmos25) resistor r=0.5 c=0
+Rh247 (\68\:I17\|nmos25 \67\:I17\|nmos25) resistor r=1.094 c=0
+Rh280 (\8\:I17\|I1\|OEB \9\:I17\|I1\|OEB) resistor r=19.6143 c=0
+Rh287 (\7\:I17\|I1\|OE \14\:I17\|I1\|OE) resistor r=45 c=0
+Rh246 (\9\:I17\|I2\|net093 \25\:I17\|I2\|net093) resistor r=0.5 c=0
+Rh223 (\24\:I17\|I2\|net0106 \25\:I17\|I2\|net0106) resistor r=0.609 c=0
+Rh200 (\20\:I17\|I2\|net0174 \13\:I17\|I2\|net0174) resistor r=19.2831 c=0
+Rh177 (\17\:I17\|I2\|net0110 \14\:I17\|I2\|net0110) resistor r=5.102 c=0
+Rh156 (\3\:I17\|I2\|net0189 \6\:I17\|I2\|net0189) resistor r=216.072 c=0
+Rh14 (\6\:I17\|I2\|net0218 \7\:I17\|I2\|net0218) resistor r=5.9841 c=0
+Rw88 (\1\:PAD \14\:PAD) resistor r=304.044 c=0
+Rw89 (I17\|I2\|net0110 \2\:I17\|I2\|net0110) resistor r=128.13 c=0
+Rw273 (VDD \73\:VDD) resistor r=0.2471 c=0
+Rw96 (\7\:Y Y) resistor r=0.04765 c=0
+Rw97 (\87\:VSS \88\:VSS) resistor r=0.03972 c=0
+Rw183 (\985\:VSSIOR! \986\:VSSIOR!) resistor r=19.9387 c=0
+Rw184 (\42\:PAD \43\:PAD) resistor r=0.3737 c=0
+Rw185 (\22\:I17\|pmos \21\:I17\|pmos) resistor r=4.1268 c=0
+Rw270 (\3\:I17\|nmos I17\|nmos) resistor r=19.9434 c=0
+Rw95 (I17\|pmos25 \2\:I17\|pmos25) resistor r=5.625 c=0
+Rw186 (\97\:I17\|pmos25 \109\:I17\|pmos25) resistor r=2.25 c=0
+Rw187 (\60\:I17\|nmos25 I17\|nmos25) resistor r=16.1311 c=0
+Rw188 (\62\:I17\|nmos25 \69\:I17\|nmos25) resistor r=2.25 c=0
+Rw278 (\8\:I17\|I1\|OEB \6\:I17\|I1\|OEB) resistor r=8.7654 c=0
+Rw279 (\15\:I17\|I1\|OE \14\:I17\|I1\|OE) resistor r=0.1472 c=0
+Rw280 (\6\:I17\|I2\|net093 \19\:I17\|I2\|net093) resistor r=45 c=0
+Rw281 (\25\:I17\|I2\|net0106 \6\:I17\|I2\|net0106) resistor r=5.7172 c=0
+Rw470 (\20\:I17\|I2\|net0174 \18\:I17\|I2\|net0174) resistor r=5.2053 c=0
+Rw486 (\24\:I17\|I2\|net0110 \22\:I17\|I2\|net0110) resistor r=19.7325 c=0
+Rw518 (\3\:I17\|I2\|net0189 \4\:I17\|I2\|net0189) resistor r=292.83 c=0
+Rw180 (\6\:I17\|I2\|net0218 \9\:I17\|I2\|net0218) resistor r=5.7269 c=0
+Rv242 (\380\:PAD PAD) resistor r=0.01272 c=0
+Rv243 (I17\|I2\|net59 \6\:I17\|I2\|net59) resistor r=206.457 c=0
+Rv244 (\73\:VDD \74\:VDD) resistor r=0.03981 c=0
+Rv64 (\4\:Y \1\:Y) resistor r=5.0289 c=0
+Rv150 (\88\:VSS \5\:VSS) resistor r=19.2081 c=0
+Rv248 (\1\:OEN \2\:OEN) resistor r=406.323 c=0
+Rv241 (\42\:PAD \27\:PAD) resistor r=1.0609 c=0
+Rv151 (\3\:I17\|pmos I17\|pmos) resistor r=20.1336 c=0
+Rv63 (\4\:I17\|nmos \5\:I17\|nmos) resistor r=19.9702 c=0
+Rv253 (\4\:I17\|pmos25 \2\:I17\|pmos25) resistor r=1.243 c=0
+Rv254 (\108\:I17\|pmos25 \109\:I17\|pmos25) resistor r=1.7757 c=0
+Rv291 (I17\|nmos25 \62\:I17\|nmos25) resistor r=16.1311 c=0
+Rv498 (\68\:I17\|nmos25 \69\:I17\|nmos25) resistor r=1.5629 c=0
+Rv499 (I17\|I1\|OE \2\:I17\|I1\|OE) resistor r=2.5163 c=0
+Rv500 (\15\:I17\|I1\|OE \16\:I17\|I1\|OE) resistor r=19.1086 c=0
+Rv501 (\21\:I17\|I2\|net093 \19\:I17\|I2\|net093) resistor r=0.5 c=0
+Rv502 (\24\:I17\|I2\|net0106 \10\:I17\|I2\|net0106) resistor r=20.4018 c=0
+Rv503 (\20\:I17\|I2\|net0174 \24\:I17\|I2\|net0174) resistor r=45.442 c=0
+Rv504 (\27\:I17\|I2\|net0110 \25\:I17\|I2\|net0110) resistor r=4.548 c=0
+Rv505 (\4\:I17\|I2\|net0189 \7\:I17\|I2\|net0189) resistor r=390.997 c=0
+Ru4 (PAD \57\:PAD) resistor r=0.1749 c=0
+Ru5 (\3\:A \4\:A) resistor r=130.186 c=0
+Ru6 (\17\:VDD \74\:VDD) resistor r=0.0462 c=0
+Ru1 (\4\:Y \5\:Y) resistor r=6.8155 c=0
+Ru2 (\88\:VSS \8\:VSS) resistor r=19.2098 c=0
+Ru3 (\2\:OEN \3\:OEN) resistor r=235.347 c=0
+Ru7 (\14\:PAD \27\:PAD) resistor r=46.5428 c=0
+Ru19 (\3\:I17\|pmos \4\:I17\|pmos) resistor r=8.4411 c=0
+Ru20 (\4\:I17\|nmos \7\:I17\|nmos) resistor r=8.7087 c=0
+Ru166 (I17\|pmos25 \6\:I17\|pmos25) resistor r=2.25 c=0
+Ru112 (\102\:I17\|pmos25 \111\:I17\|pmos25) resistor r=4.8642 c=0
+Ru91 (I17\|nmos25 \4\:I17\|nmos25) resistor r=2.25 c=0
+Ru172 (\31\:I17\|nmos25 \49\:I17\|nmos25) resistor r=2.2831 c=0
+Ru34 (\2\:I17\|I1\|OE \3\:I17\|I1\|OE) resistor r=39.2642 c=0
+Ru197 (\9\:I17\|I1\|OE \18\:I17\|I1\|OE) resistor r=8.1988 c=0
+Ru83 (\23\:I17\|I2\|net093 \14\:I17\|I2\|net093) resistor r=0.5 c=0
+Ru81 (\24\:I17\|I2\|net0106 \13\:I17\|I2\|net0106) resistor r=4.8486 c=0
+Ru80 (\24\:I17\|I2\|net0110 \34\:I17\|I2\|net0110) resistor r=0.5 c=0
+Ru63 (\34\:I17\|I2\|net0110 \7\:I17\|I2\|net0110) resistor r=45.1848 c=0
+Ru62 (\4\:I17\|I2\|net0189 \11\:I17\|I2\|net0189) resistor r=45.1179 c=0
+Rz219 (\29\:PAD \57\:PAD) resistor r=0.1318 c=0
+Rz218 (\1\:A \2\:A) resistor r=518.542 c=0
+Rz216 (\76\:VDD \75\:VDD) resistor r=0.3011 c=0
+Rz217 (\41\:VSS \84\:VSS) resistor r=0.2653 c=0
+Rz6 (\962\:VSSIOR! \973\:VSSIOR!) resistor r=0.4351 c=0
+Rz7 (\6\:OEN \7\:OEN) resistor r=0.1539 c=0
+Rz288 (\12\:I17\|pmos \15\:I17\|pmos) resistor r=143.848 c=0
+Rz291 (\10\:I17\|pmos \6\:I17\|pmos) resistor r=8.9121 c=0
+Rz299 (I17\|pmos25 \97\:I17\|pmos25) resistor r=13.1186 c=0
+Rz22 (\4\:I17\|pmos25 \6\:I17\|pmos25) resistor r=1.7757 c=0
+Rz38 (\104\:I17\|pmos25 \111\:I17\|pmos25) resistor r=4.8642 c=0
+Rz69 (I17\|nmos25 \2\:I17\|nmos25) resistor r=5.625 c=0
+Rz85 (I17\|nmos25 \53\:I17\|nmos25) resistor r=2.7242 c=0
+Rz116 (\2\:I17\|I1\|OE \4\:I17\|I1\|OE) resistor r=665.034 c=0
+Rz12 (\3\:I17\|I2\|net093 \6\:I17\|I2\|net093) resistor r=60.0555 c=0
+Rz13 (I17\|I2\|net093 \14\:I17\|I2\|net093) resistor r=45 c=0
+Rz14 (\20\:I17\|I2\|net0106 \3\:I17\|I2\|net0106) resistor r=45.4355 c=0
+Rz15 (\34\:I17\|I2\|net0110 \27\:I17\|I2\|net0110) resistor r=0.5 c=0
+Rz18 (\34\:I17\|I2\|net0110 \31\:I17\|I2\|net0110) resistor r=45.5462 c=0
+Rz24 (\11\:I17\|I2\|net0189 \12\:I17\|I2\|net0189) resistor r=6.4787 c=0
+Ry8 (\43\:PAD \74\:PAD) resistor r=0.1319 c=0
+Ry9 (\12\:A \13\:A) resistor r=4.0963 c=0
+Ry10 (\74\:VDD \75\:VDD) resistor r=0.09792 c=0
+Ry271 (\84\:VSS \85\:VSS) resistor r=0.2699 c=0
+Ry285 (\973\:VSSIOR! \985\:VSSIOR!) resistor r=9.991 c=0
+Ry297 (\8\:OEN \9\:OEN) resistor r=0.125 c=0
+Ry296 (\15\:I17\|pmos \17\:I17\|pmos) resistor r=540.645 c=0
+Ry6 (\4\:I17\|nmos \10\:I17\|nmos) resistor r=0.5 c=0
+Ry7 (I17\|pmos25 \102\:I17\|pmos25) resistor r=16.2371 c=0
+Ry284 (\9\:I17\|pmos25 \10\:I17\|pmos25) resistor r=2.25 c=0
+Ry298 (\102\:I17\|pmos25 \110\:I17\|pmos25) resistor r=5.625 c=0
+Ry299 (\4\:I17\|nmos25 \2\:I17\|nmos25) resistor r=1.094 c=0
+Ry609 (\49\:I17\|nmos25 \53\:I17\|nmos25) resistor r=0.5 c=0
+Ry627 (\5\:I17\|I1\|OE \6\:I17\|I1\|OE) resistor r=619.196 c=0
+Ry636 (\18\:I17\|I2\|net093 \22\:I17\|I2\|net093) resistor r=0.5 c=0
+Ry645 (\9\:I17\|I2\|net093 \7\:I17\|I2\|net093) resistor r=5.1911 c=0
+Ry600 (\3\:I17\|I2\|net0174 \4\:I17\|I2\|net0174) resistor r=82.9721 c=0
+Ry657 (\34\:I17\|I2\|net0110 \35\:I17\|I2\|net0110) resistor r=0.2489 c=0
+Ry314 (I17\|I2\|net59 \4\:I17\|I2\|net59) resistor r=292.83 c=0
+Ry317 (\11\:I17\|I2\|net0189 \14\:I17\|I2\|net0189) resistor r=5.2864 c=0
+Rx43 (VDDIOR! \1369\:VDDIOR!) resistor r=0.5301 c=0
+Rx46 (\4\:A \15\:A) resistor r=23 c=0
+Rx10 (\57\:VDD \75\:VDD) resistor r=0.3177 c=0
+Rx13 (\50\:VSS \85\:VSS) resistor r=0.08546 c=0
+Rx16 (\985\:VSSIOR! \990\:VSSIOR!) resistor r=0.4475 c=0
+Rx19 (\6\:OEN \10\:OEN) resistor r=0.5 c=0
+Rx22 (\3\:I17\|pmos \10\:I17\|pmos) resistor r=0.6557 c=0
+Rx25 (\10\:I17\|nmos \9\:I17\|nmos) resistor r=0.2484 c=0
+Rx90 (I17\|pmos25 \104\:I17\|pmos25) resistor r=16.1311 c=0
+Rx93 (\7\:I17\|pmos25 \8\:I17\|pmos25) resistor r=5.625 c=0
+Rx96 (\111\:I17\|pmos25 \110\:I17\|pmos25) resistor r=1.243 c=0
+Rx99 (I17\|nmos25 \6\:I17\|nmos25) resistor r=2.25 c=0
+Rx102 (I17\|I1\|OEB \2\:I17\|I1\|OEB) resistor r=387.207 c=0
+Rx105 (\6\:I17\|I1\|OE \8\:I17\|I1\|OE) resistor r=85.6735 c=0
+Rx47 (\22\:I17\|I2\|net093 \21\:I17\|I2\|net093) resistor r=0.2538 c=0
+Rx49 (\13\:I17\|I2\|net093 \11\:I17\|I2\|net093) resistor r=19.9018 c=0
+Rx28 (\3\:I17\|I2\|net0174 \20\:I17\|I2\|net0174) resistor r=44.6665 c=0
+Rx31 (\35\:I17\|I2\|net0110 \37\:I17\|I2\|net0110) resistor r=0.3238 c=0
+Rx34 (\4\:I17\|I2\|net59 \7\:I17\|I2\|net59) resistor r=239.062 c=0
+Rx37 (I17\|I2\|net0227 \3\:I17\|I2\|net0227) resistor r=239.367 c=0
+I17\|I1\|NM5 (I17\|pmos \4\:I17\|I1\|OE I17\|nmos VSS) g45n1svt w=(5e-07) \
+        l=4.5e-08 nf=1 as=8e-14 ad=7e-14 ps=1.32e-06 pd=1.28e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=5.5e-07 sd=160n sca=3.24721 \
+        scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I17\|I1\|NM0 (\16\:I17\|I1\|OE \3\:OEN \5\:VSS VSS) g45n1svt w=(5e-07) \
+        l=4.5e-08 nf=1 as=7e-14 ad=8e-14 ps=1.28e-06 pd=1.32e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n sca=3.24721 \
+        scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I17\|I1\|NM4 (I17\|nmos \3\:I17\|I1\|OEB \8\:VSS VSS) g45n1svt w=(5e-07) \
+        l=4.5e-08 nf=1 as=8e-14 ad=8e-14 ps=1.32e-06 pd=1.32e-06 \
+        nrd=1.16667 nrs=1.16667 sa=3.45e-07 sb=3.45e-07 sd=160n \
+        sca=3.24721 scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I17\|I1\|NM2 (\9\:I17\|I1\|OEB \8\:I17\|I1\|OE \5\:VSS VSS) g45n1svt \
+        w=(5e-07) l=4.5e-08 nf=1 as=7e-14 ad=8e-14 ps=1.28e-06 pd=1.32e-06 \
+        nrd=1.16667 nrs=1.16667 sa=3.45e-07 sb=1.4e-07 sd=160n sca=3.24721 \
+        scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I17\|I1\|NM3 (\5\:I17\|nmos \3\:A \8\:VSS VSS) g45n1svt w=(5e-07) \
+        l=4.5e-08 nf=1 as=7e-14 ad=8e-14 ps=1.28e-06 pd=1.32e-06 \
+        nrd=1.16667 nrs=1.16667 sa=5.5e-07 sb=1.4e-07 sd=160n sca=3.24721 \
+        scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I17\|I4\|NM0_1__rcx (\1\:Y \29\:I17\|I4\|net026 \23\:VSS VSS) g45n1svt \
+        w=(2.5e-06) l=4.5e-08 nf=1 as=4e-13 ad=3.5e-13 ps=5.32e-06 \
+        pd=5.28e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n \
+        sca=2.4853 scb=7.86359e-05 scc=2.85679e-09 m=(2)
+I17\|I2\|NM1 (\12\:I17\|I2\|net59 \17\:I17\|pmos \60\:VSS VSS) g45n1svt \
+        w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=2.8e-13 ps=4.32e-06 \
+        pd=4.28e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n \
+        sca=2.58054 scb=7.96347e-05 scc=2.87843e-09 m=(1)
+I17\|I2\|NM3 (\12\:I17\|I2\|net0189 \17\:I17\|nmos \75\:VSS VSS) \
+        g45n1svt w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=2.8e-13 \
+        ps=4.32e-06 pd=4.28e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 \
+        sb=3.45e-07 sd=160n sca=2.58054 scb=7.96347e-05 scc=2.87843e-09 \
+        m=(1)
+I17\|I2\|NM2 (\7\:I17\|I2\|net0227 \6\:I17\|I2\|net59 \60\:VSS VSS) \
+        g45n1svt w=(2e-06) l=4.5e-08 nf=1 as=2.8e-13 ad=3.2e-13 \
+        ps=4.28e-06 pd=4.32e-06 nrd=1.16667 nrs=1.16667 sa=3.45e-07 \
+        sb=1.4e-07 sd=160n sca=2.58054 scb=7.96347e-05 scc=2.87843e-09 \
+        m=(1)
+I17\|I2\|NM4 (\7\:I17\|I2\|net0218 \6\:I17\|I2\|net0189 \75\:VSS VSS) \
+        g45n1svt w=(2e-06) l=4.5e-08 nf=1 as=2.8e-13 ad=3.2e-13 \
+        ps=4.28e-06 pd=4.32e-06 nrd=1.16667 nrs=1.16667 sa=3.45e-07 \
+        sb=1.4e-07 sd=160n sca=2.58054 scb=7.96347e-05 scc=2.87843e-09 \
+        m=(1)
+I17\|I2\|NM6_1__rcx (\7\:I17\|I2\|net093 I17\|I2\|net59 \50\:VSS VSS) \
+        g45n1svt w=(2.5e-06) l=4.5e-08 nf=1 as=4e-13 ad=3.75e-13 \
+        ps=5.32e-06 pd=5.3e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 \
+        sb=7.55e-07 sd=160n sca=2.4853 scb=7.86359e-05 scc=2.85679e-09 \
+        m=(2)
+I17\|I2\|NM7_1__rcx (\6\:I17\|I2\|net0106 I17\|I2\|net0189 \41\:VSS VSS) \
+        g45n1svt w=(2.5e-06) l=4.5e-08 nf=1 as=4e-13 ad=3.75e-13 \
+        ps=5.32e-06 pd=5.3e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 \
+        sb=7.55e-07 sd=160n sca=2.4853 scb=7.86359e-05 scc=2.85679e-09 \
+        m=(2)
+I17\|I2\|NM5 (\7\:I17\|I2\|net0174 I17\|I2\|net0227 \50\:VSS VSS) \
+        g45n1svt w=(2.5e-06) l=4.5e-08 nf=1 as=4e-13 ad=3.75e-13 \
+        ps=5.32e-06 pd=5.3e-06 nrd=1.16667 nrs=1.16667 sa=5.5e-07 \
+        sb=3.45e-07 sd=160n sca=2.4853 scb=7.86359e-05 scc=2.85679e-09 \
+        m=(2)
+I17\|I2\|NM8 (\14\:I17\|I2\|net0110 I17\|I2\|net0218 \41\:VSS VSS) \
+        g45n1svt w=(2.5e-06) l=4.5e-08 nf=1 as=4e-13 ad=3.75e-13 \
+        ps=5.32e-06 pd=5.3e-06 nrd=1.16667 nrs=1.16667 sa=5.5e-07 \
+        sb=3.45e-07 sd=160n sca=2.4853 scb=7.86359e-05 scc=2.85679e-09 \
+        m=(2)
+I17\|I2\|M15 (\11\:I17\|I2\|net093 \2\:I17\|I2\|net0174 \974\:VSSIOR! \
+        VSSIOR!) g45n2svt w=(5e-07) l=1.5e-07 nf=1 as=1e-13 ad=7.5e-14 \
+        ps=1.4e-06 pd=1.3e-06 nrd=468.75m nrs=468.75m sa=1.5e-07 sb=5e-07 \
+        sd=200n sca=3.07246 scb=6.94833e-05 scc=1.79353e-09 m=(1)
+I17\|I2\|M20 (\10\:I17\|I2\|net0106 \2\:I17\|I2\|net0110 \986\:VSSIOR! \
+        VSSIOR!) g45n2svt w=(5e-07) l=1.5e-07 nf=1 as=1e-13 ad=7.5e-14 \
+        ps=1.4e-06 pd=1.3e-06 nrd=468.75m nrs=468.75m sa=1.5e-07 sb=5e-07 \
+        sd=200n sca=3.07246 scb=6.94833e-05 scc=1.79353e-09 m=(1)
+I17\|I2\|M11 (\13\:I17\|I2\|net0174 \2\:I17\|I2\|net093 \974\:VSSIOR! \
+        VSSIOR!) g45n2svt w=(5e-07) l=1.5e-07 nf=1 as=7.5e-14 ad=1e-13 \
+        ps=1.3e-06 pd=1.4e-06 nrd=468.75m nrs=468.75m sa=5e-07 sb=1.5e-07 \
+        sd=200n sca=3.07246 scb=6.94833e-05 scc=1.79353e-09 m=(1)
+I17\|I2\|M19 (\22\:I17\|I2\|net0110 \2\:I17\|I2\|net0106 \986\:VSSIOR! \
+        VSSIOR!) g45n2svt w=(5e-07) l=1.5e-07 nf=1 as=7.5e-14 ad=1e-13 \
+        ps=1.3e-06 pd=1.4e-06 nrd=468.75m nrs=468.75m sa=5e-07 sb=1.5e-07 \
+        sd=200n sca=3.07246 scb=6.94833e-05 scc=1.79353e-09 m=(1)
+I17\|I2\|M23 (\31\:I17\|nmos25 \7\:I17\|I2\|net0110 \990\:VSSIOR! VSSIOR!) \
+        g45n2svt w=(2.5e-06) l=1.5e-07 nf=1 as=5e-13 ad=4.375e-13 \
+        ps=5.4e-06 pd=5.35e-06 nrd=468.75m nrs=468.75m sa=1.5e-07 \
+        sb=1.2e-06 sd=200n sca=2.31056 scb=5.36983e-05 scc=1.44728e-09 \
+        m=(4)
+I17\|I2\|M27_1__rcx (\61\:I17\|pmos25 \40\:I17\|I2\|net0174 \962\:VSSIOR! \
+        VSSIOR!) g45n2svt w=(2.5e-06) l=1.5e-07 nf=1 as=5e-13 \
+        ad=4.5833e-13 ps=5.4e-06 pd=5.36667e-06 nrd=468.75m nrs=468.75m \
+        sa=8.5e-07 sb=1.2e-06 sd=200n sca=2.31056 scb=5.36983e-05 \
+        scc=1.44728e-09 m=(6)
+I17\|I3\|M8_4__rcx (\43\:PAD I17\|nmos25 VSSIOR! VSSIOR!) g45n2svt \
+        w=(1e-05) l=2e-07 nf=1 as=5.41e-11 ad=5.25e-12 ps=3.082e-05 \
+        pd=2.105e-05 nrd=468.75m nrs=468.75m sa=5.25e-07 sb=2e-06 sd=200n \
+        sca=1.84848 scb=4.29512e-05 scc=1.08015e-09 m=(8)
+I17\|I3\|M4_44__rcx (\74\:PAD VSSIOR! VSSIOR! VSSIOR!) g45n2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=5.25e-12 ps=3.082e-05 pd=2.105e-05 \
+        nrd=468.75m nrs=468.75m sa=5.25e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(48)
+I17\|I1\|PM5 (\4\:I17\|pmos \3\:I17\|I1\|OE \10\:VDD VDD) g45p1svt \
+        w=(1e-06) l=4.5e-08 nf=1 as=1.4e-13 ad=1.6e-13 ps=2.28e-06 \
+        pd=2.32e-06 nrd=1.16667 nrs=1.16667 sa=3.45e-07 sb=1.4e-07 sd=160n \
+        sca=22.8136 scb=0.0138897 scc=0.00170436 m=(1)
+I17\|I1\|PM4 (\7\:I17\|nmos I17\|I1\|OEB \6\:I17\|pmos VDD) g45p1svt \
+        w=(1e-06) l=4.5e-08 nf=1 as=1.4e-13 ad=1.4e-13 ps=2.28e-06 \
+        pd=2.28e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=1.4e-07 sd=160n \
+        sca=19.4885 scb=0.00947105 scc=0.00165874 m=(1)
+I17\|I1\|PM1 (\18\:I17\|I1\|OE \1\:OEN \1\:VDD VDD) g45p1svt w=(1e-06) \
+        l=4.5e-08 nf=1 as=1.6e-13 ad=1.4e-13 ps=2.32e-06 pd=2.28e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n sca=22.0179 \
+        scb=0.0125224 scc=0.00167909 m=(1)
+I17\|I1\|PM2 (\6\:I17\|I1\|OEB \5\:I17\|I1\|OE \1\:VDD VDD) g45p1svt \
+        w=(1e-06) l=4.5e-08 nf=1 as=1.4e-13 ad=1.6e-13 ps=2.28e-06 \
+        pd=2.32e-06 nrd=1.16667 nrs=1.16667 sa=3.45e-07 sb=1.4e-07 sd=160n \
+        sca=29.1166 scb=0.0240644 scc=0.00238817 m=(1)
+I17\|I4\|PM1 (\5\:Y \29\:I17\|I4\|net026 \26\:VDD VDD) g45p1svt \
+        w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=2.8e-13 ps=4.32e-06 \
+        pd=4.28e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n \
+        sca=5.10306 scb=0.00199193 scc=5.97223e-06 m=(2)
+I17\|I2\|PM1 (\14\:I17\|I2\|net59 \12\:I17\|pmos \57\:VDD VDD) g45p1svt \
+        w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=3e-13 ps=4.32e-06 \
+        pd=4.3e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=7.55e-07 sd=160n \
+        sca=17.2363 scb=0.014483 scc=0.00111574 m=(2)
+I17\|I2\|PM4_1__rcx (\14\:I17\|I2\|net0189 \12\:I17\|nmos \57\:VDD VDD) \
+        g45p1svt w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=3e-13 ps=4.32e-06 \
+        pd=4.3e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=7.55e-07 sd=160n \
+        sca=17.2363 scb=0.014483 scc=0.00111574 m=(2)
+I17\|I2\|PM2_1__rcx (\9\:I17\|I2\|net0227 \7\:I17\|I2\|net59 \57\:VDD \
+        VDD) g45p1svt w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=3e-13 \
+        ps=4.32e-06 pd=4.3e-06 nrd=1.16667 nrs=1.16667 sa=5.5e-07 \
+        sb=3.45e-07 sd=160n sca=12.6259 scb=0.00589089 scc=0.000830541 \
+        m=(2)
+I17\|I2\|PM3_1__rcx (\9\:I17\|I2\|net0218 \7\:I17\|I2\|net0189 \57\:VDD \
+        VDD) g45p1svt w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=3e-13 \
+        ps=4.32e-06 pd=4.3e-06 nrd=1.16667 nrs=1.16667 sa=5.5e-07 \
+        sb=3.45e-07 sd=160n sca=12.6259 scb=0.00589089 scc=0.000830541 \
+        m=(2)
+I17\|I2\|M22 (\13\:I17\|I2\|net0106 \3\:I17\|I2\|net0110 \1369\:VDDIOR! \
+        VDDIOR!) g45p2svt w=(2.5e-06) l=1.5e-07 nf=1 as=4.375e-13 ad=5e-13 \
+        ps=5.35e-06 pd=5.4e-06 nrd=468.75m nrs=468.75m sa=5e-07 sb=2e-06 \
+        sd=200n sca=4.19433 scb=0.0015129 scc=4.78258e-05 m=(2)
+I17\|I2\|M24 (\25\:I17\|I2\|net0110 \3\:I17\|I2\|net0106 \1369\:VDDIOR! \
+        VDDIOR!) g45p2svt w=(2.5e-06) l=1.5e-07 nf=1 as=5e-13 ad=5e-13 \
+        ps=5.4e-06 pd=5.4e-06 nrd=468.75m nrs=468.75m sa=8.5e-07 sb=2e-06 \
+        sd=200n sca=3.54553 scb=0.00128546 scc=4.77339e-05 m=(2)
+I17\|I2\|M12 (\71\:I17\|pmos25 \24\:I17\|I2\|net0174 \1369\:VDDIOR! \
+        VDDIOR!) g45p2svt w=(2e-06) l=1.5e-07 nf=1 as=4e-13 ad=3.75e-13 \
+        ps=4.4e-06 pd=4.375e-06 nrd=468.75m nrs=468.75m sa=2e-06 sb=5e-07 \
+        sd=200n sca=4.58139 scb=0.00182184 scc=5.9759e-05 m=(4)
+I17\|I2\|M18 (\16\:I17\|I2\|net093 \4\:I17\|I2\|net0174 \1369\:VDDIOR! \
+        VDDIOR!) g45p2svt w=(2e-06) l=1.5e-07 nf=1 as=3.5e-13 ad=4e-13 \
+        ps=4.35e-06 pd=4.4e-06 nrd=468.75m nrs=468.75m sa=5e-07 sb=2e-06 \
+        sd=200n sca=3.93258 scb=0.00159441 scc=5.96671e-05 m=(2)
+I17\|I2\|M14 (\18\:I17\|I2\|net0174 \3\:I17\|I2\|net093 \1369\:VDDIOR! \
+        VDDIOR!) g45p2svt w=(2e-06) l=1.5e-07 nf=1 as=4e-13 ad=4e-13 \
+        ps=4.4e-06 pd=4.4e-06 nrd=468.75m nrs=468.75m sa=8.5e-07 \
+        sb=1.9e-06 sd=200n sca=3.93258 scb=0.00159441 scc=5.96671e-05 \
+        m=(2)
+I17\|I2\|M29_1__rcx (\31\:I17\|nmos25 \31\:I17\|I2\|net0110 \1369\:VDDIOR! \
+        VDDIOR!) g45p2svt w=(2.5e-06) l=1.5e-07 nf=1 as=4.7917e-13 \
+        ad=5e-13 ps=5.38333e-06 pd=5.4e-06 nrd=468.75m nrs=468.75m \
+        sa=1.55e-06 sb=1.9e-06 sd=200n sca=3.54553 scb=0.00128546 \
+        scc=4.77339e-05 m=(6)
+I17\|I3\|M6_36__rcx (\57\:PAD VDDIOR! VDDIOR! VDDIOR!) g45p2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=3.473e-12 ps=3.082e-05 pd=2.07e-05 \
+        nrd=468.75m nrs=468.75m sa=3.474e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(40)
+I17\|I3\|M9_12__rcx (\29\:PAD I17\|pmos25 VDDIOR! VDDIOR!) g45p2svt \
+        w=(1e-05) l=2e-07 nf=1 as=5.41e-11 ad=3.473e-12 ps=3.082e-05 \
+        pd=2.07e-05 nrd=468.75m nrs=468.75m sa=3.474e-07 sb=2e-06 sd=200n \
+        sca=1.84848 scb=4.29512e-05 scc=1.08015e-09 m=(16)
+ends PADDB
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:39:06 2012 )
+// Library name: giolib045
+// Cell name: PADDI
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADDI PAD VDD VDDIOR! VSS VSSIOR! Y
+I1\|I2\|M1 (\8\:I1\|I2\|net026 \1\:PAD \9\:VDD VDD) g45p2svt w=(2.5e-06) \
+        l=1.5e-07 nf=1 as=5e-13 ad=4.6875e-13 ps=5.4e-06 pd=5.375e-06 \
+        nrd=468.75m nrs=468.75m sa=8.5e-07 sb=1.9e-06 sd=200n sca=3.73493 \
+        scb=0.00132306 scc=4.77578e-05 m=(8)
+I1\|I2\|PM1 (\5\:Y I1\|I2\|net026 \4\:VDD VDD) g45p1svt w=(2e-06) \
+        l=4.5e-08 nf=1 as=3.2e-13 ad=2.8e-13 ps=4.32e-06 pd=4.28e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n sca=5.10306 \
+        scb=0.00199193 scc=5.97223e-06 m=(2)
+I1\|I2\|M2 (\8\:I1\|I2\|net026 \14\:PAD \19\:VSS VSS) g45n2svt w=(2e-06) \
+        l=1.5e-07 nf=1 as=3.75e-13 ad=3.75e-13 ps=4.375e-06 pd=4.375e-06 \
+        nrd=468.75m nrs=468.75m sa=8.5e-07 sb=5e-07 sd=200n sca=2.4058 \
+        scb=5.46971e-05 scc=1.46892e-09 m=(4)
+I2 (\380\:PAD) BONDPAD52
+C1 (PAD VSS) capacitor c=9.39613e-16
+C2 (VDD VSS) capacitor c=1.47526e-14
+C3 (VSSIOR! VSS) capacitor c=6.10092e-14
+C4 (VDDIOR! VSS) capacitor c=6.3844e-14
+C5 (I1\|I2\|net026 VSS) capacitor c=1.10586e-15
+C6 (\380\:PAD VSS) capacitor c=6.48056e-16
+C7 (\1\:PAD VSS) capacitor c=1.01747e-15
+C8 (\7\:Y VSS) capacitor c=9.62611e-15
+C9 (\4\:Y VSS) capacitor c=4.95374e-18
+C10 (\239\:VDDIOR! VSS) capacitor c=4.42176e-18
+C11 (\29\:PAD VSS) capacitor c=5.20162e-14
+C12 (\4\:VDD VSS) capacitor c=3.69279e-16
+C13 (\5\:Y VSS) capacitor c=5.50848e-16
+C14 (\8\:I1\|I2\|net026 VSS) capacitor c=1.95807e-15
+C15 (\1\:Y VSS) capacitor c=3.90007e-16
+C16 (\14\:PAD VSS) capacitor c=3.90236e-16
+C17 (\9\:VDD VSS) capacitor c=1.31215e-15
+C18 (\8\:Y VSS) capacitor c=5.30564e-15
+C19 (\42\:PAD VSS) capacitor c=9.99396e-15
+C20 (\43\:PAD VSS) capacitor c=5.6005e-14
+C21 (\34\:VDD VSS) capacitor c=2.01827e-15
+C22 (\2001\:VDDIOR! VSS) capacitor c=6.50465e-16
+C23 (\2006\:VDDIOR! VSS) capacitor c=1.06227e-15
+Rl12 (\1\:PAD \14\:PAD) resistor r=304.044 c=0
+Rl13 (\19\:VSS \41\:VSS) resistor r=0.02455 c=0
+Rl122 (\2001\:VDDIOR! \2006\:VDDIOR!) resistor r=0.01947 c=0
+Rk874 (\380\:PAD PAD) resistor r=0.01273 c=0
+Rk873 (\41\:VSS VSS) resistor r=0.1614 c=0
+Rj152 (PAD \29\:PAD) resistor r=0.1739 c=0
+Rj144 (\4\:Y \8\:Y) resistor r=0.5 c=0
+Ri102 (\4\:VDD \9\:VDD) resistor r=0.2644 c=0
+Ri103 (\8\:Y \7\:Y) resistor r=5.4912 c=0
+Rh7 (\13\:VSS \19\:VSS) resistor r=0.3237 c=0
+Rh5 (\7\:Y Y) resistor r=0.025 c=0
+Rw99 (I1\|I2\|net026 \8\:I1\|I2\|net026) resistor r=52.526 c=0
+Rw100 (\4\:Y \1\:Y) resistor r=5.0248 c=0
+Rv67 (\14\:PAD \42\:PAD) resistor r=48.7984 c=0
+Rv68 (\4\:Y \5\:Y) resistor r=6.8062 c=0
+Ru2 (\42\:PAD \29\:PAD) resistor r=0.4379 c=0
+Ru1 (VDDIOR! \239\:VDDIOR!) resistor r=1.6894 c=0
+Rz266 (\42\:PAD \43\:PAD) resistor r=0.376 c=0
+Rz267 (VDDIOR! \2001\:VDDIOR!) resistor r=0.02399 c=0
+Ry282 (\9\:VDD \34\:VDD) resistor r=0.0367 c=0
+Ry283 (VDDIOR! \2006\:VDDIOR!) resistor r=0.04045 c=0
+Rx43 (\34\:VDD VDD) resistor r=0.1637 c=0
+Rx4 (\239\:VDDIOR! \2006\:VDDIOR!) resistor r=0.05821 c=0
+I1\|I2\|NM0 (\1\:Y I1\|I2\|net026 \13\:VSS VSS) g45n1svt w=(2.5e-06) \
+        l=4.5e-08 nf=1 as=4e-13 ad=3.5e-13 ps=5.32e-06 pd=5.28e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n sca=2.4853 \
+        scb=7.86359e-05 scc=2.85679e-09 m=(2)
+I1\|I1\|M4_52__rcx (\43\:PAD VSSIOR! VSSIOR! VSSIOR!) g45n2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=5.25e-12 ps=3.082e-05 pd=2.105e-05 \
+        nrd=468.75m nrs=468.75m sa=5.25e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+I1\|I1\|M6_52__rcx (\29\:PAD VDDIOR! VDDIOR! VDDIOR!) g45p2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=3.473e-12 ps=3.082e-05 pd=2.07e-05 \
+        nrd=468.75m nrs=468.75m sa=3.474e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+ends PADDI
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:40:12 2012 )
+// Library name: giolib045
+// Cell name: PADDO
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADDO A PAD VDD VDDIOR! VSS VSSIOR!
+I1\|I2\|M22_1__rcx (\13\:I1\|I2\|net0106 \3\:I1\|I2\|net0110 \
+        \1354\:VDDIOR! VDDIOR!) g45p2svt w=(2.5e-06) l=1.5e-07 nf=1 \
+        as=4.375e-13 ad=5e-13 ps=5.35e-06 pd=5.4e-06 nrd=468.75m \
+        nrs=468.75m sa=5e-07 sb=2e-06 sd=200n sca=4.19433 scb=0.0015129 \
+        scc=4.78258e-05 m=(2)
+I1\|I2\|M13 (\31\:I1\|nmos25 \31\:I1\|I2\|net0110 \1354\:VDDIOR! VDDIOR!) \
+        g45p2svt w=(2.5e-06) l=1.5e-07 nf=1 as=5e-13 ad=4.7917e-13 \
+        ps=5.4e-06 pd=5.38333e-06 nrd=468.75m nrs=468.75m sa=2e-06 \
+        sb=1.2e-06 sd=200n sca=3.54553 scb=0.00128546 scc=4.77339e-05 \
+        m=(6)
+I1\|I1\|PM3 (\4\:I1\|pmos \1\:A \12\:VDD VDD) g45p1svt w=(1e-06) \
+        l=4.5e-08 nf=1 as=1.6e-13 ad=1.4e-13 ps=2.32e-06 pd=2.28e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n sca=33.3252 \
+        scb=0.0289801 scc=0.00318301 m=(1)
+I1\|I2\|M15 (\11\:I1\|I2\|net093 \2\:I1\|I2\|net0174 \966\:VSSIOR! \
+        VSSIOR!) g45n2svt w=(5e-07) l=1.5e-07 nf=1 as=1e-13 ad=7.5e-14 \
+        ps=1.4e-06 pd=1.3e-06 nrd=468.75m nrs=468.75m sa=1.5e-07 sb=5e-07 \
+        sd=200n sca=3.07246 scb=6.94833e-05 scc=1.79353e-09 m=(1)
+I2 (\351\:PAD) BONDPAD52
+C1 (PAD VSSIOR!) capacitor c=3.61912e-16
+C2 (VDD VSSIOR!) capacitor c=1.47623e-14
+C3 (VSS VSSIOR!) capacitor c=1.74512e-14
+C4 (VDDIOR! VSSIOR!) capacitor c=8.39262e-14
+C5 (I1\|pmos VSSIOR!) capacitor c=1.55823e-16
+C6 (I1\|nmos VSSIOR!) capacitor c=2.26483e-16
+C7 (I1\|pmos25 VSSIOR!) capacitor c=3.07117e-17
+C8 (I1\|nmos25 VSSIOR!) capacitor c=3.25387e-17
+C9 (I1\|I1\|OEB VSSIOR!) capacitor c=8.28401e-17
+C10 (I1\|I1\|net79 VSSIOR!) capacitor c=1.58651e-16
+C11 (I1\|I2\|net093 VSSIOR!) capacitor c=2.14759e-16
+C12 (I1\|I2\|net0106 VSSIOR!) capacitor c=1.95356e-16
+C13 (I1\|I2\|net0174 VSSIOR!) capacitor c=4.67771e-17
+C14 (I1\|I2\|net0110 VSSIOR!) capacitor c=4.68176e-17
+C15 (I1\|I2\|net59 VSSIOR!) capacitor c=2.22162e-16
+C16 (I1\|I2\|net0189 VSSIOR!) capacitor c=2.17664e-16
+C17 (I1\|I2\|net0227 VSSIOR!) capacitor c=2.32062e-16
+C18 (I1\|I2\|net0218 VSSIOR!) capacitor c=2.37055e-16
+C19 (\3\:I1\|I2\|net093 VSSIOR!) capacitor c=2.6229e-16
+C20 (\3\:I1\|I2\|net0106 VSSIOR!) capacitor c=2.19666e-16
+C21 (\3\:I1\|I2\|net0110 VSSIOR!) capacitor c=1.22547e-16
+C22 (\12\:I1\|nmos VSSIOR!) capacitor c=1.24135e-16
+C23 (\12\:I1\|pmos VSSIOR!) capacitor c=2.37008e-16
+C24 (\5\:I1\|I1\|OE VSSIOR!) capacitor c=5.95142e-17
+C25 (\3\:I1\|I1\|OE VSSIOR!) capacitor c=6.00678e-17
+C26 (\1\:A VSSIOR!) capacitor c=1.32128e-16
+C27 (\40\:I1\|I2\|net0174 VSSIOR!) capacitor c=1.01796e-15
+C28 (\7\:I1\|I2\|net0110 VSSIOR!) capacitor c=4.63583e-16
+C29 (\2\:I1\|I2\|net0106 VSSIOR!) capacitor c=9.04163e-17
+C30 (\2\:I1\|I2\|net093 VSSIOR!) capacitor c=9.74186e-17
+C31 (\2\:I1\|I2\|net0110 VSSIOR!) capacitor c=5.80964e-17
+C32 (\2\:I1\|I2\|net0174 VSSIOR!) capacitor c=6.20724e-17
+C33 (\6\:I1\|I2\|net0189 VSSIOR!) capacitor c=1.39385e-16
+C34 (\6\:I1\|I2\|net59 VSSIOR!) capacitor c=1.37857e-16
+C35 (\17\:I1\|nmos VSSIOR!) capacitor c=1.51412e-16
+C36 (\17\:I1\|pmos VSSIOR!) capacitor c=1.4991e-16
+C37 (\8\:I1\|I1\|OE VSSIOR!) capacitor c=1.09961e-16
+C38 (\4\:I1\|I1\|net79 VSSIOR!) capacitor c=1.68168e-17
+C39 (\3\:A VSSIOR!) capacitor c=6.67734e-17
+C40 (\3\:I1\|I1\|OEB VSSIOR!) capacitor c=1.19754e-16
+C41 (\4\:I1\|I1\|OE VSSIOR!) capacitor c=1.14752e-16
+C42 (\102\:I1\|pmos25 VSSIOR!) capacitor c=1.2374e-17
+C43 (\104\:I1\|pmos25 VSSIOR!) capacitor c=7.63142e-18
+C44 (\24\:I1\|I2\|net0174 VSSIOR!) capacitor c=3.79329e-16
+C45 (\31\:I1\|I2\|net0110 VSSIOR!) capacitor c=1.31368e-15
+C46 (\6\:I1\|I2\|net093 VSSIOR!) capacitor c=2.67859e-17
+C47 (\3\:I1\|I2\|net0174 VSSIOR!) capacitor c=2.56414e-17
+C48 (\3\:I1\|I2\|net0227 VSSIOR!) capacitor c=5.89755e-18
+C49 (\4\:I1\|I2\|net0189 VSSIOR!) capacitor c=2.33224e-16
+C50 (\4\:I1\|I2\|net59 VSSIOR!) capacitor c=2.30022e-16
+C51 (\15\:I1\|pmos VSSIOR!) capacitor c=2.57204e-16
+C52 (\7\:I1\|nmos25 VSSIOR!) capacitor c=8.34235e-15
+C53 (\7\:I1\|I1\|OE VSSIOR!) capacitor c=2.30413e-16
+C54 (\2\:I1\|I1\|net79 VSSIOR!) capacitor c=4.83561e-16
+C55 (\3\:I1\|I1\|net79 VSSIOR!) capacitor c=9.47376e-18
+C56 (\4\:A VSSIOR!) capacitor c=2.23089e-17
+C57 (\2\:I1\|I1\|OEB VSSIOR!) capacitor c=6.81242e-17
+C58 (\2\:A VSSIOR!) capacitor c=3.32168e-17
+C59 (\3\:I1\|nmos25 VSSIOR!) capacitor c=5.04386e-17
+C60 (\5\:I1\|nmos25 VSSIOR!) capacitor c=8.18606e-17
+C61 (\3\:I1\|pmos25 VSSIOR!) capacitor c=6.51267e-17
+C62 (\5\:I1\|pmos25 VSSIOR!) capacitor c=8.86487e-17
+C63 (\7\:I1\|pmos25 VSSIOR!) capacitor c=4.61322e-17
+C64 (\9\:I1\|pmos25 VSSIOR!) capacitor c=6.51267e-17
+C65 (\11\:I1\|pmos25 VSSIOR!) capacitor c=7.84886e-17
+C66 (\61\:VSS VSSIOR!) capacitor c=9.35507e-16
+C67 (\49\:I1\|nmos25 VSSIOR!) capacitor c=5.90956e-17
+C68 (\77\:I1\|pmos25 VSSIOR!) capacitor c=5.61097e-17
+C69 (\20\:I1\|pmos VSSIOR!) capacitor c=1.27983e-16
+C70 (\9\:A VSSIOR!) capacitor c=9.85848e-15
+C71 (\9\:I1\|nmos VSSIOR!) capacitor c=6.73309e-17
+C72 (\9\:I1\|pmos VSSIOR!) capacitor c=4.68611e-16
+C73 (\71\:I1\|pmos25 VSSIOR!) capacitor c=7.04115e-16
+C74 (\20\:I1\|I2\|net0174 VSSIOR!) capacitor c=5.55391e-16
+C75 (\20\:I1\|I2\|net0106 VSSIOR!) capacitor c=1.66881e-16
+C76 (\27\:I1\|I2\|net0110 VSSIOR!) capacitor c=6.91864e-17
+C77 (\18\:I1\|I2\|net093 VSSIOR!) capacitor c=7.7876e-18
+C78 (\24\:I1\|I2\|net0110 VSSIOR!) capacitor c=2.45039e-17
+C79 (\13\:I1\|I2\|net093 VSSIOR!) capacitor c=4.47923e-17
+C80 (\17\:I1\|I2\|net0110 VSSIOR!) capacitor c=1.96881e-17
+C81 (\9\:I1\|I2\|net0174 VSSIOR!) capacitor c=8.89202e-17
+C82 (\9\:I1\|I2\|net093 VSSIOR!) capacitor c=6.13961e-17
+C83 (\13\:I1\|pmos25 VSSIOR!) capacitor c=1.30932e-14
+C84 (\8\:I1\|I1\|OEB VSSIOR!) capacitor c=2.5652e-16
+C85 (\4\:I1\|nmos VSSIOR!) capacitor c=1.06871e-16
+C86 (\11\:I1\|I1\|OE VSSIOR!) capacitor c=1.61231e-16
+C87 (\3\:I1\|nmos VSSIOR!) capacitor c=1.27489e-16
+C88 (\3\:I1\|pmos VSSIOR!) capacitor c=1.30363e-16
+C89 (\1\:PAD VSSIOR!) capacitor c=7.46755e-15
+C90 (\31\:I1\|nmos25 VSSIOR!) capacitor c=1.9242e-15
+C91 (\18\:I1\|I2\|net0174 VSSIOR!) capacitor c=4.27761e-16
+C92 (\25\:I1\|I2\|net0110 VSSIOR!) capacitor c=9.79613e-17
+C93 (\16\:I1\|I2\|net093 VSSIOR!) capacitor c=2.17796e-16
+C94 (\13\:I1\|I2\|net0106 VSSIOR!) capacitor c=3.19227e-16
+C95 (\25\:VDD VSSIOR!) capacitor c=1.71688e-15
+C96 (\9\:I1\|I2\|net0218 VSSIOR!) capacitor c=3.66805e-16
+C97 (\9\:I1\|I2\|net0227 VSSIOR!) capacitor c=3.63836e-16
+C98 (\14\:I1\|I2\|net0189 VSSIOR!) capacitor c=4.2997e-16
+C99 (\14\:I1\|I2\|net59 VSSIOR!) capacitor c=3.92316e-16
+C100 (\6\:I1\|I1\|OEB VSSIOR!) capacitor c=1.29251e-16
+C101 (\1\:VDD VSSIOR!) capacitor c=1.88555e-16
+C102 (\15\:I1\|I1\|OE VSSIOR!) capacitor c=2.08551e-16
+C103 (\7\:I1\|nmos VSSIOR!) capacitor c=1.98594e-16
+C104 (\6\:I1\|pmos VSSIOR!) capacitor c=1.27708e-16
+C105 (\10\:VDD VSSIOR!) capacitor c=1.76311e-16
+C106 (\4\:I1\|pmos VSSIOR!) capacitor c=2.51996e-16
+C107 (\12\:VDD VSSIOR!) capacitor c=1.06677e-16
+C108 (\61\:I1\|pmos25 VSSIOR!) capacitor c=1.1746e-15
+C109 (\22\:I1\|I2\|net0110 VSSIOR!) capacitor c=5.34982e-17
+C110 (\13\:I1\|I2\|net0174 VSSIOR!) capacitor c=5.36355e-17
+C111 (\10\:I1\|I2\|net0106 VSSIOR!) capacitor c=1.80645e-16
+C112 (\11\:I1\|I2\|net093 VSSIOR!) capacitor c=1.61123e-16
+C113 (\27\:VSS VSSIOR!) capacitor c=1.59302e-15
+C114 (\14\:I1\|I2\|net0110 VSSIOR!) capacitor c=6.72585e-16
+C115 (\7\:I1\|I2\|net0174 VSSIOR!) capacitor c=5.30965e-16
+C116 (\18\:VSS VSSIOR!) capacitor c=1.7749e-15
+C117 (\6\:I1\|I2\|net0106 VSSIOR!) capacitor c=4.71428e-16
+C118 (\7\:I1\|I2\|net093 VSSIOR!) capacitor c=5.05137e-16
+C119 (\7\:I1\|I2\|net0218 VSSIOR!) capacitor c=4.65414e-16
+C120 (\7\:I1\|I2\|net0227 VSSIOR!) capacitor c=4.50556e-16
+C121 (\52\:VSS VSSIOR!) capacitor c=3.30942e-16
+C122 (\37\:VSS VSSIOR!) capacitor c=3.30942e-16
+C123 (\12\:I1\|I2\|net0189 VSSIOR!) capacitor c=2.37467e-16
+C124 (\12\:I1\|I2\|net59 VSSIOR!) capacitor c=2.6025e-16
+C125 (\9\:I1\|I1\|OEB VSSIOR!) capacitor c=9.03541e-17
+C126 (\1\:VSS VSSIOR!) capacitor c=1.00921e-16
+C127 (\8\:I1\|I1\|net79 VSSIOR!) capacitor c=1.1573e-16
+C128 (\5\:I1\|nmos VSSIOR!) capacitor c=1.26239e-16
+C129 (\10\:VSS VSSIOR!) capacitor c=1.03415e-16
+C130 (\2\:I1\|nmos25 VSSIOR!) capacitor c=4.35599e-17
+C131 (\4\:I1\|nmos25 VSSIOR!) capacitor c=1.09369e-16
+C132 (\6\:I1\|nmos25 VSSIOR!) capacitor c=1.33777e-16
+C133 (\2\:I1\|pmos25 VSSIOR!) capacitor c=8.10891e-17
+C134 (\4\:I1\|pmos25 VSSIOR!) capacitor c=1.93501e-16
+C135 (\6\:I1\|pmos25 VSSIOR!) capacitor c=2.1745e-16
+C136 (\8\:I1\|pmos25 VSSIOR!) capacitor c=9.54515e-17
+C137 (\10\:I1\|pmos25 VSSIOR!) capacitor c=1.93501e-16
+C138 (\12\:I1\|pmos25 VSSIOR!) capacitor c=2.05939e-16
+C139 (\2\:I1\|I1\|OE VSSIOR!) capacitor c=8.17361e-17
+C140 (\13\:I1\|I1\|OE VSSIOR!) capacitor c=6.61303e-17
+C141 (\4\:I1\|I1\|OEB VSSIOR!) capacitor c=5.48479e-17
+C142 (\7\:I1\|I1\|net79 VSSIOR!) capacitor c=1.83366e-17
+C143 (\11\:I1\|I1\|OEB VSSIOR!) capacitor c=7.0277e-17
+C144 (\12\:I1\|I1\|OEB VSSIOR!) capacitor c=9.99443e-17
+C145 (\10\:I1\|nmos VSSIOR!) capacitor c=9.88203e-17
+C146 (\11\:I1\|nmos VSSIOR!) capacitor c=8.73413e-17
+C147 (\10\:I1\|pmos VSSIOR!) capacitor c=1.93413e-16
+C148 (\3\:I1\|I2\|net0189 VSSIOR!) capacitor c=3.03269e-17
+C149 (\7\:I1\|I2\|net0189 VSSIOR!) capacitor c=1.56667e-16
+C150 (\7\:I1\|I2\|net59 VSSIOR!) capacitor c=1.43854e-16
+C151 (\10\:A VSSIOR!) capacitor c=6.49075e-15
+C152 (\11\:A VSSIOR!) capacitor c=8.47382e-17
+C153 (\4\:I1\|I2\|net0174 VSSIOR!) capacitor c=1.56816e-16
+C154 (\11\:I1\|I2\|net0189 VSSIOR!) capacitor c=1.2153e-16
+C155 (\11\:I1\|I2\|net59 VSSIOR!) capacitor c=9.20878e-17
+C156 (\6\:I1\|I2\|net0218 VSSIOR!) capacitor c=1.89831e-16
+C157 (\6\:I1\|I2\|net0227 VSSIOR!) capacitor c=1.65442e-16
+C158 (\22\:I1\|nmos VSSIOR!) capacitor c=4.6256e-16
+C159 (\21\:I1\|pmos VSSIOR!) capacitor c=5.73429e-16
+C160 (\20\:I1\|I2\|net0110 VSSIOR!) capacitor c=4.64386e-17
+C161 (\62\:VSS VSSIOR!) capacitor c=1.05572e-15
+C162 (\14\:I1\|I2\|net093 VSSIOR!) capacitor c=5.08271e-18
+C163 (\23\:I1\|nmos VSSIOR!) capacitor c=1.49563e-15
+C164 (\19\:I1\|I2\|net093 VSSIOR!) capacitor c=5.18428e-17
+C165 (\23\:I1\|pmos VSSIOR!) capacitor c=6.02835e-16
+C166 (\34\:I1\|I2\|net0110 VSSIOR!) capacitor c=3.11582e-16
+C167 (\35\:I1\|I2\|net0110 VSSIOR!) capacitor c=5.01762e-17
+C168 (\37\:I1\|I2\|net0110 VSSIOR!) capacitor c=2.86131e-16
+C169 (\21\:I1\|I2\|net0106 VSSIOR!) capacitor c=3.68588e-16
+C170 (\24\:I1\|I2\|net0106 VSSIOR!) capacitor c=2.74707e-16
+C171 (\25\:I1\|I2\|net0106 VSSIOR!) capacitor c=1.98384e-16
+C172 (\21\:I1\|I2\|net093 VSSIOR!) capacitor c=2.96138e-16
+C173 (\22\:I1\|I2\|net093 VSSIOR!) capacitor c=6.69906e-17
+C174 (\23\:I1\|I2\|net093 VSSIOR!) capacitor c=6.936e-17
+C175 (\24\:I1\|I2\|net093 VSSIOR!) capacitor c=1.61231e-16
+C176 (\25\:I1\|I2\|net093 VSSIOR!) capacitor c=1.02746e-16
+C177 (\53\:I1\|nmos25 VSSIOR!) capacitor c=8.52446e-16
+C178 (\80\:I1\|pmos25 VSSIOR!) capacitor c=1.34943e-15
+C179 (\14\:PAD VSSIOR!) capacitor c=7.99851e-15
+C180 (\28\:PAD VSSIOR!) capacitor c=4.4336e-14
+C181 (\45\:PAD VSSIOR!) capacitor c=6.26173e-14
+C182 (\67\:I1\|nmos25 VSSIOR!) capacitor c=3.80031e-17
+C183 (\68\:I1\|nmos25 VSSIOR!) capacitor c=9.74317e-17
+C184 (\69\:I1\|nmos25 VSSIOR!) capacitor c=1.22355e-16
+C185 (\107\:I1\|pmos25 VSSIOR!) capacitor c=9.03481e-17
+C186 (\108\:I1\|pmos25 VSSIOR!) capacitor c=1.93501e-16
+C187 (\109\:I1\|pmos25 VSSIOR!) capacitor c=2.139e-16
+C188 (\110\:I1\|pmos25 VSSIOR!) capacitor c=2.39092e-17
+C189 (\111\:I1\|pmos25 VSSIOR!) capacitor c=5.8707e-16
+C190 (\112\:I1\|pmos25 VSSIOR!) capacitor c=3.59889e-17
+C191 (\1354\:VDDIOR! VSSIOR!) capacitor c=4.34497e-15
+C192 (\63\:VSS VSSIOR!) capacitor c=2.09405e-15
+C193 (\41\:VDD VSSIOR!) capacitor c=4.30592e-16
+C194 (\42\:VDD VSSIOR!) capacitor c=4.29829e-15
+Rl187 (\351\:PAD PAD) resistor r=0.001 c=0
+Rl192 (\7\:I1\|nmos25 I1\|nmos25) resistor r=16.2371 c=0
+Rl199 (\41\:VDD \10\:VDD) resistor r=8.6205 c=0
+Rl205 (\977\:VSSIOR! \982\:VSSIOR!) resistor r=0.4474 c=0
+Rl210 (\2\:A \11\:A) resistor r=23 c=0
+Rl216 (\3\:I1\|pmos I1\|pmos) resistor r=20.1331 c=0
+Rl16 (\3\:I1\|nmos I1\|nmos) resistor r=19.943 c=0
+Rl23 (\13\:I1\|pmos25 \104\:I1\|pmos25) resistor r=16.1311 c=0
+Rl28 (\13\:I1\|pmos25 \108\:I1\|pmos25) resistor r=2.25 c=0
+Rl34 (\71\:I1\|pmos25 \77\:I1\|pmos25) resistor r=2.2735 c=0
+Rl41 (\7\:I1\|nmos25 \68\:I1\|nmos25) resistor r=2.25 c=0
+Rl47 (\11\:I1\|I1\|OEB \12\:I1\|I1\|OEB) resistor r=0.4451 c=0
+Rl7 (\2\:I1\|I1\|OE \3\:I1\|I1\|OE) resistor r=39.2642 c=0
+Rl1 (\22\:I1\|I2\|net093 \23\:I1\|I2\|net093) resistor r=0.2078 c=0
+Rl247 (\18\:I1\|I2\|net093 \16\:I1\|I2\|net093) resistor r=5.0394 c=0
+Rl252 (I1\|I2\|net0174 \20\:I1\|I2\|net0174) resistor r=44.6113 c=0
+Rl259 (\3\:I1\|I2\|net0110 \37\:I1\|I2\|net0110) resistor r=102.502 c=0
+Rl265 (\4\:I1\|I2\|net59 \11\:I1\|I2\|net59) resistor r=45.1179 c=0
+Rl270 (\3\:I1\|I2\|net0227 \6\:I1\|I2\|net0227) resistor r=45.0626 c=0
+Rk974 (\1\:PAD \14\:PAD) resistor r=0.8139 c=0
+Rk946 (I1\|I2\|net093 \2\:I1\|I2\|net093) resistor r=151.567 c=0
+Rk947 (\41\:VDD \12\:VDD) resistor r=8.3585 c=0
+Rk949 (\955\:VSSIOR! \1000\:VSSIOR!) resistor r=0.08333 c=0
+Rk948 (\10\:A \11\:A) resistor r=0.2421 c=0
+Rk952 (\3\:I1\|pmos \4\:I1\|pmos) resistor r=8.4409 c=0
+Rk954 (\4\:I1\|nmos \5\:I1\|nmos) resistor r=19.8659 c=0
+Rk953 (\3\:I1\|pmos25 \4\:I1\|pmos25) resistor r=2.25 c=0
+Rk956 (\13\:I1\|pmos25 \107\:I1\|pmos25) resistor r=5.625 c=0
+Rk959 (\13\:I1\|pmos25 \80\:I1\|pmos25) resistor r=2.8711 c=0
+Rk960 (\7\:I1\|nmos25 \67\:I1\|nmos25) resistor r=5.625 c=0
+Rk964 (\2\:I1\|I1\|OEB \4\:I1\|I1\|OEB) resistor r=22.5 c=0
+Rk965 (\2\:I1\|I1\|OE \4\:I1\|I1\|OE) resistor r=665.034 c=0
+Rk966 (\23\:I1\|I2\|net093 \24\:I1\|I2\|net093) resistor r=0.2488 c=0
+Rk973 (\20\:I1\|I2\|net0106 \21\:I1\|I2\|net0106) resistor r=0.5 c=0
+Rk968 (\20\:I1\|I2\|net0174 \40\:I1\|I2\|net0174) resistor r=64.8193 c=0
+Rk977 (\37\:I1\|I2\|net0110 \17\:I1\|I2\|net0110) resistor r=0.5 c=0
+Rk978 (\11\:I1\|I2\|net59 \12\:I1\|I2\|net59) resistor r=6.4618 c=0
+Rk982 (\6\:I1\|I2\|net0227 \7\:I1\|I2\|net0227) resistor r=5.9674 c=0
+Rj145 (PAD \28\:PAD) resistor r=0.1864 c=0
+Rj144 (I1\|I2\|net0106 \2\:I1\|I2\|net0106) resistor r=151.567 c=0
+Rj146 (\18\:VSS \61\:VSS) resistor r=0.2653 c=0
+Rj141 (\982\:VSSIOR! \998\:VSSIOR!) resistor r=0.04167 c=0
+Rj142 (\9\:A A) resistor r=0.025 c=0
+Rj143 (\10\:I1\|pmos \6\:I1\|pmos) resistor r=8.9119 c=0
+Rj463 (\4\:I1\|nmos \7\:I1\|nmos) resistor r=8.6522 c=0
+Rj464 (I1\|pmos25 \2\:I1\|pmos25) resistor r=5.625 c=0
+Rj465 (\108\:I1\|pmos25 \107\:I1\|pmos25) resistor r=1.243 c=0
+Rj466 (\77\:I1\|pmos25 \80\:I1\|pmos25) resistor r=0.5 c=0
+Rj710 (\68\:I1\|nmos25 \67\:I1\|nmos25) resistor r=1.0937 c=0
+Rj822 (\12\:I1\|I1\|OEB \4\:I1\|I1\|OEB) resistor r=0.5 c=0
+Rj838 (\5\:I1\|I1\|OE \7\:I1\|I1\|OE) resistor r=52.7257 c=0
+Rj854 (\13\:I1\|I2\|net093 \24\:I1\|I2\|net093) resistor r=0.5 c=0
+Rj870 (\21\:I1\|I2\|net0106 \24\:I1\|I2\|net0106) resistor r=0.2851 c=0
+Rj774 (\20\:I1\|I2\|net0174 \9\:I1\|I2\|net0174) resistor r=0.3155 c=0
+Rj776 (\35\:I1\|I2\|net0110 \20\:I1\|I2\|net0110) resistor r=0.5 c=0
+Rj808 (\11\:I1\|I2\|net59 \14\:I1\|I2\|net59) resistor r=4.9767 c=0
+Rj778 (\6\:I1\|I2\|net0227 \9\:I1\|I2\|net0227) resistor r=5.481 c=0
+Ri414 (\1\:PAD \28\:PAD) resistor r=0.1318 c=0
+Ri415 (I1\|I2\|net0174 \2\:I1\|I2\|net0174) resistor r=128.13 c=0
+Ri822 (\61\:VSS \62\:VSS) resistor r=0.2699 c=0
+Ri825 (\1000\:VSSIOR! \998\:VSSIOR!) resistor r=0.4514 c=0
+Ri828 (\12\:I1\|pmos \15\:I1\|pmos) resistor r=143.848 c=0
+Ri831 (\4\:I1\|nmos \10\:I1\|nmos) resistor r=0.5 c=0
+Ri834 (I1\|pmos25 \3\:I1\|pmos25) resistor r=4.8642 c=0
+Ri837 (\4\:I1\|pmos25 \2\:I1\|pmos25) resistor r=1.243 c=0
+Ri840 (\13\:I1\|pmos25 \109\:I1\|pmos25) resistor r=2.25 c=0
+Ri780 (I1\|nmos25 \3\:I1\|nmos25) resistor r=4.8642 c=0
+Ri684 (\7\:I1\|nmos25 \69\:I1\|nmos25) resistor r=2.25 c=0
+Ri686 (\8\:I1\|I1\|OEB \9\:I1\|I1\|OEB) resistor r=19.6084 c=0
+Ri718 (\7\:I1\|I1\|OE \8\:I1\|I1\|OE) resistor r=655.328 c=0
+Ri750 (\24\:I1\|I2\|net093 \25\:I1\|I2\|net093) resistor r=0.6088 c=0
+Ri782 (I1\|I2\|net0106 \24\:I1\|I2\|net0106) resistor r=45.5 c=0
+Ri688 (\9\:I1\|I2\|net0174 \7\:I1\|I2\|net0174) resistor r=5.0736 c=0
+Ri720 (I1\|I2\|net0110 \20\:I1\|I2\|net0110) resistor r=45 c=0
+Ri752 (I1\|I2\|net0189 \3\:I1\|I2\|net0189) resistor r=144.201 c=0
+Ri690 (I1\|I2\|net0218 \6\:I1\|I2\|net0218) resistor r=283.871 c=0
+Rh9 (\14\:PAD \45\:PAD) resistor r=0.1319 c=0
+Rh6 (I1\|I2\|net0110 \2\:I1\|I2\|net0110) resistor r=128.13 c=0
+Rh8 (\27\:VSS \62\:VSS) resistor r=0.08546 c=0
+Rh7 (VSSIOR! \998\:VSSIOR!) resistor r=0.2924 c=0
+Rh1 (\15\:I1\|pmos \17\:I1\|pmos) resistor r=540.645 c=0
+Rh3 (\10\:I1\|nmos \9\:I1\|nmos) resistor r=0.2473 c=0
+Rh2 (\3\:I1\|pmos25 \5\:I1\|pmos25) resistor r=4.8642 c=0
+Rh175 (\5\:I1\|pmos25 \6\:I1\|pmos25) resistor r=2.25 c=0
+Rh198 (\108\:I1\|pmos25 \109\:I1\|pmos25) resistor r=1.7757 c=0
+Rh221 (\3\:I1\|nmos25 \5\:I1\|nmos25) resistor r=4.8642 c=0
+Rh244 (\68\:I1\|nmos25 \69\:I1\|nmos25) resistor r=1.5624 c=0
+Rh277 (\8\:I1\|I1\|OEB \6\:I1\|I1\|OEB) resistor r=8.7707 c=0
+Rh276 (\7\:I1\|I1\|OE \11\:I1\|I1\|OE) resistor r=45.1769 c=0
+Rh243 (\9\:I1\|I2\|net093 \25\:I1\|I2\|net093) resistor r=0.5 c=0
+Rh220 (\24\:I1\|I2\|net0106 \25\:I1\|I2\|net0106) resistor r=0.6088 c=0
+Rh197 (\20\:I1\|I2\|net0174 \13\:I1\|I2\|net0174) resistor r=19.2827 c=0
+Rh174 (\17\:I1\|I2\|net0110 \14\:I1\|I2\|net0110) resistor r=5.1015 c=0
+Rh153 (\3\:I1\|I2\|net0189 \6\:I1\|I2\|net0189) resistor r=216.072 c=0
+Rh10 (\6\:I1\|I2\|net0218 \7\:I1\|I2\|net0218) resistor r=5.9837 c=0
+Rw261 (\18\:VSS \27\:VSS) resistor r=7.4812 c=0
+Rw95 (I1\|I2\|net59 \6\:I1\|I2\|net59) resistor r=206.457 c=0
+Rw96 (\61\:VSS \63\:VSS) resistor r=0.01 c=0
+Rw97 (\965\:VSSIOR! \966\:VSSIOR!) resistor r=19.922 c=0
+Rw92 (\3\:I1\|pmos \10\:I1\|pmos) resistor r=0.655 c=0
+Rw93 (\10\:I1\|nmos \11\:I1\|nmos) resistor r=0.1759 c=0
+Rw94 (\7\:I1\|pmos25 \9\:I1\|pmos25) resistor r=4.8642 c=0
+Rw266 (\4\:I1\|pmos25 \6\:I1\|pmos25) resistor r=1.7757 c=0
+Rw267 (\102\:I1\|pmos25 \111\:I1\|pmos25) resistor r=4.8642 c=0
+Rw268 (\7\:I1\|nmos25 \5\:I1\|nmos25) resistor r=16.1311 c=0
+Rw269 (\31\:I1\|nmos25 \49\:I1\|nmos25) resistor r=2.2735 c=0
+Rw446 (I1\|I1\|net79 \2\:I1\|I1\|net79) resistor r=406.323 c=0
+Rw462 (I1\|I1\|OE \13\:I1\|I1\|OE) resistor r=45 c=0
+Rw470 (\6\:I1\|I2\|net093 \19\:I1\|I2\|net093) resistor r=45 c=0
+Rw128 (\25\:I1\|I2\|net0106 \6\:I1\|I2\|net0106) resistor r=5.7167 c=0
+Rw509 (\20\:I1\|I2\|net0174 \18\:I1\|I2\|net0174) resistor r=5.2049 c=0
+Rw423 (\24\:I1\|I2\|net0110 \22\:I1\|I2\|net0110) resistor r=19.7322 c=0
+Rw427 (\3\:I1\|I2\|net0189 \4\:I1\|I2\|net0189) resistor r=292.83 c=0
+Rw431 (\6\:I1\|I2\|net0218 \9\:I1\|I2\|net0218) resistor r=5.7263 c=0
+Rv64 (\27\:VSS \37\:VSS) resistor r=5.826 c=0
+Rv240 (VDD \41\:VDD) resistor r=0.2961 c=0
+Rv63 (\63\:VSS VSS) resistor r=0.08822 c=0
+Rv245 (\977\:VSSIOR! \978\:VSSIOR!) resistor r=19.9382 c=0
+Rv246 (\10\:I1\|pmos \9\:I1\|pmos) resistor r=0.3431 c=0
+Rv428 (\3\:I1\|nmos \11\:I1\|nmos) resistor r=0.5 c=0
+Rv469 (\9\:I1\|pmos25 \11\:I1\|pmos25) resistor r=4.8642 c=0
+Rv443 (\9\:I1\|pmos25 \10\:I1\|pmos25) resistor r=2.25 c=0
+Rv459 (\104\:I1\|pmos25 \111\:I1\|pmos25) resistor r=4.8642 c=0
+Rv468 (\3\:I1\|nmos25 \4\:I1\|nmos25) resistor r=2.25 c=0
+Rv412 (\7\:I1\|nmos25 \53\:I1\|nmos25) resistor r=2.7295 c=0
+Rv413 (\2\:I1\|I1\|net79 \3\:I1\|I1\|net79) resistor r=152.694 c=0
+Rv429 (\11\:I1\|I1\|OE \13\:I1\|I1\|OE) resistor r=0.06736 c=0
+Rv406 (\21\:I1\|I2\|net093 \19\:I1\|I2\|net093) resistor r=0.5 c=0
+Rv414 (\24\:I1\|I2\|net0106 \10\:I1\|I2\|net0106) resistor r=20.4014 c=0
+Rv422 (\20\:I1\|I2\|net0174 \24\:I1\|I2\|net0174) resistor r=45.4417 c=0
+Rv430 (\27\:I1\|I2\|net0110 \25\:I1\|I2\|net0110) resistor r=4.5475 c=0
+Rv423 (\4\:I1\|I2\|net0189 \7\:I1\|I2\|net0189) resistor r=390.997 c=0
+Ru3 (\18\:VSS \52\:VSS) resistor r=5.8241 c=0
+Ru4 (VDD \42\:VDD) resistor r=0.3314 c=0
+Ru1 (\63\:VSS \1\:VSS) resistor r=19.1296 c=0
+Ru2 (\3\:A \4\:A) resistor r=130.186 c=0
+Ru208 (\15\:I1\|pmos \23\:I1\|pmos) resistor r=45.6456 c=0
+Ru109 (\12\:I1\|nmos \23\:I1\|nmos) resistor r=298.679 c=0
+Ru31 (\5\:I1\|pmos25 \13\:I1\|pmos25) resistor r=16.1311 c=0
+Ru194 (\7\:I1\|pmos25 \8\:I1\|pmos25) resistor r=5.625 c=0
+Ru80 (\102\:I1\|pmos25 \110\:I1\|pmos25) resistor r=5.625 c=0
+Ru118 (I1\|nmos25 \2\:I1\|nmos25) resistor r=5.625 c=0
+Ru155 (\49\:I1\|nmos25 \53\:I1\|nmos25) resistor r=0.5 c=0
+Ru77 (\3\:I1\|I1\|net79 \4\:I1\|I1\|net79) resistor r=56.0011 c=0
+Ru60 (\11\:I1\|I1\|OE \15\:I1\|I1\|OE) resistor r=8.1906 c=0
+Ru59 (\23\:I1\|I2\|net093 \14\:I1\|I2\|net093) resistor r=0.5 c=0
+Ru58 (\24\:I1\|I2\|net0106 \13\:I1\|I2\|net0106) resistor r=4.8482 c=0
+Ru55 (\24\:I1\|I2\|net0110 \34\:I1\|I2\|net0110) resistor r=0.5 c=0
+Ru54 (\34\:I1\|I2\|net0110 \7\:I1\|I2\|net0110) resistor r=45.1847 c=0
+Ru51 (\4\:I1\|I2\|net0189 \11\:I1\|I2\|net0189) resistor r=45.1179 c=0
+Rz318 (VDDIOR! \1354\:VDDIOR!) resistor r=0.5935 c=0
+Rz319 (\41\:VDD \42\:VDD) resistor r=0.1033 c=0
+Rz320 (\63\:VSS \10\:VSS) resistor r=19.184 c=0
+Rz323 (\1\:A \2\:A) resistor r=518.542 c=0
+Rz324 (\23\:I1\|pmos \20\:I1\|pmos) resistor r=0.9661 c=0
+Rz325 (\23\:I1\|nmos \17\:I1\|nmos) resistor r=545.007 c=0
+Rz326 (\7\:I1\|pmos25 \13\:I1\|pmos25) resistor r=16.2371 c=0
+Rz328 (\10\:I1\|pmos25 \8\:I1\|pmos25) resistor r=1.243 c=0
+Rz329 (\111\:I1\|pmos25 \110\:I1\|pmos25) resistor r=1.243 c=0
+Rz333 (\4\:I1\|nmos25 \2\:I1\|nmos25) resistor r=1.0937 c=0
+Rz334 (I1\|I1\|OEB \2\:I1\|I1\|OEB) resistor r=387.207 c=0
+Rz335 (\3\:I1\|I1\|net79 \7\:I1\|I1\|net79) resistor r=45 c=0
+Rz336 (\3\:I1\|I2\|net093 \6\:I1\|I2\|net093) resistor r=60.0555 c=0
+Rz344 (I1\|I2\|net093 \14\:I1\|I2\|net093) resistor r=45 c=0
+Rz345 (\20\:I1\|I2\|net0106 \3\:I1\|I2\|net0106) resistor r=45.4353 c=0
+Rz346 (\34\:I1\|I2\|net0110 \27\:I1\|I2\|net0110) resistor r=0.5 c=0
+Rz349 (\34\:I1\|I2\|net0110 \31\:I1\|I2\|net0110) resistor r=45.546 c=0
+Rz350 (\11\:I1\|I2\|net0189 \12\:I1\|I2\|net0189) resistor r=6.478 c=0
+Ry296 (I1\|pmos25 \13\:I1\|pmos25) resistor r=16.2371 c=0
+Ry297 (\25\:VDD \42\:VDD) resistor r=0.3177 c=0
+Ry298 (\955\:VSSIOR! \965\:VSSIOR!) resistor r=0.4349 c=0
+Ry307 (\4\:A \10\:A) resistor r=23 c=0
+Ry308 (\9\:I1\|pmos \21\:I1\|pmos) resistor r=3.5881 c=0
+Ry309 (\9\:I1\|nmos \22\:I1\|nmos) resistor r=0.5 c=0
+Ry312 (\11\:I1\|pmos25 \13\:I1\|pmos25) resistor r=16.1311 c=0
+Ry313 (\11\:I1\|pmos25 \12\:I1\|pmos25) resistor r=2.25 c=0
+Ry314 (\104\:I1\|pmos25 \112\:I1\|pmos25) resistor r=2.25 c=0
+Ry315 (\5\:I1\|nmos25 \6\:I1\|nmos25) resistor r=2.25 c=0
+Ry318 (\2\:I1\|I1\|OEB \3\:I1\|I1\|OEB) resistor r=354.215 c=0
+Ry319 (\7\:I1\|I1\|net79 \8\:I1\|I1\|net79) resistor r=19.12 c=0
+Ry322 (\18\:I1\|I2\|net093 \22\:I1\|I2\|net093) resistor r=0.5 c=0
+Ry323 (\9\:I1\|I2\|net093 \7\:I1\|I2\|net093) resistor r=5.1906 c=0
+Ry324 (\3\:I1\|I2\|net0174 \4\:I1\|I2\|net0174) resistor r=82.9721 c=0
+Ry325 (\34\:I1\|I2\|net0110 \35\:I1\|I2\|net0110) resistor r=0.2488 c=0
+Ry327 (I1\|I2\|net59 \4\:I1\|I2\|net59) resistor r=292.83 c=0
+Ry328 (\11\:I1\|I2\|net0189 \14\:I1\|I2\|net0189) resistor r=5.2859 c=0
+Rx10 (\61\:I1\|pmos25 \71\:I1\|pmos25) resistor r=0.4262 c=0
+Rx13 (\41\:VDD \1\:VDD) resistor r=8.3994 c=0
+Rx16 (\965\:VSSIOR! \977\:VSSIOR!) resistor r=9.9875 c=0
+Rx19 (\10\:A \9\:A) resistor r=6.1504 c=0
+Rx22 (\20\:I1\|pmos \21\:I1\|pmos) resistor r=0.5 c=0
+Rx25 (\23\:I1\|nmos \22\:I1\|nmos) resistor r=4.8886 c=0
+Rx89 (\102\:I1\|pmos25 \13\:I1\|pmos25) resistor r=16.2371 c=0
+Rx92 (\10\:I1\|pmos25 \12\:I1\|pmos25) resistor r=1.7757 c=0
+Rx95 (\111\:I1\|pmos25 \112\:I1\|pmos25) resistor r=1.7757 c=0
+Rx98 (\4\:I1\|nmos25 \6\:I1\|nmos25) resistor r=1.5624 c=0
+Rx101 (\8\:I1\|I1\|OEB \11\:I1\|I1\|OEB) resistor r=0.5 c=0
+Rx104 (I1\|I1\|OE \2\:I1\|I1\|OE) resistor r=2.5163 c=0
+Rx43 (\22\:I1\|I2\|net093 \21\:I1\|I2\|net093) resistor r=0.2537 c=0
+Rx46 (\13\:I1\|I2\|net093 \11\:I1\|I2\|net093) resistor r=19.9014 c=0
+Rx28 (\3\:I1\|I2\|net0174 \20\:I1\|I2\|net0174) resistor r=44.6665 c=0
+Rx31 (\35\:I1\|I2\|net0110 \37\:I1\|I2\|net0110) resistor r=0.3237 c=0
+Rx34 (\4\:I1\|I2\|net59 \7\:I1\|I2\|net59) resistor r=239.062 c=0
+Rx37 (I1\|I2\|net0227 \3\:I1\|I2\|net0227) resistor r=239.367 c=0
+I1\|I1\|NM5 (I1\|pmos \4\:I1\|I1\|OE I1\|nmos VSS) g45n1svt w=(5e-07) \
+        l=4.5e-08 nf=1 as=8e-14 ad=7e-14 ps=1.32e-06 pd=1.28e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=5.5e-07 sd=160n sca=3.24721 \
+        scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I1\|I1\|NM0 (\8\:I1\|I1\|net79 \4\:I1\|I1\|net79 \1\:VSS VSS) g45n1svt \
+        w=(5e-07) l=4.5e-08 nf=1 as=7e-14 ad=8e-14 ps=1.28e-06 pd=1.32e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n sca=3.24721 \
+        scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I1\|I1\|NM4 (I1\|nmos \3\:I1\|I1\|OEB \10\:VSS VSS) g45n1svt w=(5e-07) \
+        l=4.5e-08 nf=1 as=8e-14 ad=8e-14 ps=1.32e-06 pd=1.32e-06 \
+        nrd=1.16667 nrs=1.16667 sa=3.45e-07 sb=3.45e-07 sd=160n \
+        sca=3.24721 scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I1\|I1\|NM2 (\9\:I1\|I1\|OEB \8\:I1\|I1\|OE \1\:VSS VSS) g45n1svt \
+        w=(5e-07) l=4.5e-08 nf=1 as=7e-14 ad=8e-14 ps=1.28e-06 pd=1.32e-06 \
+        nrd=1.16667 nrs=1.16667 sa=3.45e-07 sb=1.4e-07 sd=160n sca=3.24721 \
+        scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I1\|I1\|NM3 (\5\:I1\|nmos \3\:A \10\:VSS VSS) g45n1svt w=(5e-07) \
+        l=4.5e-08 nf=1 as=7e-14 ad=8e-14 ps=1.28e-06 pd=1.32e-06 \
+        nrd=1.16667 nrs=1.16667 sa=5.5e-07 sb=1.4e-07 sd=160n sca=3.24721 \
+        scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I1\|I2\|NM1 (\12\:I1\|I2\|net59 \17\:I1\|pmos \37\:VSS VSS) g45n1svt \
+        w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=2.8e-13 ps=4.32e-06 \
+        pd=4.28e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n \
+        sca=2.58054 scb=7.96347e-05 scc=2.87843e-09 m=(1)
+I1\|I2\|NM3 (\12\:I1\|I2\|net0189 \17\:I1\|nmos \52\:VSS VSS) g45n1svt \
+        w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=2.8e-13 ps=4.32e-06 \
+        pd=4.28e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n \
+        sca=2.58054 scb=7.96347e-05 scc=2.87843e-09 m=(1)
+I1\|I2\|NM2 (\7\:I1\|I2\|net0227 \6\:I1\|I2\|net59 \37\:VSS VSS) \
+        g45n1svt w=(2e-06) l=4.5e-08 nf=1 as=2.8e-13 ad=3.2e-13 \
+        ps=4.28e-06 pd=4.32e-06 nrd=1.16667 nrs=1.16667 sa=3.45e-07 \
+        sb=1.4e-07 sd=160n sca=2.58054 scb=7.96347e-05 scc=2.87843e-09 \
+        m=(1)
+I1\|I2\|NM4 (\7\:I1\|I2\|net0218 \6\:I1\|I2\|net0189 \52\:VSS VSS) \
+        g45n1svt w=(2e-06) l=4.5e-08 nf=1 as=2.8e-13 ad=3.2e-13 \
+        ps=4.28e-06 pd=4.32e-06 nrd=1.16667 nrs=1.16667 sa=3.45e-07 \
+        sb=1.4e-07 sd=160n sca=2.58054 scb=7.96347e-05 scc=2.87843e-09 \
+        m=(1)
+I1\|I2\|NM6_1__rcx (\7\:I1\|I2\|net093 I1\|I2\|net59 \27\:VSS VSS) \
+        g45n1svt w=(2.5e-06) l=4.5e-08 nf=1 as=4e-13 ad=3.75e-13 \
+        ps=5.32e-06 pd=5.3e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 \
+        sb=7.55e-07 sd=160n sca=2.4853 scb=7.86359e-05 scc=2.85679e-09 \
+        m=(2)
+I1\|I2\|NM7_1__rcx (\6\:I1\|I2\|net0106 I1\|I2\|net0189 \18\:VSS VSS) \
+        g45n1svt w=(2.5e-06) l=4.5e-08 nf=1 as=4e-13 ad=3.75e-13 \
+        ps=5.32e-06 pd=5.3e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 \
+        sb=7.55e-07 sd=160n sca=2.4853 scb=7.86359e-05 scc=2.85679e-09 \
+        m=(2)
+I1\|I2\|NM5 (\7\:I1\|I2\|net0174 I1\|I2\|net0227 \27\:VSS VSS) g45n1svt \
+        w=(2.5e-06) l=4.5e-08 nf=1 as=4e-13 ad=3.75e-13 ps=5.32e-06 \
+        pd=5.3e-06 nrd=1.16667 nrs=1.16667 sa=5.5e-07 sb=3.45e-07 sd=160n \
+        sca=2.4853 scb=7.86359e-05 scc=2.85679e-09 m=(2)
+I1\|I2\|NM8 (\14\:I1\|I2\|net0110 I1\|I2\|net0218 \18\:VSS VSS) g45n1svt \
+        w=(2.5e-06) l=4.5e-08 nf=1 as=4e-13 ad=3.75e-13 ps=5.32e-06 \
+        pd=5.3e-06 nrd=1.16667 nrs=1.16667 sa=5.5e-07 sb=3.45e-07 sd=160n \
+        sca=2.4853 scb=7.86359e-05 scc=2.85679e-09 m=(2)
+I1\|I2\|M20 (\10\:I1\|I2\|net0106 \2\:I1\|I2\|net0110 \978\:VSSIOR! \
+        VSSIOR!) g45n2svt w=(5e-07) l=1.5e-07 nf=1 as=1e-13 ad=7.5e-14 \
+        ps=1.4e-06 pd=1.3e-06 nrd=468.75m nrs=468.75m sa=1.5e-07 sb=5e-07 \
+        sd=200n sca=3.07246 scb=6.94833e-05 scc=1.79353e-09 m=(1)
+I1\|I2\|M11 (\13\:I1\|I2\|net0174 \2\:I1\|I2\|net093 \966\:VSSIOR! \
+        VSSIOR!) g45n2svt w=(5e-07) l=1.5e-07 nf=1 as=7.5e-14 ad=1e-13 \
+        ps=1.3e-06 pd=1.4e-06 nrd=468.75m nrs=468.75m sa=5e-07 sb=1.5e-07 \
+        sd=200n sca=3.07246 scb=6.94833e-05 scc=1.79353e-09 m=(1)
+I1\|I2\|M19 (\22\:I1\|I2\|net0110 \2\:I1\|I2\|net0106 \978\:VSSIOR! \
+        VSSIOR!) g45n2svt w=(5e-07) l=1.5e-07 nf=1 as=7.5e-14 ad=1e-13 \
+        ps=1.3e-06 pd=1.4e-06 nrd=468.75m nrs=468.75m sa=5e-07 sb=1.5e-07 \
+        sd=200n sca=3.07246 scb=6.94833e-05 scc=1.79353e-09 m=(1)
+I1\|I2\|M30 (\31\:I1\|nmos25 \7\:I1\|I2\|net0110 \982\:VSSIOR! VSSIOR!) \
+        g45n2svt w=(2.5e-06) l=1.5e-07 nf=1 as=5e-13 ad=4.375e-13 \
+        ps=5.4e-06 pd=5.35e-06 nrd=468.75m nrs=468.75m sa=1.5e-07 \
+        sb=1.2e-06 sd=200n sca=2.31056 scb=5.36983e-05 scc=1.44728e-09 \
+        m=(4)
+I1\|I2\|M27 (\61\:I1\|pmos25 \40\:I1\|I2\|net0174 \955\:VSSIOR! VSSIOR!) \
+        g45n2svt w=(2.5e-06) l=1.5e-07 nf=1 as=5e-13 ad=4.5833e-13 \
+        ps=5.4e-06 pd=5.36667e-06 nrd=468.75m nrs=468.75m sa=8.5e-07 \
+        sb=1.2e-06 sd=200n sca=2.31056 scb=5.36983e-05 scc=1.44728e-09 \
+        m=(6)
+I1\|I3\|M8_4__rcx (\14\:PAD \7\:I1\|nmos25 VSSIOR! VSSIOR!) g45n2svt \
+        w=(1e-05) l=2e-07 nf=1 as=5.41e-11 ad=5.25e-12 ps=3.082e-05 \
+        pd=2.105e-05 nrd=468.75m nrs=468.75m sa=5.25e-07 sb=2e-06 sd=200n \
+        sca=1.84848 scb=4.29512e-05 scc=1.08015e-09 m=(8)
+I1\|I3\|M4_44__rcx (\45\:PAD VSSIOR! VSSIOR! VSSIOR!) g45n2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=5.25e-12 ps=3.082e-05 pd=2.105e-05 \
+        nrd=468.75m nrs=468.75m sa=5.25e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(48)
+I1\|I1\|PM5 (\4\:I1\|pmos \3\:I1\|I1\|OE \10\:VDD VDD) g45p1svt \
+        w=(1e-06) l=4.5e-08 nf=1 as=1.4e-13 ad=1.6e-13 ps=2.28e-06 \
+        pd=2.32e-06 nrd=1.16667 nrs=1.16667 sa=3.45e-07 sb=1.4e-07 sd=160n \
+        sca=22.8136 scb=0.0138897 scc=0.00170436 m=(1)
+I1\|I1\|PM4 (\7\:I1\|nmos I1\|I1\|OEB \6\:I1\|pmos VDD) g45p1svt \
+        w=(1e-06) l=4.5e-08 nf=1 as=1.4e-13 ad=1.4e-13 ps=2.28e-06 \
+        pd=2.28e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=1.4e-07 sd=160n \
+        sca=19.4885 scb=0.00947105 scc=0.00165874 m=(1)
+I1\|I1\|PM1 (\15\:I1\|I1\|OE I1\|I1\|net79 \1\:VDD VDD) g45p1svt \
+        w=(1e-06) l=4.5e-08 nf=1 as=1.6e-13 ad=1.4e-13 ps=2.32e-06 \
+        pd=2.28e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n \
+        sca=22.0179 scb=0.0125224 scc=0.00167909 m=(1)
+I1\|I1\|PM2 (\6\:I1\|I1\|OEB \5\:I1\|I1\|OE \1\:VDD VDD) g45p1svt \
+        w=(1e-06) l=4.5e-08 nf=1 as=1.4e-13 ad=1.6e-13 ps=2.28e-06 \
+        pd=2.32e-06 nrd=1.16667 nrs=1.16667 sa=3.45e-07 sb=1.4e-07 sd=160n \
+        sca=29.1166 scb=0.0240644 scc=0.00238817 m=(1)
+I1\|I2\|PM1 (\14\:I1\|I2\|net59 \12\:I1\|pmos \25\:VDD VDD) g45p1svt \
+        w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=3e-13 ps=4.32e-06 \
+        pd=4.3e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=7.55e-07 sd=160n \
+        sca=17.2363 scb=0.014483 scc=0.00111574 m=(2)
+I1\|I2\|PM4 (\14\:I1\|I2\|net0189 \12\:I1\|nmos \25\:VDD VDD) g45p1svt \
+        w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=3e-13 ps=4.32e-06 \
+        pd=4.3e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=7.55e-07 sd=160n \
+        sca=17.2363 scb=0.014483 scc=0.00111574 m=(2)
+I1\|I2\|PM2 (\9\:I1\|I2\|net0227 \7\:I1\|I2\|net59 \25\:VDD VDD) \
+        g45p1svt w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=3e-13 ps=4.32e-06 \
+        pd=4.3e-06 nrd=1.16667 nrs=1.16667 sa=5.5e-07 sb=3.45e-07 sd=160n \
+        sca=12.6259 scb=0.00589089 scc=0.000830541 m=(2)
+I1\|I2\|PM3 (\9\:I1\|I2\|net0218 \7\:I1\|I2\|net0189 \25\:VDD VDD) \
+        g45p1svt w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=3e-13 ps=4.32e-06 \
+        pd=4.3e-06 nrd=1.16667 nrs=1.16667 sa=5.5e-07 sb=3.45e-07 sd=160n \
+        sca=12.6259 scb=0.00589089 scc=0.000830541 m=(2)
+I1\|I2\|M24_1__rcx (\25\:I1\|I2\|net0110 \3\:I1\|I2\|net0106 \
+        \1354\:VDDIOR! VDDIOR!) g45p2svt w=(2.5e-06) l=1.5e-07 nf=1 \
+        as=5e-13 ad=5e-13 ps=5.4e-06 pd=5.4e-06 nrd=468.75m nrs=468.75m \
+        sa=8.5e-07 sb=2e-06 sd=200n sca=3.54553 scb=0.00128546 \
+        scc=4.77339e-05 m=(2)
+I1\|I2\|M31_1__rcx (\71\:I1\|pmos25 \24\:I1\|I2\|net0174 \1354\:VDDIOR! \
+        VDDIOR!) g45p2svt w=(2e-06) l=1.5e-07 nf=1 as=4e-13 ad=3.75e-13 \
+        ps=4.4e-06 pd=4.375e-06 nrd=468.75m nrs=468.75m sa=2e-06 sb=5e-07 \
+        sd=200n sca=4.58139 scb=0.00182184 scc=5.9759e-05 m=(4)
+I1\|I2\|M18 (\16\:I1\|I2\|net093 \4\:I1\|I2\|net0174 \1354\:VDDIOR! \
+        VDDIOR!) g45p2svt w=(2e-06) l=1.5e-07 nf=1 as=3.5e-13 ad=4e-13 \
+        ps=4.35e-06 pd=4.4e-06 nrd=468.75m nrs=468.75m sa=5e-07 sb=2e-06 \
+        sd=200n sca=3.93258 scb=0.00159441 scc=5.96671e-05 m=(2)
+I1\|I2\|M14 (\18\:I1\|I2\|net0174 \3\:I1\|I2\|net093 \1354\:VDDIOR! \
+        VDDIOR!) g45p2svt w=(2e-06) l=1.5e-07 nf=1 as=4e-13 ad=4e-13 \
+        ps=4.4e-06 pd=4.4e-06 nrd=468.75m nrs=468.75m sa=8.5e-07 \
+        sb=1.9e-06 sd=200n sca=3.93258 scb=0.00159441 scc=5.96671e-05 \
+        m=(2)
+I1\|I3\|M6_36__rcx (\28\:PAD VDDIOR! VDDIOR! VDDIOR!) g45p2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=3.473e-12 ps=3.082e-05 pd=2.07e-05 \
+        nrd=468.75m nrs=468.75m sa=3.474e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(40)
+I1\|I3\|M9_13__rcx (\1\:PAD \13\:I1\|pmos25 VDDIOR! VDDIOR!) g45p2svt \
+        w=(1e-05) l=2e-07 nf=1 as=5.41e-11 ad=3.473e-12 ps=3.082e-05 \
+        pd=2.07e-05 nrd=468.75m nrs=468.75m sa=3.474e-07 sb=2e-06 sd=200n \
+        sca=1.84848 scb=4.29512e-05 scc=1.08015e-09 m=(16)
+ends PADDO
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:41:19 2012 )
+// Library name: giolib045
+// Cell name: PADDOZ
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADDOZ A OEN PAD VDD VDDIOR! VSS VSSIOR!
+I14\|I2\|M22 (\13\:I14\|I2\|net0106 \3\:I14\|I2\|net0110 \1354\:VDDIOR! \
+        VDDIOR!) g45p2svt w=(2.5e-06) l=1.5e-07 nf=1 as=4.375e-13 ad=5e-13 \
+        ps=5.35e-06 pd=5.4e-06 nrd=468.75m nrs=468.75m sa=5e-07 sb=2e-06 \
+        sd=200n sca=4.19433 scb=0.0015129 scc=4.78258e-05 m=(2)
+I14\|I2\|M28_1__rcx (\31\:I14\|nmos25 \31\:I14\|I2\|net0110 \1354\:VDDIOR! \
+        VDDIOR!) g45p2svt w=(2.5e-06) l=1.5e-07 nf=1 as=5e-13 \
+        ad=4.7917e-13 ps=5.4e-06 pd=5.38333e-06 nrd=468.75m nrs=468.75m \
+        sa=2e-06 sb=1.2e-06 sd=200n sca=3.54553 scb=0.00128546 \
+        scc=4.77339e-05 m=(6)
+I14\|I1\|PM3 (\4\:I14\|pmos \1\:A \13\:VDD VDD) g45p1svt w=(1e-06) \
+        l=4.5e-08 nf=1 as=1.6e-13 ad=1.4e-13 ps=2.32e-06 pd=2.28e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n sca=33.3252 \
+        scb=0.0289801 scc=0.00318301 m=(1)
+I14\|I2\|M15 (\11\:I14\|I2\|net093 \2\:I14\|I2\|net0174 \966\:VSSIOR! \
+        VSSIOR!) g45n2svt w=(5e-07) l=1.5e-07 nf=1 as=1e-13 ad=7.5e-14 \
+        ps=1.4e-06 pd=1.3e-06 nrd=468.75m nrs=468.75m sa=1.5e-07 sb=5e-07 \
+        sd=200n sca=3.07246 scb=6.94833e-05 scc=1.79353e-09 m=(1)
+I2 (\351\:PAD) BONDPAD52
+C1 (A VSSIOR!) capacitor c=3.51554e-17
+C2 (VDD VSSIOR!) capacitor c=1.16943e-14
+C3 (VSS VSSIOR!) capacitor c=1.7252e-14
+C4 (PAD VSSIOR!) capacitor c=1.36798e-17
+C5 (OEN VSSIOR!) capacitor c=9.89748e-15
+C6 (VDDIOR! VSSIOR!) capacitor c=8.38584e-14
+C7 (I14\|pmos VSSIOR!) capacitor c=1.54887e-16
+C8 (I14\|nmos VSSIOR!) capacitor c=2.23708e-16
+C9 (I14\|pmos25 VSSIOR!) capacitor c=1.40261e-14
+C10 (I14\|nmos25 VSSIOR!) capacitor c=8.5592e-15
+C11 (I14\|I1\|OEB VSSIOR!) capacitor c=8.77486e-17
+C12 (I14\|I2\|net093 VSSIOR!) capacitor c=2.14743e-16
+C13 (I14\|I2\|net0106 VSSIOR!) capacitor c=1.95392e-16
+C14 (I14\|I2\|net0174 VSSIOR!) capacitor c=4.67771e-17
+C15 (I14\|I2\|net0110 VSSIOR!) capacitor c=4.68176e-17
+C16 (I14\|I2\|net59 VSSIOR!) capacitor c=2.22162e-16
+C17 (I14\|I2\|net0189 VSSIOR!) capacitor c=2.17664e-16
+C18 (I14\|I2\|net0227 VSSIOR!) capacitor c=2.32061e-16
+C19 (I14\|I2\|net0218 VSSIOR!) capacitor c=2.37062e-16
+C20 (\3\:I14\|I2\|net093 VSSIOR!) capacitor c=2.6229e-16
+C21 (\3\:I14\|I2\|net0106 VSSIOR!) capacitor c=2.19532e-16
+C22 (\3\:I14\|I2\|net0110 VSSIOR!) capacitor c=1.22413e-16
+C23 (\12\:I14\|nmos VSSIOR!) capacitor c=1.24087e-16
+C24 (\12\:I14\|pmos VSSIOR!) capacitor c=2.5431e-16
+C25 (\7\:I14\|I1\|OE VSSIOR!) capacitor c=1.2581e-16
+C26 (\1\:OEN VSSIOR!) capacitor c=1.40426e-16
+C27 (\3\:I14\|I1\|OE VSSIOR!) capacitor c=6.29761e-17
+C28 (\1\:A VSSIOR!) capacitor c=1.31963e-16
+C29 (\40\:I14\|I2\|net0174 VSSIOR!) capacitor c=1.01769e-15
+C30 (\7\:I14\|I2\|net0110 VSSIOR!) capacitor c=4.63649e-16
+C31 (\2\:I14\|I2\|net0106 VSSIOR!) capacitor c=9.04163e-17
+C32 (\2\:I14\|I2\|net093 VSSIOR!) capacitor c=9.74186e-17
+C33 (\2\:I14\|I2\|net0110 VSSIOR!) capacitor c=5.80964e-17
+C34 (\2\:I14\|I2\|net0174 VSSIOR!) capacitor c=6.20942e-17
+C35 (\6\:I14\|I2\|net0189 VSSIOR!) capacitor c=1.39385e-16
+C36 (\6\:I14\|I2\|net59 VSSIOR!) capacitor c=1.37857e-16
+C37 (\17\:I14\|nmos VSSIOR!) capacitor c=1.51412e-16
+C38 (\17\:I14\|pmos VSSIOR!) capacitor c=1.4991e-16
+C39 (\10\:I14\|I1\|OE VSSIOR!) capacitor c=3.20505e-17
+C40 (\3\:OEN VSSIOR!) capacitor c=6.57889e-17
+C41 (\3\:A VSSIOR!) capacitor c=4.85137e-17
+C42 (\3\:I14\|I1\|OEB VSSIOR!) capacitor c=1.37083e-16
+C43 (\4\:I14\|I1\|OE VSSIOR!) capacitor c=1.17007e-16
+C44 (\60\:I14\|nmos25 VSSIOR!) capacitor c=2.14224e-17
+C45 (\61\:I14\|nmos25 VSSIOR!) capacitor c=5.04386e-17
+C46 (\62\:I14\|nmos25 VSSIOR!) capacitor c=6.72197e-17
+C47 (\95\:I14\|pmos25 VSSIOR!) capacitor c=8.64089e-18
+C48 (\97\:I14\|pmos25 VSSIOR!) capacitor c=1.59051e-17
+C49 (\102\:I14\|pmos25 VSSIOR!) capacitor c=1.2374e-17
+C50 (\104\:I14\|pmos25 VSSIOR!) capacitor c=7.63142e-18
+C51 (\24\:I14\|I2\|net0174 VSSIOR!) capacitor c=3.79403e-16
+C52 (\31\:I14\|I2\|net0110 VSSIOR!) capacitor c=1.31271e-15
+C53 (\6\:I14\|I2\|net093 VSSIOR!) capacitor c=2.67859e-17
+C54 (\3\:I14\|I2\|net0174 VSSIOR!) capacitor c=2.56414e-17
+C55 (\3\:I14\|I2\|net0227 VSSIOR!) capacitor c=5.89755e-18
+C56 (\4\:I14\|I2\|net0189 VSSIOR!) capacitor c=2.33224e-16
+C57 (\4\:I14\|I2\|net59 VSSIOR!) capacitor c=2.30022e-16
+C58 (\15\:I14\|pmos VSSIOR!) capacitor c=2.66129e-16
+C59 (\9\:I14\|I1\|OE VSSIOR!) capacitor c=1.58978e-17
+C60 (\2\:OEN VSSIOR!) capacitor c=9.04168e-17
+C61 (\4\:A VSSIOR!) capacitor c=3.60422e-17
+C62 (\2\:I14\|I1\|OEB VSSIOR!) capacitor c=5.28292e-17
+C63 (\2\:A VSSIOR!) capacitor c=4.17776e-17
+C64 (\7\:I14\|pmos25 VSSIOR!) capacitor c=4.61322e-17
+C65 (\9\:I14\|pmos25 VSSIOR!) capacitor c=6.51267e-17
+C66 (\11\:I14\|pmos25 VSSIOR!) capacitor c=8.68361e-17
+C67 (\57\:VSS VSSIOR!) capacitor c=9.27454e-16
+C68 (\49\:I14\|nmos25 VSSIOR!) capacitor c=5.90036e-17
+C69 (\77\:I14\|pmos25 VSSIOR!) capacitor c=4.49542e-17
+C70 (\20\:I14\|pmos VSSIOR!) capacitor c=1.28654e-16
+C71 (\8\:OEN VSSIOR!) capacitor c=5.672e-15
+C72 (\13\:A VSSIOR!) capacitor c=9.82258e-15
+C73 (\12\:A VSSIOR!) capacitor c=7.48627e-15
+C74 (\4\:OEN VSSIOR!) capacitor c=4.25551e-17
+C75 (\9\:I14\|nmos VSSIOR!) capacitor c=6.23579e-17
+C76 (\71\:I14\|pmos25 VSSIOR!) capacitor c=7.56992e-16
+C77 (\20\:I14\|I2\|net0174 VSSIOR!) capacitor c=5.55629e-16
+C78 (\20\:I14\|I2\|net0106 VSSIOR!) capacitor c=1.66881e-16
+C79 (\27\:I14\|I2\|net0110 VSSIOR!) capacitor c=6.91864e-17
+C80 (\18\:I14\|I2\|net093 VSSIOR!) capacitor c=7.7876e-18
+C81 (\24\:I14\|I2\|net0110 VSSIOR!) capacitor c=2.45039e-17
+C82 (\13\:I14\|I2\|net093 VSSIOR!) capacitor c=4.47923e-17
+C83 (\17\:I14\|I2\|net0110 VSSIOR!) capacitor c=1.96881e-17
+C84 (\9\:I14\|I2\|net0174 VSSIOR!) capacitor c=8.89202e-17
+C85 (\9\:I14\|I2\|net093 VSSIOR!) capacitor c=6.13961e-17
+C86 (\6\:I14\|I1\|OEB VSSIOR!) capacitor c=2.99213e-16
+C87 (\5\:OEN VSSIOR!) capacitor c=8.44142e-17
+C88 (\11\:I14\|I1\|OE VSSIOR!) capacitor c=2.33362e-16
+C89 (\4\:I14\|nmos VSSIOR!) capacitor c=2.42833e-16
+C90 (\5\:I14\|I1\|OE VSSIOR!) capacitor c=3.7756e-17
+C91 (\3\:I14\|nmos VSSIOR!) capacitor c=1.25812e-16
+C92 (\1\:PAD VSSIOR!) capacitor c=1.02519e-14
+C93 (\31\:I14\|nmos25 VSSIOR!) capacitor c=1.92414e-15
+C94 (\18\:I14\|I2\|net0174 VSSIOR!) capacitor c=4.27965e-16
+C95 (\25\:I14\|I2\|net0110 VSSIOR!) capacitor c=9.79613e-17
+C96 (\16\:I14\|I2\|net093 VSSIOR!) capacitor c=2.17796e-16
+C97 (\13\:I14\|I2\|net0106 VSSIOR!) capacitor c=3.19059e-16
+C98 (\22\:VDD VSSIOR!) capacitor c=1.74589e-15
+C99 (\9\:I14\|I2\|net0218 VSSIOR!) capacitor c=3.66805e-16
+C100 (\9\:I14\|I2\|net0227 VSSIOR!) capacitor c=3.63836e-16
+C101 (\14\:I14\|I2\|net0189 VSSIOR!) capacitor c=4.2997e-16
+C102 (\14\:I14\|I2\|net59 VSSIOR!) capacitor c=3.92316e-16
+C103 (\9\:I14\|I1\|OEB VSSIOR!) capacitor c=1.23204e-16
+C104 (\8\:VDD VSSIOR!) capacitor c=1.85326e-16
+C105 (\18\:I14\|I1\|OE VSSIOR!) capacitor c=2.02937e-16
+C106 (\7\:I14\|nmos VSSIOR!) capacitor c=2.02332e-16
+C107 (\6\:I14\|pmos VSSIOR!) capacitor c=1.29565e-16
+C108 (\15\:VDD VSSIOR!) capacitor c=1.76419e-16
+C109 (\4\:I14\|pmos VSSIOR!) capacitor c=2.58998e-16
+C110 (\13\:VDD VSSIOR!) capacitor c=1.07869e-16
+C111 (\61\:I14\|pmos25 VSSIOR!) capacitor c=1.17437e-15
+C112 (\22\:I14\|I2\|net0110 VSSIOR!) capacitor c=5.34982e-17
+C113 (\13\:I14\|I2\|net0174 VSSIOR!) capacitor c=5.36355e-17
+C114 (\10\:I14\|I2\|net0106 VSSIOR!) capacitor c=1.80645e-16
+C115 (\11\:I14\|I2\|net093 VSSIOR!) capacitor c=1.61123e-16
+C116 (\23\:VSS VSSIOR!) capacitor c=1.59236e-15
+C117 (\14\:I14\|I2\|net0110 VSSIOR!) capacitor c=6.7258e-16
+C118 (\7\:I14\|I2\|net0174 VSSIOR!) capacitor c=5.30986e-16
+C119 (\14\:VSS VSSIOR!) capacitor c=1.77478e-15
+C120 (\6\:I14\|I2\|net0106 VSSIOR!) capacitor c=4.71428e-16
+C121 (\7\:I14\|I2\|net093 VSSIOR!) capacitor c=5.05137e-16
+C122 (\7\:I14\|I2\|net0218 VSSIOR!) capacitor c=4.65414e-16
+C123 (\7\:I14\|I2\|net0227 VSSIOR!) capacitor c=4.50556e-16
+C124 (\48\:VSS VSSIOR!) capacitor c=3.30942e-16
+C125 (\33\:VSS VSSIOR!) capacitor c=3.30942e-16
+C126 (\12\:I14\|I2\|net0189 VSSIOR!) capacitor c=2.37422e-16
+C127 (\12\:I14\|I2\|net59 VSSIOR!) capacitor c=2.60295e-16
+C128 (\11\:I14\|I1\|OEB VSSIOR!) capacitor c=8.22032e-17
+C129 (\9\:VSS VSSIOR!) capacitor c=1.05638e-16
+C130 (\16\:I14\|I1\|OE VSSIOR!) capacitor c=7.51994e-17
+C131 (\5\:I14\|nmos VSSIOR!) capacitor c=1.73895e-16
+C132 (\12\:VSS VSSIOR!) capacitor c=1.02044e-16
+C133 (\2\:I14\|nmos25 VSSIOR!) capacitor c=3.53066e-17
+C134 (\4\:I14\|nmos25 VSSIOR!) capacitor c=1.09369e-16
+C135 (\6\:I14\|nmos25 VSSIOR!) capacitor c=1.33777e-16
+C136 (\2\:I14\|pmos25 VSSIOR!) capacitor c=2.32163e-17
+C137 (\4\:I14\|pmos25 VSSIOR!) capacitor c=2.8502e-17
+C138 (\6\:I14\|pmos25 VSSIOR!) capacitor c=5.10504e-17
+C139 (\8\:I14\|pmos25 VSSIOR!) capacitor c=9.54515e-17
+C140 (\10\:I14\|pmos25 VSSIOR!) capacitor c=1.93501e-16
+C141 (\12\:I14\|pmos25 VSSIOR!) capacitor c=2.05939e-16
+C142 (\2\:I14\|I1\|OE VSSIOR!) capacitor c=9.25024e-17
+C143 (\6\:I14\|I1\|OE VSSIOR!) capacitor c=5.21144e-17
+C144 (\4\:I14\|I1\|OEB VSSIOR!) capacitor c=7.59525e-17
+C145 (\8\:I14\|I1\|OE VSSIOR!) capacitor c=2.51588e-16
+C146 (\12\:I14\|I1\|OE VSSIOR!) capacitor c=3.06553e-17
+C147 (\13\:I14\|I1\|OE VSSIOR!) capacitor c=3.10812e-17
+C148 (\8\:I14\|I1\|OEB VSSIOR!) capacitor c=1.29316e-16
+C149 (\6\:OEN VSSIOR!) capacitor c=2.09766e-16
+C150 (\10\:I14\|nmos VSSIOR!) capacitor c=8.68355e-17
+C151 (\11\:I14\|nmos VSSIOR!) capacitor c=1.02844e-16
+C152 (\14\:I14\|I1\|OE VSSIOR!) capacitor c=2.56689e-17
+C153 (\15\:I14\|I1\|OE VSSIOR!) capacitor c=2.05145e-16
+C154 (\3\:I14\|I2\|net0189 VSSIOR!) capacitor c=3.03269e-17
+C155 (\7\:I14\|I2\|net0189 VSSIOR!) capacitor c=1.56662e-16
+C156 (\7\:I14\|I2\|net59 VSSIOR!) capacitor c=1.43858e-16
+C157 (\9\:OEN VSSIOR!) capacitor c=3.57381e-16
+C158 (\10\:OEN VSSIOR!) capacitor c=6.2081e-16
+C159 (\4\:I14\|I2\|net0174 VSSIOR!) capacitor c=1.5685e-16
+C160 (\11\:I14\|I2\|net0189 VSSIOR!) capacitor c=1.2153e-16
+C161 (\11\:I14\|I2\|net59 VSSIOR!) capacitor c=9.20878e-17
+C162 (\6\:I14\|I2\|net0218 VSSIOR!) capacitor c=1.89831e-16
+C163 (\6\:I14\|I2\|net0227 VSSIOR!) capacitor c=1.65442e-16
+C164 (\22\:I14\|nmos VSSIOR!) capacitor c=7.94847e-16
+C165 (\21\:I14\|pmos VSSIOR!) capacitor c=1.64778e-15
+C166 (\20\:I14\|I2\|net0110 VSSIOR!) capacitor c=4.64386e-17
+C167 (\58\:VSS VSSIOR!) capacitor c=1.06037e-15
+C168 (\14\:I14\|I2\|net093 VSSIOR!) capacitor c=5.08271e-18
+C169 (\23\:I14\|nmos VSSIOR!) capacitor c=1.61388e-15
+C170 (\19\:I14\|I2\|net093 VSSIOR!) capacitor c=5.18428e-17
+C171 (\23\:I14\|pmos VSSIOR!) capacitor c=5.33621e-16
+C172 (\34\:I14\|I2\|net0110 VSSIOR!) capacitor c=3.11567e-16
+C173 (\35\:I14\|I2\|net0110 VSSIOR!) capacitor c=5.01762e-17
+C174 (\37\:I14\|I2\|net0110 VSSIOR!) capacitor c=2.86113e-16
+C175 (\21\:I14\|I2\|net0106 VSSIOR!) capacitor c=3.68031e-16
+C176 (\24\:I14\|I2\|net0106 VSSIOR!) capacitor c=2.74591e-16
+C177 (\25\:I14\|I2\|net0106 VSSIOR!) capacitor c=1.982e-16
+C178 (\21\:I14\|I2\|net093 VSSIOR!) capacitor c=2.96029e-16
+C179 (\22\:I14\|I2\|net093 VSSIOR!) capacitor c=6.69522e-17
+C180 (\23\:I14\|I2\|net093 VSSIOR!) capacitor c=6.9322e-17
+C181 (\24\:I14\|I2\|net093 VSSIOR!) capacitor c=1.61181e-16
+C182 (\25\:I14\|I2\|net093 VSSIOR!) capacitor c=1.02687e-16
+C183 (\53\:I14\|nmos25 VSSIOR!) capacitor c=9.18276e-16
+C184 (\80\:I14\|pmos25 VSSIOR!) capacitor c=1.29103e-15
+C185 (\14\:PAD VSSIOR!) capacitor c=9.97796e-15
+C186 (\28\:PAD VSSIOR!) capacitor c=4.23272e-14
+C187 (\45\:PAD VSSIOR!) capacitor c=6.42679e-14
+C188 (\67\:I14\|nmos25 VSSIOR!) capacitor c=3.80031e-17
+C189 (\68\:I14\|nmos25 VSSIOR!) capacitor c=9.74317e-17
+C190 (\69\:I14\|nmos25 VSSIOR!) capacitor c=1.22355e-16
+C191 (\107\:I14\|pmos25 VSSIOR!) capacitor c=2.32163e-17
+C192 (\108\:I14\|pmos25 VSSIOR!) capacitor c=2.8502e-17
+C193 (\109\:I14\|pmos25 VSSIOR!) capacitor c=4.75003e-17
+C194 (\110\:I14\|pmos25 VSSIOR!) capacitor c=2.39092e-17
+C195 (\111\:I14\|pmos25 VSSIOR!) capacitor c=5.8707e-16
+C196 (\112\:I14\|pmos25 VSSIOR!) capacitor c=3.59889e-17
+C197 (\1354\:VDDIOR! VSSIOR!) capacitor c=4.39299e-15
+C198 (\59\:VSS VSSIOR!) capacitor c=2.28776e-15
+C199 (\60\:VSS VSSIOR!) capacitor c=3.64026e-16
+C200 (\40\:VDD VSSIOR!) capacitor c=1.9027e-15
+C201 (\39\:VDD VSSIOR!) capacitor c=6.04604e-15
+Rl7 (\23\:VSS \14\:VSS) resistor r=7.4812 c=0
+Rl1 (I14\|I2\|net0106 \2\:I14\|I2\|net0106) resistor r=151.567 c=0
+Rl186 (\40\:VDD \39\:VDD) resistor r=0.3011 c=0
+Rl191 (\59\:VSS \60\:VSS) resistor r=0.1562 c=0
+Rl198 (\965\:VSSIOR! \966\:VSSIOR!) resistor r=19.922 c=0
+Rl204 (\12\:I14\|pmos \15\:I14\|pmos) resistor r=143.848 c=0
+Rl209 (\3\:I14\|nmos \11\:I14\|nmos) resistor r=0.5 c=0
+Rl215 (I14\|pmos25 \104\:I14\|pmos25) resistor r=16.1311 c=0
+Rl15 (\7\:I14\|pmos25 \8\:I14\|pmos25) resistor r=5.625 c=0
+Rl22 (\104\:I14\|pmos25 \111\:I14\|pmos25) resistor r=4.8642 c=0
+Rl27 (\61\:I14\|nmos25 \62\:I14\|nmos25) resistor r=4.8642 c=0
+Rl33 (\31\:I14\|nmos25 \49\:I14\|nmos25) resistor r=2.2779 c=0
+Rl40 (\2\:I14\|I1\|OE \3\:I14\|I1\|OE) resistor r=39.2642 c=0
+Rl46 (\5\:I14\|I1\|OE \13\:I14\|I1\|OE) resistor r=0.5 c=0
+Rl8 (\9\:I14\|I2\|net093 \25\:I14\|I2\|net093) resistor r=0.5 c=0
+Rl9 (\24\:I14\|I2\|net0106 \25\:I14\|I2\|net0106) resistor r=0.6088 c=0
+Rl245 (\20\:I14\|I2\|net0174 \13\:I14\|I2\|net0174) resistor r=19.2827 c=0
+Rl251 (\17\:I14\|I2\|net0110 \14\:I14\|I2\|net0110) resistor r=5.1015 c=0
+Rl258 (\3\:I14\|I2\|net0189 \6\:I14\|I2\|net0189) resistor r=216.072 c=0
+Rl263 (\6\:I14\|I2\|net0218 \7\:I14\|I2\|net0218) resistor r=5.9837 c=0
+Rk841 (\23\:VSS \33\:VSS) resistor r=5.826 c=0
+Rk73 (I14\|I2\|net0174 \2\:I14\|I2\|net0174) resistor r=128.13 c=0
+Rk74 (VDD \39\:VDD) resistor r=0.1028 c=0
+Rk76 (VSS \60\:VSS) resistor r=0.2428 c=0
+Rk75 (\977\:VSSIOR! \978\:VSSIOR!) resistor r=19.9382 c=0
+Rk77 (\15\:I14\|pmos \17\:I14\|pmos) resistor r=540.645 c=0
+Rk78 (\12\:I14\|nmos \23\:I14\|nmos) resistor r=298.679 c=0
+Rk69 (I14\|pmos25 \7\:I14\|pmos25) resistor r=16.2371 c=0
+Rk68 (\10\:I14\|pmos25 \8\:I14\|pmos25) resistor r=1.243 c=0
+Rk70 (\102\:I14\|pmos25 \110\:I14\|pmos25) resistor r=5.625 c=0
+Rk71 (I14\|nmos25 \4\:I14\|nmos25) resistor r=2.25 c=0
+Rk72 (I14\|nmos25 \53\:I14\|nmos25) resistor r=2.7239 c=0
+Rk853 (\2\:I14\|I1\|OE \4\:I14\|I1\|OE) resistor r=665.034 c=0
+Rk852 (\12\:I14\|I1\|OE \13\:I14\|I1\|OE) resistor r=0.273 c=0
+Rk859 (\6\:I14\|I2\|net093 \19\:I14\|I2\|net093) resistor r=45 c=0
+Rk858 (\25\:I14\|I2\|net0106 \6\:I14\|I2\|net0106) resistor r=5.7167 c=0
+Rk860 (\20\:I14\|I2\|net0174 \18\:I14\|I2\|net0174) resistor r=5.2049 c=0
+Rk870 (\24\:I14\|I2\|net0110 \22\:I14\|I2\|net0110) resistor r=19.7322 c=0
+Rk869 (\3\:I14\|I2\|net0189 \4\:I14\|I2\|net0189) resistor r=292.83 c=0
+Rk871 (\6\:I14\|I2\|net0218 \9\:I14\|I2\|net0218) resistor r=5.7263 c=0
+Rj454 (\14\:VSS \48\:VSS) resistor r=5.8241 c=0
+Rj137 (I14\|I2\|net0110 \2\:I14\|I2\|net0110) resistor r=128.13 c=0
+Rj138 (\22\:VDD \39\:VDD) resistor r=0.3177 c=0
+Rj145 (\60\:VSS \9\:VSS) resistor r=19.2079 c=0
+Rj146 (\1\:OEN \2\:OEN) resistor r=406.323 c=0
+Rj463 (\15\:I14\|pmos \23\:I14\|pmos) resistor r=45.6456 c=0
+Rj464 (\23\:I14\|nmos \17\:I14\|nmos) resistor r=545.007 c=0
+Rj465 (\7\:I14\|pmos25 \9\:I14\|pmos25) resistor r=4.8642 c=0
+Rj466 (\11\:I14\|pmos25 \12\:I14\|pmos25) resistor r=2.25 c=0
+Rj822 (\111\:I14\|pmos25 \110\:I14\|pmos25) resistor r=1.243 c=0
+Rj854 (I14\|nmos25 \2\:I14\|nmos25) resistor r=5.625 c=0
+Rj776 (\49\:I14\|nmos25 \53\:I14\|nmos25) resistor r=0.5 c=0
+Rj810 (\7\:I14\|I1\|OE \8\:I14\|I1\|OE) resistor r=619.196 c=0
+Rj778 (\15\:I14\|I1\|OE \16\:I14\|I1\|OE) resistor r=19.1084 c=0
+Rj796 (\21\:I14\|I2\|net093 \19\:I14\|I2\|net093) resistor r=0.5 c=0
+Rj860 (\24\:I14\|I2\|net0106 \10\:I14\|I2\|net0106) resistor r=20.4014 c=0
+Rj876 (\20\:I14\|I2\|net0174 \24\:I14\|I2\|net0174) resistor r=45.4417 c=0
+Rj798 (\27\:I14\|I2\|net0110 \25\:I14\|I2\|net0110) resistor r=4.5475 c=0
+Rj878 (\4\:I14\|I2\|net0189 \7\:I14\|I2\|net0189) resistor r=390.997 c=0
+Ri410 (\351\:PAD PAD) resistor r=0.01147 c=0
+Ri418 (I14\|I2\|net59 \6\:I14\|I2\|net59) resistor r=206.457 c=0
+Ri419 (\39\:VDD \8\:VDD) resistor r=8.3056 c=0
+Ri826 (\60\:VSS \12\:VSS) resistor r=19.2096 c=0
+Ri829 (\2\:OEN \3\:OEN) resistor r=235.347 c=0
+Ri832 (\23\:I14\|pmos \20\:I14\|pmos) resistor r=0.9679 c=0
+Ri835 (\9\:I14\|nmos \22\:I14\|nmos) resistor r=0.5 c=0
+Ri838 (I14\|pmos25 \11\:I14\|pmos25) resistor r=16.1311 c=0
+Ri841 (\10\:I14\|pmos25 \12\:I14\|pmos25) resistor r=1.7757 c=0
+Ri844 (\104\:I14\|pmos25 \112\:I14\|pmos25) resistor r=2.25 c=0
+Ri752 (\4\:I14\|nmos25 \2\:I14\|nmos25) resistor r=1.0937 c=0
+Ri690 (I14\|I1\|OEB \2\:I14\|I1\|OEB) resistor r=387.207 c=0
+Ri724 (\8\:I14\|I1\|OE \10\:I14\|I1\|OE) resistor r=85.6735 c=0
+Ri722 (\11\:I14\|I1\|OE \18\:I14\|I1\|OE) resistor r=8.1986 c=0
+Ri754 (\23\:I14\|I2\|net093 \14\:I14\|I2\|net093) resistor r=0.5 c=0
+Ri692 (\24\:I14\|I2\|net0106 \13\:I14\|I2\|net0106) resistor r=4.8482 c=0
+Ri756 (\24\:I14\|I2\|net0110 \34\:I14\|I2\|net0110) resistor r=0.5 c=0
+Ri694 (\34\:I14\|I2\|net0110 \7\:I14\|I2\|net0110) resistor r=45.1847 c=0
+Ri710 (\4\:I14\|I2\|net0189 \11\:I14\|I2\|net0189) resistor r=45.1179 c=0
+Rh9 (\14\:PAD \1\:PAD) resistor r=0.8139 c=0
+Rh6 (\3\:A \4\:A) resistor r=130.186 c=0
+Rh8 (\39\:VDD \13\:VDD) resistor r=8.2404 c=0
+Rh7 (\955\:VSSIOR! \965\:VSSIOR!) resistor r=0.4349 c=0
+Rh1 (\4\:OEN \6\:OEN) resistor r=0.1536 c=0
+Rh3 (\20\:I14\|pmos \21\:I14\|pmos) resistor r=0.5 c=0
+Rh2 (\23\:I14\|nmos \22\:I14\|nmos) resistor r=5.9285 c=0
+Rh104 (\9\:I14\|pmos25 \11\:I14\|pmos25) resistor r=4.8642 c=0
+Rh221 (\95\:I14\|pmos25 \108\:I14\|pmos25) resistor r=4.8642 c=0
+Rh277 (\111\:I14\|pmos25 \112\:I14\|pmos25) resistor r=1.7757 c=0
+Rh109 (I14\|nmos25 \6\:I14\|nmos25) resistor r=2.25 c=0
+Rh108 (\2\:I14\|I1\|OEB \3\:I14\|I1\|OEB) resistor r=354.215 c=0
+Rh107 (\8\:I14\|I1\|OE \9\:I14\|I1\|OE) resistor r=1.2301 c=0
+Rh105 (\3\:I14\|I2\|net093 \6\:I14\|I2\|net093) resistor r=60.0555 c=0
+Rh12 (I14\|I2\|net093 \14\:I14\|I2\|net093) resistor r=45 c=0
+Rh14 (\20\:I14\|I2\|net0106 \3\:I14\|I2\|net0106) resistor r=45.4353 c=0
+Rh13 (\34\:I14\|I2\|net0110 \27\:I14\|I2\|net0110) resistor r=0.5 c=0
+Rh19 (\34\:I14\|I2\|net0110 \31\:I14\|I2\|net0110) resistor r=45.546 c=0
+Rh21 (\11\:I14\|I2\|net0189 \12\:I14\|I2\|net0189) resistor r=6.478 c=0
+Rw88 (PAD \28\:PAD) resistor r=0.1755 c=0
+Rw89 (\1\:A \2\:A) resistor r=518.542 c=0
+Rw259 (\39\:VDD \15\:VDD) resistor r=8.153 c=0
+Rw96 (\965\:VSSIOR! \977\:VSSIOR!) resistor r=9.9875 c=0
+Rw97 (\8\:OEN \9\:OEN) resistor r=0.125 c=0
+Rw95 (\21\:I14\|pmos I14\|pmos) resistor r=19.608 c=0
+Rw264 (\3\:I14\|nmos I14\|nmos) resistor r=19.943 c=0
+Rw265 (I14\|pmos25 \4\:I14\|pmos25) resistor r=2.25 c=0
+Rw266 (\97\:I14\|pmos25 \108\:I14\|pmos25) resistor r=4.8642 c=0
+Rw267 (\71\:I14\|pmos25 \77\:I14\|pmos25) resistor r=2.2779 c=0
+Rw452 (\4\:I14\|nmos25 \6\:I14\|nmos25) resistor r=1.5624 c=0
+Rw179 (\6\:I14\|I1\|OEB \8\:I14\|I1\|OEB) resistor r=0.9451 c=0
+Rw178 (I14\|I1\|OE \6\:I14\|I1\|OE) resistor r=45 c=0
+Rw128 (\18\:I14\|I2\|net093 \22\:I14\|I2\|net093) resistor r=0.5 c=0
+Rw507 (\9\:I14\|I2\|net093 \7\:I14\|I2\|net093) resistor r=5.1906 c=0
+Rw421 (\3\:I14\|I2\|net0174 \4\:I14\|I2\|net0174) resistor r=82.9721 c=0
+Rw425 (\34\:I14\|I2\|net0110 \35\:I14\|I2\|net0110) resistor r=0.2488 c=0
+Rw429 (I14\|I2\|net59 \4\:I14\|I2\|net59) resistor r=292.83 c=0
+Rw431 (\11\:I14\|I2\|net0189 \14\:I14\|I2\|net0189) resistor r=5.2859 c=0
+Rv241 (\1\:PAD \28\:PAD) resistor r=0.1318 c=0
+Rv239 (\4\:A \12\:A) resistor r=23 c=0
+Rv240 (\14\:VSS \57\:VSS) resistor r=0.2653 c=0
+Rv64 (\977\:VSSIOR! \982\:VSSIOR!) resistor r=0.4474 c=0
+Rv245 (\4\:OEN \10\:OEN) resistor r=0.5 c=0
+Rv63 (\21\:I14\|pmos \4\:I14\|pmos) resistor r=5.5241 c=0
+Rv250 (\4\:I14\|nmos \5\:I14\|nmos) resistor r=19.9698 c=0
+Rv251 (I14\|pmos25 \2\:I14\|pmos25) resistor r=5.625 c=0
+Rv103 (\95\:I14\|pmos25 \107\:I14\|pmos25) resistor r=5.625 c=0
+Rv474 (I14\|pmos25 \80\:I14\|pmos25) resistor r=2.8767 c=0
+Rv448 (\61\:I14\|nmos25 \68\:I14\|nmos25) resistor r=2.25 c=0
+Rv464 (\2\:I14\|I1\|OEB \4\:I14\|I1\|OEB) resistor r=22.5 c=0
+Rv473 (\6\:I14\|I1\|OE \5\:I14\|I1\|OE) resistor r=0.06736 c=0
+Rv417 (\22\:I14\|I2\|net093 \21\:I14\|I2\|net093) resistor r=0.2537 c=0
+Rv441 (\13\:I14\|I2\|net093 \11\:I14\|I2\|net093) resistor r=19.9014 c=0
+Rv418 (\3\:I14\|I2\|net0174 \20\:I14\|I2\|net0174) resistor r=44.6665 c=0
+Rv434 (\35\:I14\|I2\|net0110 \37\:I14\|I2\|net0110) resistor r=0.3237 c=0
+Rv411 (\4\:I14\|I2\|net59 \7\:I14\|I2\|net59) resistor r=239.062 c=0
+Rv419 (I14\|I2\|net0227 \3\:I14\|I2\|net0227) resistor r=239.367 c=0
+Ru3 (\14\:PAD \45\:PAD) resistor r=0.1319 c=0
+Ru4 (\2\:A \12\:A) resistor r=23.2426 c=0
+Ru1 (\57\:VSS \58\:VSS) resistor r=0.2699 c=0
+Ru2 (\955\:VSSIOR! \1000\:VSSIOR!) resistor r=0.08333 c=0
+Ru208 (\9\:OEN \10\:OEN) resistor r=3.4881 c=0
+Ru5 (\21\:I14\|pmos \6\:I14\|pmos) resistor r=6.8896 c=0
+Ru8 (\4\:I14\|nmos \7\:I14\|nmos) resistor r=8.7083 c=0
+Ru9 (\4\:I14\|pmos25 \2\:I14\|pmos25) resistor r=1.243 c=0
+Ru12 (\108\:I14\|pmos25 \107\:I14\|pmos25) resistor r=1.243 c=0
+Ru13 (\77\:I14\|pmos25 \80\:I14\|pmos25) resistor r=0.5 c=0
+Ru16 (\60\:I14\|nmos25 \67\:I14\|nmos25) resistor r=5.625 c=0
+Ru150 (\8\:I14\|I1\|OEB \4\:I14\|I1\|OEB) resistor r=0.5 c=0
+Ru96 (\15\:I14\|I1\|OE \11\:I14\|I1\|OE) resistor r=1.3098 c=0
+Ru169 (\22\:I14\|I2\|net093 \23\:I14\|I2\|net093) resistor r=0.2078 c=0
+Ru151 (\18\:I14\|I2\|net093 \16\:I14\|I2\|net093) resistor r=5.0394 c=0
+Ru97 (I14\|I2\|net0174 \20\:I14\|I2\|net0174) resistor r=44.6113 c=0
+Ru29 (\3\:I14\|I2\|net0110 \37\:I14\|I2\|net0110) resistor r=102.502 c=0
+Ru31 (\4\:I14\|I2\|net59 \11\:I14\|I2\|net59) resistor r=45.1179 c=0
+Ru194 (\3\:I14\|I2\|net0227 \6\:I14\|I2\|net0227) resistor r=45.0626 c=0
+Rz6 (VDDIOR! \1354\:VDDIOR!) resistor r=0.5747 c=0
+Rz7 (\12\:A \13\:A) resistor r=4.1085 c=0
+Rz278 (\23\:VSS \58\:VSS) resistor r=0.08546 c=0
+Rz286 (\982\:VSSIOR! \998\:VSSIOR!) resistor r=0.04167 c=0
+Rz15 (\2\:OEN \5\:OEN) resistor r=22.5 c=0
+Rz13 (\4\:I14\|nmos \10\:I14\|nmos) resistor r=0.5 c=0
+Rz14 (I14\|pmos25 \95\:I14\|pmos25) resistor r=16.2371 c=0
+Rz18 (I14\|pmos25 \6\:I14\|pmos25) resistor r=2.25 c=0
+Rz22 (\97\:I14\|pmos25 \109\:I14\|pmos25) resistor r=2.25 c=0
+Rz25 (\60\:I14\|nmos25 I14\|nmos25) resistor r=16.1311 c=0
+Rz32 (\68\:I14\|nmos25 \67\:I14\|nmos25) resistor r=1.0937 c=0
+Rz37 (\6\:I14\|I1\|OEB \11\:I14\|I1\|OEB) resistor r=19.614 c=0
+Rz44 (\9\:I14\|I1\|OE \14\:I14\|I1\|OE) resistor r=45 c=0
+Rz45 (\23\:I14\|I2\|net093 \24\:I14\|I2\|net093) resistor r=0.2488 c=0
+Rz47 (\20\:I14\|I2\|net0106 \21\:I14\|I2\|net0106) resistor r=0.5 c=0
+Rz49 (\20\:I14\|I2\|net0174 \40\:I14\|I2\|net0174) resistor r=64.8193 c=0
+Rz51 (\37\:I14\|I2\|net0110 \17\:I14\|I2\|net0110) resistor r=0.5 c=0
+Rz55 (\11\:I14\|I2\|net59 \12\:I14\|I2\|net59) resistor r=6.4618 c=0
+Rz58 (\6\:I14\|I2\|net0227 \7\:I14\|I2\|net0227) resistor r=5.9674 c=0
+Ry8 (\61\:I14\|pmos25 \71\:I14\|pmos25) resistor r=0.4262 c=0
+Ry9 (\13\:A A) resistor r=0.02778 c=0
+Ry10 (\57\:VSS \59\:VSS) resistor r=0.01 c=0
+Ry274 (\1000\:VSSIOR! \998\:VSSIOR!) resistor r=0.4514 c=0
+Ry273 (\6\:OEN \5\:OEN) resistor r=0.5 c=0
+Ry6 (\10\:I14\|nmos \9\:I14\|nmos) resistor r=0.2478 c=0
+Ry7 (I14\|pmos25 \97\:I14\|pmos25) resistor r=16.1311 c=0
+Ry275 (\4\:I14\|pmos25 \6\:I14\|pmos25) resistor r=1.7757 c=0
+Ry276 (\108\:I14\|pmos25 \109\:I14\|pmos25) resistor r=1.7757 c=0
+Ry586 (\60\:I14\|nmos25 \61\:I14\|nmos25) resistor r=4.8642 c=0
+Ry595 (\62\:I14\|nmos25 \69\:I14\|nmos25) resistor r=2.25 c=0
+Ry604 (\6\:I14\|I1\|OEB \9\:I14\|I1\|OEB) resistor r=8.7651 c=0
+Ry622 (\15\:I14\|I1\|OE \14\:I14\|I1\|OE) resistor r=0.1472 c=0
+Ry634 (\13\:I14\|I2\|net093 \24\:I14\|I2\|net093) resistor r=0.5 c=0
+Ry294 (\21\:I14\|I2\|net0106 \24\:I14\|I2\|net0106) resistor r=0.2851 c=0
+Ry291 (\20\:I14\|I2\|net0174 \9\:I14\|I2\|net0174) resistor r=0.3155 c=0
+Ry11 (\35\:I14\|I2\|net0110 \20\:I14\|I2\|net0110) resistor r=0.5 c=0
+Ry13 (\11\:I14\|I2\|net59 \14\:I14\|I2\|net59) resistor r=4.9767 c=0
+Ry15 (\6\:I14\|I2\|net0227 \9\:I14\|I2\|net0227) resistor r=5.481 c=0
+Rx43 (I14\|I2\|net093 \2\:I14\|I2\|net093) resistor r=151.567 c=0
+Rx46 (\40\:VDD VDD) resistor r=0.01862 c=0
+Rx10 (\59\:VSS VSS) resistor r=0.2952 c=0
+Rx13 (VSSIOR! \998\:VSSIOR!) resistor r=0.2967 c=0
+Rx16 (\8\:OEN OEN) resistor r=4.1521 c=0
+Rx19 (\10\:I14\|nmos \11\:I14\|nmos) resistor r=0.1763 c=0
+Rx22 (I14\|pmos25 \102\:I14\|pmos25) resistor r=16.2371 c=0
+Rx25 (\9\:I14\|pmos25 \10\:I14\|pmos25) resistor r=2.25 c=0
+Rx88 (\102\:I14\|pmos25 \111\:I14\|pmos25) resistor r=4.8642 c=0
+Rx91 (I14\|nmos25 \62\:I14\|nmos25) resistor r=16.1311 c=0
+Rx94 (\68\:I14\|nmos25 \69\:I14\|nmos25) resistor r=1.5624 c=0
+Rx97 (I14\|I1\|OE \2\:I14\|I1\|OE) resistor r=2.5163 c=0
+Rx100 (\11\:I14\|I1\|OE \12\:I14\|I1\|OE) resistor r=0.5 c=0
+Rx103 (\24\:I14\|I2\|net093 \25\:I14\|I2\|net093) resistor r=0.6088 c=0
+Rx47 (I14\|I2\|net0106 \24\:I14\|I2\|net0106) resistor r=45.5 c=0
+Rx28 (\9\:I14\|I2\|net0174 \7\:I14\|I2\|net0174) resistor r=5.0736 c=0
+Rx31 (I14\|I2\|net0110 \20\:I14\|I2\|net0110) resistor r=45 c=0
+Rx34 (I14\|I2\|net0189 \3\:I14\|I2\|net0189) resistor r=144.201 c=0
+Rx37 (I14\|I2\|net0218 \6\:I14\|I2\|net0218) resistor r=283.871 c=0
+I14\|I1\|NM5 (I14\|pmos \4\:I14\|I1\|OE I14\|nmos VSS) g45n1svt w=(5e-07) \
+        l=4.5e-08 nf=1 as=8e-14 ad=7e-14 ps=1.32e-06 pd=1.28e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=5.5e-07 sd=160n sca=3.24721 \
+        scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I14\|I1\|NM0 (\16\:I14\|I1\|OE \3\:OEN \9\:VSS VSS) g45n1svt w=(5e-07) \
+        l=4.5e-08 nf=1 as=7e-14 ad=8e-14 ps=1.28e-06 pd=1.32e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n sca=3.24721 \
+        scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I14\|I1\|NM4 (I14\|nmos \3\:I14\|I1\|OEB \12\:VSS VSS) g45n1svt \
+        w=(5e-07) l=4.5e-08 nf=1 as=8e-14 ad=8e-14 ps=1.32e-06 pd=1.32e-06 \
+        nrd=1.16667 nrs=1.16667 sa=3.45e-07 sb=3.45e-07 sd=160n \
+        sca=3.24721 scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I14\|I1\|NM2 (\11\:I14\|I1\|OEB \10\:I14\|I1\|OE \9\:VSS VSS) g45n1svt \
+        w=(5e-07) l=4.5e-08 nf=1 as=7e-14 ad=8e-14 ps=1.28e-06 pd=1.32e-06 \
+        nrd=1.16667 nrs=1.16667 sa=3.45e-07 sb=1.4e-07 sd=160n sca=3.24721 \
+        scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I14\|I1\|NM3 (\5\:I14\|nmos \3\:A \12\:VSS VSS) g45n1svt w=(5e-07) \
+        l=4.5e-08 nf=1 as=7e-14 ad=8e-14 ps=1.28e-06 pd=1.32e-06 \
+        nrd=1.16667 nrs=1.16667 sa=5.5e-07 sb=1.4e-07 sd=160n sca=3.24721 \
+        scb=9.44209e-05 scc=3.20303e-09 m=(1)
+I14\|I2\|NM1 (\12\:I14\|I2\|net59 \17\:I14\|pmos \33\:VSS VSS) g45n1svt \
+        w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=2.8e-13 ps=4.32e-06 \
+        pd=4.28e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n \
+        sca=2.58054 scb=7.96347e-05 scc=2.87843e-09 m=(1)
+I14\|I2\|NM3 (\12\:I14\|I2\|net0189 \17\:I14\|nmos \48\:VSS VSS) \
+        g45n1svt w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=2.8e-13 \
+        ps=4.32e-06 pd=4.28e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 \
+        sb=3.45e-07 sd=160n sca=2.58054 scb=7.96347e-05 scc=2.87843e-09 \
+        m=(1)
+I14\|I2\|NM2 (\7\:I14\|I2\|net0227 \6\:I14\|I2\|net59 \33\:VSS VSS) \
+        g45n1svt w=(2e-06) l=4.5e-08 nf=1 as=2.8e-13 ad=3.2e-13 \
+        ps=4.28e-06 pd=4.32e-06 nrd=1.16667 nrs=1.16667 sa=3.45e-07 \
+        sb=1.4e-07 sd=160n sca=2.58054 scb=7.96347e-05 scc=2.87843e-09 \
+        m=(1)
+I14\|I2\|NM4 (\7\:I14\|I2\|net0218 \6\:I14\|I2\|net0189 \48\:VSS VSS) \
+        g45n1svt w=(2e-06) l=4.5e-08 nf=1 as=2.8e-13 ad=3.2e-13 \
+        ps=4.28e-06 pd=4.32e-06 nrd=1.16667 nrs=1.16667 sa=3.45e-07 \
+        sb=1.4e-07 sd=160n sca=2.58054 scb=7.96347e-05 scc=2.87843e-09 \
+        m=(1)
+I14\|I2\|NM6_1__rcx (\7\:I14\|I2\|net093 I14\|I2\|net59 \23\:VSS VSS) \
+        g45n1svt w=(2.5e-06) l=4.5e-08 nf=1 as=4e-13 ad=3.75e-13 \
+        ps=5.32e-06 pd=5.3e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 \
+        sb=7.55e-07 sd=160n sca=2.4853 scb=7.86359e-05 scc=2.85679e-09 \
+        m=(2)
+I14\|I2\|NM7_1__rcx (\6\:I14\|I2\|net0106 I14\|I2\|net0189 \14\:VSS VSS) \
+        g45n1svt w=(2.5e-06) l=4.5e-08 nf=1 as=4e-13 ad=3.75e-13 \
+        ps=5.32e-06 pd=5.3e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 \
+        sb=7.55e-07 sd=160n sca=2.4853 scb=7.86359e-05 scc=2.85679e-09 \
+        m=(2)
+I14\|I2\|NM5 (\7\:I14\|I2\|net0174 I14\|I2\|net0227 \23\:VSS VSS) \
+        g45n1svt w=(2.5e-06) l=4.5e-08 nf=1 as=4e-13 ad=3.75e-13 \
+        ps=5.32e-06 pd=5.3e-06 nrd=1.16667 nrs=1.16667 sa=5.5e-07 \
+        sb=3.45e-07 sd=160n sca=2.4853 scb=7.86359e-05 scc=2.85679e-09 \
+        m=(2)
+I14\|I2\|NM8 (\14\:I14\|I2\|net0110 I14\|I2\|net0218 \14\:VSS VSS) \
+        g45n1svt w=(2.5e-06) l=4.5e-08 nf=1 as=4e-13 ad=3.75e-13 \
+        ps=5.32e-06 pd=5.3e-06 nrd=1.16667 nrs=1.16667 sa=5.5e-07 \
+        sb=3.45e-07 sd=160n sca=2.4853 scb=7.86359e-05 scc=2.85679e-09 \
+        m=(2)
+I14\|I2\|M20 (\10\:I14\|I2\|net0106 \2\:I14\|I2\|net0110 \978\:VSSIOR! \
+        VSSIOR!) g45n2svt w=(5e-07) l=1.5e-07 nf=1 as=1e-13 ad=7.5e-14 \
+        ps=1.4e-06 pd=1.3e-06 nrd=468.75m nrs=468.75m sa=1.5e-07 sb=5e-07 \
+        sd=200n sca=3.07246 scb=6.94833e-05 scc=1.79353e-09 m=(1)
+I14\|I2\|M11 (\13\:I14\|I2\|net0174 \2\:I14\|I2\|net093 \966\:VSSIOR! \
+        VSSIOR!) g45n2svt w=(5e-07) l=1.5e-07 nf=1 as=7.5e-14 ad=1e-13 \
+        ps=1.3e-06 pd=1.4e-06 nrd=468.75m nrs=468.75m sa=5e-07 sb=1.5e-07 \
+        sd=200n sca=3.07246 scb=6.94833e-05 scc=1.79353e-09 m=(1)
+I14\|I2\|M19 (\22\:I14\|I2\|net0110 \2\:I14\|I2\|net0106 \978\:VSSIOR! \
+        VSSIOR!) g45n2svt w=(5e-07) l=1.5e-07 nf=1 as=7.5e-14 ad=1e-13 \
+        ps=1.3e-06 pd=1.4e-06 nrd=468.75m nrs=468.75m sa=5e-07 sb=1.5e-07 \
+        sd=200n sca=3.07246 scb=6.94833e-05 scc=1.79353e-09 m=(1)
+I14\|I2\|M23 (\31\:I14\|nmos25 \7\:I14\|I2\|net0110 \982\:VSSIOR! VSSIOR!) \
+        g45n2svt w=(2.5e-06) l=1.5e-07 nf=1 as=5e-13 ad=4.375e-13 \
+        ps=5.4e-06 pd=5.35e-06 nrd=468.75m nrs=468.75m sa=1.5e-07 \
+        sb=1.2e-06 sd=200n sca=2.31056 scb=5.36983e-05 scc=1.44728e-09 \
+        m=(4)
+I14\|I2\|M27 (\61\:I14\|pmos25 \40\:I14\|I2\|net0174 \955\:VSSIOR! \
+        VSSIOR!) g45n2svt w=(2.5e-06) l=1.5e-07 nf=1 as=5e-13 \
+        ad=4.5833e-13 ps=5.4e-06 pd=5.36667e-06 nrd=468.75m nrs=468.75m \
+        sa=8.5e-07 sb=1.2e-06 sd=200n sca=2.31056 scb=5.36983e-05 \
+        scc=1.44728e-09 m=(6)
+I14\|I3\|M8_4__rcx (\14\:PAD I14\|nmos25 VSSIOR! VSSIOR!) g45n2svt \
+        w=(1e-05) l=2e-07 nf=1 as=5.41e-11 ad=5.25e-12 ps=3.082e-05 \
+        pd=2.105e-05 nrd=468.75m nrs=468.75m sa=5.25e-07 sb=2e-06 sd=200n \
+        sca=1.84848 scb=4.29512e-05 scc=1.08015e-09 m=(8)
+I14\|I3\|M4_44__rcx (\45\:PAD VSSIOR! VSSIOR! VSSIOR!) g45n2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=5.25e-12 ps=3.082e-05 pd=2.105e-05 \
+        nrd=468.75m nrs=468.75m sa=5.25e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(48)
+I14\|I1\|PM5 (\4\:I14\|pmos \3\:I14\|I1\|OE \15\:VDD VDD) g45p1svt \
+        w=(1e-06) l=4.5e-08 nf=1 as=1.4e-13 ad=1.6e-13 ps=2.28e-06 \
+        pd=2.32e-06 nrd=1.16667 nrs=1.16667 sa=3.45e-07 sb=1.4e-07 sd=160n \
+        sca=22.8136 scb=0.0138897 scc=0.00170436 m=(1)
+I14\|I1\|PM4 (\7\:I14\|nmos I14\|I1\|OEB \6\:I14\|pmos VDD) g45p1svt \
+        w=(1e-06) l=4.5e-08 nf=1 as=1.4e-13 ad=1.4e-13 ps=2.28e-06 \
+        pd=2.28e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=1.4e-07 sd=160n \
+        sca=19.4885 scb=0.00947105 scc=0.00165874 m=(1)
+I14\|I1\|PM1 (\18\:I14\|I1\|OE \1\:OEN \8\:VDD VDD) g45p1svt w=(1e-06) \
+        l=4.5e-08 nf=1 as=1.6e-13 ad=1.4e-13 ps=2.32e-06 pd=2.28e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n sca=22.0179 \
+        scb=0.0125224 scc=0.00167909 m=(1)
+I14\|I1\|PM2 (\9\:I14\|I1\|OEB \7\:I14\|I1\|OE \8\:VDD VDD) g45p1svt \
+        w=(1e-06) l=4.5e-08 nf=1 as=1.4e-13 ad=1.6e-13 ps=2.28e-06 \
+        pd=2.32e-06 nrd=1.16667 nrs=1.16667 sa=3.45e-07 sb=1.4e-07 sd=160n \
+        sca=29.1166 scb=0.0240644 scc=0.00238817 m=(1)
+I14\|I2\|PM1 (\14\:I14\|I2\|net59 \12\:I14\|pmos \22\:VDD VDD) g45p1svt \
+        w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=3e-13 ps=4.32e-06 \
+        pd=4.3e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=7.55e-07 sd=160n \
+        sca=17.2363 scb=0.014483 scc=0.00111574 m=(2)
+I14\|I2\|PM4 (\14\:I14\|I2\|net0189 \12\:I14\|nmos \22\:VDD VDD) \
+        g45p1svt w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=3e-13 ps=4.32e-06 \
+        pd=4.3e-06 nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=7.55e-07 sd=160n \
+        sca=17.2363 scb=0.014483 scc=0.00111574 m=(2)
+I14\|I2\|PM2 (\9\:I14\|I2\|net0227 \7\:I14\|I2\|net59 \22\:VDD VDD) \
+        g45p1svt w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=3e-13 ps=4.32e-06 \
+        pd=4.3e-06 nrd=1.16667 nrs=1.16667 sa=5.5e-07 sb=3.45e-07 sd=160n \
+        sca=12.6259 scb=0.00589089 scc=0.000830541 m=(2)
+I14\|I2\|PM3 (\9\:I14\|I2\|net0218 \7\:I14\|I2\|net0189 \22\:VDD VDD) \
+        g45p1svt w=(2e-06) l=4.5e-08 nf=1 as=3.2e-13 ad=3e-13 ps=4.32e-06 \
+        pd=4.3e-06 nrd=1.16667 nrs=1.16667 sa=5.5e-07 sb=3.45e-07 sd=160n \
+        sca=12.6259 scb=0.00589089 scc=0.000830541 m=(2)
+I14\|I2\|M24 (\25\:I14\|I2\|net0110 \3\:I14\|I2\|net0106 \1354\:VDDIOR! \
+        VDDIOR!) g45p2svt w=(2.5e-06) l=1.5e-07 nf=1 as=5e-13 ad=5e-13 \
+        ps=5.4e-06 pd=5.4e-06 nrd=468.75m nrs=468.75m sa=8.5e-07 sb=2e-06 \
+        sd=200n sca=3.54553 scb=0.00128546 scc=4.77339e-05 m=(2)
+I14\|I2\|M18_1__rcx (\16\:I14\|I2\|net093 \4\:I14\|I2\|net0174 \
+        \1354\:VDDIOR! VDDIOR!) g45p2svt w=(2e-06) l=1.5e-07 nf=1 \
+        as=3.5e-13 ad=4e-13 ps=4.35e-06 pd=4.4e-06 nrd=468.75m nrs=468.75m \
+        sa=5e-07 sb=2e-06 sd=200n sca=3.93258 scb=0.00159441 \
+        scc=5.96671e-05 m=(2)
+I14\|I2\|M12 (\71\:I14\|pmos25 \24\:I14\|I2\|net0174 \1354\:VDDIOR! \
+        VDDIOR!) g45p2svt w=(2e-06) l=1.5e-07 nf=1 as=4e-13 ad=3.75e-13 \
+        ps=4.4e-06 pd=4.375e-06 nrd=468.75m nrs=468.75m sa=2e-06 sb=5e-07 \
+        sd=200n sca=4.58139 scb=0.00182184 scc=5.9759e-05 m=(4)
+I14\|I2\|M14_1__rcx (\18\:I14\|I2\|net0174 \3\:I14\|I2\|net093 \
+        \1354\:VDDIOR! VDDIOR!) g45p2svt w=(2e-06) l=1.5e-07 nf=1 as=4e-13 \
+        ad=4e-13 ps=4.4e-06 pd=4.4e-06 nrd=468.75m nrs=468.75m sa=8.5e-07 \
+        sb=1.9e-06 sd=200n sca=3.93258 scb=0.00159441 scc=5.96671e-05 \
+        m=(2)
+I14\|I3\|M6_36__rcx (\28\:PAD VDDIOR! VDDIOR! VDDIOR!) g45p2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=3.473e-12 ps=3.082e-05 pd=2.07e-05 \
+        nrd=468.75m nrs=468.75m sa=3.474e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(40)
+I14\|I3\|M9_12__rcx (\1\:PAD I14\|pmos25 VDDIOR! VDDIOR!) g45p2svt \
+        w=(1e-05) l=2e-07 nf=1 as=5.41e-11 ad=3.473e-12 ps=3.082e-05 \
+        pd=2.07e-05 nrd=468.75m nrs=468.75m sa=3.474e-07 sb=2e-06 sd=200n \
+        sca=1.84848 scb=4.29512e-05 scc=1.08015e-09 m=(16)
+ends PADDOZ
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:42:29 2012 )
+// Library name: giolib045
+// Cell name: PADVDD
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADVDD VDD VDDIOR! VSS VSSIOR!
+I2 (\1136\:VDD) BONDPAD52
+C1 (VDD VSS) capacitor c=3.66658e-14
+C2 (VSSIOR! VSS) capacitor c=6.6333e-14
+C3 (VDDIOR! VSS) capacitor c=9.4032e-14
+C4 (\1136\:VDD VSS) capacitor c=1.48675e-14
+C5 (\241\:VDD VSS) capacitor c=6.08775e-14
+C6 (\576\:VDD VSS) capacitor c=1.74227e-14
+C7 (\2204\:VSSIOR! VSS) capacitor c=8.69511e-16
+C8 (\2205\:VSSIOR! VSS) capacitor c=9.36916e-16
+Rl46 (\241\:VDD VDD) resistor r=0.09209 c=0
+Rk1074 (\576\:VDD \1136\:VDD) resistor r=1.2061 c=0
+Rj790 (\576\:VDD VDD) resistor r=0.02106 c=0
+Ri83 (VSSIOR! \2204\:VSSIOR!) resistor r=0.004317 c=0
+Rh79 (VSSIOR! \2205\:VSSIOR!) resistor r=0.03779 c=0
+Rw151 (\2204\:VSSIOR! \2205\:VSSIOR!) resistor r=0.02256 c=0
+I1\|M4_52__rcx (\241\:VDD VSSIOR! VSSIOR! VSSIOR!) g45n2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=5.25e-12 ps=3.082e-05 pd=2.105e-05 \
+        nrd=468.75m nrs=468.75m sa=5.25e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+ends PADVDD
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:43:37 2012 )
+// Library name: giolib045
+// Cell name: PADVDD25
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADVDD25 VDD VDD25! VDDIOR! VSS VSSIOR!
+I2 (\529\:VDD25!) BONDPAD52
+C1 (VSSIOR! VDD) capacitor c=6.81357e-14
+C2 (VDD25! VDD) capacitor c=3.86672e-14
+C3 (VSS VDD) capacitor c=5.63127e-14
+C4 (VDDIOR! VDD) capacitor c=1.86096e-14
+C5 (\529\:VDD25! VDD) capacitor c=3.57105e-15
+C6 (\49\:VDD25! VDD) capacitor c=5.88295e-14
+C7 (\205\:VDD25! VDD) capacitor c=1.10227e-14
+Rl46 (\49\:VDD25! VDD25!) resistor r=0.1647 c=0
+Rk1101 (\49\:VDD25! \205\:VDD25!) resistor r=0.1084 c=0
+Rj965 (\205\:VDD25! \529\:VDD25!) resistor r=1.4507 c=0
+Ri839 (\230\:VDD \543\:VDD) resistor r=0.1304 c=0
+Rh317 (\543\:VDD VDD) resistor r=0.1008 c=0
+Rw330 (\230\:VDD \559\:VDD) resistor r=0.05748 c=0
+Rv392 (VDD \559\:VDD) resistor r=0.09134 c=0
+Ru343 (VDD \561\:VDD) resistor r=0.0912 c=0
+Rz43 (VDD \577\:VDD) resistor r=0.1035 c=0
+Ry254 (\561\:VDD \577\:VDD) resistor r=0.1403 c=0
+I1\|M4_52__rcx (\49\:VDD25! VSSIOR! VSSIOR! VSSIOR!) g45n2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=5.25e-12 ps=3.082e-05 pd=2.105e-05 \
+        nrd=468.75m nrs=468.75m sa=5.25e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+ends PADVDD25
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:44:50 2012 )
+// Library name: giolib045
+// Cell name: PADVDDIOR
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADVDDIOR VDD VDDIOR! VSS VSSIOR!
+I2 (\1986\:VDDIOR!) BONDPAD52
+C1 (VSSIOR! VSS) capacitor c=6.81332e-14
+C2 (VDD VSS) capacitor c=1.16415e-14
+C3 (VDDIOR! VSS) capacitor c=8.12254e-14
+C4 (\1986\:VDDIOR! VSS) capacitor c=9.49407e-16
+C5 (\200\:VDDIOR! VSS) capacitor c=7.16151e-14
+C6 (\1088\:VDDIOR! VSS) capacitor c=3.87712e-15
+Rl45 (\1986\:VDDIOR! VDDIOR!) resistor r=0.1341 c=0
+Rk1421 (\200\:VDDIOR! VDDIOR!) resistor r=0.1536 c=0
+Rj817 (\200\:VDDIOR! \1088\:VDDIOR!) resistor r=2.2038 c=0
+Ri1107 (\1088\:VDDIOR! VDDIOR!) resistor r=0.03564 c=0
+Rh310 (\233\:VSS \543\:VSS) resistor r=0.1304 c=0
+Rw408 (\543\:VSS VSS) resistor r=0.09805 c=0
+Rv535 (\233\:VSS \559\:VSS) resistor r=0.04631 c=0
+Ru336 (VSS \559\:VSS) resistor r=0.09134 c=0
+Rz59 (VSS \561\:VSS) resistor r=0.0912 c=0
+Ry254 (VSS \577\:VSS) resistor r=0.1498 c=0
+Rx1 (\561\:VSS \577\:VSS) resistor r=0.1458 c=0
+I0\|M4_52__rcx (\200\:VDDIOR! VSSIOR! VSSIOR! VSSIOR!) g45n2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=5.25e-12 ps=3.082e-05 pd=2.105e-05 \
+        nrd=468.75m nrs=468.75m sa=5.25e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+ends PADVDDIOR
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:45:56 2012 )
+// Library name: giolib045
+// Cell name: PADVSS
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADVSS VDD VDDIOR! VSS VSSIOR!
+I1 (\1552\:VSS) BONDPAD52
+C1 (VSSIOR! VSS) capacitor c=1.78221e-14
+C2 (VDD VSS) capacitor c=5.05734e-14
+C3 (VDDIOR! VSS) capacitor c=6.42639e-14
+C4 (\19\:VDD VSS) capacitor c=6.58728e-15
+C5 (\18\:VDD VSS) capacitor c=6.56185e-15
+C6 (\17\:VDD VSS) capacitor c=6.56185e-15
+C7 (\16\:VDD VSS) capacitor c=6.56185e-15
+C8 (\15\:VDD VSS) capacitor c=6.65241e-15
+C9 (\14\:VDD VSS) capacitor c=6.58949e-15
+C10 (\7\:VDD VSS) capacitor c=2.19896e-16
+C11 (\8\:VDD VSS) capacitor c=2.23634e-16
+C12 (\9\:VDD VSS) capacitor c=2.26109e-16
+C13 (\10\:VDD VSS) capacitor c=2.17405e-16
+C14 (\11\:VDD VSS) capacitor c=2.32353e-16
+C15 (\12\:VDD VSS) capacitor c=2.10998e-16
+Rl46 (\325\:VSS \1552\:VSS) resistor r=0.1883 c=0
+Rl52 (VDD \17\:VDD) resistor r=0.5404 c=0
+Rl58 (VDD \10\:VDD) resistor r=0.06163 c=0
+Rk35 (\325\:VSS \339\:VSS) resistor r=0.08814 c=0
+Rk29 (VDD \16\:VDD) resistor r=0.5452 c=0
+Rk36 (\17\:VDD \10\:VDD) resistor r=0.5088 c=0
+Rj496 (\339\:VSS VSS) resistor r=0.569 c=0
+Rj433 (VDD \15\:VDD) resistor r=0.5439 c=0
+Rj500 (\9\:VDD \10\:VDD) resistor r=0.1392 c=0
+Ri50 (VSS \1194\:VSS) resistor r=9.804 c=0
+Ri49 (VDD \14\:VDD) resistor r=0.5419 c=0
+Ri53 (VDD \11\:VDD) resistor r=0.07756 c=0
+Rh134 (VSS \1195\:VSS) resistor r=1.4397 c=0
+Rh68 (VDD \7\:VDD) resistor r=0.06428 c=0
+Rh70 (\18\:VDD \11\:VDD) resistor r=0.5088 c=0
+Rw269 (\1194\:VSS \1195\:VSS) resistor r=17.0226 c=0
+Rw270 (\14\:VDD \7\:VDD) resistor r=0.509 c=0
+Rw237 (VDD \12\:VDD) resistor r=0.05508 c=0
+Rv48 (VSS \342\:VSS) resistor r=0.1708 c=0
+Rv64 (VDD \8\:VDD) resistor r=0.06822 c=0
+Rv46 (\19\:VDD \12\:VDD) resistor r=0.5088 c=0
+Ru65 (\1194\:VSS \342\:VSS) resistor r=0.7147 c=0
+Ru66 (\15\:VDD \8\:VDD) resistor r=0.509 c=0
+Ru67 (\11\:VDD \12\:VDD) resistor r=0.139 c=0
+Rz187 (\1195\:VSS \342\:VSS) resistor r=1.0537 c=0
+Rz178 (\7\:VDD \8\:VDD) resistor r=0.1392 c=0
+Ry391 (VDD \19\:VDD) resistor r=0.537 c=0
+Ry309 (VDD \9\:VDD) resistor r=0.07084 c=0
+Rx1 (VDD \18\:VDD) resistor r=0.5485 c=0
+Rx4 (\16\:VDD \9\:VDD) resistor r=0.5089 c=0
+I0\|M6_52__rcx (\325\:VSS VDDIOR! VDDIOR! VDDIOR!) g45p2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=3.473e-12 ps=3.082e-05 pd=2.07e-05 \
+        nrd=468.75m nrs=468.75m sa=3.474e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+ends PADVSS
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:47:04 2012 )
+// Library name: giolib045
+// Cell name: PADVSS25
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADVSS25 VDD VDDIOR! VSS VSS25! VSSIOR!
+I1 (\980\:VSS25!) BONDPAD52
+C1 (VDD VSS) capacitor c=5.05357e-14
+C2 (VDDIOR! VSS) capacitor c=6.42668e-14
+C3 (VSS25! VSS) capacitor c=9.38377e-14
+C4 (VSSIOR! VSS) capacitor c=1.78219e-14
+C5 (\980\:VSS25! VSS) capacitor c=1.12843e-15
+C6 (\15\:VSS25! VSS) capacitor c=1.22846e-14
+C7 (\1\:VSS25! VSS) capacitor c=5.62367e-14
+C8 (\941\:VSS25! VSS) capacitor c=1.03432e-15
+C9 (\940\:VSS25! VSS) capacitor c=1.0908e-15
+C10 (\19\:VDD VSS) capacitor c=6.58728e-15
+C11 (\18\:VDD VSS) capacitor c=6.56185e-15
+C12 (\17\:VDD VSS) capacitor c=6.56185e-15
+C13 (\16\:VDD VSS) capacitor c=6.56185e-15
+C14 (\15\:VDD VSS) capacitor c=6.65241e-15
+C15 (\14\:VDD VSS) capacitor c=6.58949e-15
+C16 (\7\:VDD VSS) capacitor c=2.19896e-16
+C17 (\8\:VDD VSS) capacitor c=2.23634e-16
+C18 (\9\:VDD VSS) capacitor c=2.26109e-16
+C19 (\10\:VDD VSS) capacitor c=2.17405e-16
+C20 (\11\:VDD VSS) capacitor c=2.32353e-16
+C21 (\12\:VDD VSS) capacitor c=2.10998e-16
+Rl46 (\1\:VSS25! \980\:VSS25!) resistor r=0.1883 c=0
+Rl52 (\15\:VDD \8\:VDD) resistor r=0.509 c=0
+Rl58 (\11\:VDD \12\:VDD) resistor r=0.139 c=0
+Rk1282 (\1\:VSS25! VSS25!) resistor r=0.5433 c=0
+Rk1024 (\7\:VDD \8\:VDD) resistor r=0.1392 c=0
+Rk1125 (VSS25! \941\:VSS25!) resistor r=11.6332 c=0
+Rj735 (VDD \19\:VDD) resistor r=0.537 c=0
+Rj738 (VDD \9\:VDD) resistor r=0.07084 c=0
+Rj741 (VSS25! \940\:VSS25!) resistor r=2.3302 c=0
+Ri737 (VDD \18\:VDD) resistor r=0.5485 c=0
+Ri740 (\16\:VDD \9\:VDD) resistor r=0.5089 c=0
+Ri743 (\941\:VSS25! \940\:VSS25!) resistor r=16.7839 c=0
+Rh135 (VDD \17\:VDD) resistor r=0.5404 c=0
+Rh166 (VDD \10\:VDD) resistor r=0.06163 c=0
+Rh137 (VSS25! \15\:VSS25!) resistor r=0.1607 c=0
+Rw141 (VDD \16\:VDD) resistor r=0.5452 c=0
+Rw157 (\17\:VDD \10\:VDD) resistor r=0.5088 c=0
+Rw173 (\941\:VSS25! \15\:VSS25!) resistor r=0.924 c=0
+Rv387 (VDD \15\:VDD) resistor r=0.5439 c=0
+Rv388 (\9\:VDD \10\:VDD) resistor r=0.1392 c=0
+Rv389 (\940\:VSS25! \15\:VSS25!) resistor r=0.8503 c=0
+Ru322 (VDD \14\:VDD) resistor r=0.5419 c=0
+Ru266 (VDD \11\:VDD) resistor r=0.07756 c=0
+Rz327 (VDD \7\:VDD) resistor r=0.06428 c=0
+Rz346 (\18\:VDD \11\:VDD) resistor r=0.5088 c=0
+Ry37 (\14\:VDD \7\:VDD) resistor r=0.509 c=0
+Ry39 (VDD \12\:VDD) resistor r=0.05508 c=0
+Rx2 (VDD \8\:VDD) resistor r=0.06822 c=0
+Rx4 (\19\:VDD \12\:VDD) resistor r=0.5088 c=0
+I0\|M6_52__rcx (\1\:VSS25! VDDIOR! VDDIOR! VDDIOR!) g45p2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=3.473e-12 ps=3.082e-05 pd=2.07e-05 \
+        nrd=468.75m nrs=468.75m sa=3.474e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+ends PADVSS25
+// End of subcircuit definition.
+
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:48:13 2012 )
+// Library name: giolib045
+// Cell name: PADVSSIOR
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADVSSIOR VDD VDDIOR! VSS VSSIOR!
+I1 (\1022\:VSSIOR!) BONDPAD52
+C1 (VDDIOR! VSS) capacitor c=6.42704e-14
+C2 (VSSIOR! VSS) capacitor c=3.18348e-14
+C3 (VDD VSS) capacitor c=1.10915e-14
+C4 (\1022\:VSSIOR! VSS) capacitor c=1.12843e-15
+C5 (\21\:VSSIOR! VSS) capacitor c=5.41655e-14
+Rl46 (\21\:VSSIOR! \1022\:VSSIOR!) resistor r=0.1883 c=0
+Rk1282 (\21\:VSSIOR! VSSIOR!) resistor r=0.7413 c=0
+I0\|M6_52__rcx (\21\:VSSIOR! VDDIOR! VDDIOR! VDDIOR!) g45p2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=3.473e-12 ps=3.082e-05 pd=2.07e-05 \
+        nrd=468.75m nrs=468.75m sa=3.474e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+ends PADVSSIOR
+// End of subcircuit definition.
+

@@ -1,0 +1,94 @@
+########################################
+########## Create Library_Set ##########
+########################################
+
+create_library_set -name FF_Min_1p10v_0c \
+   -timing [list \
+	../../../../GPDK045/digital/giolib045_v3.5/timing/pads_FF_s1vg.lib \
+	../../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib \
+	../../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib \
+    ]
+
+create_library_set -name SS_Max_0p90v_125c \
+   -timing [list \
+	../../../../GPDK045/digital/giolib045_v3.5/timing/pads_SS_s1vg.lib \
+	../../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib \
+	../../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib \
+    ]
+
+###############################################
+########## Create Operating Condition #########
+###############################################
+create_opcond -name op_cond_slow -process 1 -voltage 0.9 -temperature 125
+create_opcond -name op_cond_fast -process 1 -voltage 1.10 -temperature 0
+
+create_timing_condition -name timing_cond_slow -opcond op_cond_slow -library_sets {SS_Max_0p90v_125c}
+create_timing_condition -name timing_cond_fast -opcond op_cond_fast -library_sets {FF_Min_1p10v_0c}
+
+########################################
+########## Create RC_ Corner ###########
+########################################
+
+#create_rc_corner -name BEST \
+#   -qx_tech_file ../../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/qrc/qx/gpdk045.tch
+
+#create_rc_corner -name WORST \
+#   -qx_tech_file ../../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/qrc/qx/gpdk045.tch
+
+create_rc_corner -name rc_corner -cap_table ../../../GPDK045/digital/gsclib045_all_v4.4/captable/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl
+
+########################################
+########## Create Delay_Corner #########
+########################################
+
+#create_delay_corner -name FF_BEST \
+#   -library_set FF_Min_1p10v_0c \
+#   -rc_corner BEST
+
+#create_delay_corner -name SS_WORST \
+#   -library_set SS_Max_0p90v_125c \
+#   -rc_corner WORST
+
+create_delay_corner -name delay_corner_wcl_slow -early_timing_condition timing_cond_slow \
+                    -late_timing_condition timing_cond_slow -early_rc_corner rc_corner \
+                    -late_rc_corner rc_corner
+
+create_delay_corner -name delay_corner_wcl_fast -early_timing_condition timing_cond_fast \
+                    -late_timing_condition timing_cond_fast -early_rc_corner rc_corner \
+                    -late_rc_corner rc_corner
+
+############################################
+########## Create Constraint_Mode ##########
+############################################
+
+#create_constraint_mode -name FUNC_SLOW \
+#   -sdc_files [list ./cons/cmsdk_mcu_slow.sdc]
+
+#create_constraint_mode -name FUNC_FAST \
+#   -sdc_files [list ./cons/cmsdk_mcu_fast.sdc]
+
+create_constraint_mode -name FUNC_SLOW \
+   -sdc_files [list ./mapped/cmsdk_mcu_syn_final.sdc]
+
+create_constraint_mode -name FUNC_FAST \
+   -sdc_files [list ./mapped/cmsdk_mcu_syn_final.sdc]
+
+############################################
+########### Create Analysis_view ###########
+############################################
+
+create_analysis_view -name FUNC_FF_BEST \
+   -constraint_mode FUNC_FAST \
+   -delay_corner delay_corner_wcl_fast 
+
+create_analysis_view -name FUNC_SS_WORST \
+   -constraint_mode FUNC_SLOW \
+   -delay_corner delay_corner_wcl_slow 
+
+############################################
+############ Set Analysis_view #############
+############################################
+
+set_analysis_view -setup { FUNC_SS_WORST FUNC_FF_BEST }
+
+

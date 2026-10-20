@@ -1,0 +1,41 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  giolib045
+* Top Cell Name: PADANALOG
+* View Name:     schematic
+* Netlisted on:  Mar 15 07:35:43 2012
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL VSS!
++        VDDIOR!
++        VDD!
++        VSSIOR!
+
+*.PIN VSS!
+*+    VDDIOR!
+*+    VDD!
+*+    VSSIOR!
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    PADANALOG
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT PADANALOG AY
+*.PININFO AY:B
+MM4 AY VSSIOR! VSSIOR! VSSIOR! g45n2svt m=1 l=200n w=560u
+.ENDS
+

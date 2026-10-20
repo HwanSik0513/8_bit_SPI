@@ -1,0 +1,21 @@
+// Generated for: spectre (Mar 15 07:36:54 2012 )
+// Library name: giolib045
+// Cell name: PADANALOG
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADANALOG AY VDD VDDIOR! VSS VSSIOR!
+C1 (VSS VDD) capacitor c=1.31279e-13
+C2 (VSSIOR! VDD) capacitor c=5.93374e-14
+C3 (AY VDD) capacitor c=3.25193e-15
+C4 (VDDIOR! VDD) capacitor c=9.85225e-14
+C5 (\1\:AY VDD) capacitor c=2.96625e-13
+Rl46 (\1\:AY AY) resistor r=0.2332 c=0
+M4_52__rcx (\1\:AY VSSIOR! VSSIOR! VSSIOR!) g45n2svt w=(1e-05) l=2e-07 \
+        nf=1 as=5.41e-11 ad=5.25e-12 ps=3.082e-05 pd=2.105e-05 nrd=468.75m \
+        nrs=468.75m sa=5.25e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+ends PADANALOG
+// End of subcircuit definition.
+

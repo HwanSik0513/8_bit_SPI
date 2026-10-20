@@ -1,0 +1,14 @@
+##########
+## NOTE ##
+##########
+Lab3 is for high speed test
+1ns test, so toggle at each 0.5ns
+
+###########
+## GUIDE ##
+###########
+with option -gui
+simvision auto started
+dump folder is auto opened 
+press start button and stop at $stop function
+

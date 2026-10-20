@@ -1,0 +1,6 @@
+TDMCHECKPOINT="1.0"
+giolib045/bidirlogic type="cell"
+giolib045/inputlogic type="cell"
+giolib045/levelup_latch type="cell"
+giolib045/nonzoutlogic type="cell"
+keepEmptyCategory type="unknown"

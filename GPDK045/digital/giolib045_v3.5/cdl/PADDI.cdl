@@ -1,0 +1,94 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  giolib045
+* Top Cell Name: PADDI
+* View Name:     schematic
+* Netlisted on:  Mar 15 07:38:20 2012
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL VSSIOR!
++        VDD!
++        VDDIOR!
++        VSS!
+
+*.PIN VSSIOR!
+*+    VDD!
+*+    VDDIOR!
+*+    VSS!
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    BONDPAD52
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT BONDPAD52 PAD
+*.PININFO PAD:B
+.ENDS
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    inputlogic
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inputlogic PAD Y inh_VDD inh_VSS
+*.PININFO inh_VDD:I inh_VSS:I Y:O PAD:B
+MM2 net026 PAD inh_VSS inh_VSS g45n2svt m=1 l=150n w=4u
+MM0 net026 PAD inh_VSS inh_VSS g45n2svt m=1 l=150n w=4u
+MNM0 Y net026 inh_VSS inh_VSS g45n1svt m=1 l=45n w=5u
+MPM1 Y net026 inh_VDD inh_VDD g45p1svt m=1 l=45n w=4u
+MM5 net026 PAD inh_VDD inh_VDD g45p2svt m=1 l=150n w=5u
+MM4 net026 PAD inh_VDD inh_VDD g45p2svt m=1 l=150n w=5u
+MM3 net026 PAD inh_VDD inh_VDD g45p2svt m=1 l=150n w=5u
+MM1 net026 PAD inh_VDD inh_VDD g45p2svt m=1 l=150n w=5u
+.ENDS
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    ESDCore04_Input
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ESDCore04_Input PAD inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+*.PININFO inh_VDD:I inh_VDDIOR:I inh_VSS:I inh_VSSIOR:I PAD:B
+MM4 PAD inh_VSSIOR inh_VSSIOR inh_VSSIOR g45n2svt m=1 l=200n w=560u
+MM6 PAD inh_VDDIOR inh_VDDIOR inh_VDDIOR g45p2svt m=1 l=200n w=560u
+.ENDS
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    IORINGDI
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT IORINGDI PAD Y inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR
+*.PININFO inh_VDD:I inh_VDDIOR:I inh_VSS:I inh_VSSIOR:I Y:O PAD:B
+XI2 PAD Y inh_VDD inh_VSS / inputlogic
+XI1 PAD inh_VDD inh_VDDIOR inh_VSS inh_VSSIOR / ESDCore04_Input
+.ENDS
+
+************************************************************************
+* Library Name: giolib045
+* Cell Name:    PADDI
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT PADDI PAD Y
+*.PININFO PAD:I Y:O
+XI2 PAD / BONDPAD52
+XI1 PAD Y VDD! VDDIOR! VSS! VSSIOR! / IORINGDI
+.ENDS
+

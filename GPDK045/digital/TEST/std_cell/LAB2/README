@@ -1,0 +1,13 @@
+##########
+## NOTE ##
+##########
+#1. no -gui option in testbench file
+#2. $finish instead of $stop in testbench file
+
+###########
+## GUIDE ##
+###########
+1) just ./run_function.tcl and it will be finished automatically
+2) $> simvision
+3) open database in dump folder
+4) just check your result waveform and no need to restart simulation

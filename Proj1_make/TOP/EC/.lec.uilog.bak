@@ -1,0 +1,610 @@
+#Version: 22.10-s300 (29-Aug-2022) (64 bit executable)
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+ guiWinConfig . 1108 832 256 31 
+_tixRecordFlags <ButtonPress-1> % 7355 ?? 1 ?? ?? ?? ?? ?? ?? ?? ?? 0 147626765 ?? 190 304 ?? ?? 0 ?? ?? 0x0000f3 00000000 4 .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist 459 488; 
+	tixHList:Button-1 .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist 190 304 ""
+    ; _tixDeleteFlags;
+_tixRecordFlags <B1-Motion> % 7355 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 256 147626781 ?? 190 304 ?? ?? 0 ?? ?? 0x0000f3 00000000 6 .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist 459 488; 
+	set tkPriv(x) 190
+	set tkPriv(y) 304
+	set tkPriv(X) 459
+	set tkPriv(Y) 488
+ 	tixHList:B1-Motion .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist 190 304
+    ; _tixDeleteFlags;
+_tixRecordFlags <ButtonRelease-1> % 7374 ?? 1 ?? ?? ?? ?? ?? ?? ?? ?? 256 147626890 ?? 190 304 ?? ?? 0 ?? ?? 0x0000f3 00000000 5 .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist 459 488; 
+	tixHList:ButtonRelease-1 .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist 190 304
+    ; _tixDeleteFlags;
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+         if { [ .icon.rrcmgr cget -state ] == "normal" } {
+            .icon.rrcmgr configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.rrcmgr
+ .icon.rrcmgr configure -relief flat 
+     tk::ButtonLeave .icon.rrcmgr
+         if { [ .icon.modelmgr cget -state ] == "normal" } {
+            .icon.modelmgr configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.modelmgr
+ .icon.modelmgr configure -relief flat 
+     tk::ButtonLeave .icon.modelmgr
+     tk::MbEnter .v_menu.read
+     tk::MbMotion .v_menu.read up 285 58
+     tk::MbMotion .v_menu.read up 283 56
+     tk::MbMotion .v_menu.read up 278 52
+     tk::MbMotion .v_menu.read up 277 52
+     tk::MbMotion .v_menu.read up 275 52
+     tk::MbMotion .v_menu.read up 273 52
+     tk::MbMotion .v_menu.read up 273 51
+     if {$tk::Priv(inMenubutton) ne ""} {
+	tk::MbPost $tk::Priv(inMenubutton) 273 51
+    }
+ guiWinConfig . 1108 832 256 31 
+     tk::MbMotion .v_menu.read down 273 51
+     tk::MbButtonUp .v_menu.read
+     tk::MbMotion .v_menu.read up 273 51
+     tk::MbMotion .v_menu.read up 273 52
+     tk::MbMotion .v_menu.read up 275 55
+     tk::MbMotion .v_menu.read up 276 56
+     tk::MbMotion .v_menu.read up 277 58
+     tk::MbLeave .v_menu.read
+     set tk::Priv(window) .v_menu.read.menu
+    if {[.v_menu.read.menu cget -type] eq "tearoff"} {
+	if {"NotifyNormal" ne "NotifyUngrab"} {
+	    if {[tk windowingsystem] eq "x11"} {
+		tk_menuSetFocus .v_menu.read.menu
+	    }
+	}
+    }
+    tk::MenuMotion .v_menu.read.menu 22 0 0
+#Gui Step(4)===>(Menu).v_menu.read.menu <Button> {(menu-item) "Do Dofile"}
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 4:  (Menu) <Button>\
+ (menu-item) "Do Dofile"} .v_menu.read.menu } 
+set x [guiGetMenuX .v_menu.read.menu 1];set y [guiGetMenuY .v_menu.read.menu 1 ] 
+     tk::MenuMotion .v_menu.read.menu $x $y 0
+     tk::MenuButtonDown .v_menu.read.menu
+    tk::MenuInvoke .v_menu.read.menu 1
+_tixRecordFlags <Configure> % 8929 00000000 ?? ?? ?? ?? 45 ?? ?? 0 ?? ?? ?? 380 4 208 ?? 0 0 ?? ?? ?? ?? 22 .fselect.fsbox.lf.types ?? ??; 
+	tixWidgetDoWhenIdle tixComboBox:align .fselect.fsbox.lf.types
+    ; _tixDeleteFlags;
+_tixRecordFlags <Configure> % 9045 00000000 ?? ?? ?? ?? 45 ?? ?? 0 ?? ?? ?? 190 5 3 ?? 0 0 ?? ?? ?? ?? 22 .fselect.fsbox.lf.pane.1.dir ?? ??; 
+	tixWidgetDoWhenIdle tixComboBox:align .fselect.fsbox.lf.pane.1.dir
+    ; _tixDeleteFlags;
+_tixRecordFlags <Configure> % 9081 00000000 ?? ?? ?? ?? 45 ?? ?? 0 ?? ?? ?? 170 5 3 ?? 0 0 ?? ?? ?? ?? 22 .fselect.fsbox.lf.pane.2.file ?? ??; 
+	tixWidgetDoWhenIdle tixComboBox:align .fselect.fsbox.lf.pane.2.file
+    ; _tixDeleteFlags;
+         if { [ .icon.modelmgr cget -state ] == "normal" } {
+            .icon.modelmgr configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.modelmgr
+ .icon.modelmgr configure -relief flat 
+     tk::ButtonLeave .icon.modelmgr
+ guiWinConfig . 1108 832 256 31 
+ guiWinConfig . 1108 832 256 31 
+ guiWinConfig . 1108 832 256 31 
+ guiWinConfig . 1108 832 256 31 
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+ guiWinConfig .fselect 480 255 528 228 
+ .fselect.fsbox.bf.cancel instate !disabled {.fselect.fsbox.bf.cancel state active} 
+ .fselect.fsbox.bf.cancel state !active 
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+     if {$tk_strictMotif} {
+	set tk::Priv(activeBg) [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -activebackground]
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -background]
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate [.fselect.fsbox.lf.pane.1.dirlist.vsb identify 9 119]
+     if {$tk_strictMotif && [info exists tk::Priv(activeBg)]} {
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground $tk::Priv(activeBg)
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate {}
+     if {$tk_strictMotif} {
+	set tk::Priv(activeBg) [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -activebackground]
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -background]
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate [.fselect.fsbox.lf.pane.1.dirlist.vsb identify 0 127]
+     if {$tk_strictMotif && [info exists tk::Priv(activeBg)]} {
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground $tk::Priv(activeBg)
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate {}
+     if {$tk_strictMotif} {
+	set tk::Priv(activeBg) [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -activebackground]
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -background]
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate [.fselect.fsbox.lf.pane.1.dirlist.vsb identify 12 128]
+     ::tk::ScrollToPos .fselect.fsbox.lf.pane.1.dirlist.vsb 0.0
+     ::tk::ScrollToPos .fselect.fsbox.lf.pane.1.dirlist.vsb 0.104575
+     if {$tk_strictMotif && [info exists tk::Priv(activeBg)]} {
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground $tk::Priv(activeBg)
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate {}
+#Gui Step(7)===>(TixHList).fselect.fsbox.lf.pane.1.dirlist.f1.hlist <Button-1> script
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 7:  (TixHList) <Button-1>\
+ script} .fselect.fsbox.lf.pane.1.dirlist.f1.hlist } 
+set x [guiGetHListEntryX .fselect.fsbox.lf.pane.1.dirlist.f1.hlist {/home/ex_poly2/SoC/SoC_make_G45/TOP/EC/script}];set y [guiGetHListEntryY .fselect.fsbox.lf.pane.1.dirlist.f1.hlist {/home/ex_poly2/SoC/SoC_make_G45/TOP/EC/script}] 
+_tixRecordFlags <ButtonPress-1> % 10031 ?? 1 ?? ?? ?? ?? ?? ?? ?? ?? 0 147633796 ?? 97 126 ?? ?? 0 ?? ?? 0x0000f3 00000000 4 .fselect.fsbox.lf.pane.1.dirlist.f1.hlist 637 413; 
+	 tixHList:Button-1 .fselect.fsbox.lf.pane.1.dirlist.f1.hlist  $x $y ""
+    ; _tixDeleteFlags;
+#Gui Step(8)===>(TixHList).fselect.fsbox.lf.pane.1.dirlist.f1.hlist <ButtonRelease-1> script
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 8:  (TixHList) <ButtonRelease-1>\
+ script} .fselect.fsbox.lf.pane.1.dirlist.f1.hlist } 
+set x [guiGetHListEntryX .fselect.fsbox.lf.pane.1.dirlist.f1.hlist {/home/ex_poly2/SoC/SoC_make_G45/TOP/EC/script}];set y [guiGetHListEntryY .fselect.fsbox.lf.pane.1.dirlist.f1.hlist {/home/ex_poly2/SoC/SoC_make_G45/TOP/EC/script}] 
+_tixRecordFlags <ButtonRelease-1> % 10102 ?? 1 ?? ?? ?? ?? ?? ?? ?? ?? 256 147633875 ?? 97 126 ?? ?? 0 ?? ?? 0x0000f3 00000000 5 .fselect.fsbox.lf.pane.1.dirlist.f1.hlist 637 413; 
+	 tixHList:ButtonRelease-1 .fselect.fsbox.lf.pane.1.dirlist.f1.hlist  $x $y
+    ; _tixDeleteFlags;
+     if {$tk_strictMotif} {
+	set tk::Priv(activeBg) [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -activebackground]
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -background]
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate [.fselect.fsbox.lf.pane.1.dirlist.vsb identify 7 117]
+     if {$tk_strictMotif && [info exists tk::Priv(activeBg)]} {
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground $tk::Priv(activeBg)
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate {}
+     tk::ButtonEnter .fselect.fsbox.lf.types.frame.arrow
+     tk::ButtonLeave .fselect.fsbox.lf.types.frame.arrow
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+ .fselect.fsbox.bf.cancel instate !disabled {.fselect.fsbox.bf.cancel state active} 
+ .fselect.fsbox.bf.cancel instate !disabled { ttk::clickToFocus .fselect.fsbox.bf.cancel; .fselect.fsbox.bf.cancel state pressed } 
+ .fselect.fsbox.bf.cancel instate pressed { .fselect.fsbox.bf.cancel state !pressed; .fselect.fsbox.bf.cancel instate !disabled { .fselect.fsbox.bf.cancel invoke } } 
+tixPrimitive:Destructor .fselect.fsbox.lf.pane.1.dir.shell.slistbox
+tixComboBox:Destructor .fselect.fsbox.lf.pane.1.dir
+tixPrimitive:Destructor .fselect.fsbox.lf.pane.1.dirlist
+tixPrimitive:Destructor .fselect.fsbox.lf.pane.2.file.shell.slistbox
+tixComboBox:Destructor .fselect.fsbox.lf.pane.2.file
+tixPrimitive:Destructor .fselect.fsbox.lf.pane.2.filelist
+tixPrimitive:Destructor .fselect.fsbox.lf.pane
+tixPrimitive:Destructor .fselect.fsbox.lf.types.shell.slistbox
+tixComboBox:Destructor .fselect.fsbox.lf.types
+tixPrimitive:Destructor .fselect.fsbox
+     [tixGetMethod .fselect [set .fselect(className)] Destructor] .fselect
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+#Gui Step(11)===>(Text).a.pane.f2.mesg.text.text <Button-1> 8.0
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 11:  (Text) <Button-1>\
+ 8.0} .a.pane.f2.mesg.text.text } 
+set x [guiGetTextX .a.pane.f2.mesg.text.text 8 0];set y [guiGetTextY .a.pane.f2.mesg.text.text 8 0] 
+   .a.pane.f2.mesg.text.text configure -state normal
+  tkTextButton1 .a.pane.f2.mesg.text.text $x $y
+#Gui Step(12)===>(Text).a.pane.f2.mesg.text.text <Button-1> 8.0
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 12:  (Text) <Button-1>\
+ 8.0} .a.pane.f2.mesg.text.text } 
+set x [guiGetTextX .a.pane.f2.mesg.text.text 8 0];set y [guiGetTextY .a.pane.f2.mesg.text.text 8 0] 
+     tk::TextButton1 .a.pane.f2.mesg.text.text $x $y
+    .a.pane.f2.mesg.text.text tag remove sel 0.0 end
+   tkCancelRepeat
+  set pos [.a.pane.f2.mesg.text.text index insert]
+  #set pos {end - 1 chars}
+  .a.pane.f2.mesg.text.text mark set insert $pos
+  .a.pane.f2.mesg.text.text see insert
+  .a.pane.f2.mesg.text.text configure -state disabled
+     tk::CancelRepeat
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+         if { [ .icon.modelmgr cget -state ] == "normal" } {
+            .icon.modelmgr configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.modelmgr
+ .icon.modelmgr configure -relief flat 
+     tk::ButtonLeave .icon.modelmgr
+         if { [ .icon.rulechk cget -state ] == "normal" } {
+            .icon.rulechk configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.rulechk
+ .icon.rulechk configure -relief flat 
+     tk::ButtonLeave .icon.rulechk
+     tk::MbEnter .v_menu.read
+     tk::MbMotion .v_menu.read up 282 61
+     tk::MbMotion .v_menu.read up 281 61
+     tk::MbMotion .v_menu.read up 281 60
+     tk::MbMotion .v_menu.read up 281 60
+     tk::MbMotion .v_menu.read up 280 59
+     tk::MbMotion .v_menu.read up 280 59
+     tk::MbMotion .v_menu.read up 280 58
+     tk::MbMotion .v_menu.read up 280 58
+     tk::MbMotion .v_menu.read up 280 53
+     tk::MbMotion .v_menu.read up 280 55
+     tk::MbMotion .v_menu.read up 283 58
+     tk::MbLeave .v_menu.read
+         if { [ .icon.modelmgr cget -state ] == "normal" } {
+            .icon.modelmgr configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.modelmgr
+ .icon.modelmgr configure -relief flat 
+     tk::ButtonLeave .icon.modelmgr
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+ guiWinConfig . 1108 832 256 31 
+_tixRecordFlags <ButtonPress-1> % 11211 ?? 1 ?? ?? ?? ?? ?? ?? ?? ?? 0 147651109 ?? 97 268 ?? ?? 0 ?? ?? 0x0000f3 00000000 4 .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist 366 452; 
+	tixHList:Button-1 .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist 97 268 ""
+    ; _tixDeleteFlags;
+_tixRecordFlags <B1-Motion> % 11216 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 256 147651125 ?? 97 268 ?? ?? 0 ?? ?? 0x0000f3 00000000 6 .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist 366 452; 
+	set tkPriv(x) 97
+	set tkPriv(y) 268
+	set tkPriv(X) 366
+	set tkPriv(Y) 452
+ 	tixHList:B1-Motion .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist 97 268
+    ; _tixDeleteFlags;
+_tixRecordFlags <ButtonRelease-1> % 11225 ?? 1 ?? ?? ?? ?? ?? ?? ?? ?? 256 147651171 ?? 97 268 ?? ?? 0 ?? ?? 0x0000f3 00000000 5 .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist 366 452; 
+	tixHList:ButtonRelease-1 .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist 97 268
+    ; _tixDeleteFlags;
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+         if { [ .icon.rulechk cget -state ] == "normal" } {
+            .icon.rulechk configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.rulechk
+ .icon.rulechk configure -relief flat 
+     tk::ButtonLeave .icon.rulechk
+     tk::MbEnter .v_menu.read
+     tk::MbMotion .v_menu.read up 277 59
+     tk::MbMotion .v_menu.read up 278 58
+     tk::MbMotion .v_menu.read up 281 56
+     tk::MbMotion .v_menu.read up 283 54
+     tk::MbMotion .v_menu.read up 284 53
+     tk::MbMotion .v_menu.read up 286 52
+     if {$tk::Priv(inMenubutton) ne ""} {
+	tk::MbPost $tk::Priv(inMenubutton) 286 52
+    }
+ guiWinConfig . 1108 832 256 31 
+     tk::MbMotion .v_menu.read down 286 52
+     tk::MbMotion .v_menu.read down 286 52
+     tk::MbButtonUp .v_menu.read
+     tk::MbMotion .v_menu.read up 286 52
+     tk::MbMotion .v_menu.read up 286 52
+     tk::MbMotion .v_menu.read up 286 54
+     tk::MbMotion .v_menu.read up 286 55
+     tk::MbMotion .v_menu.read up 287 56
+     tk::MbMotion .v_menu.read up 287 57
+     tk::MbMotion .v_menu.read up 288 58
+     tk::MbMotion .v_menu.read up 289 61
+     tk::MbLeave .v_menu.read
+     set tk::Priv(window) .v_menu.read.menu
+    if {[.v_menu.read.menu cget -type] eq "tearoff"} {
+	if {"NotifyNormal" ne "NotifyUngrab"} {
+	    if {[tk windowingsystem] eq "x11"} {
+		tk_menuSetFocus .v_menu.read.menu
+	    }
+	}
+    }
+    tk::MenuMotion .v_menu.read.menu 35 1 0
+#Gui Step(19)===>(Menu).v_menu.read.menu <Button> {(menu-item) "Do Dofile"}
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 19:  (Menu) <Button>\
+ (menu-item) "Do Dofile"} .v_menu.read.menu } 
+set x [guiGetMenuX .v_menu.read.menu 1];set y [guiGetMenuY .v_menu.read.menu 1 ] 
+     tk::MenuMotion .v_menu.read.menu $x $y 0
+     tk::MenuButtonDown .v_menu.read.menu
+    tk::MenuInvoke .v_menu.read.menu 1
+_tixRecordFlags <Configure> % 12618 00000000 ?? ?? ?? ?? 45 ?? ?? 0 ?? ?? ?? 380 4 208 ?? 0 0 ?? ?? ?? ?? 22 .fselect.fsbox.lf.types ?? ??; 
+	tixWidgetDoWhenIdle tixComboBox:align .fselect.fsbox.lf.types
+    ; _tixDeleteFlags;
+_tixRecordFlags <Configure> % 12734 00000000 ?? ?? ?? ?? 45 ?? ?? 0 ?? ?? ?? 190 5 3 ?? 0 0 ?? ?? ?? ?? 22 .fselect.fsbox.lf.pane.1.dir ?? ??; 
+	tixWidgetDoWhenIdle tixComboBox:align .fselect.fsbox.lf.pane.1.dir
+    ; _tixDeleteFlags;
+_tixRecordFlags <Configure> % 12770 00000000 ?? ?? ?? ?? 45 ?? ?? 0 ?? ?? ?? 170 5 3 ?? 0 0 ?? ?? ?? ?? 22 .fselect.fsbox.lf.pane.2.file ?? ??; 
+	tixWidgetDoWhenIdle tixComboBox:align .fselect.fsbox.lf.pane.2.file
+    ; _tixDeleteFlags;
+         if { [ .icon.modelmgr cget -state ] == "normal" } {
+            .icon.modelmgr configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.modelmgr
+ .icon.modelmgr configure -relief flat 
+     tk::ButtonLeave .icon.modelmgr
+ guiWinConfig . 1108 832 256 31 
+ guiWinConfig . 1108 832 256 31 
+ guiWinConfig . 1108 832 256 31 
+ guiWinConfig . 1108 832 256 31 
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+ guiWinConfig .fselect 480 255 528 228 
+     if {$tk_strictMotif} {
+	set tk::Priv(activeBg) [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -activebackground]
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -background]
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate [.fselect.fsbox.lf.pane.1.dirlist.vsb identify 9 90]
+     if {$tk_strictMotif && [info exists tk::Priv(activeBg)]} {
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground $tk::Priv(activeBg)
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate {}
+     if {$tk_strictMotif} {
+	set tk::Priv(activeBg) [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -activebackground]
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -background]
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate [.fselect.fsbox.lf.pane.1.dirlist.vsb identify 0 123]
+     if {$tk_strictMotif && [info exists tk::Priv(activeBg)]} {
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground $tk::Priv(activeBg)
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate {}
+     if {$tk_strictMotif} {
+	set tk::Priv(activeBg) [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -activebackground]
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -background]
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate [.fselect.fsbox.lf.pane.1.dirlist.vsb identify 12 125]
+     ::tk::ScrollToPos .fselect.fsbox.lf.pane.1.dirlist.vsb 0.0
+     ::tk::ScrollToPos .fselect.fsbox.lf.pane.1.dirlist.vsb 0.104575
+     if {$tk_strictMotif && [info exists tk::Priv(activeBg)]} {
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground $tk::Priv(activeBg)
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate {}
+#Gui Step(22)===>(TixHList).fselect.fsbox.lf.pane.1.dirlist.f1.hlist <Button-1> script
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 22:  (TixHList) <Button-1>\
+ script} .fselect.fsbox.lf.pane.1.dirlist.f1.hlist } 
+set x [guiGetHListEntryX .fselect.fsbox.lf.pane.1.dirlist.f1.hlist {/home/ex_poly2/SoC/SoC_make_G45/TOP/EC/script}];set y [guiGetHListEntryY .fselect.fsbox.lf.pane.1.dirlist.f1.hlist {/home/ex_poly2/SoC/SoC_make_G45/TOP/EC/script}] 
+_tixRecordFlags <ButtonPress-1> % 13782 ?? 1 ?? ?? ?? ?? ?? ?? ?? ?? 0 147657656 ?? 91 127 ?? ?? 0 ?? ?? 0x0000f3 00000000 4 .fselect.fsbox.lf.pane.1.dirlist.f1.hlist 631 414; 
+	 tixHList:Button-1 .fselect.fsbox.lf.pane.1.dirlist.f1.hlist  $x $y ""
+    ; _tixDeleteFlags;
+#Gui Step(23)===>(TixHList).fselect.fsbox.lf.pane.1.dirlist.f1.hlist <ButtonRelease-1> script
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 23:  (TixHList) <ButtonRelease-1>\
+ script} .fselect.fsbox.lf.pane.1.dirlist.f1.hlist } 
+set x [guiGetHListEntryX .fselect.fsbox.lf.pane.1.dirlist.f1.hlist {/home/ex_poly2/SoC/SoC_make_G45/TOP/EC/script}];set y [guiGetHListEntryY .fselect.fsbox.lf.pane.1.dirlist.f1.hlist {/home/ex_poly2/SoC/SoC_make_G45/TOP/EC/script}] 
+_tixRecordFlags <ButtonRelease-1> % 13852 ?? 1 ?? ?? ?? ?? ?? ?? ?? ?? 256 147657734 ?? 91 127 ?? ?? 0 ?? ?? 0x0000f3 00000000 5 .fselect.fsbox.lf.pane.1.dirlist.f1.hlist 631 414; 
+	 tixHList:ButtonRelease-1 .fselect.fsbox.lf.pane.1.dirlist.f1.hlist  $x $y
+    ; _tixDeleteFlags;
+     if {$tk_strictMotif} {
+	set tk::Priv(activeBg) [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -activebackground]
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground [.fselect.fsbox.lf.pane.1.dirlist.vsb cget -background]
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate [.fselect.fsbox.lf.pane.1.dirlist.vsb identify 1 94]
+     if {$tk_strictMotif && [info exists tk::Priv(activeBg)]} {
+	.fselect.fsbox.lf.pane.1.dirlist.vsb configure -activebackground $tk::Priv(activeBg)
+    }
+    .fselect.fsbox.lf.pane.1.dirlist.vsb activate {}
+_tixRecordFlags <1> % 14271 ?? 1 ?? ?? ?? ?? ?? ?? ?? ?? 0 147659156 ?? 101 48 ?? ?? 0 ?? ?? 0x0000f3 00000000 4 .fselect.fsbox.lf.pane.2.filelist.listbox 838 332; 
+	if {[set [tixGetMegaWidget .fselect.fsbox.lf.pane.2.filelist.listbox](-state)] eq "disabled"} {
+	    break
+	}
+    ; _tixDeleteFlags;
+set x [guiGetListBoxEntryX .fselect.fsbox.lf.pane.2.filelist.listbox 2];set y [guiGetListBoxEntryY .fselect.fsbox.lf.pane.2.filelist.listbox 2] 
+     if {[winfo exists .fselect.fsbox.lf.pane.2.filelist.listbox]} {
+	tk::ListboxBeginSelect .fselect.fsbox.lf.pane.2.filelist.listbox [.fselect.fsbox.lf.pane.2.filelist.listbox index  @$x,$y] 1
+    }
+#Gui Step(26)===>(Listbox).fselect.fsbox.lf.pane.2.filelist.listbox <Button-1> script.tcl_test
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 26:  (Listbox) <Button-1>\
+ script.tcl_test} .fselect.fsbox.lf.pane.2.filelist.listbox } 
+_tixRecordFlags <1> % 14271 ?? 1 ?? ?? ?? ?? ?? ?? ?? ?? 0 147659156 ?? 101 48 ?? ?? 0 ?? ?? 0x0000f3 00000000 4 .fselect.fsbox.lf.pane.2.filelist.listbox 838 332; 
+	if {[string is true -strict [.fselect.fsbox.lf.pane.2.filelist.listbox cget -takefocus]]} {
+	    focus .fselect.fsbox.lf.pane.2.filelist.listbox
+	}
+	tixScrolledListBox:Browse [tixGetMegaWidget .fselect.fsbox.lf.pane.2.filelist.listbox]
+    ; _tixDeleteFlags;
+focus .fselect.fsbox.lf.pane.2.filelist.listbox
+#Gui Step(27)===>(Listbox).fselect.fsbox.lf.pane.2.filelist.listbox <ButtonRelease-1> script.tcl_test
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 27:  (Listbox) <ButtonRelease-1>\
+ script.tcl_test} .fselect.fsbox.lf.pane.2.filelist.listbox } 
+_tixRecordFlags <ButtonRelease-1> % 14379 ?? 1 ?? ?? ?? ?? ?? ?? ?? ?? 256 147659218 ?? 101 48 ?? ?? 0 ?? ?? 0x0000f3 00000000 5 .fselect.fsbox.lf.pane.2.filelist.listbox 838 332; 
+	if {[set [tixGetMegaWidget .fselect.fsbox.lf.pane.2.filelist.listbox](-state)] eq "disabled"} {
+	    break
+	}
+    ; _tixDeleteFlags;
+#Gui Step(28)===>(Listbox).fselect.fsbox.lf.pane.2.filelist.listbox <ButtonRelease-1> script.tcl_test
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 28:  (Listbox) <ButtonRelease-1>\
+ script.tcl_test} .fselect.fsbox.lf.pane.2.filelist.listbox } 
+     tk::CancelRepeat
+    .fselect.fsbox.lf.pane.2.filelist.listbox activate @101,48
+#Gui Step(29)===>(Listbox).fselect.fsbox.lf.pane.2.filelist.listbox <ButtonRelease-1> script.tcl_test
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 29:  (Listbox) <ButtonRelease-1>\
+ script.tcl_test} .fselect.fsbox.lf.pane.2.filelist.listbox } 
+_tixRecordFlags <ButtonRelease-1> % 14379 ?? 1 ?? ?? ?? ?? ?? ?? ?? ?? 256 147659218 ?? 101 48 ?? ?? 0 ?? ?? 0x0000f3 00000000 5 .fselect.fsbox.lf.pane.2.filelist.listbox 838 332; 
+	tixScrolledListBox:Browse [tixGetMegaWidget .fselect.fsbox.lf.pane.2.filelist.listbox]
+    ; _tixDeleteFlags;
+ .fselect.fsbox.bf.cancel instate !disabled {.fselect.fsbox.bf.cancel state active} 
+ .fselect.fsbox.bf.cancel state !active 
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+     if {$tk_strictMotif} {
+	set tk::Priv(activeBg) [.a.pane.f2.mesg.text.vsb cget -activebackground]
+	.a.pane.f2.mesg.text.vsb configure -activebackground [.a.pane.f2.mesg.text.vsb cget -background]
+    }
+    .a.pane.f2.mesg.text.vsb activate [.a.pane.f2.mesg.text.vsb identify 5 29]
+     if {$tk_strictMotif && [info exists tk::Priv(activeBg)]} {
+	.a.pane.f2.mesg.text.vsb configure -activebackground $tk::Priv(activeBg)
+    }
+    .a.pane.f2.mesg.text.vsb activate {}
+         if { [ .icon.find cget -state ] == "normal" } {
+            .icon.find configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.find
+ .icon.find configure -relief flat 
+     tk::ButtonLeave .icon.find
+         if { [ .icon.find cget -state ] == "normal" } {
+            .icon.find configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.find
+ .icon.find configure -relief flat 
+     tk::ButtonLeave .icon.find
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+ .fselect.fsbox.bf.ok instate !disabled {.fselect.fsbox.bf.ok state active} 
+ .fselect.fsbox.bf.ok state !active 
+     tk::ButtonEnter .fselect.fsbox.lf.types.frame.arrow
+     tk::ButtonLeave .fselect.fsbox.lf.types.frame.arrow
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+ .fselect.fsbox.bf.cancel instate !disabled {.fselect.fsbox.bf.cancel state active} 
+ .fselect.fsbox.bf.cancel state !active 
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+         if { [ .icon.stop cget -state ] == "normal" } {
+            .icon.stop configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.stop
+ .icon.stop configure -relief flat 
+     tk::ButtonLeave .icon.stop
+         if { [ .icon.find cget -state ] == "normal" } {
+            .icon.find configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.find
+ .icon.find configure -relief flat 
+     tk::ButtonLeave .icon.find
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+ guiWinConfig .b.frame.lab 4 21 1 1 
+ guiWinConfig . 1108 832 256 31 
+ guiWinConfig .fselect 480 255 528 228 
+ guiWinConfig .fselect 480 255 528 228 
+focus .fselect.fsbox.lf.pane.2.filelist.listbox
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+     tk::ButtonEnter .fselect.fsbox.lf.pane.1.dir.frame.arrow
+     tk::ButtonLeave .fselect.fsbox.lf.pane.1.dir.frame.arrow
+ .fselect.fsbox.bf.ok instate !disabled {.fselect.fsbox.bf.ok state active} 
+ .fselect.fsbox.bf.ok instate !disabled { ttk::clickToFocus .fselect.fsbox.bf.ok; .fselect.fsbox.bf.ok state pressed } 
+ .fselect.fsbox.bf.ok instate pressed { .fselect.fsbox.bf.ok state !pressed; .fselect.fsbox.bf.ok instate !disabled { .fselect.fsbox.bf.ok invoke } } 
+ .fselect.fsbox.bf.ok state !active 
+ guiWinConfig . 1108 832 256 31 
+ guiWinConfig .fselect 480 255 528 228 
+ guiWinConfig .fselect 480 255 528 228 
+ guiWinConfig . 1108 832 256 31 
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+ guiWinConfig .b.frame.lab 180 21 1 1 
+ guiWinConfig .b.frame.lab 228 21 1 1 
+ guiWinConfig .b.frame.lab 168 21 1 1 
+ guiWinConfig .b.frame.lab 229 21 1 1 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe 1106 463 0 0 
+tixVStack:ClientGeomProc .a.pane.f1.middle.nb -configure .a.pane.f1.middle.nb.nbframe.hier
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier 1090 408 8 47 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_g.list 1 1 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_g.list.listbox 1 1 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_r.list 1 1 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_r.list.listbox 1 1 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe 1106 463 0 0 
+tixVStack:ClientGeomProc .a.pane.f1.middle.nb -configure .a.pane.f1.middle.nb.nbframe.hier
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier 1090 408 8 47 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe 1106 463 0 0 
+tixVStack:ClientGeomProc .a.pane.f1.middle.nb -configure .a.pane.f1.middle.nb.nbframe.hier
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier 1090 408 8 47 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_g.list.listbox 1 1 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_g.list.vsb 13 1 1 0 
+ guiWinConfig .a.pane.f1 1108 465 0 0 
+ guiWinConfig .a.pane.f2 1108 264 0 465 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_g.list.listbox 1 1 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_g.list.vsb 13 1 1 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_g.list.hsb 1 13 0 1 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_g.list 1 1 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_g.list.listbox 1 1 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_r.list 1 1 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_r.list.listbox 1 1 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe 1106 463 0 0 
+tixVStack:ClientGeomProc .a.pane.f1.middle.nb -configure .a.pane.f1.middle.nb.nbframe.hier
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier 1090 408 8 47 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe 1106 463 0 0 
+tixVStack:ClientGeomProc .a.pane.f1.middle.nb -configure .a.pane.f1.middle.nb.nbframe.hier
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier 1090 408 8 47 
+ guiWinConfig .a.pane.f1 1108 465 0 0 
+ guiWinConfig .a.pane.f2 1108 264 0 465 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_g.list.listbox 1 1 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_g.list.vsb 13 1 1 0 
+ guiWinConfig .a.pane.f1 1108 465 0 0 
+ guiWinConfig .a.pane.f2 1108 264 0 465 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_g.list.listbox 1 1 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_g.list.vsb 13 1 1 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.design.sw1.bkd_g.list.hsb 1 13 0 1 
+ guiWinConfig .b.frame.lab 172 21 1 1 
+ guiWinConfig . 1108 832 256 31 
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+     tk::MbEnter .v_menu.win
+     tk::MbLeave .v_menu.win
+ guiWinConfig . 1108 764 256 99 
+ guiWinConfig .b 1108 31 0 733 
+ guiWinConfig .a 1108 661 0 72 
+ guiWinConfig .a.pane 1108 661 0 0 
+ guiWinConfig .a.pane.f1 1108 465 0 0 
+ guiWinConfig .a.pane.f2 1108 196 0 465 
+ guiWinConfig .a.pane.f3 1108 377 0 661 
+ guiWinConfig .a.pane.f2.mesg 1108 196 0 0 
+ guiWinConfig .a.pane.f3.command 1106 375 1 1 
+ guiWinConfig .a.pane.sep2 1108 2 0 660 
+ guiWinConfig .a.pane.btn2 9 9 1095 657 
+ guiWinConfig .a.pane.f2.mesg.text 1108 196 0 0 
+ guiWinConfig .a.pane.f3.command.text 1106 375 0 0 
+ guiWinConfig .a.pane.f2.mesg.text.text 1095 196 0 0 
+ guiWinConfig .a.pane.f2.mesg.text.vsb 13 196 1095 0 
+ guiWinConfig .a.pane.f3.command.text.text 1093 375 0 0 
+ guiWinConfig .a.pane.f3.command.text.vsb 13 375 1093 0 
+ guiWinConfig . 1108 764 256 99 
+ guiWinConfig . 1108 764 256 35 
+     tk::MbEnter .v_menu.help
+     tk::MbLeave .v_menu.help
+     tk::MbEnter .v_menu.help
+     tk::MbLeave .v_menu.help
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+ guiWinConfig . 1108 764 256 99 
+ guiWinConfig . 1108 764 256 99 
+ guiWinConfig . 1108 764 256 35 
+     if {$tk_strictMotif} {
+	set tk::Priv(activeBg) [.a.pane.f2.mesg.text.vsb cget -activebackground]
+	.a.pane.f2.mesg.text.vsb configure -activebackground [.a.pane.f2.mesg.text.vsb cget -background]
+    }
+    .a.pane.f2.mesg.text.vsb activate [.a.pane.f2.mesg.text.vsb identify 7 191]
+     if {$tk_strictMotif && [info exists tk::Priv(activeBg)]} {
+	.a.pane.f2.mesg.text.vsb configure -activebackground $tk::Priv(activeBg)
+    }
+    .a.pane.f2.mesg.text.vsb activate {}
+ guiWinConfig . 1108 764 256 35 
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+     if {$tk_strictMotif} {
+	set tk::Priv(activeBg) [.a.pane.f2.mesg.text.vsb cget -activebackground]
+	.a.pane.f2.mesg.text.vsb configure -activebackground [.a.pane.f2.mesg.text.vsb cget -background]
+    }
+    .a.pane.f2.mesg.text.vsb activate [.a.pane.f2.mesg.text.vsb identify 4 171]
+ guiWinConfig . 1108 764 256 35 
+     if {$tk_strictMotif && [info exists tk::Priv(activeBg)]} {
+	.a.pane.f2.mesg.text.vsb configure -activebackground $tk::Priv(activeBg)
+    }
+    .a.pane.f2.mesg.text.vsb activate {}
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+ guiWinConfig . 1108 764 256 35 
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist
+         if { [ .v_menu.logo cget -state ] == "normal" } {
+            .v_menu.logo configure -relief groove
+        }
+    
+     tk::ButtonEnter .v_menu.logo
+ .v_menu.logo configure -relief flat 
+     tk::ButtonLeave .v_menu.logo
+AppExit
+ guiWinConfig . 1108 764 256 35 
+ guiWinConfig .exit 273 159 632 264 
+ guiWinConfig .exit 273 159 632 264 
+ guiWinConfig .exit 273 159 632 264 
+ .exit.yes instate !disabled {.exit.yes state active} 
+ .exit.yes state !active 
+ .exit.yes instate !disabled {.exit.yes state active} 
+ .exit.yes state !active 
+ 	tk::CheckEnter .exit.prompt.save
+    
+ 	tk::CheckLeave .exit.prompt.save
+    
+ 	tk::CheckEnter .exit.prompt.save
+    
+ 	tk::CheckLeave .exit.prompt.save
+    
+ .exit.yes instate !disabled {.exit.yes state active} 
+ .exit.yes state !active 
+ .exit.no instate !disabled {.exit.no state active} 
+ .exit.no state !active 
+ .exit.yes instate !disabled {.exit.yes state active} 
+ guiWinConfig .exit 273 159 632 264 
+ .exit.yes state !active 
+ .exit.yes instate !disabled {.exit.yes state active} 
+ .exit.yes state !active 
+ .exit.yes instate !disabled {.exit.yes state active} 
+ .exit.yes state !active 
+ guiWinConfig .exit 273 159 632 264 

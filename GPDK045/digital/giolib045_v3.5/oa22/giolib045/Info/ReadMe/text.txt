@@ -1,0 +1,92 @@
+
+
+ README: GIOLIB045 (Generic IO Library, 45nm node)       
+ =================================================
+
+I. Process Technology: GPDK045 (Cadence Generic Process Design Kit, 45nm node)
+   The associated Virtuoso ITDB technology libraries are needed in order to view and access to the 'giolib045' library 
+   contents.
+   1. The foundry technology libary or PDK: gpdk045
+      The PDK provides layer definition, spacing rules, constraints, vias, pCells, symbol, simulation models, and
+      DRC/LVS/Ext rule decks. 
+   2. The MS tool technology library: gsclib045_tech  
+      This libary provides custom via definitions, constraint group for P&R tool, and site definitions
+   
+II. Pad cells 
+    (Ref: "PADS" category in Virtuoso Library Manager) 
+    1. The pad cells (Bondpad + IOring + ESD):	
+     -------------------------------------------------------------------------------------------------------------------
+         Cell Name |   Notes
+     -------------------------------------------------------------------------------------------------------------------
+     1. BONDPAD52  | A bond pad with metal mesh of M1~M11. Size: 52um x 80um (suitable for 24.5um diameter gold wire) 
+                   |---------------------------------------------------------------------------------------------------
+     2. PADANALOG  | A bond pad for analog signal (BONDPAD52 + IORINGANALOG + ESD )
+     3. PADDB      | A bond pad for digital bi-directional signal        (BONDPAD52 + IORINGDB[Buffer & Logic] + ESD)
+     4. PADDI      | A bond pad for digital input signal without ennable (BONDPAD52 + IORINGDI[Buffer & Logic] + ESD)
+     5. PADDO      | A bond pad for digital output signal without enable (BONDPAD52 + IORINGDO[Buffer & Logic] + ESD)
+     6. PADDOZ     | A bond pad for digital output signal with enable    (BONDPAD52 + IORINGDOZ[Buffer & Logic] + ESD)
+     6. PADVDD     | A bond pad for digital power  (BONDPAD52 + IORINGVDD + ESD )
+     7. PADVDD25   | A bond pad for analog power   (BONDPAD52 + IORINGVDD25+ ESD ): For case of Analog pwr != IORING pwr
+     8. PADVDDIOR  | A bond pad for IO ring power  (BONDPAD52 + IORINGVDDIOR + ESD ) 
+     9. PADVSS     | A bond pad for digital ground (BONDPAD52 + IORINGVSS + ESD )
+     10.PADVSS25   | A bond pad for analog ground  (BONDPAD52 + IORINGVSS25 + ESD ): For case of Analog gnd != IORING gnd
+     11.PADVSSIOR  | A bond pad for IO ring ground (BONDPAD52 + IORINGVSSIOR + ESD )
+     ------------------------------------------------------------------------------------------------------------------
+     Note: All pad cells are with uniformed grid dimension (Width x Height): 60um x 240um
+
+
+   2. Pad Spacer cells:
+      (Ref: "PADSPACER" category in Virtuoso Library Manager)
+      ------------------------------------------------------------------------------------------------------------------
+         Cell Name       |     Notes
+      ------------------------------------------------------------------------------------------------------------------
+      1. padIORINGFEED1  |  1 X feed of Pad+IORING, Dimension (Width x Height): 1um  x 240um 
+      2. padIORINGFEED3  |  3 X feed of Pad+IORING, Dimension (Width x Height): 3um  x 240um 
+      3. padIORINGFEED5  |  5 X feed of Pad+IORING, Dimension (Width x Height): 5um  x 240um 
+      4. padIORINGFEED10 | 10 X feed of Pad+IORING, Dimension (Width x Height): 10um x 240um 
+      5. padIORINGFEED60 | 60 X feed of Pad+IORING, Dimension (Width x Height): 60um x 240um
+      ------------------------------------------------------------------------------------------------------------------
+
+   3. Corner cells:
+      ------------------------------------------------------------------------------------------------------------------
+         Cell Name       |     Notes
+      ------------------------------------------------------------------------------------------------------------------
+      1. padIORINGCORNER | A corner cell with IORING feed,Dimension (Width x Height): 240um x 240um
+      ------------------------------------------------------------------------------------------------------------------
+      
+
+III. The Pad Use-Models:
+     1. Single row structure (recommended): A single deck(PADx + padIORINGFEEDx + padIORINGCORNER )
+                                            Example: giolib045/test_pads/{layout,layout_allPads}
+     2. Double rows structure: Create double decks with (1) Upper deck: BONDPAD52 or empty space
+                                                        (2) Lower deck: IORINGx + IORINGFEEDx + IORINGCORNER
+							
+
+IV. Multiple grounds isolation methodology for mixed-signal design:
+     (a) Main ground 
+         Select a ground that corresponds to the highest voltage in the chip as the main ground.
+         The main ground must have substrate connection without any psuedo region marker (eg: pSub.dra).
+	 Example: In 'giolib45/test_pads/{schematic_LPpllchip,layout_LPpllchip}', the 'agnd_h' is assigned
+	          as the main ground of the wafer/die substrate; and it is assigned to PADVSSIOR pad.
+		  This main ground should not have psuedo marker "pSub.dra".
+     (b) Psuedo ground/s
+         Other ground/s from the main ground is/are the psuedo ground/s. The 'pSub.dra' layer should
+         be utilized for distinguishing it/them from the main ground.
+	 Example1: In 'giolib45/test_pads/{schematic_LPpllchip,layout_LPpllchip}', the digital domain
+	           ground called 'dgnd' is a psuedo ground; and it is assigned to PADVSS pad. This
+		   psuedo ground region has 'pSub.dra' layer.
+	 Example2: For complete implementation example, please refer to 'zambezi45/LP_pll_chip/layout'
+	           This chip has multiple grounds: agnd_h (main ground without psuedo region marker), 
+		                                   agnd_lf, agnd_hf, dgnd (psuedo grouds with 'pSub.dra' marker)
+	 													       
+V. Test cells:
+   1. Physical design: 
+      (a) DRC valication: giolib045/test_pads/layout_allPads
+      (b) LVS validation: giolib045/test_pads/{layout_LPpllchip, schematic_LPpllchip}
+          Note: These addtional PVS LVS rules are required
+	         // Specified black-box for: giolib045/BONDPAD52/layout;
+                    lvs_black_box BONDPAD52 -source_layout;
+	         // Filter out the 'padIORINGCORNER' on schematic side:
+                    lvs_filter_device padIORINGCORNER (padIORINGCORNER) -source_schematic;
+
+   2. Basic digital logic tests: giolib045/test_pads/{adexl_schematic, adexl_extracted}

@@ -1,0 +1,6 @@
+TDMCHECKPOINT="1.0"
+giolib045/corner type="cell"
+giolib045/corner.Cat type="category"
+giolib045/pad type="cell"
+giolib045/pad.Cat type="category"
+keepEmptyCategory type="unknown"

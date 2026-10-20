@@ -1,0 +1,8 @@
+cUiMoveCellToBin {levelup_latch} {Ignore}
+cUiSelectCellP {levelup_latch}
+cUiSetViewStatus {levelup_latch} {layout} {1}
+cUiSetViewStatus {levelup_latch} {logical} {0}
+cUiSetViewStatus {levelup_latch} {abstract.pin} {0}
+cUiSetViewStatus {levelup_latch} {abstract.ext} {0}
+cUiSetViewStatus {levelup_latch} {abstract} {0}
+cUiSetViewStatus {levelup_latch} {abstract.ver} {0}

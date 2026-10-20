@@ -1,0 +1,8 @@
+cUiMoveCellToBin {nonzoutlogic} {Ignore}
+cUiSelectCellP {nonzoutlogic}
+cUiSetViewStatus {nonzoutlogic} {layout} {1}
+cUiSetViewStatus {nonzoutlogic} {logical} {0}
+cUiSetViewStatus {nonzoutlogic} {abstract.pin} {0}
+cUiSetViewStatus {nonzoutlogic} {abstract.ext} {0}
+cUiSetViewStatus {nonzoutlogic} {abstract} {0}
+cUiSetViewStatus {nonzoutlogic} {abstract.ver} {0}

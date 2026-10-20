@@ -34,18 +34,20 @@ reg	r_dst_sync_d	;
 
 // ---- Source domain: toggle flop ----
  
-always @(posedge src_clk) begin
-	if (!src_rst_n)
+always @(posedge src_clk or negedge src_rst_n) begin
+	if (!src_rst_n) begin
 	    r_src_toggle <= 1'b0		;
-
-	else if (i_src_pulse)
+	end
+	
+	else if (i_src_pulse) begin
 	    r_src_toggle <= ~r_src_toggle	;
+	end
 
 end
 
 // ---- Destination domain: 2FF synchronizer + edge detect ----
 
-always @(posedge dst_clk) begin
+always @(posedge dst_clk or negedge dst_rst_n) begin
 	if (!dst_rst_n) begin 
 	    r_dst_meta 	 <= 1'b0		;
 	    r_dst_sync   <= 1'b0		;

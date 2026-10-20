@@ -1,0 +1,36 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[13:29:00.440185] Configured Lic search path (22.01-s003): 35266@npit-service1.iptime.org
+
+Version: 22.16-s078_1, built Sun Jun 09 22:32:57 PDT 2024
+Options: -files all.tcl 
+Date:    Thu Jul 17 13:29:00 2025
+Host:    npit.ic.rnd1 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (20cores*80cpus*2physical cpus*Intel(R) Xeon(R) Silver 4316 CPU @ 2.30GHz 30720KB) (395262912KB)
+PID:     53049
+OS:      Red Hat Enterprise Linux Server release 7.9 (Maipo)
+
+Checking out license: Genus_Synthesis
+[13:29:00.203657] Periodic Lic check successful
+[13:29:00.203666] Feature usage summary:
+[13:29:00.203667] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (1 second elapsed).
+
+Loading tool scripts...
+Another Ctrl-C within 1 second will terminate the tool.
+CURRENT RESOURCES: RT {elapsed: 0s, ST: 0s, FG: 0s, CPU: 0.0%}, MEM {curr: 1.0G, peak: 1.0G, phys curr: 0.0G, phys peak: 0.0G}, SYS {load: 4.1, cpu: 80, total: 377.0G, free: 24.0G}
+
+Another Ctrl-C within 1 second will terminate the tool.
+CURRENT RESOURCES: RT {elapsed: 1s, ST: 1s, FG: 1s, CPU: 0.0%}, MEM {curr: 1.0G, peak: 1.0G, phys curr: 0.0G, phys peak: 0.0G}, SYS {load: 4.1, cpu: 80, total: 377.0G, free: 24.0G}
+Abnormal exit.
+Encountered a problem while exiting.

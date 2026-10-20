@@ -1,0 +1,89 @@
+
+// Library name: giolib045
+// Cell name: BONDPAD52
+// View name: schematic
+subckt BONDPAD52 PAD
+ends BONDPAD52
+// End of subcircuit definition.
+// Generated for: spectre (Mar 15 07:39:06 2012 )
+// Library name: giolib045
+// Cell name: PADDI
+// View name: extracted
+
+simulator lang=spectre
+
+subckt PADDI PAD VDD VDDIOR! VSS VSSIOR! Y
+I1\|I2\|M1 (\8\:I1\|I2\|net026 \1\:PAD \9\:VDD VDD) g45p2svt w=(2.5e-06) \
+        l=1.5e-07 nf=1 as=5e-13 ad=4.6875e-13 ps=5.4e-06 pd=5.375e-06 \
+        nrd=468.75m nrs=468.75m sa=8.5e-07 sb=1.9e-06 sd=200n sca=3.73493 \
+        scb=0.00132306 scc=4.77578e-05 m=(8)
+I1\|I2\|PM1 (\5\:Y I1\|I2\|net026 \4\:VDD VDD) g45p1svt w=(2e-06) \
+        l=4.5e-08 nf=1 as=3.2e-13 ad=2.8e-13 ps=4.32e-06 pd=4.28e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n sca=5.10306 \
+        scb=0.00199193 scc=5.97223e-06 m=(2)
+I1\|I2\|M2 (\8\:I1\|I2\|net026 \14\:PAD \19\:VSS VSS) g45n2svt w=(2e-06) \
+        l=1.5e-07 nf=1 as=3.75e-13 ad=3.75e-13 ps=4.375e-06 pd=4.375e-06 \
+        nrd=468.75m nrs=468.75m sa=8.5e-07 sb=5e-07 sd=200n sca=2.4058 \
+        scb=5.46971e-05 scc=1.46892e-09 m=(4)
+I2 (\380\:PAD) BONDPAD52
+C1 (PAD VSS) capacitor c=9.39613e-16
+C2 (VDD VSS) capacitor c=1.47526e-14
+C3 (VSSIOR! VSS) capacitor c=6.10092e-14
+C4 (VDDIOR! VSS) capacitor c=6.3844e-14
+C5 (I1\|I2\|net026 VSS) capacitor c=1.10586e-15
+C6 (\380\:PAD VSS) capacitor c=6.48056e-16
+C7 (\1\:PAD VSS) capacitor c=1.01747e-15
+C8 (\7\:Y VSS) capacitor c=9.62611e-15
+C9 (\4\:Y VSS) capacitor c=4.95374e-18
+C10 (\239\:VDDIOR! VSS) capacitor c=4.42176e-18
+C11 (\29\:PAD VSS) capacitor c=5.20162e-14
+C12 (\4\:VDD VSS) capacitor c=3.69279e-16
+C13 (\5\:Y VSS) capacitor c=5.50848e-16
+C14 (\8\:I1\|I2\|net026 VSS) capacitor c=1.95807e-15
+C15 (\1\:Y VSS) capacitor c=3.90007e-16
+C16 (\14\:PAD VSS) capacitor c=3.90236e-16
+C17 (\9\:VDD VSS) capacitor c=1.31215e-15
+C18 (\8\:Y VSS) capacitor c=5.30564e-15
+C19 (\42\:PAD VSS) capacitor c=9.99396e-15
+C20 (\43\:PAD VSS) capacitor c=5.6005e-14
+C21 (\34\:VDD VSS) capacitor c=2.01827e-15
+C22 (\2001\:VDDIOR! VSS) capacitor c=6.50465e-16
+C23 (\2006\:VDDIOR! VSS) capacitor c=1.06227e-15
+Rl12 (\1\:PAD \14\:PAD) resistor r=304.044 c=0
+Rl13 (\19\:VSS \41\:VSS) resistor r=0.02455 c=0
+Rl122 (\2001\:VDDIOR! \2006\:VDDIOR!) resistor r=0.01947 c=0
+Rk874 (\380\:PAD PAD) resistor r=0.01273 c=0
+Rk873 (\41\:VSS VSS) resistor r=0.1614 c=0
+Rj152 (PAD \29\:PAD) resistor r=0.1739 c=0
+Rj144 (\4\:Y \8\:Y) resistor r=0.5 c=0
+Ri102 (\4\:VDD \9\:VDD) resistor r=0.2644 c=0
+Ri103 (\8\:Y \7\:Y) resistor r=5.4912 c=0
+Rh7 (\13\:VSS \19\:VSS) resistor r=0.3237 c=0
+Rh5 (\7\:Y Y) resistor r=0.025 c=0
+Rw99 (I1\|I2\|net026 \8\:I1\|I2\|net026) resistor r=52.526 c=0
+Rw100 (\4\:Y \1\:Y) resistor r=5.0248 c=0
+Rv67 (\14\:PAD \42\:PAD) resistor r=48.7984 c=0
+Rv68 (\4\:Y \5\:Y) resistor r=6.8062 c=0
+Ru2 (\42\:PAD \29\:PAD) resistor r=0.4379 c=0
+Ru1 (VDDIOR! \239\:VDDIOR!) resistor r=1.6894 c=0
+Rz266 (\42\:PAD \43\:PAD) resistor r=0.376 c=0
+Rz267 (VDDIOR! \2001\:VDDIOR!) resistor r=0.02399 c=0
+Ry282 (\9\:VDD \34\:VDD) resistor r=0.0367 c=0
+Ry283 (VDDIOR! \2006\:VDDIOR!) resistor r=0.04045 c=0
+Rx43 (\34\:VDD VDD) resistor r=0.1637 c=0
+Rx4 (\239\:VDDIOR! \2006\:VDDIOR!) resistor r=0.05821 c=0
+I1\|I2\|NM0 (\1\:Y I1\|I2\|net026 \13\:VSS VSS) g45n1svt w=(2.5e-06) \
+        l=4.5e-08 nf=1 as=4e-13 ad=3.5e-13 ps=5.32e-06 pd=5.28e-06 \
+        nrd=1.16667 nrs=1.16667 sa=1.4e-07 sb=3.45e-07 sd=160n sca=2.4853 \
+        scb=7.86359e-05 scc=2.85679e-09 m=(2)
+I1\|I1\|M4_52__rcx (\43\:PAD VSSIOR! VSSIOR! VSSIOR!) g45n2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=5.25e-12 ps=3.082e-05 pd=2.105e-05 \
+        nrd=468.75m nrs=468.75m sa=5.25e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+I1\|I1\|M6_52__rcx (\29\:PAD VDDIOR! VDDIOR! VDDIOR!) g45p2svt w=(1e-05) \
+        l=2e-07 nf=1 as=5.41e-11 ad=3.473e-12 ps=3.082e-05 pd=2.07e-05 \
+        nrd=468.75m nrs=468.75m sa=3.474e-07 sb=2e-06 sd=200n sca=1.84848 \
+        scb=4.29512e-05 scc=1.08015e-09 m=(56)
+ends PADDI
+// End of subcircuit definition.
+

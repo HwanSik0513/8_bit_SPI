@@ -1,0 +1,36 @@
+Multi-Mode Analysis View Report
+_______________________________
+
++ ALL Views
+   |
+   + Analysis View:  default_emulate_view
+     |
+     + Delay Calc Corner: default_emulate_delay_corner
+     |   |
+     |   + timing_condition: default_emulate_timing_cond_max
+     |   |    |
+     |   |    + library_sets: default_emulate_libset_max
+     |   |        |
+     |   |        + timing: /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib
+                             /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib
+                             /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/giolib045_v3.5/timing/pads_SS_s1vg.lib
+     |   |
+     |   |
+     |   |
+     |   + rc_corner: default_emulate_rc_corner
+     |   |    |
+     |   |    + postRoute_res: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_cap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_xcap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_clkcap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_clkres: 1.0 1.0 1.0
+     |   |    |
+     |   |    + qx_tech_file: /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045_tech/qrc/qx/gpdk045.tch
+     |   |    |
+     |   |    + temperature: 0.0
+     |
+     + Constraint Mode: default_emulate_constraint_mode
